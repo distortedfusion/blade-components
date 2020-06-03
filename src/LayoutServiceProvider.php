@@ -17,8 +17,8 @@ class LayoutServiceProvider extends ServiceProvider
         $this->defineResources();
 
         $aliasMethod = version_compare($this->app::VERSION, '7.0.0', '>=')
-            ? 'component'
-            : 'aliasComponent';
+            ? 'aliasComponent'
+            : 'component';
 
         Blade::{$aliasMethod}('tailwind-layout::container', 'container');
         Blade::{$aliasMethod}('tailwind-layout::container-narrow', 'containerNarrow');
