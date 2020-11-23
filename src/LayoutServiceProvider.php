@@ -16,12 +16,10 @@ class LayoutServiceProvider extends ServiceProvider
     {
         $this->defineResources();
 
-        $aliasMethod = version_compare($this->app::VERSION, '7.0.0', '>=')
-            ? 'aliasComponent'
-            : 'component';
+        Blade::aliasComponent('tailwind-layout::container', 'container');
+        Blade::aliasComponent('tailwind-layout::container-narrow', 'containerNarrow');
 
-        Blade::{$aliasMethod}('tailwind-layout::container', 'container');
-        Blade::{$aliasMethod}('tailwind-layout::container-narrow', 'containerNarrow');
+        Blade::component('alert', Components\Alert::class);
     }
 
     /**
@@ -46,7 +44,7 @@ class LayoutServiceProvider extends ServiceProvider
     public function defineViewPublishing()
     {
         $this->publishes([
-            LAYOUT_INDEX_PATH.'/resources/views' => resource_path('views/vendor/livewire-index'),
+            LAYOUT_INDEX_PATH.'/resources/views' => resource_path('views/vendor/tailwind-layout'),
         ], 'tailwind-layout-views');
     }
 

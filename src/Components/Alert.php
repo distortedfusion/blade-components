@@ -1,0 +1,90 @@
+<?php
+
+namespace DistortedFusion\Tailwind\Components;
+
+use Illuminate\View\Component;
+
+class Alert extends Component
+{
+    /**
+     * Default alert icons.
+     *
+     * @var array
+     */
+    const DEFAULT_ICONS = [
+        'success' => 'fa-check-circle',
+        'info' => 'fa-info-circle',
+        'warning' => 'fa-exclamation-circle',
+        'danger' => 'fa-exclamation-circle',
+    ];
+
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public string $type;
+
+    /**
+     * The alert title.
+     *
+     * @var string|null
+     */
+    public ?string $title;
+
+    /**
+     * The alert message.
+     *
+     * @var string
+     */
+    public string $message;
+
+    /**
+     * The alert icon.
+     *
+     * @var string
+     */
+    public string $icon;
+
+    /**
+     * Create the component instance.
+     *
+     * @param string      $message
+     * @param string|null $title
+     * @param string      $type
+     * @param string|null $icon
+     */
+    public function __construct(string $message, string $title = null, string $type = 'default', string $icon = null)
+    {
+        $this->type = $type;
+        $this->message = $message;
+        $this->icon = $icon ?: $this->defaultIconForType($type);
+        $this->title = $title;
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\View\View|string
+     */
+    public function render()
+    {
+        return view('tailwind-layout::components.alert');
+    }
+
+    /**
+     * Get the default icon for the alert type.
+     *
+     * @param string $type
+     *
+     * @return string
+     */
+    protected function defaultIconForType(string $type): string
+    {
+        if (array_key_exists($type, self::DEFAULT_ICONS)) {
+            return self::DEFAULT_ICONS[$type];
+        }
+
+        return 'fa-exclamation-triangle';
+    }
+}

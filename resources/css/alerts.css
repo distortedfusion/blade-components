@@ -1,0 +1,107 @@
+.alert {
+    @apply bg-gray-50 text-gray-700;
+
+    .alert-icon {
+        @apply text-gray-400;
+    }
+
+    .alert-title {
+        @apply text-gray-800;
+    }
+
+    hr {
+        @apply text-gray-700;
+    }
+}
+
+/* States... */
+
+.alert-success {
+    background-color: theme('colors.green.50');
+    color: theme('colors.green.700');
+
+    .alert-icon {
+        color: theme('colors.green.400');
+    }
+
+    .alert-title {
+        color: theme('colors.green.800');
+    }
+
+    hr {
+        border-color: theme('colors.green.700');
+    }
+}
+
+.alert-info {
+    background-color: theme('colors.blue.50');
+    color: theme('colors.blue.700');
+
+    .alert-icon {
+        color: theme('colors.blue.400');
+    }
+
+    .alert-title {
+        color: theme('colors.blue.800');
+    }
+
+    hr {
+        border-color: theme('colors.blue.700');
+    }
+}
+
+.alert-warning {
+    background-color: theme('colors.yellow.50');
+    color: theme('colors.yellow.700');
+
+    .alert-icon {
+        color: theme('colors.yellow.400');
+    }
+
+    .alert-title {
+        color: theme('colors.yellow.800');
+    }
+
+    hr {
+        border-color: theme('colors.yellow.700');
+    }
+}
+
+.alert-danger {
+    background-color: theme('colors.red.50');
+    color: theme('colors.red.700');
+
+    .alert-icon {
+        color: theme('colors.red.400');
+    }
+
+    .alert-title {
+        color: theme('colors.red.800');
+    }
+
+    hr {
+        border-color: theme('colors.red.700');
+    }
+}
+
+/* States, inverse... */
+
+.alert-inverse.alert-success {
+    background-color: theme('colors.gray.900');
+    color: theme('colors.green.400');
+}
+
+.alert-inverse.alert-info {
+    background-color: theme('colors.gray.900');
+    color: theme('colors.blue.400');
+}
+
+.alert-inverse.alert-warning {
+    background-color: theme('colors.gray.900');
+    color: theme('colors.yellow.400');
+}
+
+.alert-inverse.alert-danger {
+    background-color: theme('colors.gray.900');
+    color: theme('colors.red.400');
+}
