@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => sprintf('alert alert-%s flex items-center text-sm px-2 py-1 rounded-full mb-4', $type)]) }}>
+<div {{ $attributes->merge(['class' => sprintf('alert alert-%s flex items-center text-sm px-2 py-1 rounded-full mb-4', $type)]) }} role="alert">
     <div class="flex-shrink-0">
         <i class="alert-icon fad fa-fw {{ $icon }}"></i>
     </div>
