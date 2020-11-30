@@ -20,6 +20,13 @@ class LayoutServiceProvider extends ServiceProvider
         Blade::aliasComponent('tailwind-layout::container-narrow', 'containerNarrow');
 
         Blade::component('alert', Components\Alert::class);
+
+        Blade::component('table.cell', Components\Table\Cell::class);
+        Blade::component('table.row-group', Components\Table\RowGroup::class);
+        Blade::component('table.row', Components\Table\Row::class);
+        Blade::component('table', Components\Table::class);
+
+        Blade::component('field.title', Components\Field\Title::class);
     }
 
     /**
