@@ -1,4 +1,4 @@
-<div class="dropdown dropleft">
+<div class="dropdown{{ $variant ? ' '.$variant : null }}">
     <x-bootstrap.dropdown-button>
         {{ __('More') }}
     </x-bootstrap.dropdown-button>

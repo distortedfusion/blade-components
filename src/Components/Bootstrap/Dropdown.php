@@ -28,17 +28,26 @@ class Dropdown extends Component
     public string $placement;
 
     /**
+     * The dropdown variant.
+     *
+     * @var string|null
+     */
+    public ?string $variant;
+
+    /**
      * Create the component instance.
      *
      * @param array       $actions
      * @param string|null $title
      * @param string      $placement
+     * @param string|null $variant
      */
-    public function __construct(array $actions, string $title = null, string $placement = 'right')
+    public function __construct(array $actions, string $title = null, string $placement = 'right', string $variant = null)
     {
         $this->actions = $actions;
         $this->title = $title;
         $this->placement = $placement;
+        $this->variant = $variant;
     }
 
     /**
