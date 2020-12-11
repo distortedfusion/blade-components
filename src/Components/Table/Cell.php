@@ -28,11 +28,25 @@ class Cell extends Component
     public ?int $rowspan;
 
     /**
-     * The loop variable.
+     * Determines if the cell is in an even row of the loop.
      *
      * @var mixed
      */
-    public $loop;
+    public $isEven;
+
+    /**
+     * Determines if the cell is the first in the loop.
+     *
+     * @var mixed
+     */
+    public $isFirst;
+
+    /**
+     * Determines if the cell is the last in the loop.
+     *
+     * @var mixed
+     */
+    public $isLast;
 
     /**
      * Create the component instance.
@@ -40,14 +54,19 @@ class Cell extends Component
      * @param string   $align
      * @param int|null $colspan
      * @param int|null $rowspan
-     * @param mixed    $loop
+     * @param bool     $isEven
+     * @param bool     $isFirst
+     * @param bool     $isLast
      */
-    public function __construct(string $align = 'left', int $colspan = null, int $rowspan = null, $loop = null)
+    public function __construct(string $align = 'left', int $colspan = null, int $rowspan = null, bool $isEven = false, bool $isFirst = false, bool $isLast = false)
     {
         $this->align = $align;
         $this->colspan = $colspan;
         $this->rowspan = $rowspan;
-        $this->loop = $loop;
+
+        $this->isEven = $isEven;
+        $this->isFirst = $isFirst;
+        $this->isLast = $isLast;
     }
 
     /**
@@ -58,35 +77,5 @@ class Cell extends Component
     public function render()
     {
         return view('tailwind-layout::components.table.cell');
-    }
-
-    /**
-     * Determine if this is the first cell in the loop.
-     *
-     * @return bool
-     */
-    public function isFirst(): bool
-    {
-        return $this->loop && $this->loop->first;
-    }
-
-    /**
-     * Determine if this is the last cell in the loop.
-     *
-     * @return bool
-     */
-    public function isLast(): bool
-    {
-        return $this->loop && $this->loop->last;
-    }
-
-    /**
-     * Determine if this cell is in an even row in the loop.
-     *
-     * @return bool
-     */
-    public function isEvenRow(): bool
-    {
-        return $this->loop && $this->loop->parent && $this->loop->parent->even;
     }
 }

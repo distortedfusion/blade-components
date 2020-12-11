@@ -21,6 +21,14 @@ class LayoutServiceProvider extends ServiceProvider
 
         Blade::component('alert', Components\Alert::class);
 
+        // Bootstrap...
+        Blade::component('bootstrap.dropdown', Components\Bootstrap\Dropdown::class);
+        Blade::component('bootstrap.dropdown-action', Components\Bootstrap\DropdownAction::class);
+        Blade::component('bootstrap.dropdown-button', Components\Bootstrap\DropdownButton::class);
+
+        // Buttons...
+        Blade::component('form-button', Components\Buttons\FormButton::class);
+
         // Table components...
         Blade::component('table.cell', Components\Table\Cell::class);
         Blade::component('table.header-group', Components\Table\HeaderGroup::class);

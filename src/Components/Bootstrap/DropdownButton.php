@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Table;
+namespace DistortedFusion\Tailwind\Components\Bootstrap;
 
 use Illuminate\View\Component;
 
-class Row extends Component
+class DropdownButton extends Component
 {
     /**
      * Get the view / contents that represent the component.
@@ -13,6 +13,6 @@ class Row extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.row');
+        return view('tailwind-layout::components.bootstrap.dropdown-button');
     }
 }
