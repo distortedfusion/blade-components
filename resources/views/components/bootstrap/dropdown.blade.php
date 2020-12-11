@@ -1,7 +1,11 @@
 <div class="dropdown{{ $variant ? ' '.$variant : null }}">
-    <x-bootstrap.dropdown-button>
-        {{ __('More') }}
-    </x-bootstrap.dropdown-button>
+    @if (! ($toggle ?? false))
+        <x-bootstrap.dropdown-button>
+            {{ __('More') }}
+        </x-bootstrap.dropdown-button>
+    @else
+        {{ $toggle }}
+    @endif
 
     <div class="dropdown-menu dropdown-menu-{{ $placement }}">
         @foreach ($actions as $action)
