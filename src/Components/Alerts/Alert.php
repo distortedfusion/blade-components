@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components;
+namespace DistortedFusion\Tailwind\Components\Alerts;
 
 use Illuminate\View\Component;
 
@@ -69,7 +69,7 @@ class Alert extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.alert');
+        return view('tailwind-layout::components.alerts.alert');
     }
 
     /**

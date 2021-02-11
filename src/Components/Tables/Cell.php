@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Table;
+namespace DistortedFusion\Tailwind\Components\Tables;
 
 use Illuminate\View\Component;
 
@@ -76,6 +76,6 @@ class Cell extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.cell');
+        return view('tailwind-layout::components.tables.cell');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Table;
+namespace DistortedFusion\Tailwind\Components\Tables;
 
 use Illuminate\View\Component;
 
-class HeaderGroup extends Component
+class Table extends Component
 {
     /**
      * Get the view / contents that represent the component.
@@ -13,6 +13,6 @@ class HeaderGroup extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.header-group');
+        return view('tailwind-layout::components.tables.table');
     }
 }

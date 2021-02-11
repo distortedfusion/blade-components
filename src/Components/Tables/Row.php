@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components;
+namespace DistortedFusion\Tailwind\Components\Tables;
 
 use Illuminate\View\Component;
 
-class Table extends Component
+class Row extends Component
 {
     /**
      * Get the view / contents that represent the component.
@@ -13,6 +13,6 @@ class Table extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table');
+        return view('tailwind-layout::components.tables.row');
     }
 }

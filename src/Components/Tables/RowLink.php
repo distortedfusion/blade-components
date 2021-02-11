@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Table;
+namespace DistortedFusion\Tailwind\Components\Tables;
 
 use Illuminate\View\Component;
 
@@ -30,6 +30,6 @@ class RowLink extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.row-link');
+        return view('tailwind-layout::components.tables.row-link');
     }
 }

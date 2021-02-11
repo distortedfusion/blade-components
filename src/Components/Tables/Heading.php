@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Table;
+namespace DistortedFusion\Tailwind\Components\Tables;
 
 class Heading extends Cell
 {
@@ -11,6 +11,6 @@ class Heading extends Cell
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.heading');
+        return view('tailwind-layout::components.tables.heading');
     }
 }
