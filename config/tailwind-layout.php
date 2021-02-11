@@ -20,12 +20,12 @@ return [
         'form-button' => Components\Buttons\FormButton::class,
 
         // Table components...
-        'table.cell' => Components\Table\Cell::class,
-        'table.header-group' => Components\Table\HeaderGroup::class,
-        'table.heading' => Components\Table\Heading::class,
-        'table.row-group' => Components\Table\RowGroup::class,
-        'table.row-link' => Components\Table\RowLink::class,
-        'table.row' => Components\Table\Row::class,
+        'table.cell' => Components\Tables\Cell::class,
+        'table.header-group' => Components\Tables\HeaderGroup::class,
+        'table.heading' => Components\Tables\Heading::class,
+        'table.row-group' => Components\Tables\RowGroup::class,
+        'table.row-link' => Components\Tables\RowLink::class,
+        'table.row' => Components\Tables\Row::class,
         'table' => Components\Tables\Table::class,
     ],
 ];
