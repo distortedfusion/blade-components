@@ -5,7 +5,7 @@
 **Important:** Include the `alerts.css` in your `app.css`.
 
 ```css
-/* Typically the app.css is located in ./resources/css/... */
+/* Typically the app.css is located in ./resources/css/ */
 @import "./../../vendor/distortedfusion/laravel-tailwind-layout/resources/css/alerts.css";
 ```
 

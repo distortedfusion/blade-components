@@ -1,4 +1,4 @@
-<div class="dropdown{{ $variant ? ' '.$variant : null }}">
+<div class="dropdown static{{ $variant ? ' '.$variant : null }}">
     @if (! ($toggle ?? false))
         <x-bootstrap.dropdown-button>
             {{ __('More') }}

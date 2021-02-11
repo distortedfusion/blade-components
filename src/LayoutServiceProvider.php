@@ -34,6 +34,7 @@ class LayoutServiceProvider extends ServiceProvider
         Blade::component('table.header-group', Components\Table\HeaderGroup::class);
         Blade::component('table.heading', Components\Table\Heading::class);
         Blade::component('table.row-group', Components\Table\RowGroup::class);
+        Blade::component('table.row-link', Components\Table\RowLink::class);
         Blade::component('table.row', Components\Table\Row::class);
         Blade::component('table', Components\Table::class);
 
