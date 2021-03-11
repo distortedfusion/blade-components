@@ -5,6 +5,9 @@ use DistortedFusion\Tailwind\Components;
 return [
     'components' => [
         'alert' => Components\Alerts\Alert::class,
+
+        // Fields...
+        'field.boolean' => Components\Field\Boolean::class,
         'field.title' => Components\Field\Title::class,
 
         // Bootstrap...
