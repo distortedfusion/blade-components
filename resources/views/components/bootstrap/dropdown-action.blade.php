@@ -3,6 +3,10 @@
         @csrf
         @method($method)
 
+        @foreach ($inputs as $key => $value)
+            <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+        @endforeach
+
         <button type="submit" {{ $attributes->merge(['class' => 'dropdown-item text-left']) }}>
             {{ $slot }}
         </button>

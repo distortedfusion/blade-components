@@ -7,15 +7,14 @@ use Illuminate\View\Component;
 class DropdownAction extends Component
 {
     public ?string $action;
+    public array $inputs;
     public string $method;
     public bool $show;
 
-    /**
-     * Create the component instance.
-     */
-    public function __construct(string $action = null, string $method = 'GET', bool $show = true)
+    public function __construct(string $action = null, array $inputs = [], string $method = 'GET', bool $show = true)
     {
         $this->action = $action;
+        $this->inputs = $inputs;
         $this->method = strtoupper($method);
         $this->show = $show;
     }
