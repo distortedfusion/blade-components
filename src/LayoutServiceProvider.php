@@ -51,6 +51,10 @@ class LayoutServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
+                TL_PATH.'/config/tailwind-layout.php' => config_path('tailwind-layout.php')
+            ], 'tailwind-layout-config');
+
+            $this->publishes([
                 TL_PATH.'/resources/views' => resource_path('views/vendor/tailwind-layout'),
             ], 'tailwind-layout-views');
         }
