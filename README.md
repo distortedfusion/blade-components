@@ -7,18 +7,3 @@ This is a collection of reusable Blade components implementing TailwindCSS.
 Install the package via composer: `composer require distortedfusion/laravel-tailwind-layout`
 
 *This package implements Laravel's Package Discovery, no further changes are needed to your application configs. For more information [please refer to the Laravel documentation](https://laravel.com/docs/packages#package-discovery).*
-
-## Available components
-
-### @container and @containerNarrow
-```
-@container
-    <p>Hello world!</p>
-@endcontainer
-```
-
-```
-@containerNarrow
-    <p>Hello world!</p>
-@endcontainerNarrow
-```
