@@ -33,13 +33,6 @@ class Alert extends Component
     public ?string $title;
 
     /**
-     * The alert message.
-     *
-     * @var string
-     */
-    public string $message;
-
-    /**
      * The alert icon.
      *
      * @var string
@@ -49,15 +42,13 @@ class Alert extends Component
     /**
      * Create the component instance.
      *
-     * @param string      $message
      * @param string|null $title
      * @param string      $type
      * @param string|null $icon
      */
-    public function __construct(string $message, string $title = null, string $type = 'default', string $icon = null)
+    public function __construct(string $title = null, string $type = 'default', string $icon = null)
     {
         $this->type = $type;
-        $this->message = $message;
         $this->icon = $icon ?: $this->defaultIconForType($type);
         $this->title = $title;
     }

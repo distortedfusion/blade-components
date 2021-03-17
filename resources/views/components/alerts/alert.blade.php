@@ -10,6 +10,6 @@
             </span>
         @endif
 
-        {{ $message }}
+        {{ $slot }}
     </div>
 </div>
