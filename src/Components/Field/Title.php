@@ -39,6 +39,6 @@ class Title extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.table.title');
+        return view('tailwind-layout::components.field.title');
     }
 }
