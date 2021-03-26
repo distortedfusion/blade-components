@@ -14,13 +14,6 @@ class Dropdown extends Component
     public array $actions;
 
     /**
-     * The button title.
-     *
-     * @var string|null
-     */
-    public ?string $title = null;
-
-    /**
      * The menu placement.
      *
      * @var string
@@ -42,10 +35,9 @@ class Dropdown extends Component
      * @param string      $placement
      * @param string|null $variant
      */
-    public function __construct(array $actions, string $title = null, string $placement = 'right', string $variant = null)
+    public function __construct(array $actions = [], string $placement = 'right', string $variant = null)
     {
         $this->actions = $actions;
-        $this->title = $title;
         $this->placement = $placement;
         $this->variant = $variant;
     }
