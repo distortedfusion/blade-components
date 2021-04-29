@@ -1,3 +1,3 @@
-<div {{ $attributes->merge(['class' => 'divide-y-8 divide-gray-200 divide-solid']) }}>
+<div {{ $attributes->merge(['class' => 'section-group']) }}>
     {{ $slot }}
 </div>
