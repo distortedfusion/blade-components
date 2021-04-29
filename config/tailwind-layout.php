@@ -15,9 +15,13 @@ return [
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
 
-        // Containers...
-        'container' => Components\Containers\Container::class,
-        'container-narrow' => Components\Containers\ContainerNarrow::class,
+        // Layout...
+        'layout.section' => Components\Layout\Section::class,
+        'layout.description' => Components\Layout\Description::class,
+
+        // Layout containers...
+        'container' => Components\Containers\Layout\Container::class,
+        'container-narrow' => Components\Containers\Layout\ContainerNarrow::class,
 
         // Buttons...
         'form-button' => Components\Buttons\FormButton::class,

@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Containers;
+namespace DistortedFusion\Tailwind\Components\Layout\Containers;
 
 use Illuminate\View\Component;
 
@@ -13,6 +13,6 @@ class ContainerNarrow extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.containers.container-narrow');
+        return view('tailwind-layout::components.containers.layout.container-narrow');
     }
 }
