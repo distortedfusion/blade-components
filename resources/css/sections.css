@@ -1,7 +1,3 @@
-.section-group {
-    @apply divide-y divide-gray-200;
-}
-
 .section-group section + section {
     @apply mt-8 pt-8;
 }
