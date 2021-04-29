@@ -20,8 +20,8 @@ return [
         'layout.description' => Components\Layout\Description::class,
 
         // Layout containers...
-        'container' => Components\Containers\Layout\Container::class,
-        'container-narrow' => Components\Containers\Layout\ContainerNarrow::class,
+        'container' => Components\Layout\Containers\Container::class,
+        'container-narrow' => Components\Layout\Containers\ContainerNarrow::class,
 
         // Buttons...
         'form-button' => Components\Buttons\FormButton::class,

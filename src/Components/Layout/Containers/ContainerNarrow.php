@@ -13,6 +13,6 @@ class ContainerNarrow extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.containers.layout.container-narrow');
+        return view('tailwind-layout::components.layout.containers.container-narrow');
     }
 }

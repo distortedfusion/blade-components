@@ -13,6 +13,6 @@ class Container extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.containers.layout.container');
+        return view('tailwind-layout::components.layout.containers.container');
     }
 }
