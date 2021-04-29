@@ -17,6 +17,7 @@ return [
 
         // Layout...
         'layout.section' => Components\Layout\Section::class,
+        'layout.section-group' => Components\Layout\SectionGroup::class,
         'layout.description' => Components\Layout\Description::class,
 
         // Layout containers...
