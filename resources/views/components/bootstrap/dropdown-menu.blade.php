@@ -6,7 +6,7 @@
             </div>
         @endif
 
-        <div class="flex-grow text-base truncate">
+        <div class="flex-grow truncate">
             {{ $action['title'] ?? null }}
         </div>
     </x-bootstrap.dropdown-action>
