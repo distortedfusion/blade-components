@@ -1,4 +1,4 @@
-<div class="dropdown static{{ $variant ? ' '.$variant : null }}">
+<div {{ $attributes->merge(['class' => 'dropdown'.($variant ? ' '.$variant : null)]) }}>
     @if (! ($toggle ?? false))
         <x-bootstrap.dropdown-button>
             {{ __('More') }}
