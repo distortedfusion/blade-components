@@ -84,6 +84,10 @@
     }
 }
 
+.dropdown-header {
+    @apply block p-2 mb-0 text-sm text-muted whitespace-nowrap;
+  }
+
 .dropdown-item {
     @apply flex items-center w-full text-black p-2 rounded;
 
