@@ -116,16 +116,13 @@
     @apply block;
 }
 
-/* Styles ported from _navbar.scss */
-.navbar .dropdown-menu {
-    /**
-     * By default the dropdown would receive a static positioning class in the navbar.
-     * At the moment we only use dropdowns in a collapsed state, therefore we don't need this behaviour just yet.
-     */
-    position: absolute;
+/* Custom fade animation */
+.dropdown-menu.fade {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
 }
-
-.navbar .dropdown-menu-right {
-    right: 0;
-    left: auto;
+.show > .dropdown-menu.fade {
+    pointer-events: auto;
+    opacity: 1;
 }

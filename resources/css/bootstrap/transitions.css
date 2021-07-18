@@ -1,0 +1,25 @@
+/**
+ * Ported from TWBS 4.4.1.
+ *
+ * @see https://github.com/twbs/bootstrap/blob/master/scss/_transitions.scss
+ */
+
+.fade {
+    transition: opacity .15s linear;
+
+    &:not(.show) {
+        opacity: 0;
+    }
+}
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
