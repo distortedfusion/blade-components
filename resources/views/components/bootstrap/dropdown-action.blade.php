@@ -7,7 +7,7 @@
             <input type="hidden" name="{{ $key }}" value="{{ $value }}">
         @endforeach
 
-        <button type="submit" {{ $attributes->merge(['class' => 'dropdown-item text-left']) }}>
+        <button type="submit" {{ $attributes->merge(array_merge($actionAttributes, ['class' => 'dropdown-item text-left'])) }}>
             {{ $slot }}
         </button>
     </form>
