@@ -16,6 +16,7 @@ return [
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
 
         // Form...
+        'form.actions' => Components\Form\Actions::class,
         'form.section' => Components\Form\Section::class,
         'form.sections' => Components\Form\Sections::class,
 
