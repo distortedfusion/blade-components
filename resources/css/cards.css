@@ -1,0 +1,120 @@
+.card {
+    @apply border bg-white rounded;
+
+    > .list-group {
+        .list-group-item {
+            @apply border-l-0 border-r-0 rounded-none;
+        }
+    }
+
+    > .list-group:first-child {
+        .list-group-item:first-child {
+            @apply rounded-t-lg border-t-0;
+        }
+    }
+
+    > .list-group:last-child {
+        .list-group-item:last-child {
+            @apply rounded-b-lg border-b-0;
+        }
+    }
+
+    > .card-heading + .list-group {
+        .list-group-item:first-child {
+            @apply border-t-0;
+        }
+    }
+}
+
+/* Card spacing */
+
+.card + .card {
+    @apply mt-8;
+}
+
+/* Card nesting */
+
+.card .card {
+    @apply border shadow-none;
+}
+
+/* Heading */
+
+.card-heading {
+    @apply border-b px-4 py-5;
+}
+
+@screen sm {
+    .card-heading {
+        @apply px-6;
+    }
+}
+
+/* Body */
+
+.card-body {
+    @apply px-4 py-5;
+
+    > label.mb-6:last-child {
+        @apply mb-0;
+    }
+}
+
+@screen sm {
+    .card-body {
+        @apply p-6;
+    }
+}
+
+/* Footer */
+
+.card-footer {
+    @apply border-t bg-gray-100 px-4 py-3;
+}
+
+.card {
+    > .card-footer:first-child {
+        @apply rounded-t;
+    }
+
+    > .card-footer:last-child {
+        @apply rounded-b;
+    }
+}
+
+@screen sm {
+    .card-footer {
+        @apply px-6;
+    }
+}
+
+/* Other */
+
+.card-title {
+    @apply text-2xl mb-4;
+}
+
+.card-title:last-child {
+    @apply mb-0;
+}
+
+.card-text {
+    @apply mb-4;
+}
+
+.card-text:last-child {
+    @apply mb-0;
+}
+
+.card-img-top,
+.card-img-bottom {
+    @apply w-full;
+}
+
+.card-img-top {
+    @apply rounded-t;
+}
+
+.card-img-bottom {
+    @apply rounded-b;
+}

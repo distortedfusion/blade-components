@@ -1,0 +1,25 @@
+.list-group {
+    @apply flex flex-col;
+}
+
+.list-group-item {
+    @apply block relative border px-4 py-4;
+
+    &:first-child {
+        @apply rounded-t;
+    }
+
+    &:last-child {
+        @apply rounded-b;
+    }
+
+    & + & {
+        @apply border-t-0
+    }
+}
+
+@screen sm {
+    .list-group-item {
+        @apply px-6;
+    }
+}
