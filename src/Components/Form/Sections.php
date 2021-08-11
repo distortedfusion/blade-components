@@ -13,6 +13,6 @@ class Sections extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.field.sections');
+        return view('tailwind-layout::components.form.sections');
     }
 }

@@ -28,6 +28,6 @@ class Section extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.field.section');
+        return view('tailwind-layout::components.form.section');
     }
 }
