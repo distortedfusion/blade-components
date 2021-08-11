@@ -15,6 +15,10 @@ return [
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
 
+        // Form...
+        'form.section' => Components\Form\Section::class,
+        'form.sections' => Components\Form\Sections::class,
+
         // Layout...
         'layout.section' => Components\Layout\Section::class,
         'layout.section-group' => Components\Layout\SectionGroup::class,
