@@ -9,7 +9,8 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/support": "^7.0|^8.0"
+        "illuminate/support": "^7.0|^8.0",
+        "protonemedia/laravel-form-components": "^2.5"
     },
     "autoload": {
         "psr-4": {
