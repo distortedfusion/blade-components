@@ -20,8 +20,9 @@ return [
         'form.section' => Components\Form\Section::class,
         'form.sections' => Components\Form\Sections::class,
 
-        // Buttons...
-        'form-button' => Components\Buttons\FormButton::class,
+        // Form components...
+        'form-button' => Components\Form\Button::class,
+        'form-toggle' => Components\Form\Toggle::class,
 
         // Layout...
         'layout.section' => Components\Layout\Section::class,

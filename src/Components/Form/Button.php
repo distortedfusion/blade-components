@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Buttons;
+namespace DistortedFusion\Tailwind\Components\Form;
 
 use Illuminate\View\Component;
 
-class FormButton extends Component
+class Button extends Component
 {
     /**
      * The form action.
@@ -48,6 +48,6 @@ class FormButton extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.buttons.form-button');
+        return view('tailwind-layout::components.form.button');
     }
 }
