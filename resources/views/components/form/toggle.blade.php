@@ -1,6 +1,6 @@
 <div {!! $attributes->merge(['class' => 'flex flex-col']) !!}>
     <div class="flex items-center">
-        <label class="toggle flex-shrink-0">
+        <label class="form-toggle flex-shrink-0">
             <input id="{{ $name }}"
                 type="checkbox"
                 value="{{ $value }}"

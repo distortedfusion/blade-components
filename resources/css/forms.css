@@ -1,0 +1,92 @@
+/* Generic input styling */
+.form-label {
+    @apply font-bold text-sm select-none;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+    @apply block w-full bg-transparent border-gray-300 shadow-sm rounded-md;
+
+    @apply text-sm;
+}
+
+/* Placeholder styling */
+.form-input::placeholder,
+.form-textarea::placeholder,
+.form-select::placeholder,
+.form-multiselect::placeholder {
+    @apply text-muted;
+}
+
+/* Checkbox and radio styling */
+.form-checkbox,
+.form-radio {
+    @apply text-brand-500 border-gray-300;
+}
+
+/* Focus styling for all elements */
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect,
+.form-checkbox,
+.form-radio {
+    @apply ring-0 ring-brand-500 ring-opacity-0;
+
+    transition: box-shadow .2s ease-in-out;
+
+    &:focus {
+        @apply border-brand-500 ring ring-brand-500 ring-opacity-50;
+    }
+
+    &:disabled, &[readonly] {
+        @apply bg-gray-100 border-gray-300;
+
+        &:focus {
+            @apply ring ring-gray-300 ring-opacity-50;
+        }
+    }
+}
+
+/* Floating label */
+.floating-label {
+    @apply block relative;
+
+    .form-label.floating {
+        @apply absolute pl-3 pr-3 left-0 opacity-0 cursor-pointer;
+        top: calc(50% - theme('padding.2'));
+        transition: all .2s ease-in-out;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select,
+    .form-multiselect {
+        @apply h-12 py-3;
+
+        /* Additional padding animation */
+        transition: box-shadow .2s ease-in-out, padding .2s ease-in-out;
+    }
+
+    .form-textarea {
+        @apply h-auto;
+    }
+}
+
+.floating-label .form-input:not(:placeholder-shown),
+.floating-label .form-textarea:not(:placeholder-shown),
+.floating-label .form-select:not(:placeholder-shown),
+.floating-label .form-multiselect:not(:placeholder-shown) {
+    /* Shift 2 spacing to the top, similar to the offset of the floating label. */
+    @apply pt-5 pb-1;
+}
+
+.floating-label .form-input:not(:placeholder-shown) + .form-label.floating,
+.floating-label .form-textarea:not(:placeholder-shown) + .form-label.floating,
+.floating-label .form-select:not(:placeholder-shown) + .form-label.floating,
+.floating-label .form-multiselect:not(:placeholder-shown) + .form-label.floating {
+    @apply opacity-75;
+    transform: translateY(-10px);
+}
