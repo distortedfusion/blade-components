@@ -2,8 +2,10 @@
 
 namespace DistortedFusion\Tailwind;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
+use ProtoneMedia\LaravelFormComponents\Components\Component as FormComponent;
 
 class LayoutServiceProvider extends ServiceProvider
 {
@@ -31,6 +33,7 @@ class LayoutServiceProvider extends ServiceProvider
         $this->bootResources();
         $this->bootBladeComponents();
         $this->bootPublishing();
+        $this->bootFormComponentsOverload();
     }
 
     private function bootResources(): void
@@ -51,12 +54,23 @@ class LayoutServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                TL_PATH.'/config/tailwind-layout.php' => config_path('tailwind-layout.php')
+                TL_PATH.'/config/tailwind-layout.php' => config_path('tailwind-layout.php'),
             ], 'tailwind-layout-config');
 
             $this->publishes([
                 TL_PATH.'/resources/views' => resource_path('views/vendor/tailwind-layout'),
             ], 'tailwind-layout-views');
         }
+    }
+
+    private function bootFormComponentsOverload(): void
+    {
+        $this->callAfterResolving(FormComponent::class, function () {
+            foreach (config('tailwind-layout.form-components', []) as $alias => $config) {
+                $defaultConfig = config('form-components.components.'.$alias);
+
+                Config::set('form-components.components.'.$alias, array_merge($defaultConfig, $config));
+            }
+        });
     }
 }
