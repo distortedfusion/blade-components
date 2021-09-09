@@ -1,13 +1,13 @@
-<div {{ $attributes->merge(['class' => sprintf('alert alert-%s flex items-center text-sm px-2 py-1 rounded-full', $type)]) }} role="alert">
-    <div class="flex-shrink-0">
+<div {{ $attributes->merge(['class' => sprintf('alert alert-%s flex items-start p-2 rounded', $type)]) }} role="alert">
+    <div class="flex-shrink-0 leading-normal text-base">
         <i class="alert-icon fad fa-fw {{ $icon }}"></i>
     </div>
 
-    <div class="ml-3">
+    <div class="ml-2">
         @if (! is_null($title))
-            <span class="alert-title font-semibold">
+            <div class="alert-title font-semibold">
                 {{ $title }}
-            </span>
+            </div>
         @endif
 
         {{ $slot }}
