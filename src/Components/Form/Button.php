@@ -2,9 +2,10 @@
 
 namespace DistortedFusion\Tailwind\Components\Form;
 
+use DistortedFusion\Tailwind\Contracts\ButtonContract;
 use Illuminate\View\Component;
 
-class Button extends Component
+class Button extends Component implements ButtonContract
 {
     /**
      * The form action.
@@ -21,23 +22,23 @@ class Button extends Component
     public string $method;
 
     /**
-     * The button type.
+     * The button style.
      *
      * @var string
      */
-    public string $type;
+    public string $style;
 
     /**
      * Create the component instance.
      *
      * @param string $action
-     * @param string $type
+     * @param string $style
      * @param string $method
      */
-    public function __construct(string $action, string $type = 'default', string $method = 'POST')
+    public function __construct(string $action, string $style = 'default', string $method = 'POST')
     {
         $this->action = $action;
-        $this->type = $type;
+        $this->style = $style;
         $this->method = strtoupper($method);
     }
 
@@ -49,5 +50,19 @@ class Button extends Component
     public function render()
     {
         return view('tailwind-layout::components.form.button');
+    }
+
+    /**
+     * Get the button class for the style.
+     *
+     * @return string
+     */
+    public function buttonClass(): string
+    {
+        if (! is_null($this->style) && array_key_exists($this->style, self::STYLES)) {
+            return self::STYLES[$this->style];
+        }
+
+        return self::STYLES[self::DEFAULT_STYLE];
     }
 }
