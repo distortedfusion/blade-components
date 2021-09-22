@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class Actions extends Component implements ButtonContract
 {
-    public string $cancel;
+    public ?string $cancel;
     public bool $redirectPrevious;
     public ?string $cancelTitle;
     public ?string $submitTitle;
@@ -17,13 +17,13 @@ class Actions extends Component implements ButtonContract
     /**
      * Create a new component instance.
      *
-     * @param string      $cancel
+     * @param string|null $cancel
      * @param bool        $redirectPrevious
      * @param string|null $cancelTitle
      * @param string|null $submitTitle
      * @param string      $style
      */
-    public function __construct(string $cancel, bool $redirectPrevious = false, string $cancelTitle = null, string $submitTitle = null, string $style = 'primary')
+    public function __construct(string $cancel = null, bool $redirectPrevious = false, string $cancelTitle = null, string $submitTitle = null, string $style = 'primary')
     {
         $this->cancel = $cancel;
         $this->redirectPrevious = $redirectPrevious;
