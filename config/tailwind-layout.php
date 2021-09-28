@@ -15,6 +15,10 @@ return [
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
 
+        'bootstrap.modal' => Components\Bootstrap\Modal::class,
+        'bootstrap.modal-confirmation' => Components\Bootstrap\ModalConfirmation::class,
+        'bootstrap.modal-dialog' => Components\Bootstrap\ModalDialog::class,
+
         // Form...
         'form.actions' => Components\Form\Actions::class,
         'form.section' => Components\Form\Section::class,
