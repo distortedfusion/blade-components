@@ -18,6 +18,14 @@
     }
 }
 
+a.list-group-item {
+    @apply text-current;
+
+    &:hover {
+        @apply no-underline bg-gray-100;
+    }
+}
+
 @screen sm {
     .list-group-item {
         @apply px-6;
