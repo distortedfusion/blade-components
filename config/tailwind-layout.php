@@ -32,6 +32,7 @@ return [
         'layout.section' => Components\Layout\Section::class,
         'layout.section-group' => Components\Layout\SectionGroup::class,
         'layout.description' => Components\Layout\Description::class,
+        'layout.empty-state' => Components\Layout\EmptyState::class,
 
         // Layout containers...
         'container' => Components\Layout\Containers\Container::class,
