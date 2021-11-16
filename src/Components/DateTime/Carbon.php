@@ -10,7 +10,7 @@ use Illuminate\View\Component;
 
 class Carbon extends Component
 {
-    protected static string $defaultFormat = 'M j, Y \&\m\d\a\s\h\; H:i:s';
+    protected static string $defaultFormat = 'M j, Y \&\m\d\a\s\h\; H:i';
 
     public CarbonInterface $date;
 
