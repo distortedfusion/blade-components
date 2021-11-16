@@ -28,6 +28,7 @@ return [
 
         // Form components...
         'form-button' => Components\Form\Button::class,
+        'form-help' => Components\Form\Help::class,
         'form-toggle' => Components\Form\Toggle::class,
 
         // Layout...
