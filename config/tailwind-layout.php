@@ -6,6 +6,8 @@ return [
     'components' => [
         'alert' => Components\Alerts\Alert::class,
 
+        'carbon' => Components\DateTime\Carbon::class,
+
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
         'field.title' => Components\Field\Title::class,
