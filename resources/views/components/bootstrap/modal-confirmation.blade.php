@@ -4,8 +4,8 @@
     'footer',
 ])
 
-<x-bootstrap.modal :id="$id" :size="$size" {{ $attributes->merge(['data-backdrop' => 'static']) }}>
-    <div {{ $content->attributes->class(['modal-body', 'text-muted', 'text-center']) }}>
+<x-bootstrap.modal :id="$id" :size="$size" {{ $attributes->merge(['data-backdrop' => 'static', 'data-keyboard' => 'false']) }}>
+    <div {{ $content->attributes->class(['modal-body', 'text-center']) }}>
         <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full my-4 sm:my-6 {{ $iconContainerClass() }}">
             <i class="fas text-base fa-fw {{ $icon }}"></i>
         </div>
