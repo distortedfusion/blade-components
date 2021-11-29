@@ -9,17 +9,20 @@ class Section extends Component
 {
     public string $title;
     public ?string $description = null;
+    public bool $vertical;
 
     /**
      * Create a new component instance.
      *
      * @param string $title
-     * @param string $description
+     * @param string|null $description
+     * @param bool $vertical
      */
-    public function __construct(string $title, string $description = null)
+    public function __construct(string $title, string $description = null, bool $vertical = false)
     {
         $this->title = $title;
         $this->description = $description;
+        $this->vertical = $vertical;
     }
 
     /**
