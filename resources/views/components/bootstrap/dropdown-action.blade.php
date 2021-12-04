@@ -1,16 +1,19 @@
 @if (! is_null($action) && $show)
-    <form method="POST" action="{{ $action }}">
-        @csrf
-        @method($method)
-
-        @foreach ($inputs as $key => $value)
-            <input type="hidden" name="{{ $key }}" value="{{ $value }}">
-        @endforeach
-
-        <button type="submit" {{ $attributes->merge(array_merge($actionAttributes, ['class' => 'dropdown-item text-left'])) }}>
+    @if ($method === 'GET')
+        <a href="{{ $action }}" class="dropdown-item">
             {{ $slot }}
-        </button>
-    </form>
+        </a>
+    @else
+        <x-form :action="$action" :method="$method">
+            @foreach ($inputs as $key => $value)
+                <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+            @endforeach
+
+            <button type="submit" {{ $attributes->merge(['class' => 'dropdown-item text-left']) }}>
+                {{ $slot }}
+            </button>
+        </x-form>
+    @endif
 @endif
 
 @if (is_null($action) && $show)

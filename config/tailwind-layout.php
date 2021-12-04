@@ -13,9 +13,10 @@ return [
         'field.title' => Components\Field\Title::class,
 
         // Bootstrap...
-        'bootstrap.dropdown' => Components\Bootstrap\Dropdown::class,
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
+        'bootstrap.dropdown-icon' => Components\Bootstrap\DropdownIcon::class,
+        'bootstrap.dropdown' => Components\Bootstrap\Dropdown::class,
 
         'bootstrap.modal' => Components\Bootstrap\Modal::class,
         'bootstrap.modal-confirmation' => Components\Bootstrap\ModalConfirmation::class,
