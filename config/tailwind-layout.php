@@ -21,6 +21,9 @@ return [
         'bootstrap.modal-confirmation' => Components\Bootstrap\ModalConfirmation::class,
         'bootstrap.modal-dialog' => Components\Bootstrap\ModalDialog::class,
 
+        // Card...
+        'card.title' => Components\Card\Title::class,
+
         // Form...
         'form.actions' => Components\Form\Actions::class,
         'form.section' => Components\Form\Section::class,

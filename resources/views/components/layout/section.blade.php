@@ -5,7 +5,7 @@
 
     <div class="grid grid-cols-1 gap-8{{ ! $vertical ? ' sm:grid-cols-3' : null}}">
         @if ($description)
-            <div class="col-span-1">
+            <div class="col-span-1 space-y-6">
                 {{ $description }}
             </div>
         @endif
