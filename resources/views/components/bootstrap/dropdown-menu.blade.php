@@ -1,5 +1,5 @@
 @foreach ($actions as $action)
-    <x-bootstrap.dropdown-action :action="$action['link'] ?? null" :inputs="$action['data'] ?? []" :actionAttributes="$action['attributes'] ?? []" :method="$action['method'] ?? 'GET'" :show="$action['show'] ?? true">
+    <x-bootstrap.dropdown-action :action="$action['link'] ?? null" :inputs="$action['data'] ?? []" :method="$action['method'] ?? 'GET'" :show="$action['show'] ?? true">
         @if (isset($action['icon']))
             <div class="flex flex-shrink-0 items-center justify-center w-6 mr-4 text-muted">
                 <x-bootstrap.dropdown-icon :icon="$action['icon']" />
