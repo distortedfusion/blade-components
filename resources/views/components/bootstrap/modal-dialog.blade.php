@@ -13,7 +13,7 @@
         </button>
     </div>
 
-    <div {{ $content->attributes->class(['modal-body', 'text-muted']) }}>
+    <div {{ $content->attributes->class(['modal-body']) }}>
         {{ $content }}
     </div>
 
