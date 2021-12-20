@@ -16,6 +16,7 @@ return [
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
         'bootstrap.dropdown-icon' => Components\Bootstrap\DropdownIcon::class,
+        'bootstrap.dropdown-separator' => 'tailwind-layout::components.bootstrap.dropdown-separator',
         'bootstrap.dropdown' => Components\Bootstrap\Dropdown::class,
 
         'bootstrap.modal' => Components\Bootstrap\Modal::class,

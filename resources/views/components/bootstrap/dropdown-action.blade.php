@@ -17,5 +17,5 @@
 @endif
 
 @if (is_null($action) && $show)
-    <hr class="my-2">
+    <x-bootstrap.dropdown-separator />
 @endif
