@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <div {{ $attributes->merge(['class' => 'grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6']) }}>
+    <div {{ $attributes->merge(['class' => 'grid grid-cols-1 gap-y-2 gap-x-4 sm:grid-cols-6']) }}>
         {{ $slot }}
     </div>
 </section>
