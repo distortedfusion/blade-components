@@ -13,6 +13,11 @@
     @apply text-sm;
 }
 
+/* Adds the floating label styling */
+.StripeElement {
+    @apply h-12 py-3 cursor-text;
+}
+
 /* Placeholder styling */
 .form-input::placeholder,
 .form-textarea::placeholder,
