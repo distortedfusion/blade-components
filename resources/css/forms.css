@@ -6,7 +6,8 @@
 .form-input,
 .form-textarea,
 .form-select,
-.form-multiselect {
+.form-multiselect,
+.StripeElement {
     @apply block w-full bg-transparent border-gray-300 shadow-sm rounded-md;
 
     @apply text-sm;
@@ -26,13 +27,14 @@
     @apply text-brand-500 border-gray-300;
 }
 
-/* Focus styling for all elements */
+/* Focus/Disabled styling for all elements */
 .form-input,
 .form-textarea,
 .form-select,
 .form-multiselect,
 .form-checkbox,
-.form-radio {
+.form-radio,
+.StripeElement {
     @apply ring-0 ring-brand-500 ring-opacity-0;
 
     transition: box-shadow .2s ease-in-out;
@@ -48,6 +50,11 @@
             @apply ring ring-gray-300 ring-opacity-50;
         }
     }
+}
+
+/* The stripe element uses a dedicated class for focus styles */
+.StripeElement--focus {
+    @apply border-brand-500 ring ring-brand-500 ring-opacity-50;
 }
 
 /* Floating label */
