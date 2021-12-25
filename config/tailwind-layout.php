@@ -10,7 +10,7 @@ return [
 
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
-        'field.title' => Components\Field\Title::class,
+        'field.title' => 'tailwind-layout::components.field.title',
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
