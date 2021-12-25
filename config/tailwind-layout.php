@@ -10,6 +10,7 @@ return [
 
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
+        'field.currency' => Components\Field\Currency::class,
         'field.title' => 'tailwind-layout::components.field.title',
 
         // Bootstrap...
