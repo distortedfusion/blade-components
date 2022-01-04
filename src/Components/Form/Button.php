@@ -2,11 +2,13 @@
 
 namespace DistortedFusion\Tailwind\Components\Form;
 
-use DistortedFusion\Tailwind\Contracts\ButtonContract;
+use DistortedFusion\Tailwind\Concerns\ButtonStyling;
 use Illuminate\View\Component;
 
-class Button extends Component implements ButtonContract
+class Button extends Component
 {
+    use ButtonStyling;
+
     /**
      * The form action.
      *
@@ -50,19 +52,5 @@ class Button extends Component implements ButtonContract
     public function render()
     {
         return view('tailwind-layout::components.form.button');
-    }
-
-    /**
-     * Get the button class for the style.
-     *
-     * @return string
-     */
-    public function buttonClass(): string
-    {
-        if (! is_null($this->style) && array_key_exists($this->style, self::STYLES)) {
-            return self::STYLES[$this->style];
-        }
-
-        return self::STYLES[self::DEFAULT_STYLE];
     }
 }

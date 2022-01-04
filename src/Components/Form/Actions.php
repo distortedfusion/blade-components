@@ -2,12 +2,14 @@
 
 namespace DistortedFusion\Tailwind\Components\Form;
 
-use DistortedFusion\Tailwind\Contracts\ButtonContract;
+use DistortedFusion\Tailwind\Concerns\ButtonStyling;
 use Illuminate\Support\Facades\URL;
 use Illuminate\View\Component;
 
-class Actions extends Component implements ButtonContract
+class Actions extends Component
 {
+    use ButtonStyling;
+
     public ?string $cancel;
     public bool $redirectPrevious;
     public ?string $cancelTitle;
@@ -67,10 +69,6 @@ class Actions extends Component implements ButtonContract
      */
     public function submitButtonClass(): string
     {
-        if (! is_null($this->style) && array_key_exists($this->style, self::STYLES)) {
-            return self::STYLES[$this->style];
-        }
-
-        return self::STYLES[self::DEFAULT_STYLE];
+        return $this->buttonClass($this->style);
     }
 }
