@@ -1,7 +1,0 @@
-.section-group section + section {
-    @apply mt-8 pt-8;
-}
-
-.form-section + .form-section {
-    @apply pt-8;
-}

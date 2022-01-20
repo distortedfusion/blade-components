@@ -1,3 +1,7 @@
+.form-sections > :not([hidden]) ~ :not([hidden]) {
+    @apply pt-8;
+}
+
 /* Generic input styling */
 .form-label {
     @apply font-bold text-sm select-none;
@@ -8,7 +12,7 @@
 .form-select,
 .form-multiselect,
 .StripeElement {
-    @apply block w-full bg-transparent border-gray-300 shadow-sm rounded-md;
+    @apply block w-full bg-white border-gray-300 shadow-sm rounded-md;
 
     @apply text-sm;
 }
