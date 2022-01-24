@@ -9,7 +9,7 @@
             </div>
 
             @if ($action ?? false)
-                <div class="flex-shrink-0 ml-2">{{ $action }}</div>
+                <div {{ $action->attributes->class(['flex-shrink-0 ml-2 space-x-2']) }}>{{ $action }}</div>
             @endif
         </div>
     @endif
