@@ -34,6 +34,7 @@ return [
 
         // Form components...
         'form-button' => Components\Form\Button::class,
+        'form-file' => Components\Form\File::class,
         'form-help' => Components\Form\Help::class,
         'form-toggle' => Components\Form\Toggle::class,
 
@@ -66,7 +67,7 @@ return [
     | package. These views are loaded during boot by overriding their respective
     | default config value.
     |
-    | This behaviour can be disabled by removing entries from the array below.
+    | This behavior can be disabled by removing entries from the array below.
     |
     | More information: https://github.com/protonemedia/laravel-form-components
     |
