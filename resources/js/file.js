@@ -20,8 +20,6 @@ class File {
         const $placeholderInput = $(this._container).find('input[name="'+this._config.file+'_placeholder"]');
         const $fileInput = $(this._container).find('input#'+this._config.file+'_file');
 
-        console.log($placeholderInput, $fileInput);
-
         // Update the placeholder input when the file input changes...
         $fileInput.on('change', () => $placeholderInput.val(($fileInput.val()).split('\\').pop()));
 
