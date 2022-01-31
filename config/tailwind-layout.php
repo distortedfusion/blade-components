@@ -30,7 +30,7 @@ return [
         // Form...
         'form.actions' => Components\Form\Actions::class,
         'form.section' => Components\Form\Section::class,
-        'form.sections' => Components\Form\Sections::class,
+        'form.sections' => 'tailwind-layout::components.layout.section-group',
 
         // Form components...
         'form-button' => Components\Form\Button::class,
@@ -40,7 +40,7 @@ return [
 
         // Layout...
         'layout.section' => Components\Layout\Section::class,
-        'layout.section-group' => Components\Layout\SectionGroup::class,
+        'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
 

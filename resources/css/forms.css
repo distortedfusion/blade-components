@@ -1,7 +1,3 @@
-.form-sections > :not([hidden]) ~ :not([hidden]) {
-    @apply pt-8;
-}
-
 /* Generic input styling */
 .form-label {
     @apply font-bold text-sm select-none;
