@@ -11,7 +11,7 @@ return [
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
         'field.currency' => Components\Field\Currency::class,
-        'field.title' => 'tailwind-layout::components.field.title',
+        'field.title' => Components\Field\Title::class,
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
