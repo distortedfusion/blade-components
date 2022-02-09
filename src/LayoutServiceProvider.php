@@ -2,6 +2,7 @@
 
 namespace DistortedFusion\Tailwind;
 
+use DistortedFusion\Tailwind\Console\PublishCommand;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
@@ -16,11 +17,11 @@ class LayoutServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        if (! defined('TL_PATH')) {
-            define('TL_PATH', realpath(__DIR__.'/../'));
+        if (! defined('DF_LTL_PATH')) {
+            define('DF_LTL_PATH', realpath(__DIR__.'/../'));
         }
 
-        $this->mergeConfigFrom(__DIR__.'/../config/tailwind-layout.php', 'tailwind-layout');
+        $this->mergeConfigFrom(DF_LTL_PATH.'/config/tailwind-layout.php', 'tailwind-layout');
     }
 
     /**
@@ -30,18 +31,43 @@ class LayoutServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->bootResources();
-        $this->bootBladeComponents();
-        $this->bootPublishing();
-        $this->bootFormComponentsOverload();
+        $this->registerResources();
+        $this->defineAssetPublishing();
+        $this->offerPublishing();
+
+        $this->configureBladeComponents();
+        $this->configureFormComponentsOverload();
+        $this->configureCommands();
     }
 
-    private function bootResources(): void
+    private function registerResources(): void
     {
-        $this->loadViewsFrom(TL_PATH.'/resources/views', 'tailwind-layout');
+        $this->loadViewsFrom(DF_LTL_PATH.'/resources/views', 'tailwind-layout');
     }
 
-    private function bootBladeComponents(): void
+    private function defineAssetPublishing(): void
+    {
+        $this->publishes([
+            DF_LTL_PATH.'/public' => public_path('/vendor/distortedfusion/laravel-tailwind-layout'),
+            DF_LTL_PATH.'/resources/css' => $this->app->resourcePath('/css/vendor/distortedfusion/laravel-tailwind-layout'),
+            DF_LTL_PATH.'/resources/js' => $this->app->resourcePath('/js/vendor/distortedfusion/laravel-tailwind-layout'),
+        ], 'df-assets');
+    }
+
+    private function offerPublishing(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                DF_LTL_PATH.'/config/tailwind-layout.php' => config_path('tailwind-layout.php'),
+            ], 'tailwind-layout-config');
+
+            $this->publishes([
+                DF_LTL_PATH.'/resources/views' => resource_path('views/vendor/tailwind-layout'),
+            ], 'tailwind-layout-views');
+        }
+    }
+
+    private function configureBladeComponents(): void
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
             foreach (config('tailwind-layout.components', []) as $alias => $component) {
@@ -50,20 +76,7 @@ class LayoutServiceProvider extends ServiceProvider
         });
     }
 
-    private function bootPublishing(): void
-    {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                TL_PATH.'/config/tailwind-layout.php' => config_path('tailwind-layout.php'),
-            ], 'tailwind-layout-config');
-
-            $this->publishes([
-                TL_PATH.'/resources/views' => resource_path('views/vendor/tailwind-layout'),
-            ], 'tailwind-layout-views');
-        }
-    }
-
-    private function bootFormComponentsOverload(): void
+    private function configureFormComponentsOverload(): void
     {
         $this->callAfterResolving(FormComponent::class, function () {
             foreach (config('tailwind-layout.form-components', []) as $alias => $config) {
@@ -72,5 +85,14 @@ class LayoutServiceProvider extends ServiceProvider
                 Config::set('form-components.components.'.$alias, array_merge($defaultConfig, $config));
             }
         });
+    }
+
+    private function configureCommands(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                PublishCommand::class,
+            ]);
+        }
     }
 }
