@@ -42,6 +42,7 @@ return [
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.page-action' => Components\Layout\PageAction::class,
+        'layout.photo' => Components\Layout\Photo::class,
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section' => Components\Layout\Section::class,
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
