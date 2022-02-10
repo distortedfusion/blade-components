@@ -41,9 +41,11 @@ return [
         // Layout...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
+        'layout.page-action' => Components\Layout\PageAction::class,
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section' => Components\Layout\Section::class,
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
+        'layout.title-bar' => Components\Layout\TitleBar::class,
 
         // Layout containers...
         'container' => Components\Layout\Containers\Container::class,
