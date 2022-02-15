@@ -41,6 +41,8 @@ return [
         // Layout...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
+        'layout.icon-muted' => Components\Layout\IconMuted::class,
+        'layout.icon' => Components\Layout\Icon::class,
         'layout.page-action' => Components\Layout\PageAction::class,
         'layout.photo' => Components\Layout\Photo::class,
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
