@@ -5,13 +5,11 @@ use DistortedFusion\Tailwind\Components;
 return [
     'components' => [
         'alert' => Components\Alerts\Alert::class,
-
         'carbon' => Components\DateTime\Carbon::class,
 
-        // Fields...
-        'field.boolean' => Components\Field\Boolean::class,
-        'field.currency' => Components\Field\Currency::class,
-        'field.title' => Components\Field\Title::class,
+        // Auth...
+        'auth.card' => 'tailwind-layout::components.auth.card',
+        'auth.session-status' => 'tailwind-layout::components.auth.session-status',
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
@@ -27,6 +25,14 @@ return [
         // Card...
         'card.title' => Components\Card\Title::class,
 
+        // Errors...
+        'errors.card' => 'tailwind-layout::components.errors.card',
+
+        // Fields...
+        'field.boolean' => Components\Field\Boolean::class,
+        'field.currency' => Components\Field\Currency::class,
+        'field.title' => Components\Field\Title::class,
+
         // Form...
         'form.actions' => Components\Form\Actions::class,
         'form.section' => Components\Form\Section::class,
@@ -38,7 +44,14 @@ return [
         'form-help' => Components\Form\Help::class,
         'form-toggle' => Components\Form\Toggle::class,
 
-        // Layout...
+        // Layouts...
+        'layouts.app-base' => Components\Layouts\AppBase::class,
+        'layouts.app' => Components\Layouts\App::class,
+        'layouts.auth' => Components\Layouts\Auth::class,
+        'layouts.errors' => Components\Layouts\Errors::class,
+        'layouts.guest' => Components\Layouts\Guest::class,
+
+        // Layout components...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon-muted' => Components\Layout\IconMuted::class,
@@ -47,6 +60,8 @@ return [
         'layout.photo' => Components\Layout\Photo::class,
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section' => Components\Layout\Section::class,
+        'layout.footer' => 'tailwind-layout::components.layout.footer',
+        'layout.sidebar' => 'tailwind-layout::components.layout.sidebar',
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 

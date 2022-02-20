@@ -52,6 +52,10 @@ class LayoutServiceProvider extends ServiceProvider
             DF_LTL_PATH.'/resources/css' => $this->app->resourcePath('/css/vendor/distortedfusion/laravel-tailwind-layout'),
             DF_LTL_PATH.'/resources/js' => $this->app->resourcePath('/js/vendor/distortedfusion/laravel-tailwind-layout'),
         ], 'df-assets');
+
+        $this->publishes([
+            DF_LTL_PATH.'/resources/views/errors' => $this->app->resourcePath('views/errors/'),
+        ], ['df-errors', 'df-assets']);
     }
 
     private function offerPublishing(): void
