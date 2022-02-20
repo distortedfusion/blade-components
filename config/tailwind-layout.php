@@ -61,6 +61,7 @@ return [
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section' => Components\Layout\Section::class,
         'layout.footer' => 'tailwind-layout::components.layout.footer',
+        'layout.sidebar-toggle' => 'tailwind-layout::components.layout.sidebar-toggle',
         'layout.sidebar' => 'tailwind-layout::components.layout.sidebar',
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
         'layout.title-bar' => Components\Layout\TitleBar::class,
