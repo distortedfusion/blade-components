@@ -66,8 +66,8 @@ return [
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
         // Layout containers...
-        'container' => Components\Layout\Containers\Container::class,
-        'container-narrow' => Components\Layout\Containers\ContainerNarrow::class,
+        'container' => 'tailwind-layout::components.layout.containers.container',
+        'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
 
         // Table components...
         'table.cell' => Components\Tables\Cell::class,
