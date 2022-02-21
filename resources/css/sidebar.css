@@ -1,6 +1,6 @@
 #sidebar {
-    /* Sidebar width + negative margin offset of dismiss button */
-    left: -17rem;
+    /* Sidebar width (16) + dismiss button width (1) + some extra to hide the dismiss button focus style (1) */
+    left: -18rem;
     transition: left ease-in-out .5s;
 }
 
