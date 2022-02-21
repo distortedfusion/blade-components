@@ -1,6 +1,9 @@
 <div class="flex flex-col">
     <label class="flex items-center">
-        <input {!! $attributes->merge(['class' => 'form-checkbox']) !!}
+        <input {{ $attributes->class([
+                'form-checkbox',
+                'text-brand-500 border-gray-300',
+            ]) }}
             type="checkbox"
             value="{{ $value }}"
 

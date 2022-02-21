@@ -9,7 +9,11 @@
                 name="{{ $name }}"
             @endif
 
-            {!! $attributes->merge(['class' => 'form-textarea']) !!}
+            {{ $attributes->class([
+                'form-textarea',
+                'text-black bg-white border-gray-300 shadow-sm rounded-md',
+                'dark:text-white dark:bg-gray-900 dark:border-gray-800 dark:shadow-none',
+            ]) }}
         >@unless($isWired()){!! $value !!}@endunless</textarea>
     </label>
 

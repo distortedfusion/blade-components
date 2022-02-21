@@ -8,14 +8,13 @@
 .form-select,
 .form-multiselect,
 .StripeElement {
-    @apply block w-full bg-white border-gray-300 shadow-sm rounded-md;
-
-    @apply text-sm;
+    @apply block w-full text-sm;
 }
 
 /* Adds the floating label styling */
 .StripeElement {
     @apply h-12 py-3 cursor-text;
+    @apply text-black bg-white border-gray-300 shadow-sm rounded-md;
 }
 
 /* Placeholder styling */
@@ -24,12 +23,6 @@
 .form-select::placeholder,
 .form-multiselect::placeholder {
     @apply text-muted;
-}
-
-/* Checkbox and radio styling */
-.form-checkbox,
-.form-radio {
-    @apply text-brand-500 border-gray-300;
 }
 
 /* Focus/Disabled styling for all elements */
@@ -99,6 +92,6 @@
 .floating-label .form-textarea:not(:placeholder-shown) + .form-label.floating,
 .floating-label .form-select:not(:placeholder-shown) + .form-label.floating,
 .floating-label .form-multiselect:not(:placeholder-shown) + .form-label.floating {
-    @apply opacity-75;
+    @apply opacity-100;
     transform: translateY(-10px);
 }

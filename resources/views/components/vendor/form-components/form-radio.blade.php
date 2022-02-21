@@ -1,6 +1,9 @@
 <div>
     <label class="inline-flex items-center">
-        <input {!! $attributes->merge(['class' => 'form-radio']) !!}
+        <input {{ $attributes->class([
+                'form-checkbox',
+                'text-brand-500 border-gray-300',
+            ]) }}
             type="radio"
 
             @if($isWired())

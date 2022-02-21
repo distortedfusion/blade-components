@@ -11,9 +11,11 @@
                 multiple
             @endif
 
-            {!! $attributes->merge([
-                'class' => 'form-select',
-            ]) !!}>
+            {{ $attributes->class([
+                'form-select',
+                'text-black bg-white border-gray-300 shadow-sm rounded-md',
+                'dark:text-white dark:bg-gray-900 dark:border-gray-800 dark:shadow-none',
+            ]) }}>
             @forelse($options as $key => $option)
                 <option value="{{ $key }}" @if($isSelected($key)) selected="selected" @endif>
                     {{ $option }}
