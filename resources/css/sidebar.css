@@ -1,0 +1,30 @@
+#sidebar {
+    /* Sidebar width + negative margin offset of dismiss button */
+    left: -17rem;
+    transition: left ease-in-out .5s;
+}
+
+#sidebar.show {
+    left: 0;
+}
+
+#sidebarBackdrop {
+    @apply w-screen h-screen z-modal-backdrop fixed top-0 left-0;
+
+    background-color: rgba(255,255,255,0.05);
+    backdrop-filter: saturate(180%) blur(5px);
+}
+
+#sidebarBackdrop:not(.show) {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    #sidebar {
+        @apply left-0;
+    }
+
+    #sidebarBackdrop {
+        @apply hidden;
+    }
+}
