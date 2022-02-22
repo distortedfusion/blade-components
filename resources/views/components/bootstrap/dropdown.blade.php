@@ -7,11 +7,15 @@
         {{ $toggle }}
     @endif
 
-    <div class="dropdown-menu dropdown-menu-{{ $placement }}">
-        @if (! ($menu ?? false))
+    @if(! ($menu ?? false))
+        <div class="dropdown-menu dropdown-menu-{{ $placement }}">
             @include('tailwind-layout::components.bootstrap.dropdown-menu')
-        @else
+        </div>
+    @else
+        <div {{ $menu->attributes->class([
+            'dropdown-menu dropdown-menu-'.$placement
+        ]) }}>
             {{ $menu }}
-        @endif
-    </div>
+        </div>
+    @endif
 </div>
