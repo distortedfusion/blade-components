@@ -1,7 +1,7 @@
 <div>
     <label class="inline-flex items-center">
         <input {{ $attributes->class([
-                'form-checkbox',
+                'form-radio',
                 'text-brand-500 border-gray-300',
             ]) }}
             type="radio"
