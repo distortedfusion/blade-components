@@ -4,9 +4,9 @@ namespace DistortedFusion\Tailwind\Components\Form;
 
 use DistortedFusion\Tailwind\Concerns\ButtonStyling;
 use Illuminate\Support\Facades\URL;
-use Illuminate\View\Component;
+use ProtoneMedia\LaravelFormComponents\Components\Component as FormComponent;
 
-class Actions extends Component
+class Actions extends FormComponent
 {
     use ButtonStyling;
 
