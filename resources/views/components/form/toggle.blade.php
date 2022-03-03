@@ -14,6 +14,10 @@
                 @if($checked)
                     checked="checked"
                 @endif
+
+                @if($disabled)
+                    disabled
+                @endif
             />
             <span class="slider round"></span>
         </label>
