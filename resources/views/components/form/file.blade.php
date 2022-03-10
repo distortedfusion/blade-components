@@ -11,9 +11,12 @@
 
     <div class="flex items-start rounded-md shadow-sm">
         <label class="flex-grow floating-label">
-            <input {!! $attributes->merge([
-                'class' => 'form-input cursor-pointer rounded-r-none shadow-none',
-                'placeholder' => $label ?: $name,
+            <input {!! $attributes
+                ->merge(['placeholder' => $label ?: $name])
+                ->class([
+                    'form-input cursor-pointer',
+                    'text-black bg-white border-gray-300 rounded-md rounded-r-none',
+                    'dark:text-white dark:bg-gray-900 dark:border-gray-800',
                 ]) !!}
                 name="{{ $name.'_placeholder' }}"
                 type="text" />
