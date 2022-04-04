@@ -11,7 +11,7 @@ class Alert extends Component
      *
      * @var array
      */
-    const DEFAULT_ICONS = [
+    public const DEFAULT_ICONS = [
         'success' => 'fa-check-circle',
         'info' => 'fa-info-circle',
         'warning' => 'fa-exclamation-circle',

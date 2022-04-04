@@ -4,8 +4,8 @@ namespace DistortedFusion\Tailwind\Components\Bootstrap;
 
 class ModalConfirmation extends Modal
 {
-    const DEFAULT_STYLE = 'default';
-    const STYLES = [
+    public const DEFAULT_STYLE = 'default';
+    public const STYLES = [
         'default' => 'bg-gray-100 text-gray-600',
         'success' => 'bg-green-100 text-green-600',
         'info' => 'bg-blue-100 text-blue-600',
@@ -18,7 +18,7 @@ class ModalConfirmation extends Modal
      *
      * @var array
      */
-    const DEFAULT_ICONS = [
+    public const DEFAULT_ICONS = [
         'default' => 'fa-info',
         'success' => 'fa-check',
         'info' => 'fa-info',

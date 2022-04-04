@@ -15,6 +15,10 @@ class File extends Component
     /**
      * Create a new component instance.
      *
+     * @param string $name
+     * @param string $label
+     * @param bool   $showErrors
+     *
      * @return void
      */
     public function __construct(

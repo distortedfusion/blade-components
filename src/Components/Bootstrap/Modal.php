@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class Modal extends Component
 {
-    const SIZES = [
+    public const SIZES = [
         'sm' => 'modal-sm',
         'lg' => 'modal-lg',
         'xl' => 'modal-xl',
