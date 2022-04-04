@@ -1,6 +1,6 @@
 # Laravel TailwindCSS Layout
 
-This is a collection of reusable Blade components implementing TailwindCSS.
+A collection of reusable Blade components implementing TailwindCSS.
 
 ## Installation
 

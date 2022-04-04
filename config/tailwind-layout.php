@@ -45,13 +45,6 @@ return [
         'form-select.description' => 'tailwind-layout::components.form.select-description',
         'form-toggle' => Components\Form\Toggle::class,
 
-        // Layouts...
-        'layouts.app-base' => Components\Layouts\AppBase::class,
-        'layouts.app' => Components\Layouts\App::class,
-        'layouts.auth' => Components\Layouts\Auth::class,
-        'layouts.errors' => Components\Layouts\Errors::class,
-        'layouts.guest' => Components\Layouts\Guest::class,
-
         // Layout components...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,

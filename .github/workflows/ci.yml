@@ -1,0 +1,38 @@
+name: CI-CD
+
+on: [push, pull_request]
+
+jobs:
+  php-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [7.4, 8.0, 8.1]
+        stability: [prefer-stable]
+        experimental: [false]
+
+    continue-on-error: ${{ matrix.experimental }}
+
+    name: PHP ${{ matrix.php }} (${{ matrix.stability }})
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          extensions: mbstring, bcmath
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install dependencies
+        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
+
+      - name: Execute PHPCS
+        run: composer phpcs
