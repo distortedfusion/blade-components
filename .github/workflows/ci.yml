@@ -28,11 +28,22 @@ jobs:
           coverage: none
           extensions: mbstring, bcmath
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
 
       - name: Install dependencies
-        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
+        run: |
+          composer validate
+          composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
 
       - name: Execute PHPCS
         run: composer phpcs

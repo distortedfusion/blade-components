@@ -25,9 +25,6 @@ return [
         // Card...
         'card.title' => Components\Card\Title::class,
 
-        // Errors...
-        'errors.card' => 'tailwind-layout::components.errors.card',
-
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
         'field.currency' => Components\Field\Currency::class,
