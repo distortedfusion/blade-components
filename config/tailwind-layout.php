@@ -6,6 +6,7 @@ return [
     'components' => [
         'alert' => Components\Alerts\Alert::class,
         'carbon' => Components\DateTime\Carbon::class,
+        'pre' => 'tailwind-layout::components.pre.index',
 
         // Auth...
         'auth.card' => 'tailwind-layout::components.auth.card',
