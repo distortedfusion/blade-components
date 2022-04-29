@@ -45,7 +45,15 @@ class Icon extends Component
     {
         $attributesClass = Arr::get($this->attributes, 'class');
 
-        $class = 'inline-flex items-center justify-center w-10 h-10 rounded';
+        $class = 'inline-flex items-center justify-center rounded';
+
+        if (! Str::contains($attributesClass, 'w-')) {
+            $class .= ' w-10';
+        }
+
+        if (! Str::contains($attributesClass, 'h-')) {
+            $class .= ' h-10';
+        }
 
         if (! Str::contains($attributesClass, 'text-')) {
             $class .= ' text-brand-100';
