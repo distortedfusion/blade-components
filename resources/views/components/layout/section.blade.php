@@ -9,14 +9,14 @@
         @endif
     </div>
 
-    <div class="grid grid-cols-1 gap-8{{ ! $vertical ? ' sm:grid-cols-3' : null}}">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         @if ($description)
-            <div class="col-span-1 space-y-6">
+            <div class="sm:col-span-1 space-y-6">
                 {{ $description }}
             </div>
         @endif
 
-        <div class="{{ ! $vertical ? ($description ? 'col-span-2' : 'col-span-3') : 'col-span-1' }}">
+        <div class="col-span-1 {{ ! $vertical ? ($description ? 'sm:col-span-2' : 'sm:col-span-3') : 'sm:col-span-3' }}">
             {{ $slot }}
         </div>
     </div>
