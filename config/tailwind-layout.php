@@ -40,7 +40,7 @@ return [
         'form-button' => Components\Form\Button::class,
         'form-file' => Components\Form\File::class,
         'form-help' => Components\Form\Help::class,
-        'form-select.description' => 'tailwind-layout::components.form.select-description',
+        'form-select.description' => Components\Form\SelectDescription::class,
         'form-toggle' => Components\Form\Toggle::class,
 
         // Layout components...

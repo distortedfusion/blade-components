@@ -1,3 +1,7 @@
 <option disabled aria-hidden="true">
-    {!! sprintf('&rdsh; %s', trim($slot)) !!}
+    @if($after)
+        {!! sprintf('%s %s', trim($slot), $entity) !!}
+    @else
+        {!! sprintf('%s %s', $entity, trim($slot)) !!}
+    @endif
 </option>
