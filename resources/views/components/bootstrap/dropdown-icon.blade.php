@@ -1,4 +1,1 @@
-<i {{ $attributes->class([
-    'fad' => ! Str::contains($attributes->get('class'), ['fab', 'fad', 'far', 'fas']),
-    'fa-fw '.$icon,
-]) }}></i>
+<x-dynamic-component :component="$icon" class="dropdown-icon" />
