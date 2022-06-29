@@ -12,10 +12,10 @@ class Alert extends Component
      * @var array
      */
     public const DEFAULT_ICONS = [
-        'success' => 'fa-check-circle',
-        'info' => 'fa-info-circle',
-        'warning' => 'fa-exclamation-circle',
-        'danger' => 'fa-exclamation-circle',
+        'success' => 'fad-circle-check',
+        'info' => 'fad-circle-info',
+        'warning' => 'fad-triangle-exclamation',
+        'danger' => 'fad-hexagon-exclamation',
     ];
 
     /**
@@ -48,9 +48,9 @@ class Alert extends Component
      */
     public function __construct(string $title = null, string $type = 'default', string $icon = null)
     {
+        $this->title = $title;
         $this->type = $type;
         $this->icon = $icon ?: $this->defaultIconForType($type);
-        $this->title = $title;
     }
 
     /**
@@ -76,6 +76,6 @@ class Alert extends Component
             return self::DEFAULT_ICONS[$type];
         }
 
-        return 'fa-exclamation-triangle';
+        return 'fad-circle-info';
     }
 }

@@ -10,8 +10,8 @@
 ```
 
 ```php
-<x-alert type="success" title="Action required" message="Lorem, ipsum dolor sit amet consectetur adipisicing elit."/>
-<x-alert type="info" title="Action required" message="Lorem, ipsum dolor sit amet consectetur adipisicing elit."/>
-<x-alert type="warning" title="Action required" message="Lorem, ipsum dolor sit amet consectetur adipisicing elit."/>
-<x-alert type="danger" title="Action required" message="Lorem, ipsum dolor sit amet consectetur adipisicing elit."/>
+<x-alert type="success" title="Action required">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</x-alert>
+<x-alert type="info" title="Action required">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</x-alert>
+<x-alert type="warning" title="Action required">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</x-alert>
+<x-alert type="danger" title="Action required">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</x-alert>
 ```

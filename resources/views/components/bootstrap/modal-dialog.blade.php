@@ -9,7 +9,7 @@
         <h5 class="modal-title">{{ $title }}</h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <i class="far fa-times" aria-hidden="true"></i>
+            <x-fas-xmark aria-hidden="true" />
         </button>
     </div>
 

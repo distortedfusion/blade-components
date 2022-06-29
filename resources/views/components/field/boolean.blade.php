@@ -1,5 +1,5 @@
 @if ($state)
-    <i class="far fa-fw fa-check-circle text-success"></i>
+    <x-fad-circle-check class="text-success" />
 @else
-    <i class="far fa-fw fa-times-circle text-danger"></i>
+    <x-fad-circle-xmark class="text-danger" />
 @endif

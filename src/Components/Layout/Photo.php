@@ -15,7 +15,7 @@ class Photo extends Component
      * @param string|null $url
      * @param string      $icon
      */
-    public function __construct(string $url = null, string $icon = 'fa-user')
+    public function __construct(string $url = null, string $icon = 'fad-user')
     {
         $this->url = $url;
         $this->icon = $icon;

@@ -10,17 +10,20 @@ class TitleBar extends Component
 {
     public ?string $title;
     public ?string $actions;
+    public ?string $previousUrl;
 
     /**
      * Create a new component instance.
      *
      * @param string|null $title
      * @param string|null $actions
+     * @param string|null $previousUrl
      */
-    public function __construct(string $title = null, string $actions = null)
+    public function __construct(string $title = null, string $actions = null, string $previousUrl = null)
     {
         $this->title = $title;
         $this->actions = $actions;
+        $this->previousUrl = $previousUrl;
     }
 
     /**
@@ -40,8 +43,12 @@ class TitleBar extends Component
      *
      * @return string|null
      */
-    public function previousUrl(): ?string
+    public function getPreviousUrl(): ?string
     {
+        if (! is_null($this->previousUrl)) {
+            return $this->previousUrl;
+        }
+
         if (! ($currentRouteName = Route::currentRouteName())) {
             return null;
         }

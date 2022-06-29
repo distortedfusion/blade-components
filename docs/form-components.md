@@ -20,7 +20,7 @@ Additionally we ship some extra components, one of which is the `form-toggle`. T
 ```blade
 <x-form-toggle name="toggle.enabled" :label="__('On/Off')">
     <x-slot name="description">
-        <i class="fad fa-fw fa-cog"></i> {{ __('Toggle description') }}
+        {{ __('Toggle description') }}
     </x-slot>
 </x-form-toggle>
 ```

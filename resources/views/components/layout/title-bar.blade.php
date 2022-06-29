@@ -2,10 +2,10 @@
     <x-dynamic-component :component="Str::contains(Route::currentRouteName(), ['create', 'edit']) ? 'container-narrow' : 'container'">
         <div class="border-b border-gray-100 py-6">
             <div class="flex items-center">
-                @if($url = $previousUrl())
+                @if($url = $getPreviousUrl())
                     <div class="flex-1 mr-4">
                         <a href="{{ $url }}" class="group btn btn-primary btn-secondary btn-sm text-base px-2">
-                            <i class="fas fa-fw fa-chevron-left text-muted group-hover:text-brand-600"></i>
+                            <x-fas-chevron-left class="text-muted group-hover:text-brand-600" />
                         </a>
                     </div>
                 @endif

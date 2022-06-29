@@ -9,20 +9,15 @@ use Illuminate\View\Component;
 class Icon extends Component
 {
     public string $icon;
-    public string $type;
 
     /**
      * Create a new component instance.
      *
      * @param string $icon
-     * @param string $type
-     *
-     * @return void
      */
-    public function __construct(string $icon, string $type = 'fad')
+    public function __construct(string $icon)
     {
         $this->icon = $icon;
-        $this->type = $type;
     }
 
     /**

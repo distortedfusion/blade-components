@@ -1,3 +1,3 @@
 <p class="text-muted mt-2 text-sm">
-    <i class="fad fa-fw fa-info-circle"></i> {{ $slot }}
+    <x-fad-circle-info class="inline-block mr-2" /><span>{{ $slot }}</span>
 </p>

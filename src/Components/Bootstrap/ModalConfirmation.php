@@ -19,11 +19,11 @@ class ModalConfirmation extends Modal
      * @var array
      */
     public const DEFAULT_ICONS = [
-        'default' => 'fa-info',
-        'success' => 'fa-check',
-        'info' => 'fa-info',
-        'warning' => 'fa-exclamation',
-        'danger' => 'fa-exclamation',
+        'default' => 'fas-info',
+        'success' => 'fas-check',
+        'info' => 'fas-info',
+        'warning' => 'fas-exclamation',
+        'danger' => 'fas-exclamation',
     ];
 
     public ?string $style;

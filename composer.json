@@ -10,8 +10,10 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0|^8.1",
+        "php": "^8.0|^8.1",
         "illuminate/support": "^7.0|^8.0|^9.0",
+        "distortedfusion/fontawesome-pro-icons-duotone": "^6.1",
+        "distortedfusion/fontawesome-pro-icons-solid": "^6.1",
         "protonemedia/laravel-form-components": "^3.5"
     },
     "require-dev": {

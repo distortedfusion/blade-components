@@ -9,7 +9,7 @@
 ]) }}>
     <div class="absolute inset-0">
         <div class="flex items-center justify-center absolute inset-0">
-            <i class="fad {{ $icon }}"></i>
+            <x-dynamic-component :component="$icon" />
         </div>
 
         @if($url)
