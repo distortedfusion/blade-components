@@ -62,6 +62,11 @@ return [
         'container' => 'tailwind-layout::components.layout.containers.container',
         'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
 
+        // List group...
+        'list-group' => Components\ListGroup\Index::class,
+        'list-group.item' => Components\ListGroup\Item::class,
+        'list-group.item-link' => Components\ListGroup\ItemLink::class,
+
         // Table components...
         'table.cell' => Components\Tables\Cell::class,
         'table.header-group' => Components\Tables\HeaderGroup::class,
