@@ -18,7 +18,7 @@ jobs:
     name: PHP ${{ matrix.php }} (${{ matrix.stability }})
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
       - name: Setup PHP
@@ -32,7 +32,7 @@ jobs:
         id: composer-cache
         run: |
           echo "::set-output name=dir::$(composer config cache-files-dir)"
-      - name: Cache Composer dependencies
+      - name: Cache Composer Dependencies
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
@@ -40,10 +40,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: Install dependencies
+      - name: Composer Configuration
+        run: composer config http-basic.distortedfusion.muse.staging.distortedfusion.com token ${{ secrets.MUSE_TOKEN }}
+
+      - name: Composer Install
         run: |
           composer validate
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
 
-      - name: Execute PHPCS
+      - name: PHPCS
         run: composer phpcs
