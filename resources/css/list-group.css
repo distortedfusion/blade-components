@@ -1,10 +1,4 @@
-.list-group {
-    @apply flex flex-col;
-}
-
 .list-group-item {
-    @apply block relative border px-4 py-4;
-
     &:first-child {
         @apply rounded-t;
     }
@@ -15,19 +9,5 @@
 
     & + & {
         @apply border-t-0
-    }
-}
-
-a.list-group-item {
-    @apply text-current;
-
-    &:hover {
-        @apply no-underline bg-gray-100;
-    }
-}
-
-@screen sm {
-    .list-group-item {
-        @apply px-6;
     }
 }

@@ -1,3 +1,5 @@
-<div class="table-row-group">
+<div {{ $attributes->class([
+    'table-row-group',
+]) }}>
     {{ $slot }}
 </div>

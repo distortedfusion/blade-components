@@ -1,4 +1,7 @@
-<div {{ $attributes->merge(['class' => 'text-center my-6']) }}>
+<div {{ $attributes->class([
+    'text-center',
+    'my-4' => ! Str::contains($attributes->get('class'), ['my-', 'mt-', 'mb-']),
+]) }}>
     <h3>{{ $title }}</h3>
 
     <p class="text-muted text-sm mt-1">
