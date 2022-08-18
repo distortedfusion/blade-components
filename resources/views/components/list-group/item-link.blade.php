@@ -10,7 +10,9 @@
         <div class="flex-grow flex items-baseline">
             @if(! is_null($title))
                 <div class="w-1/3 flex-shrink-0">
-                    <h3 class="text-xs text-muted font-semibold">{!! $title !!}</h3>
+                    <h3 {{ $title->attributes->class([
+                        'text-xs text-muted font-semibold',
+                    ]) }}>{!! $title !!}</h3>
                 </div>
             @endif
             <div class="flex-grow">{!! $slot ?: '&mdash;' !!}</div>
