@@ -11,10 +11,11 @@ class ItemLink extends Item
      *
      * @param string      $url
      * @param string|null $title
+     * @param string      $align
      */
-    public function __construct(string $url, string $title = null)
+    public function __construct(string $url, string $title = null, string $align = 'left')
     {
-        parent::__construct($title);
+        parent::__construct($title, $align);
 
         $this->url = $url;
     }

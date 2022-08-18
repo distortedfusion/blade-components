@@ -15,7 +15,7 @@
                     ]) }}>{!! $title !!}</h3>
                 </div>
             @endif
-            <div class="flex-grow">{!! $slot ?: '&mdash;' !!}</div>
+            <div class="flex-grow text-{{ $align }}">{!! $slot ?: '&mdash;' !!}</div>
         </div>
 
         <div class="flex-no-shrink">
