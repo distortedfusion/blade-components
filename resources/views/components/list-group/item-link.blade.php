@@ -9,7 +9,7 @@
     <div class="flex items-center">
         <div class="flex-grow flex items-baseline">
             @if(! is_null($title))
-                <div class="w-1/3 flex-shrink-0">
+                <div class="flex-shrink-0{{ $align !== 'right' ? ' w-1/3' : null}}">
                     <h3 {{ $title->attributes->class([
                         'text-xs text-muted font-semibold',
                     ]) }}>{!! $title !!}</h3>

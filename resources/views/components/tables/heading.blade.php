@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'table-cell align-middle border-t border-b relative text-xs font-semibold',
+    'table-cell align-middle border-t border-b relative font-semibold',
     'uppercase' => ! Str::contains($attributes->get('class'), ['uppercase', 'lowercase', 'normal-case', 'capitalize']),
     'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
