@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'flex flex-col',
+    'list-group flex flex-col',
 ]) }}>
     {{ $slot }}
 </div>
