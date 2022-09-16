@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', () => {
     $('#sidebarDismiss, #sidebarBackdrop').on('click', function () {
         $('#sidebar').removeClass('show');
         $('#sidebarBackdrop').removeClass('show');
