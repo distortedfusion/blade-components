@@ -8,6 +8,13 @@ use Illuminate\View\Component;
 
 class TitleBar extends Component
 {
+    /**
+     * The routes with a potential previous route.
+     *
+     * @var array
+     */
+    protected static array $routesWithPrevious = ['create', 'edit'];
+
     public ?string $title;
     public ?string $actions;
     public ?string $previousUrl;
@@ -53,12 +60,35 @@ class TitleBar extends Component
             return null;
         }
 
-        if (! Str::contains($currentRouteName, ['create', 'edit'])) {
+        if (! Str::contains($currentRouteName, static::$routesWithPrevious)) {
             return null;
         }
 
-        $expectedRoute = Str::replace(['create', 'edit'], 'index', $currentRouteName);
+        $expectedPrevious = Str::contains($currentRouteName, 'create') ? 'index' : 'show';
+        $expectedRoute = Str::replace(static::$routesWithPrevious, $expectedPrevious, $currentRouteName);
 
         return Route::has($expectedRoute) ? route($expectedRoute) : null;
+    }
+
+    /**
+     * Get the routes with a potential previous route.
+     *
+     * @return array
+     */
+    public static function getRoutesWithPrevious(): array
+    {
+        return static::$routesWithPrevious;
+    }
+
+    /**
+     * Set the routes with a potential previous route.
+     *
+     * @param array $routes
+     *
+     * @return void
+     */
+    public static function setRoutesWithPrevious(array $routes): void
+    {
+        static::$routesWithPrevious = $routes;
     }
 }
