@@ -1,4 +1,4 @@
-<a href="{{ $url }}" {{ $attributes->class([
+<button type="{{ $type }}" {{ $attributes->class([
     'group list-group-item block relative border',
     'text-current hover:no-underline',
     'hover:bg-gray-100' => ! Str::contains($attributes->get('class'), 'hover:bg-'),
@@ -16,4 +16,4 @@
             @include('tailwind-layout::components.list-group.partials.icon')
         </div>
     </div>
-</a>
+</button>

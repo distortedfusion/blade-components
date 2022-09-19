@@ -65,6 +65,7 @@ return [
         // List group...
         'list-group' => Components\ListGroup\Index::class,
         'list-group.item' => Components\ListGroup\Item::class,
+        'list-group.item-button' => Components\ListGroup\ItemButton::class,
         'list-group.item-link' => Components\ListGroup\ItemLink::class,
 
         // Table components...

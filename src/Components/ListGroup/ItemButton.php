@@ -2,25 +2,25 @@
 
 namespace DistortedFusion\Tailwind\Components\ListGroup;
 
-class ItemLink extends Item
+class ItemButton extends Item
 {
-    public string $url;
+    public string $type;
     public ?string $icon;
 
     /**
      * Create a new component instance.
      *
-     * @param string      $url
      * @param string|null $title
      * @param string      $align
      * @param string|null $icon
+     * @param string      $type
      */
-    public function __construct(string $url, string $title = null, string $align = 'left', string $icon = null)
+    public function __construct(string $title = null, string $align = 'left', string $icon = null, string $type = 'button')
     {
         parent::__construct($title, $align);
 
-        $this->url = $url;
         $this->icon = $icon;
+        $this->type = $type;
     }
 
     /**
@@ -30,6 +30,6 @@ class ItemLink extends Item
      */
     public function render()
     {
-        return view('tailwind-layout::components.list-group.item-link');
+        return view('tailwind-layout::components.list-group.item-button');
     }
 }
