@@ -67,7 +67,11 @@ class TitleBar extends Component
         $expectedPrevious = Str::contains($currentRouteName, 'create') ? 'index' : 'show';
         $expectedRoute = Str::replace(static::$routesWithPrevious, $expectedPrevious, $currentRouteName);
 
-        return Route::has($expectedRoute) ? route($expectedRoute) : null;
+        if (! Route::has($expectedRoute)) {
+            return null;
+        }
+
+        return route($expectedRoute, Route::current()->parameters());
     }
 
     /**
