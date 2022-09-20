@@ -8,10 +8,6 @@ return [
         'carbon' => Components\DateTime\Carbon::class,
         'pre' => 'tailwind-layout::components.pre.index',
 
-        // Auth...
-        'auth.card' => 'tailwind-layout::components.auth.card',
-        'auth.session-status' => 'tailwind-layout::components.auth.session-status',
-
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
