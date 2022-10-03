@@ -6,6 +6,6 @@
 ]) }}>
     <div class="flex items-baseline">
         @include('tailwind-layout::components.list-group.partials.title')
-        <div class="flex-grow text-{{ $align }}">{!! $slot ?: '&mdash;' !!}</div>
+        <div class="flex-grow text-{{ $align }}">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
     </div>
 </div>

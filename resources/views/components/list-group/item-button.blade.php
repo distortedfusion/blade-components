@@ -9,7 +9,7 @@
     <div class="flex items-center space-x-2">
         <div class="flex-grow flex items-baseline">
             @include('tailwind-layout::components.list-group.partials.title')
-            <div class="flex-grow text-{{ $align }}">{!! $slot ?: '&mdash;' !!}</div>
+            <div class="flex-grow text-{{ $align }}">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         <div class="flex-no-shrink">
