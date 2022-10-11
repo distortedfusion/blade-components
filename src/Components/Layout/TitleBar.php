@@ -15,6 +15,13 @@ class TitleBar extends Component
      */
     protected static array $routesWithPrevious = ['create', 'edit'];
 
+    /**
+     * The routes using a narrow layout.
+     *
+     * @var array
+     */
+    protected static array $routesWithNarrowLayout = ['create', 'edit'];
+
     public ?string $title;
     public ?string $actions;
     public ?string $previousUrl;
@@ -56,22 +63,47 @@ class TitleBar extends Component
             return $this->previousUrl;
         }
 
-        if (! ($currentRouteName = Route::currentRouteName())) {
+        if (! $this->currentRouteApplicableForPrevious()) {
             return null;
         }
 
-        if (! Str::contains($currentRouteName, static::$routesWithPrevious)) {
+        $current = Route::currentRouteName();
+        $expected = Str::contains($current, 'create') ? 'index' : 'show';
+        $route = Str::replace(static::$routesWithPrevious, $expected, $current);
+
+        if (! Route::has($route)) {
             return null;
         }
 
-        $expectedPrevious = Str::contains($currentRouteName, 'create') ? 'index' : 'show';
-        $expectedRoute = Str::replace(static::$routesWithPrevious, $expectedPrevious, $currentRouteName);
+        return route($route, Route::current()->parameters());
+    }
 
-        if (! Route::has($expectedRoute)) {
-            return null;
+    /**
+     * Determine if the current route is applicable for a previous url.
+     *
+     * @return bool
+     */
+    public function currentRouteApplicableForPrevious(): bool
+    {
+        if (! ($current = Route::currentRouteName())) {
+            return false;
         }
 
-        return route($expectedRoute, Route::current()->parameters());
+        return Str::contains($current, static::$routesWithPrevious);
+    }
+
+    /**
+     * Determine if the current route is applicable for a previous url.
+     *
+     * @return bool
+     */
+    public function currentRouteApplicableForNarrowLayout(): bool
+    {
+        if (! ($current = Route::currentRouteName())) {
+            return false;
+        }
+
+        return Str::contains($current, static::$routesWithNarrowLayout);
     }
 
     /**
@@ -94,5 +126,27 @@ class TitleBar extends Component
     public static function setRoutesWithPrevious(array $routes): void
     {
         static::$routesWithPrevious = $routes;
+    }
+
+    /**
+     * Get the routes using a narrow layout.
+     *
+     * @return array
+     */
+    public static function getRoutesWithNarrowLayout(): array
+    {
+        return static::$routesWithNarrowLayout;
+    }
+
+    /**
+     * Set the routes with a narrow layout.
+     *
+     * @param array $routes
+     *
+     * @return void
+     */
+    public static function setRoutesWithNarrowLayout(array $routes): void
+    {
+        static::$routesWithNarrowLayout = $routes;
     }
 }

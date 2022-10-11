@@ -1,5 +1,5 @@
 <header {{ $attributes }}>
-    <x-dynamic-component :component="Str::contains(Route::currentRouteName(), ['create', 'edit']) ? 'container-narrow' : 'container'">
+    <x-dynamic-component :component="$currentRouteApplicableForNarrowLayout() ? 'container-narrow' : 'container'">
         <div class="border-b border-gray-100 py-6">
             <div class="flex items-center">
                 @if($url = $getPreviousUrl())
