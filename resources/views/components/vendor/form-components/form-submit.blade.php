@@ -8,7 +8,7 @@
         @endif>
         @if($isWired())
             <div class="hidden" wire:loading.block>
-                <x-layout.spinner class="p-0" />
+                <x-loading.pulser />
             </div>
         @endif
         <div @if($isWired())wire:loading.class="hidden"@endif>

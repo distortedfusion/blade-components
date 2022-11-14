@@ -22,6 +22,10 @@ return [
         // Card...
         'card.title' => Components\Card\Title::class,
 
+        // Layout containers...
+        'container' => 'tailwind-layout::components.layout.containers.container',
+        'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
+
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
         'field.currency' => Components\Field\Currency::class,
@@ -54,9 +58,8 @@ return [
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
-        // Layout containers...
-        'container' => 'tailwind-layout::components.layout.containers.container',
-        'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
+        // Loading components...
+        'loading.pulser' => 'tailwind-layout::components.loading.pulser',
 
         // List group...
         'list-group' => Components\ListGroup\Index::class,
