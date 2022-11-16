@@ -1,8 +1,3 @@
-@props([
-    'prefix',
-    'suffix',
-])
-
 <div class="{{ $type === 'hidden' ? 'hidden' : null }}">
     <div class="w-full flex items-stretch relative">
         @if($prefix ?? false)
