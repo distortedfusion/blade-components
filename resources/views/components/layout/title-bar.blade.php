@@ -10,7 +10,7 @@
                     </div>
                 @endif
                 <div class="flex-grow leading-tight">
-                    <h2 class="font-semibold text-base leading-tight text-gray-800 py-2">{{ $title }}</h2>
+                    <h1 class="font-semibold text-base leading-tight text-gray-800 py-2">{{ $title }}</h1>
                 </div>
                 @if($actions ?? false)
                     <div class="flex items-center ml-4">
