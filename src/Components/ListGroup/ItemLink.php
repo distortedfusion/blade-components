@@ -2,19 +2,13 @@
 
 namespace DistortedFusion\Tailwind\Components\ListGroup;
 
+use Closure;
+
 class ItemLink extends Item
 {
     public string $url;
     public ?string $icon;
 
-    /**
-     * Create a new component instance.
-     *
-     * @param string      $url
-     * @param string|null $title
-     * @param string      $align
-     * @param string|null $icon
-     */
     public function __construct(string $url, string $title = null, string $align = 'left', string $icon = null)
     {
         parent::__construct($title, $align);
@@ -26,7 +20,7 @@ class ItemLink extends Item
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {

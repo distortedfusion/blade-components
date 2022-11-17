@@ -1,5 +1,5 @@
 @if ($state)
-    <x-fad-circle-check class="text-success" />
+    <x-fad-circle-check {{ $attributes->class(['text-success']) }} />
 @else
-    <x-fad-circle-xmark class="text-danger" />
+    <x-fad-circle-xmark {{ $attributes->class(['text-danger']) }} />
 @endif

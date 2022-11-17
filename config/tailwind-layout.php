@@ -5,6 +5,10 @@ use DistortedFusion\Tailwind\Components;
 return [
     'components' => [
         'alert' => Components\Alerts\Alert::class,
+
+        // Elements...
+        'badge' => Components\Elements\Badge::class,
+        'boolean-badge' => Components\Elements\BooleanBadge::class,
         'carbon' => Components\DateTime\Carbon::class,
         'pre' => 'tailwind-layout::components.pre.index',
 
@@ -20,7 +24,11 @@ return [
         'bootstrap.modal-dialog' => Components\Bootstrap\ModalDialog::class,
 
         // Card...
+        'card.body' => 'tailwind-layout::components.card.body',
+        'card.footer' => 'tailwind-layout::components.card.footer',
+        'card.header' => 'tailwind-layout::components.card.header',
         'card.title' => Components\Card\Title::class,
+        'card' => 'tailwind-layout::components.card.index',
 
         // Layout containers...
         'container' => 'tailwind-layout::components.layout.containers.container',
