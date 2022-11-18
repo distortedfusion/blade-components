@@ -4,7 +4,8 @@ use DistortedFusion\Tailwind\Components;
 
 return [
     'components' => [
-        'alert' => Components\Alerts\Alert::class,
+        'alert' => Components\Alert\Index::class,
+        'stats' => 'tailwind-layout::components.stats.index',
 
         // Elements...
         'badge' => Components\Elements\Badge::class,

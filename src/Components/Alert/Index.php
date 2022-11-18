@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Alerts;
+namespace DistortedFusion\Tailwind\Components\Alert;
 
 use Illuminate\View\Component;
 
-class Alert extends Component
+class Index extends Component
 {
     /**
      * Default alert icons.
@@ -60,7 +60,7 @@ class Alert extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.alerts.alert');
+        return view('tailwind-layout::components.alert.index');
     }
 
     /**
