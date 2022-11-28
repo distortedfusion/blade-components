@@ -1,3 +1,7 @@
+.sidebar-open {
+    overflow: hidden;
+}
+
 #sidebar {
     /* Sidebar width (16) + dismiss button width (1) + some extra to hide the dismiss button focus style (1) */
     left: -18rem;
@@ -9,8 +13,6 @@
 }
 
 #sidebarBackdrop {
-    @apply w-screen h-screen z-modal-backdrop fixed top-0 left-0;
-
     background-color: rgba(255,255,255,0.05);
     backdrop-filter: saturate(180%) blur(5px);
 }
