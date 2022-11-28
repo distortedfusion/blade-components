@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'list-group-item block relative border-t border-b',
+    'list-group-item block relative border-t border-b border-l border-r',
     'sm:px-6' => ! Str::contains($attributes->get('class'), ['sm:px-', 'sm:pl-', 'sm:pr-']),
     'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),

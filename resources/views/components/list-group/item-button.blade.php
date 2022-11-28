@@ -1,12 +1,11 @@
 <div {{ $attributes->class([
-    'list-group-item block relative border-t border-b',
-    'sm:px-6' => ! Str::contains($attributes->get('class'), ['sm:px-', 'sm:pl-', 'sm:pr-']),
-    'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
+    'list-group-item block relative border-t border-b border-l border-r',
+    'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
 ]) }}>
     <button type="{{ $type }}" class="{{
-        'group block rounded relative'
-        . ' -mx-4 px-4 -my-3 py-3'
+        'group block w-full rounded relative'
+        . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
         . ' hover:bg-gray-100'
     }}">
