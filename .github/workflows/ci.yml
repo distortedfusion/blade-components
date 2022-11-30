@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-composer-
 
       - name: Composer Configuration
-        run: composer config http-basic.distortedfusion.muse.staging.distortedfusion.com token ${{ secrets.MUSE_TOKEN }}
+        run: composer config http-basic.distortedfusion.muse.distortedfusion.com token ${{ secrets.MUSE_TOKEN }}
 
       - name: Composer Install
         run: |

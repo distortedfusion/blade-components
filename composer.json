@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://distortedfusion.muse.staging.distortedfusion.com"
+            "url": "https://distortedfusion.muse.distortedfusion.com"
         }
     ],
     "require": {
