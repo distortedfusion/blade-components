@@ -9,7 +9,10 @@
                         </a>
                     </div>
                 @endif
-                <div class="flex-grow leading-tight">
+                <div class="flex-grow flex items-center space-x-2">
+                    @if($icon)
+                        <x-layout.icon :icon="$icon" />
+                    @endif
                     <h1 class="font-semibold text-base leading-tight text-gray-800 py-2">{{ $title }}</h1>
                 </div>
                 @if($actions ?? false)

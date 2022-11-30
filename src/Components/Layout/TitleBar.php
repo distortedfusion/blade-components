@@ -2,6 +2,7 @@
 
 namespace DistortedFusion\Tailwind\Components\Layout;
 
+use Closure;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
@@ -25,6 +26,7 @@ class TitleBar extends Component
     public ?string $title;
     public ?string $actions;
     public ?string $previousUrl;
+    public ?string $icon;
 
     /**
      * Create a new component instance.
@@ -32,18 +34,20 @@ class TitleBar extends Component
      * @param string|null $title
      * @param string|null $actions
      * @param string|null $previousUrl
+     * @param string|null $icon
      */
-    public function __construct(string $title = null, string $actions = null, string $previousUrl = null)
+    public function __construct(string $title = null, string $actions = null, string $previousUrl = null, string $icon = null)
     {
         $this->title = $title;
         $this->actions = $actions;
         $this->previousUrl = $previousUrl;
+        $this->icon = $icon;
     }
 
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {
