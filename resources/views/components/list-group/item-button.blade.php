@@ -1,14 +1,16 @@
-<div {{ $attributes->class([
-    'list-group-item block relative border-t border-b border-l border-r',
-    'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
-    'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
-]) }}>
+<div {{ $attributes
+    ->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:'))
+    ->class([
+        'list-group-item block relative border-t border-b border-l border-r',
+        'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
+        'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
+    ]) }}>
     <button type="{{ $type }}" class="{{
         'group block w-full rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
         . ' hover:bg-gray-100'
-    }}">
+    }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
         <div class="flex items-baseline">
             @include('tailwind-layout::components.list-group.partials.title')
             <div class="flex-grow text-{{ $align }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
