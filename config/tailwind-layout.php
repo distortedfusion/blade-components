@@ -5,7 +5,7 @@ use DistortedFusion\Tailwind\Components;
 return [
     'components' => [
         'alert' => Components\Alert\Index::class,
-        'stats' => 'tailwind-layout::components.stats.index',
+        'stats.card' => Components\Stats\Card::class,
 
         // Elements...
         'badge' => Components\Elements\Badge::class,
