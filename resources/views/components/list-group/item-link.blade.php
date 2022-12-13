@@ -9,7 +9,7 @@
         . ' text-current hover:no-underline'
         . ' hover:bg-gray-100'
     }}">
-        <div class="flex items-baseline">
+        <div class="flex items-baseline space-x-2">
             @include('tailwind-layout::components.list-group.partials.title')
             <div class="flex-grow text-{{ $align }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
