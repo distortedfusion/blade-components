@@ -2,6 +2,7 @@
 
 namespace DistortedFusion\Tailwind\Components\Layout;
 
+use Closure;
 use Illuminate\View\Component;
 
 class IconMuted extends Icon
@@ -9,7 +10,7 @@ class IconMuted extends Icon
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {

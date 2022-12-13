@@ -2,6 +2,7 @@
 
 namespace DistortedFusion\Tailwind\Components\Bootstrap;
 
+use Closure;
 use Illuminate\View\Component;
 
 class Modal extends Component
@@ -30,7 +31,7 @@ class Modal extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {

@@ -2,6 +2,8 @@
 
 namespace DistortedFusion\Tailwind\Components\Bootstrap;
 
+use Closure;
+
 class ModalConfirmation extends Modal
 {
     public const DEFAULT_STYLE = 'default';
@@ -48,7 +50,7 @@ class ModalConfirmation extends Modal
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {

@@ -2,6 +2,7 @@
 
 namespace DistortedFusion\Tailwind\Components\Layout;
 
+use Closure;
 use Illuminate\View\Component;
 
 class PageAction extends Component
@@ -24,7 +25,7 @@ class PageAction extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {
