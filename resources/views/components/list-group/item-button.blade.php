@@ -1,12 +1,18 @@
-<div {{ $attributes
-    ->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:'))
-    ->class([
-        'list-group-item block relative border-t border-b border-l border-r',
-        'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
-        'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
-    ]) }}>
+<div {{ $attributes->filter(
+    fn ($value, $key) => ! Str::startsWith($key, 'wire:')
+)->class([
+    'list-group-item flex items-center relative border-t border-b border-l border-r',
+    'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
+    'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
+]) }}>
+    @if($prefix ?? false)
+        <div {{ $prefix->attributes->class(['relative pr-1 pl-2 sm:pl-4 mr-1 border-r']) }}>
+            {{ $prefix }}
+        </div>
+    @endif
+
     <button type="{{ $type }}" class="{{
-        'group block w-full rounded relative'
+        'flex-grow group block w-full rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
         . ' hover:bg-gray-100'
@@ -16,8 +22,14 @@
             <div class="flex-grow text-{{ $align }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
-        <div class="absolute inset-y-1/2 right-4 -mt-2">
+        <div class="absolute inset-y-1/2 right-2 -mt-2">
             <x-fas-angle-right class="text-muted opacity-50 group-hover:opacity-100" />
         </div>
     </button>
+
+    @if($suffix ?? false)
+        <div {{ $suffix->attributes->class(['relative pl-1 pr-2 sm:pr-4 ml-1 border-l']) }}>
+            {{ $suffix }}
+        </div>
+    @endif
 </div>
