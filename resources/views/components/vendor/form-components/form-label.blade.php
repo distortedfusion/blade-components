@@ -1,9 +1,9 @@
 @if ($label)
-    <span {{ $attributes->class([
-        'form-label',
+    <div {{ $attributes->class([
+        'form-label w-full truncate',
         'text-gray-600',
         'dark:text-gray-400',
     ]) }}>
         {!! $label !!}
-    </span>
+    </div>
 @endif
