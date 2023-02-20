@@ -9,11 +9,13 @@ class Item extends Component
 {
     public ?string $title;
     public string $align;
+    public bool $vertical;
 
-    public function __construct(string $title = null, string $align = 'left')
+    public function __construct(string $title = null, string $align = 'left', bool $vertical = false)
     {
         $this->title = $title;
         $this->align = $align;
+        $this->vertical = $vertical;
     }
 
     /**

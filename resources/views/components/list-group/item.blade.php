@@ -13,7 +13,7 @@
         'flex-grow group block w-full rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
     }}">
-        <div class="flex items-baseline space-x-2">
+        <div class="flex items-baseline {{ $vertical ? 'flex-col' : 'space-x-2' }}">
             @include('tailwind-layout::components.list-group.partials.title')
             <div class="flex-grow text-{{ $align }}">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
