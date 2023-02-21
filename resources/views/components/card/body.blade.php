@@ -1,5 +1,7 @@
 <div {{ $attributes->class([
-    'card-body px-4 py-5 sm:p-6',
+    'card-body',
+    'px-4 sm:px-6' => ! Str::contains($attributes->get('class'), ['px-', 'p-']),
+    'py-5 sm:py-6' => ! Str::contains($attributes->get('class'), ['py-', 'p-']),
 ]) }}>
     {{ $slot }}
 </div>
