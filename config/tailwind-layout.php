@@ -48,6 +48,7 @@ return [
         // Form components...
         'form-button' => Components\Form\Button::class,
         'form-file' => Components\Form\File::class,
+        'form-file-simple' => Components\Form\FileSimple::class,
         'form-help' => Components\Form\Help::class,
         'form-select.description' => Components\Form\SelectDescription::class,
         'form-toggle' => Components\Form\Toggle::class,
