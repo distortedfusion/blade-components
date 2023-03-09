@@ -1,5 +1,13 @@
 <div {{ $attributes->class([
-    'card-header rounded-t border-b px-4 sm:px-6 py-5',
+    'card-header flex items-center space-x-2 rounded-t',
+    'border-b' => ! Str::contains($attributes->get('class'), ['border-']),
+    'px-4 sm:px-6' => ! Str::contains($attributes->get('class'), ['px-']),
+    'py-5' => ! Str::contains($attributes->get('class'), ['py-']),
 ]) }}>
-    {{ $slot }}
+    <div class="flex-grow">{{ $slot }}</div>
+    @if($action ?? false)
+        <div class="flex-shrink-0">
+            {{ $action }}
+        </div>
+    @endif
 </div>
