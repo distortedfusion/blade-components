@@ -18,6 +18,13 @@
     }
 }
 
+/* TailwindCSS 3.x fix where the visibility helpers would overlap with the TWBS behaviour of collapse */
+.collapse {
+    &.show {
+        visibility: visible;
+    }
+}
+
 .collapsing {
     height: 0;
     overflow: hidden;
