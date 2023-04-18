@@ -22,9 +22,11 @@
             <div class="flex-grow text-{{ $align }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
-        <div class="absolute inset-y-1/2 right-2 -mt-2">
-            <x-fas-angle-right class="text-muted opacity-50 group-hover:opacity-100" />
-        </div>
+        @if(! is_null($icon))
+            <div class="absolute inset-y-1/2 right-2 -mt-2">
+                <x-dynamic-component :component="$icon" class="text-muted opacity-50 group-hover:opacity-100" />
+            </div>
+        @endif
     </button>
 
     @if($suffix ?? false)

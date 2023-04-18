@@ -9,7 +9,7 @@ class ItemLink extends Item
     public string $url;
     public ?string $icon;
 
-    public function __construct(string $url, string $title = null, string $align = 'left', string $icon = null)
+    public function __construct(string $url, string $title = null, string $align = 'left', ?string $icon = 'fas-angle-right')
     {
         parent::__construct($title, $align);
 
