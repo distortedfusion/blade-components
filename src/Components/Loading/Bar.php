@@ -8,20 +8,17 @@ class Bar extends Component
 {
     public $percentage;
     public $spinner;
-    public string $color;
 
     /**
      * Create a new component instance.
      *
-     * @param int    $percentage
-     * @param bool   $spinner
-     * @param string $color
+     * @param int  $percentage
+     * @param bool $spinner
      */
-    public function __construct(int $percentage, bool $spinner = false, string $color = 'brand-500')
+    public function __construct(int $percentage, bool $spinner = false)
     {
         $this->percentage = $percentage;
         $this->spinner = $spinner;
-        $this->color = $color;
     }
 
     /**
