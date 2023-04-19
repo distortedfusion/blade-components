@@ -1,6 +1,6 @@
 <section {{ $attributes->merge(['id' => $getSectionId()]) }}>
     <div class="flex items-center justify-between mb-8">
-        <h2 class="text-3xl">{{ $title }}</h2>
+        <x-layout.section-title>{{ $title }}</x-layout.section-title>
 
         @if ($action)
             <div class="flex items-center ml-4">
