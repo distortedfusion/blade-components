@@ -1,18 +1,18 @@
 <div {{ $attributes->class([
-    'flex items-center p-2 rounded',
-    'bg-green-50' => $type === 'success',
-    'bg-blue-50' => $type === 'info',
-    'bg-yellow-50' => $type === 'warning',
-    'bg-red-50' => $type === 'danger',
-    'bg-gray-50' => $type === 'default',
+    'flex items-center p-2 rounded border',
+    'bg-green-50 border-green-100' => $type === 'success',
+    'bg-blue-50 border-blue-100' => $type === 'info',
+    'bg-yellow-50 border-yellow-100' => $type === 'warning',
+    'bg-red-50 border-red-100' => $type === 'danger',
+    'bg-gray-50 border-gray-100' => $type === 'default',
 ]) }} role="alert">
     <div {{ (new \Illuminate\View\ComponentAttributeBag)->class([
         'h-full p-2 rounded flex-shrink-0 inline-block',
-        'bg-green-200 text-green-500' => $type === 'success',
-        'bg-blue-200 text-blue-500' => $type === 'info',
-        'bg-yellow-200 text-yellow-500' => $type === 'warning',
-        'bg-red-200 text-red-500' => $type === 'danger',
-        'bg-gray-200 text-gray-500' => $type === 'default',
+        'bg-green-100 text-green-600' => $type === 'success',
+        'bg-blue-100 text-blue-600' => $type === 'info',
+        'bg-yellow-100 text-yellow-600' => $type === 'warning',
+        'bg-red-100 text-red-600' => $type === 'danger',
+        'bg-gray-100 text-gray-600' => $type === 'default',
     ]) }}>
         <x-dynamic-component :component="$icon" />
     </div>
