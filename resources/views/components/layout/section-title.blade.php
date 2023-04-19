@@ -1,1 +1,1 @@
-<h{{ $headingLevel }} {{ $attributes }}>{{ $slot }}</h{{ $headingLevel }}>
+<h{{ $headingLevel }} {{ $attributes->class(['font-semibold']) }}>{{ $slot }}</h{{ $headingLevel }}>
