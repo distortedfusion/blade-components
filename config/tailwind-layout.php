@@ -71,6 +71,7 @@ return [
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
         // Loading components...
+        'loading.bar' => Components\Loading\Bar::class,
         'loading.pulser' => 'tailwind-layout::components.loading.pulser',
 
         // List group...
