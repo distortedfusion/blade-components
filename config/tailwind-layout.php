@@ -10,6 +10,7 @@ return [
         // Elements...
         'badge' => Components\Elements\Badge::class,
         'boolean-badge' => Components\Elements\BooleanBadge::class,
+        'btn' => Components\Btn\Index::class,
         'carbon' => Components\DateTime\Carbon::class,
         'pre' => 'tailwind-layout::components.pre.index',
 
