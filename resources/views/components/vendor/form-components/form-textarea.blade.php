@@ -11,7 +11,7 @@
 
             {{ $attributes->class([
                 'form-textarea',
-                'placeholder:font-semibold',
+                'placeholder:font-semibold dark:placeholder:text-gray-200',
                 'text-black dark:text-white' => ! Str::contains($attributes->get('class'), 'text-'),
                 'bg-white dark:bg-gray-900' => ! Str::contains($attributes->get('class'), 'bg-'),
                 'border-gray-300 dark:border-gray-700' => ! Str::contains($attributes->get('class'), 'border-'),
