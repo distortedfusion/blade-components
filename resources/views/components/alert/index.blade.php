@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'flex items-center p-2 rounded border',
+    'flex items-start px-2 py-1 rounded border space-x-2',
     'bg-green-50 border-green-100' => $type === 'success',
     'bg-blue-50 border-blue-100' => $type === 'info',
     'bg-yellow-50 border-yellow-100' => $type === 'warning',
@@ -7,22 +7,24 @@
     'bg-gray-50 border-gray-100' => $type === 'default',
 ]) }} role="alert">
     <div {{ (new \Illuminate\View\ComponentAttributeBag)->class([
-        'h-full p-2 rounded flex-shrink-0 inline-block',
+        'h-full my-1 p-2 rounded flex-shrink-0 inline-block',
         'bg-green-100 text-green-600' => $type === 'success',
         'bg-blue-100 text-blue-600' => $type === 'info',
         'bg-yellow-100 text-yellow-600' => $type === 'warning',
         'bg-red-100 text-red-600' => $type === 'danger',
         'bg-gray-100 text-gray-600' => $type === 'default',
     ]) }}>
-        <x-dynamic-component :component="$icon" />
+        <x-dynamic-component :component="$icon" class="w-4 h-4" />
     </div>
 
-    <div class="ml-2 inline-flex divide-x divide-current space-x-2">
+    <div class="text-sm leading-6">
         @if (! is_null($title))
-            <span class="font-semibold">{{ $title }}</span>
-            <span class="pl-2">{{ $slot }}</span>
+            <div class="flex items-center flex-wrap">
+                <div class="mt-2 font-semibold mr-2">{{ $title }}</div>
+                <div class="mt-2">{{ $slot }}</div>
+            </div>
         @else
-            <span>{{ $slot }}</span>
+            {{ $slot }}
         @endif
     </div>
 </div>
