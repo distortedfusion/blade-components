@@ -24,7 +24,7 @@
                 <div class="mt-2">{{ $slot }}</div>
             </div>
         @else
-            {{ $slot }}
+            <div class="mt-2">{{ $slot }}</div>
         @endif
     </div>
 </div>
