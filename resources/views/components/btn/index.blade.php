@@ -14,6 +14,12 @@ $class = [
     'focus:bg-white focus:border-gray-600 focus:text-gray-500' => $style === 'default',
     'active:bg-gray-100 active:border-gray-600 active:text-gray-800' => $style === 'default',
 
+    // Danger color...
+    'bg-red-400 border-red-400 text-white' => $style === 'danger',
+    'hover:bg-red-300 hover:border-red-300 hover:text-white' => $style === 'danger',
+    'focus:bg-red-300 focus:border-red-300 focus:text-white' => $style === 'danger',
+    'active:bg-red-500 active:border-red-500 active:text-white' => $style === 'danger',
+
     // Primary color...
     'bg-brand-400 border-brand-400 text-white' => $style === 'primary',
     'hover:bg-brand-300 hover:border-brand-300 hover:text-white' => $style === 'primary',
