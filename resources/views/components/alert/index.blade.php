@@ -1,5 +1,6 @@
 <div {{ $attributes->class([
-    'flex items-start px-2 py-1 rounded border space-x-2',
+    'flex items-start px-2 py-1 border space-x-2',
+    'rounded' => ! Str::contains($attributes->get('class'), ['rounded']),
     'bg-green-50 border-green-100' => $type === 'success',
     'bg-blue-50 border-blue-100' => $type === 'info',
     'bg-yellow-50 border-yellow-100' => $type === 'warning',
