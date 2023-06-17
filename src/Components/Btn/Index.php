@@ -12,7 +12,7 @@ class Index extends Component
     public string $style;
     public ?string $size;
 
-    public function __construct(string $href = null, string $type = 'button', string $style = 'primary', ?string $size = null)
+    public function __construct(string $href = null, string $type = 'button', string $style = 'primary', string $size = null)
     {
         $this->href = $href;
         $this->type = $type;

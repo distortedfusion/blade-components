@@ -12,7 +12,7 @@ class Card extends Component implements Htmlable
     protected ?string $id = null;
     protected ?array $chart = null;
     protected string|Htmlable $label;
-    protected $value = null;
+    protected $value;
 
     public function __construct(string $label)
     {
