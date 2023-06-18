@@ -48,7 +48,6 @@ return [
         'layout.icon-muted' => Components\Layout\IconMuted::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
-        'layout.page-action' => Components\Layout\PageAction::class,
         'layout.photo' => Components\Layout\Photo::class,
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section-title' => Components\Layout\SectionTitle::class,
