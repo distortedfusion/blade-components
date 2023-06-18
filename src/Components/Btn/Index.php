@@ -8,16 +8,20 @@ use Illuminate\View\Component;
 class Index extends Component
 {
     public ?string $href;
-    public string $type;
     public string $style;
     public ?string $size;
 
-    public function __construct(string $href = null, string $type = 'button', string $style = 'primary', string $size = null)
+    public string $type;
+    public bool $disabled;
+
+    public function __construct(string $href = null, string $style = 'primary', string $size = null, string $type = 'button', bool $disabled = false)
     {
         $this->href = $href;
-        $this->type = $type;
         $this->style = $style;
         $this->size = $size;
+
+        $this->type = $type;
+        $this->disabled = $disabled;
     }
 
     /**

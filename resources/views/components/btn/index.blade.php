@@ -14,21 +14,45 @@ $class = [
     'focus:bg-white focus:border-gray-600 focus:text-gray-500' => $style === 'default',
     'active:bg-gray-100 active:border-gray-600 active:text-gray-800' => $style === 'default',
 
+    // Primary color...
+    'bg-brand-400 border-brand-400 text-white' => $style === 'primary',
+    'hover:bg-brand-300 hover:border-brand-300 hover:text-white' => $style === 'primary',
+    'focus:bg-brand-300 focus:border-brand-300 focus:text-white' => $style === 'primary',
+    'active:bg-brand-500 active:border-brand-500 active:text-white' => $style === 'primary',
+
+    // Success color...
+    'bg-green-400 border-green-400 text-white' => $style === 'success',
+    'hover:bg-green-300 hover:border-green-300 hover:text-white' => $style === 'success',
+    'focus:bg-green-300 focus:border-green-300 focus:text-white' => $style === 'success',
+    'active:bg-green-500 active:border-green-500 active:text-white' => $style === 'success',
+
+    // Info color...
+    'bg-blue-400 border-blue-400 text-white' => $style === 'info',
+    'hover:bg-blue-300 hover:border-blue-300 hover:text-white' => $style === 'info',
+    'focus:bg-blue-300 focus:border-blue-300 focus:text-white' => $style === 'info',
+    'active:bg-blue-500 active:border-blue-500 active:text-white' => $style === 'info',
+
+    // Warning color...
+    'bg-amber-400 border-amber-400 text-white' => $style === 'warning',
+    'hover:bg-amber-300 hover:border-amber-300 hover:text-white' => $style === 'warning',
+    'focus:bg-amber-300 focus:border-amber-300 focus:text-white' => $style === 'warning',
+    'active:bg-amber-500 active:border-amber-500 active:text-white' => $style === 'warning',
+
     // Danger color...
     'bg-red-400 border-red-400 text-white' => $style === 'danger',
     'hover:bg-red-300 hover:border-red-300 hover:text-white' => $style === 'danger',
     'focus:bg-red-300 focus:border-red-300 focus:text-white' => $style === 'danger',
     'active:bg-red-500 active:border-red-500 active:text-white' => $style === 'danger',
 
-    // Primary color...
-    'bg-brand-400 border-brand-400 text-white' => $style === 'primary',
-    'hover:bg-brand-300 hover:border-brand-300 hover:text-white' => $style === 'primary',
-    'focus:bg-brand-300 focus:border-brand-300 focus:text-white' => $style === 'primary',
-    'active:bg-brand-500 active:border-brand-500 active:text-white' => $style === 'primary',
+    // Disabled color...
+    'bg-gray-400 border-gray-400 text-white cursor-not-allowed' => $disabled,
+    'hover:bg-gray-400 hover:border-gray-400 hover:text-white' => $disabled,
+    'focus:bg-gray-400 focus:border-gray-400 focus:text-white' => $disabled,
+    'active:bg-gray-400 active:border-gray-400 active:text-white' => $disabled,
 ];
 @endphp
-@if(is_null($href))
-<button type="{{ $type }}" {{ $attributes->class($class) }}>
+@if(is_null($href) || $disabled)
+<button type="{{ $type }}" {{ $attributes->merge(['disabled' => $disabled])->class($class) }}>
     {{ $slot }}
 </button>
 @else
