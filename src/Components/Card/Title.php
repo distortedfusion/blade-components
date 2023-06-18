@@ -2,23 +2,17 @@
 
 namespace DistortedFusion\Tailwind\Components\Card;
 
-use Illuminate\Support\Str;
-use Illuminate\View\Component;
+use DistortedFusion\Tailwind\Components\Layout\Heading;
 
-class Title extends Component
+class Title extends Heading
 {
-    public string $title;
-    public int $headingLevel;
-
     /**
      * Create the component instance.
      *
-     * @param string $title
-     * @param int    $headingLevel
+     * @param int $headingLevel
      */
-    public function __construct(string $title, int $headingLevel = 3)
+    public function __construct(int $headingLevel = 3)
     {
-        $this->title = $title;
         $this->headingLevel = $headingLevel;
     }
 
@@ -30,15 +24,5 @@ class Title extends Component
     public function render()
     {
         return view('tailwind-layout::components.card.title');
-    }
-
-    /**
-     * Fetch the slugged title variant for the ID property.
-     *
-     * @return string
-     */
-    public function id(): string
-    {
-        return Str::slug($this->title);
     }
 }

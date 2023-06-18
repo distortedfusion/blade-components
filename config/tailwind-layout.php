@@ -45,6 +45,7 @@ return [
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.footer' => 'tailwind-layout::components.layout.footer',
+        'layout.heading' => Components\Layout\Heading::class,
         'layout.icon-muted' => Components\Layout\IconMuted::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
