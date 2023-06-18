@@ -5,7 +5,7 @@
                 @if($url = $getPreviousUrl())
                     <div class="flex-1 mr-4">
                         <a href="{{ $url }}" class="group btn btn-primary btn-secondary btn-sm text-base px-2">
-                            <x-fas-chevron-left class="text-muted group-hover:text-brand-600" />
+                            <x-fas-chevron-left class="text-muted group-hover:text-brand-600 w-4 h-4" />
                         </a>
                     </div>
                 @endif
@@ -13,7 +13,7 @@
                     @if($icon)
                         <x-layout.icon :icon="$icon" />
                     @endif
-                    <h1 class="font-semibold text-base leading-tight text-gray-800 py-2">{{ $title }}</h1>
+                    <h1 class="font-semibold text-lg">{{ $title }}</h1>
                 </div>
                 @if($actions ?? false)
                     <div class="flex items-center ml-4">
