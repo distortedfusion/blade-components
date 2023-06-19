@@ -45,10 +45,7 @@ $class = [
     'active:bg-red-500 active:border-red-500 active:text-white' => $style === 'danger',
 
     // Disabled color...
-    'bg-gray-400 border-gray-400 text-white cursor-not-allowed' => $disabled,
-    'hover:bg-gray-400 hover:border-gray-400 hover:text-white' => $disabled,
-    'focus:bg-gray-400 focus:border-gray-400 focus:text-white' => $disabled,
-    'active:bg-gray-400 active:border-gray-400 active:text-white' => $disabled,
+    'disabled:bg-gray-400 disabled:border-gray-400 disabled:text-white disabled:cursor-not-allowed',
 ];
 @endphp
 @if(is_null($href) || $disabled)
