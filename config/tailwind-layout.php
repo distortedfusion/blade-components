@@ -44,7 +44,6 @@ return [
         // Layout components...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
-        'layout.footer' => 'tailwind-layout::components.layout.footer',
         'layout.heading' => Components\Layout\Heading::class,
         'layout.icon-muted' => Components\Layout\IconMuted::class,
         'layout.icon' => Components\Layout\Icon::class,
@@ -53,8 +52,6 @@ return [
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section-title' => Components\Layout\SectionTitle::class,
         'layout.section' => Components\Layout\Section::class,
-        'layout.sidebar-toggle' => 'tailwind-layout::components.layout.sidebar-toggle',
-        'layout.sidebar' => 'tailwind-layout::components.layout.sidebar',
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
