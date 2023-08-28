@@ -1,3 +1,6 @@
-<p class="text-muted mt-2 text-sm">
-    <x-fad-circle-info class="inline-block mr-2" /><span>{{ $slot }}</span>
+<p {{ $attributes->class([
+    'text-muted text-sm',
+    'mt-2' => ! Str::contains($attributes->get('class'), ['m-', 'my-', 'mt-'])
+]) }}>
+    <x-fad-circle-info class="inline-block -mb-0.5 mr-2" /><span>{{ $slot }}</span>
 </p>
