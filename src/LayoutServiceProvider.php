@@ -3,7 +3,6 @@
 namespace DistortedFusion\Tailwind;
 
 use DistortedFusion\Tailwind\Console\PublishCommand;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
@@ -21,8 +20,6 @@ class LayoutServiceProvider extends ServiceProvider
         }
 
         $this->mergeConfigFrom(DF_LTL_PATH.'/config/tailwind-layout.php', 'tailwind-layout');
-
-        $this->registerFormComponentsOverload();
     }
 
     /**
@@ -43,17 +40,6 @@ class LayoutServiceProvider extends ServiceProvider
     private function registerResources(): void
     {
         $this->loadViewsFrom(DF_LTL_PATH.'/resources/views', 'tailwind-layout');
-    }
-
-    private function registerFormComponentsOverload(): void
-    {
-        $this->booting(function () {
-            foreach (config('tailwind-layout.form-components', []) as $alias => $config) {
-                $defaultConfig = config('form-components.components.'.$alias);
-
-                Config::set('form-components.components.'.$alias, array_merge($defaultConfig, $config));
-            }
-        });
     }
 
     private function defineAssetPublishing(): void
