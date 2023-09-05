@@ -41,19 +41,6 @@ return [
         'field.currency' => Components\Field\Currency::class,
         'field.title' => Components\Field\Title::class,
 
-        // Form...
-        'form.actions' => Components\Form\Actions::class,
-        'form.section' => Components\Form\Section::class,
-        'form.sections' => 'tailwind-layout::components.layout.section-group',
-
-        // Form components...
-        'form-button' => Components\Form\Button::class,
-        'form-file' => Components\Form\File::class,
-        'form-file-simple' => Components\Form\FileSimple::class,
-        'form-help' => Components\Form\Help::class,
-        'form-select.description' => Components\Form\SelectDescription::class,
-        'form-toggle' => Components\Form\Toggle::class,
-
         // Layout components...
         'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
@@ -89,53 +76,5 @@ return [
         'table.row-link' => Components\Tables\RowLink::class,
         'table.row' => Components\Tables\Row::class,
         'table' => Components\Tables\Table::class,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Laravel Form Components
-    |--------------------------------------------------------------------------
-    |
-    | This package provides markup for the protonemedia/laravel-form-components
-    | package. These views are loaded during boot by overriding their respective
-    | default config value.
-    |
-    | This behavior can be disabled by removing entries from the array below.
-    |
-    | More information: https://github.com/protonemedia/laravel-form-components
-    |
-    */
-
-    'form-components' => [
-        'form' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form',
-        ],
-        'form-checkbox' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-checkbox',
-        ],
-        'form-errors' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-errors',
-        ],
-        'form-group' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-group',
-        ],
-        'form-input' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-input',
-        ],
-        'form-label' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-label',
-        ],
-        'form-radio' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-radio',
-        ],
-        'form-select' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-select',
-        ],
-        'form-submit' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-submit',
-        ],
-        'form-textarea' => [
-            'view' => 'tailwind-layout::components.vendor.form-components.form-textarea',
-        ],
     ],
 ];
