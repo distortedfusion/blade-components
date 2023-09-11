@@ -1,3 +1,4 @@
+@aware(['flush'])
 <div {{ $attributes->filter(
     fn ($value, $key) => ! Str::startsWith($key, 'wire:')
 )->class([

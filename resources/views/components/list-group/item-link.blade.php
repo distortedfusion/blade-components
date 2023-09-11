@@ -1,3 +1,4 @@
+@aware(['flush'])
 <div {{ $attributes->class([
     'list-group-item flex items-center w-full relative border-t border-b border-l border-r',
     'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
