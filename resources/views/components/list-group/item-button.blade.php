@@ -2,7 +2,8 @@
 <div {{ $attributes->filter(
     fn ($value, $key) => ! Str::startsWith($key, 'wire:')
 )->class([
-    'list-group-item flex items-center relative border-t border-b border-l border-r',
+    'list-group-item flex items-center w-full relative',
+    'border-black/10',
     'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
 ]) }}>
