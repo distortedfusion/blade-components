@@ -1,6 +1,6 @@
-<p {{ $attributes->class([
-    'text-muted',
-    'text-sm' => ! Str::contains($attributes->get('class'), ['text-xs', 'text-sm', 'text-md', 'text-lg', 'text-xl', 'text-2xl']),
+<dl {{ $attributes->class([
+    'space-y-1',
 ]) }}>
-    {{ $slot }}
-</p>
+    <dt class="text-muted text-sm">{{ $title }}</dt>
+    <dd class="text-muted text-base">{{ $slot }}</dd>
+</dl>
