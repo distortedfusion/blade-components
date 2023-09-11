@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\Tailwind\Components\Text;
 
 use Closure;
 use Illuminate\Support\Str;
@@ -22,7 +22,7 @@ class Heading extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.heading');
+        return view('tailwind-layout::components.text.heading');
     }
 
     /**

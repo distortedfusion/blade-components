@@ -7,6 +7,11 @@ return [
         'alert' => Components\Alert\Index::class,
         'stats.card' => Components\Stats\Card::class,
 
+        // Text...
+        'layout.heading' => Components\Layout\Heading::class,
+        'layout.paragraph' => 'tailwind-layout::components.layout.paragraph',
+        'description' => 'tailwind-layout::components.description.index',
+
         // Elements...
         'badge' => Components\Elements\Badge::class,
         'boolean-badge' => Components\Elements\BooleanBadge::class,
@@ -42,9 +47,7 @@ return [
         'field.title' => Components\Field\Title::class,
 
         // Layout components...
-        'layout.description' => Components\Layout\Description::class,
         'layout.empty-state' => Components\Layout\EmptyState::class,
-        'layout.heading' => Components\Layout\Heading::class,
         'layout.icon-muted' => Components\Layout\IconMuted::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
