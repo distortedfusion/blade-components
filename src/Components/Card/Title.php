@@ -2,7 +2,7 @@
 
 namespace DistortedFusion\Tailwind\Components\Card;
 
-use DistortedFusion\Tailwind\Components\Layout\Heading;
+use DistortedFusion\Tailwind\Components\Text\Heading;
 
 class Title extends Heading
 {

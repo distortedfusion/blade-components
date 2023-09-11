@@ -8,16 +8,16 @@ return [
         'stats.card' => Components\Stats\Card::class,
 
         // Text...
-        'layout.heading' => Components\Layout\Heading::class,
-        'layout.paragraph' => 'tailwind-layout::components.layout.paragraph',
-        'description' => 'tailwind-layout::components.description.index',
+        'heading' => Components\Text\Heading::class,
+        'paragraph' => 'tailwind-layout::components.text.paragraph',
+        'description' => 'tailwind-layout::components.text.description',
+        'pre' => 'tailwind-layout::components.text.pre',
 
         // Elements...
         'badge' => Components\Elements\Badge::class,
         'boolean-badge' => Components\Elements\BooleanBadge::class,
         'btn' => Components\Btn\Index::class,
         'carbon' => Components\DateTime\Carbon::class,
-        'pre' => 'tailwind-layout::components.pre.index',
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
