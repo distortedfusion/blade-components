@@ -32,6 +32,28 @@ Displays a brief heading and subheading for additional information or context.
 </x-description>
 ```
 
+## Unordered List
+
+```blade-component
+<x-ul>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+</x-ul>
+```
+
+## Ordered List
+
+```blade-component
+<x-ol>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+    <li>The Evil Rabbit Jumped over the Fence.</li>
+</x-ol>
+```
+
 ## Codeblock
 
 ```blade-component

@@ -11,6 +11,8 @@ return [
         'heading' => Components\Text\Heading::class,
         'paragraph' => 'tailwind-layout::components.text.paragraph',
         'description' => 'tailwind-layout::components.text.description',
+        'ol' => 'tailwind-layout::components.text.ol',
+        'ul' => 'tailwind-layout::components.text.ul',
         'pre' => 'tailwind-layout::components.text.pre',
 
         // Elements...
