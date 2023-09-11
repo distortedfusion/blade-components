@@ -26,9 +26,9 @@ Displays a brief heading and subheading for additional information or context.
 ```blade-component
 <x-description>
     <x-slot:title>
-        composer require distortedfusion/blade-components
+        Section Title
     </x-slot:title>
-    composer require distortedfusion/blade-components
+    Description about this section.
 </x-description>
 ```
 
