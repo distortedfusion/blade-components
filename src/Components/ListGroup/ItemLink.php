@@ -6,14 +6,14 @@ use Closure;
 
 class ItemLink extends Item
 {
-    public string $url;
+    public string $href;
     public ?string $icon;
 
-    public function __construct(string $url, string $title = null, string $align = 'left', ?string $icon = 'fas-angle-right')
+    public function __construct(string $href, string $title = null, string $align = 'left', ?string $icon = 'fas-angle-right')
     {
         parent::__construct($title, $align);
 
-        $this->url = $url;
+        $this->href = $href;
         $this->icon = $icon;
     }
 

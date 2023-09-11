@@ -9,7 +9,7 @@
         </div>
     @endif
 
-    <a href="{{ $url }}" class="{{
+    <a href="{{ $href }}" class="{{
         'flex-grow group block rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
