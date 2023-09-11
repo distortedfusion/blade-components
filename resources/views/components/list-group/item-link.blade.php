@@ -22,7 +22,7 @@
 
         @if(! is_null($icon))
             <div class="absolute inset-y-1/2 right-2 -mt-2">
-                <x-dynamic-component :component="$icon" class="text-muted opacity-50 group-hover:opacity-100" />
+                <x-dynamic-component :component="$icon" class="w-4 h-4 text-muted opacity-50 group-hover:opacity-100" />
             </div>
         @endif
     </a>
