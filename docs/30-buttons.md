@@ -31,13 +31,10 @@
 ## Sizes
 
 ```blade-component
-<div class="grid grid-cols-3 gap-4">
-    <x-btn style="default">Button Text</x-btn>
-    <x-btn style="primary">Button Text</x-btn>
-    <x-btn style="success">Button Text</x-btn>
-    <x-btn style="info">Button Text</x-btn>
-    <x-btn style="warning">Button Text</x-btn>
-    <x-btn style="danger">Button Text</x-btn>
+<div class="grid grid-cols-3 gap-4 items-center">
+    <x-btn size="lg">Button Text</x-btn>
+    <x-btn>Button Text</x-btn>
+    <x-btn size="sm">Button Text</x-btn>
 </div>
 ```
 

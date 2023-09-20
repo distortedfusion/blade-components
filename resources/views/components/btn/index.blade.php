@@ -5,7 +5,7 @@ $class = [
     'focus:no-underline focus:outline-0',
 
     // Button sizes...
-    'h-12 py-2 px-4 text-sm font-semibold leading-8' => is_null($size),
+    'h-12 py-2 px-4 text-sm font-semibold leading-8' => is_null($size) || ! in_array(['sm', 'lg'], $size),
     'h-8 py-0 px-4 text-sm font-semibold leading-8' => $size === 'sm',
 
     // Default color...
