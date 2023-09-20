@@ -1,12 +1,10 @@
 # Buttons
 
-A controls that triggers an action. Button labels should express what action will occur when the user interacts with it.
-
 ```blade-component
 <div class="grid grid-cols-3 gap-4">
-    <x-btn style="default">Button Text</x-btn>
     <x-btn style="primary">Button Text</x-btn>
-    <x-btn style="success">Button Text</x-btn>
+    <x-btn style="secondary">Button Text</x-btn>
+    <x-btn style="tertiary">Button Text</x-btn>
     <x-btn style="info">Button Text</x-btn>
     <x-btn style="warning">Button Text</x-btn>
     <x-btn style="danger">Button Text</x-btn>
