@@ -40,7 +40,7 @@ return [
         'card.footer' => 'tailwind-layout::components.card.footer',
         'card.header' => 'tailwind-layout::components.card.header',
         'card.title' => Components\Card\Title::class,
-        'card' => 'tailwind-layout::components.card.index',
+        'card' => Components\Card\Card::class,
 
         // Layout containers...
         'container' => 'tailwind-layout::components.layout.containers.container',
