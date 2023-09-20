@@ -51,6 +51,42 @@
 </x-card>
 ```
 
+## Variants
+
+```blade-component
+<x-card style="warning">
+    <x-card.header>
+        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+    </x-card.header>
+
+    <x-card.body>
+        <p>The Evil Rabbit Jumped over the Fence</p>
+    </x-card.body>
+
+    <x-card.footer class="justify-end">
+        <x-btn size="sm" style="default">Cancel</x-btn>
+        <x-btn size="sm" style="warning">Update</x-btn>
+    </x-card.footer>
+</x-card>
+```
+
+```blade-component
+<x-card style="danger">
+    <x-card.header>
+        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+    </x-card.header>
+
+    <x-card.body>
+        <p>The Evil Rabbit Jumped over the Fence</p>
+    </x-card.body>
+
+    <x-card.footer class="justify-end">
+        <x-btn size="sm" style="default">Cancel</x-btn>
+        <x-btn size="sm" style="danger">Delete</x-btn>
+    </x-card.footer>
+</x-card>
+```
+
 ## List Groups
 
 ```blade-component
