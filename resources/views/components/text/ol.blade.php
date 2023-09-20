@@ -1,5 +1,5 @@
 <ol {{ $attributes->class([
-    'list-inside list-decimal',
+    'list-decimal pl-5 marker:text-gray-400',
 ]) }}>
     {{ $slot }}
 </ol>
