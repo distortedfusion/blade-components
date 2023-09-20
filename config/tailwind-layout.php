@@ -15,10 +15,13 @@ return [
         'ul' => 'tailwind-layout::components.text.ul',
         'pre' => 'tailwind-layout::components.text.pre',
 
+        // Buttons...
+        'btn' => Components\Btn\Index::class,
+        'btn.icon' => 'tailwind-layout::components.btn.icon',
+
         // Elements...
         'badge' => Components\Elements\Badge::class,
         'boolean-badge' => Components\Elements\BooleanBadge::class,
-        'btn' => Components\Btn\Index::class,
         'carbon' => Components\DateTime\Carbon::class,
 
         // Bootstrap...
