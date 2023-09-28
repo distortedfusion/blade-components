@@ -11,6 +11,10 @@
 </x-layout.title-bar>
 ```
 
+```blade-component-code
+<x-layout.title-bar title="Page Title" icon="fal-feather" />
+```
+
 ## Photo
 
 ```blade-component-code
@@ -28,15 +32,15 @@
 
 ```blade-component-code
 <div class="grid grid-cols-3 gap-4 items-center">
-    <x-layout.icon icon="fal-user" style="primary" size="lg" />
-    <x-layout.icon icon="fal-user" style="primary" />
-    <x-layout.icon icon="fal-user" style="primary" size="sm" />
-    <x-layout.icon icon="fal-user" style="secondary" size="lg" />
-    <x-layout.icon icon="fal-user" style="secondary" />
-    <x-layout.icon icon="fal-user" style="secondary" size="sm" />
-    <x-layout.icon icon="fal-user" style="tertiary" size="lg" />
-    <x-layout.icon icon="fal-user" style="tertiary" />
-    <x-layout.icon icon="fal-user" style="tertiary" size="sm" />
+    <x-layout.icon icon="fal-tags" style="primary" size="lg" />
+    <x-layout.icon icon="fal-tags" style="primary" />
+    <x-layout.icon icon="fal-tags" style="primary" size="sm" />
+    <x-layout.icon icon="fal-tags" style="secondary" size="lg" />
+    <x-layout.icon icon="fal-tags" style="secondary" />
+    <x-layout.icon icon="fal-tags" style="secondary" size="sm" />
+    <x-layout.icon icon="fal-tags" style="tertiary" size="lg" />
+    <x-layout.icon icon="fal-tags" style="tertiary" />
+    <x-layout.icon icon="fal-tags" style="tertiary" size="sm" />
 </div>
 ```
 
