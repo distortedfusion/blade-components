@@ -1,4 +1,4 @@
-<span {{ $attributes->class([
+<div {{ $attributes->class([
     'inline-flex items-center border p-2 py-0.5 text-sm font-semibold rounded-md',
 
     // Badge sizes...
@@ -13,10 +13,10 @@
     'text-gray-900 border-gray-200 bg-gray-100' => $style === 'default',
 ]) }} role="alert">
     @if($prefix ?? false)
-        {{ $prefix }}
+        <div class="flex-shrink-0">{{ $prefix }}</div>
     @endif
-    <span>{{ $slot }}</span>
+    <div class="flex-grow">{{ $slot }}</div>
     @if($suffix ?? false)
-        {{ $suffix }}
+        <div class="flex-shrink-0">{{ $suffix }}</div>
     @endif
-</span>
+</div>
