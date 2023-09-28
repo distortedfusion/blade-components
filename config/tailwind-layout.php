@@ -10,6 +10,7 @@ return [
         // Text...
         'heading' => Components\Text\Heading::class,
         'paragraph' => 'tailwind-layout::components.text.paragraph',
+        'date-time' => Components\Text\DateTime::class,
         'description' => 'tailwind-layout::components.text.description',
         'ol' => 'tailwind-layout::components.text.ol',
         'ul' => 'tailwind-layout::components.text.ul',
@@ -22,7 +23,6 @@ return [
         // Elements...
         'badge' => Components\Elements\Badge::class,
         'boolean-badge' => Components\Elements\BooleanBadge::class,
-        'carbon' => Components\DateTime\Carbon::class,
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,

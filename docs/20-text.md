@@ -34,6 +34,14 @@ Displays a brief heading and subheading for additional information or context.
 </x-description>
 ```
 
+## Date Time
+
+```blade-component-code
+<x-text.date-time>
+    The Evil Rabbit Jumped over the Fence.
+</x-text.date-time>
+```
+
 ## Unordered List
 
 ```blade-component-code
