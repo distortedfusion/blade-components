@@ -1,14 +1,14 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\DateTime;
+namespace DistortedFusion\Tailwind\Components\Text;
 
-use Carbon\Carbon as CarbonAlias;
+use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use DateTimeInterface;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Carbon extends Component
+class DateTime extends Component
 {
     protected static string $defaultFormat = 'M j, Y \&\m\d\a\s\h\; H:i';
 
@@ -23,14 +23,14 @@ class Carbon extends Component
         string $format = null,
         bool $human = false
     ) {
-        $this->date = CarbonAlias::instance($date);
+        $this->date = Carbon::instance($date);
         $this->format = $format ?: static::getDefaultFormat();
         $this->human = $human;
     }
 
     public function render(): View
     {
-        return view('tailwind-layout::components.date-time.carbon');
+        return view('tailwind-layout::components.text.date-time');
     }
 
     /**
