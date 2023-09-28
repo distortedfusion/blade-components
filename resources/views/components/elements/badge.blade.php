@@ -12,5 +12,11 @@
     'text-red-900 border-red-200 bg-red-100' => $style === 'danger',
     'text-gray-900 border-gray-200 bg-gray-100' => $style === 'default',
 ]) }} role="alert">
-    {{ $slot }}
+    @if($prefix ?? false)
+        {{ $prefix }}
+    @endif
+    <span>{{ $slot }}</span>
+    @if($suffix ?? false)
+        {{ $suffix }}
+    @endif
 </span>
