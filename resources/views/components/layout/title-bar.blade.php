@@ -1,17 +1,17 @@
 <header {{ $attributes }}>
     <x-dynamic-component :component="$currentRouteApplicableForNarrowLayout() ? 'container-narrow' : 'container'">
         <div class="border-b border-black/10 py-6">
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center">
                 @if($url = $getPreviousUrl())
-                    <div class="flex-shrink-0">
-                        <a href="{{ $url }}" class="group btn btn-primary btn-secondary btn-sm text-base px-2">
-                            <x-fal-chevron-left class="text-muted group-hover:text-brand-600 w-4 h-4" />
-                        </a>
+                    <div class="flex-shrink-0 border-r border-black/10 pr-2 mr-2">
+                        <x-btn :href="$url" size="sm" style="tertiary" class="px-2">
+                            <x-btn.icon icon="fal-chevron-left" />
+                        </x-btn>
                     </div>
                 @endif
 
                 @if($icon)
-                    <div class="flex-shrink-0">
+                    <div class="flex-shrink-0 mr-4">
                         <x-layout.icon :icon="$icon" />
                     </div>
                 @endif
@@ -23,7 +23,7 @@
                     </x-dynamic-component>
                 </div>
                 @if($actions ?? false)
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-2 ml-2">
                         {!! $actions !!}
                     </div>
                 @endif
