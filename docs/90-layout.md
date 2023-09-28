@@ -28,3 +28,13 @@
     <x-layout.icon icon="fal-user" style="tertiary" size="sm" />
 </div>
 ```
+
+## Progress Bar
+
+```blade-component-code
+<div class="space-y-4">
+    <x-loading.bar progress="50" size="lg" />
+    <x-loading.bar progress="50" />
+    <x-loading.bar progress="50" size="sm" />
+</div>
+```
