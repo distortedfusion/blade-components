@@ -1,6 +1,6 @@
 # Buttons
 
-```blade-component
+```blade-component-code
 <div class="grid grid-cols-3 gap-4">
     <x-btn style="primary">Button Text</x-btn>
     <x-btn style="secondary">Button Text</x-btn>
@@ -15,7 +15,7 @@
 
 Buttons can be used as links by supplying a `href=""` attribute.
 
-```blade-component
+```blade-component-code
 <div class="grid grid-cols-3 gap-4">
     <x-btn href="#">Button Text</x-btn>
 </div>
@@ -25,7 +25,7 @@ Buttons can be used as links by supplying a `href=""` attribute.
 
 Both linked buttons and traditional buttons can be set to a disabled state by supplying the `disabled` boolean attribute.
 
-```blade-component
+```blade-component-code
 <div class="grid grid-cols-3 gap-4">
     <x-btn disabled href="#">Button Text</x-btn>
     <x-btn disabled>Button Text</x-btn>
@@ -34,7 +34,7 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 
 ## Sizes
 
-```blade-component
+```blade-component-code
 <div class="grid grid-cols-3 gap-4 items-center">
     <x-btn size="lg">Button Text</x-btn>
     <x-btn>Button Text</x-btn>
@@ -44,7 +44,7 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 
 ## Icons
 
-```blade-component
+```blade-component-code
 <x-btn.icon icon="fal-arrow-up" />
 ```
 
@@ -52,7 +52,7 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 
 Buttons can be combined with the `x-btn.icon` component or simple text elements for additional clarity.
 
-```blade-component
+```blade-component-code
 <div class="grid grid-cols-3 gap-4 items-center">
     <x-btn>
         <x-slot:prefix>

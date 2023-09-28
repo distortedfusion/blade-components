@@ -1,6 +1,6 @@
 # Cards
 
-```blade-component
+```blade-component-code
 <x-card>
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -18,7 +18,7 @@
 
 ## Actions
 
-```blade-component
+```blade-component-code
 <x-card>
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -34,7 +34,7 @@
 </x-card>
 ```
 
-```blade-component
+```blade-component-code
 <x-card>
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -53,7 +53,7 @@
 
 ## Variants
 
-```blade-component
+```blade-component-code
 <x-card style="warning">
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -70,7 +70,7 @@
 </x-card>
 ```
 
-```blade-component
+```blade-component-code
 <x-card style="danger">
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -89,7 +89,7 @@
 
 ## List Groups
 
-```blade-component
+```blade-component-code
 <x-card>
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
@@ -116,7 +116,7 @@
 </x-card>
 ```
 
-```blade-component
+```blade-component-code
 <x-card>
     <x-card.header>
         <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>

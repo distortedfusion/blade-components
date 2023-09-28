@@ -7,7 +7,7 @@
 @import "./../../vendor/distortedfusion/laravel-tailwind-layout/resources/css/tables.css";
 ```
 
-```blade-component
+```blade-component-code
 <x-table>
     <x-table.row>
         <x-table.heading is-first>First Name</x-table.heading>

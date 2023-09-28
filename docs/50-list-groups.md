@@ -1,7 +1,7 @@
 # List Groups
 
 
-```blade-component
+```blade-component-code
 <x-list-group>
     <x-list-group.item>
         <x-slot:title>
@@ -18,7 +18,7 @@
 </x-list-group>
 ```
 
-```blade-component
+```blade-component-code
 <x-list-group flush>
     <x-list-group.item>
         <x-slot:title>
@@ -37,7 +37,7 @@
 
 ## Link items
 
-```blade-component
+```blade-component-code
 <x-list-group>
     <x-list-group.item-link href="#">
         <x-slot:title>
@@ -56,7 +56,7 @@
 
 ## Button items
 
-```blade-component
+```blade-component-code
 <x-list-group>
     <x-list-group.item-button>
         <x-slot:title>

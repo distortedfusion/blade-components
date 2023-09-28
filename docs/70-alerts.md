@@ -2,13 +2,13 @@
 
 Display text that requires attention or provides additional information.
 
-```blade-component
+```blade-component-code
 <x-alert>This alert details some information.</x-alert>
 ```
 
 ## Title
 
-```blade-component
+```blade-component-code
 <x-alert title="Important">
     This alert details some information.
 </x-alert>
@@ -16,7 +16,7 @@ Display text that requires attention or provides additional information.
 
 ## Variants
 
-```blade-component
+```blade-component-code
 <div class="space-y-2">
     <x-alert type="default">
         This alert details some information.

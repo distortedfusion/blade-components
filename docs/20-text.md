@@ -2,7 +2,7 @@
 
 ## Heading
 
-```blade-component
+```blade-component-code
 <x-heading :heading-level="1">The Evil Rabbit Jumps.</x-heading>
 <x-heading :heading-level="2">The Evil Rabbit Jumps.</x-heading>
 <x-heading :heading-level="3">The Evil Rabbit Jumps.</x-heading>
@@ -13,7 +13,7 @@
 
 ## Paragraph
 
-```blade-component
+```blade-component-code
 <x-paragraph>
     The Evil Rabbit Jumped over the Fence.
 </x-paragraph>
@@ -23,7 +23,7 @@
 
 Displays a brief heading and subheading for additional information or context.
 
-```blade-component
+```blade-component-code
 <x-description>
     <x-slot:title>
         Section Title
@@ -34,7 +34,7 @@ Displays a brief heading and subheading for additional information or context.
 
 ## Unordered List
 
-```blade-component
+```blade-component-code
 <x-ul>
     <li>The Evil Rabbit Jumped over the Fence.</li>
     <li>The Evil Rabbit Jumped over the Fence.</li>
@@ -45,7 +45,7 @@ Displays a brief heading and subheading for additional information or context.
 
 ## Ordered List
 
-```blade-component
+```blade-component-code
 <x-ol>
     <li>The Evil Rabbit Jumped over the Fence.</li>
     <li>The Evil Rabbit Jumped over the Fence.</li>
@@ -56,6 +56,6 @@ Displays a brief heading and subheading for additional information or context.
 
 ## Codeblock
 
-```blade-component
-<x-pre>composer require distortedfusion/blade-components</x-pre>
+```blade-component-code
+<x-pre>composer require distortedfusion/blade-component-codes</x-pre>
 ```
