@@ -9,17 +9,20 @@ class Photo extends Component
 {
     public ?string $url;
     public string $icon;
+    public ?string $size;
 
     /**
      * Create a new component instance.
      *
      * @param string|null $url
      * @param string      $icon
+     * @param string|null $size
      */
-    public function __construct(string $url = null, string $icon = 'fad-user')
+    public function __construct(string $url = null, string $icon = 'fal-user', string $size = null)
     {
         $this->url = $url;
         $this->icon = $icon;
+        $this->size = $size;
     }
 
     /**

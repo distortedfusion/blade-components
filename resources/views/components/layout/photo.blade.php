@@ -1,15 +1,17 @@
 <div {{ $attributes->class([
-    'overflow-hidden relative block rounded',
+    'inline-flex items-center justify-center relative rounded overflow-hidden aspect-square',
     'bg-gray-100' => ! Str::contains($attributes->get('class'), 'bg-'),
-    'text-muted' => ! Str::contains($attributes->get('class'), 'text-'),
+    'text-gray-700' => ! Str::contains($attributes->get('class'), 'text-'),
     'm-px' => ! Str::contains($attributes->get('class'), 'm-'),
     'p-px' => ! Str::contains($attributes->get('class'), 'p-'),
-    'w-10' => ! Str::contains($attributes->get('class'), 'w-'),
-    'h-10' => ! Str::contains($attributes->get('class'), 'h-'),
+
+    'w-12' => $size === 'lg',
+    'w-10' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'w-8' => $size === 'sm',
 ]) }}>
     <div class="absolute inset-0">
         <div class="flex items-center justify-center absolute inset-0">
-            <x-dynamic-component :component="$icon" />
+            <x-dynamic-component :component="$icon" class="w-4 h-4" />
         </div>
 
         @if($url)
