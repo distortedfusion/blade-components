@@ -49,7 +49,6 @@ return [
 
         // Layout components...
         'layout.empty-state' => 'tailwind-layout::components.layout.empty-state',
-        'layout.icon-muted' => Components\Layout\IconMuted::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
         'layout.photo' => Components\Layout\Photo::class,

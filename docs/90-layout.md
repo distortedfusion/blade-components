@@ -1,5 +1,16 @@
 # Layout
 
+## Icons
+
+```blade-component-code
+<div class="flex items-center justify-between">
+    <x-layout.icon icon="fal-user" />
+    <x-layout.icon icon="fal-user" size="sm" />
+    <x-layout.icon icon="fal-user" style="muted" />
+    <x-layout.icon icon="fal-user" style="muted" size="sm" />
+</div>
+```
+
 ## Empty States
 
 ```blade-component-code
