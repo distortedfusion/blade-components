@@ -1,5 +1,14 @@
 # Layout
 
+## Photo
+
+```blade-component-code
+<div class="grid grid-cols-2 gap-4 items-center">
+    <x-layout.photo url="https://gravatar.com/avatar/3f76cdf0c0cfa00f10fd1216e15a410941cd9328746f963fc3258e6f147833d2?size=128" />
+    <x-layout.photo url="" />
+</div>
+```
+
 ## Contained Icons
 
 ```blade-component-code
@@ -14,86 +23,4 @@
     <x-layout.icon icon="fal-user" style="tertiary" />
     <x-layout.icon icon="fal-user" style="tertiary" size="sm" />
 </div>
-```
-
-## Empty States
-
-```blade-component-code
-<x-layout.empty-state title="Title">
-    The Evil Rabbit Jumped over the Fence.
-    <x-slot:action>
-        <x-btn size="sm">Primary Action</x-btn>
-        <x-btn size="sm" style="tertiary">
-            Learn More
-            <x-slot:suffix>
-                <x-btn.icon icon="fal-arrow-up-right-from-square" />
-            </x-slot:suffix>
-        </x-btn>
-    </x-slot:action>
-</x-layout.empty-state>
-```
-
-```blade-component-code
-<x-layout.empty-state title="Title">
-    <x-paragraph>The Evil Rabbit Jumped over the Fence.</x-paragraph>
-
-    <x-list-group>
-        <x-list-group.item>
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-brush" style="tertiary" />
-                </div>
-
-                <div class="flex-grow">
-                    <span class="font-medium">TailwindCSS</span>
-                    <div class="text-xs text-gray-600">CSS Framework</div>
-                </div>
-
-                <div class="flex-shrink-0">
-                    <x-btn size="sm">Action</x-btn>
-                </div>
-            </div>
-        </x-list-group.item>
-        <x-list-group.item>
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-code" style="tertiary" />
-                </div>
-
-                <div class="flex-grow">
-                    <span class="font-medium">Laravel</span>
-                    <div class="text-xs text-gray-600">Application Framework</div>
-                </div>
-
-                <div class="flex-shrink-0">
-                    <x-btn size="sm">Action</x-btn>
-                </div>
-            </div>
-        </x-list-group.item>
-        <x-list-group.item>
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-database" style="tertiary" />
-                </div>
-
-                <div class="flex-grow">
-                    <span class="font-medium">MySQL</span>
-                    <div class="text-xs text-gray-600">Database</div>
-                </div>
-
-                <div class="flex-shrink-0">
-                    <x-btn size="sm">Action</x-btn>
-                </div>
-            </div>
-        </x-list-group.item>
-    </x-list-group>
-    <x-slot:action>
-        <x-btn size="sm" style="tertiary">
-            Learn More
-            <x-slot:suffix>
-                <x-btn.icon icon="fal-arrow-up-right-from-square" />
-            </x-slot:suffix>
-        </x-btn>
-    </x-slot:action>
-</x-layout.empty-state>
 ```
