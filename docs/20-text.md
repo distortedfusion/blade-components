@@ -34,6 +34,12 @@ Displays a brief heading and subheading for additional information or context.
 </x-description>
 ```
 
+## Currency
+
+```blade-component-code
+<x-currency :value="100.00" />
+```
+
 ## Date Time
 
 ```blade-component-code
