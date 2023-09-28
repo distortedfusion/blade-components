@@ -49,7 +49,6 @@ return [
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
         'field.currency' => Components\Field\Currency::class,
-        'field.title' => Components\Field\Title::class,
 
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
