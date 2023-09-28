@@ -20,7 +20,7 @@ A contained label that shows the status of an element, emphasizes an element, or
 <div class="flex items-center space-x-4">
     <x-badge>
         <x-slot:prefix>
-            <x-badge-icon icon="fal-arrow-up" />
+            <x-badge.icon icon="fal-arrow-up" />
         </x-slot:prefix>
         Badge Text
     </x-badge>
