@@ -23,6 +23,7 @@ return [
 
         // Elements...
         'badge' => Components\Elements\Badge::class,
+        'badge-icon' => 'tailwind-layout::components.elements.badge-icon',
         'boolean-badge' => Components\Elements\BooleanBadge::class,
 
         // Bootstrap...
