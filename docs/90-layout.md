@@ -15,6 +15,10 @@
 <x-layout.title-bar title="Page Title" icon="fal-feather" />
 ```
 
+```blade-component-code
+<x-layout.title-bar title="Page Title" previous-url="#" />
+```
+
 ## Photo
 
 ```blade-component-code
