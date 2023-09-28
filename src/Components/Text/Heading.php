@@ -10,7 +10,7 @@ class Heading extends Component
 {
     public int $headingLevel;
 
-    public function __construct(int $headingLevel = 2)
+    public function __construct(int $headingLevel = 1)
     {
         $this->headingLevel = $headingLevel;
     }
