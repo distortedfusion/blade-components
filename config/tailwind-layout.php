@@ -10,6 +10,7 @@ return [
         // Text...
         'heading' => Components\Text\Heading::class,
         'paragraph' => 'tailwind-layout::components.text.paragraph',
+        'currency' => Components\Text\Currency::class,
         'date-time' => Components\Text\DateTime::class,
         'description' => 'tailwind-layout::components.text.description',
         'ol' => 'tailwind-layout::components.text.ol',
@@ -48,7 +49,6 @@ return [
 
         // Fields...
         'field.boolean' => Components\Field\Boolean::class,
-        'field.currency' => Components\Field\Currency::class,
 
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
