@@ -33,8 +33,8 @@
 
 ```blade-component-code
 <div class="space-y-4">
-    <x-loading.bar progress="50" size="lg" />
-    <x-loading.bar progress="50" />
-    <x-loading.bar progress="50" size="sm" />
+    <x-layout.progress-bar progress="50" size="lg" />
+    <x-layout.progress-bar progress="50" />
+    <x-layout.progress-bar progress="50" size="sm" />
 </div>
 ```
