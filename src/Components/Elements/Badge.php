@@ -6,11 +6,13 @@ use Illuminate\View\Component;
 
 class Badge extends Component
 {
-    public string $type;
+    public string $style;
+    public ?string $size;
 
-    public function __construct(string $type = 'default')
+    public function __construct(string $style = 'default', string $size = null)
     {
-        $this->type = $type;
+        $this->style = $style;
+        $this->size = $size;
     }
 
     /**
