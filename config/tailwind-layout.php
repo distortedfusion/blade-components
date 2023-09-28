@@ -72,14 +72,5 @@ return [
         'list-group.item' => Components\ListGroup\Item::class,
         'list-group.item-button' => Components\ListGroup\ItemButton::class,
         'list-group.item-link' => Components\ListGroup\ItemLink::class,
-
-        // Table components...
-        'table.cell' => Components\Tables\Cell::class,
-        'table.header-group' => Components\Tables\HeaderGroup::class,
-        'table.heading' => Components\Tables\Heading::class,
-        'table.row-group' => Components\Tables\RowGroup::class,
-        'table.row-link' => Components\Tables\RowLink::class,
-        'table.row' => Components\Tables\Row::class,
-        'table' => Components\Tables\Table::class,
     ],
 ];

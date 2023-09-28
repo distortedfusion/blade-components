@@ -1,5 +1,7 @@
 # Buttons
 
+Primary controls for any action, supporting both anchors and buttons.
+
 ```blade-component-code
 <div class="grid grid-cols-3 gap-4">
     <x-btn style="primary">Button Text</x-btn>

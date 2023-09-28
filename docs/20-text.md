@@ -1,5 +1,7 @@
 # Text
 
+Display text using pre-defined typographic styles and style combinations.
+
 ## Heading
 
 ```blade-component-code

@@ -1,5 +1,6 @@
 # List Groups
 
+List information in an organized manner or refer to a different source.
 
 ```blade-component-code
 <x-list-group>
