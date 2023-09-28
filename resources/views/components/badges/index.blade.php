@@ -12,11 +12,10 @@
     'text-red-900 border-red-200 bg-red-100' => $style === 'danger',
     'text-gray-900 border-gray-200 bg-gray-100' => $style === 'default',
 ]) }} role="alert">
-    @if($prefix ?? false)
-        <div class="flex-shrink-0">{{ $prefix }}</div>
+    @if(! is_null($icon))
+        <div class="flex-shrink-0">
+            <x-badge.icon :icon="$icon" />
+        </div>
     @endif
     <div class="flex-grow">{{ $slot }}</div>
-    @if($suffix ?? false)
-        <div class="flex-shrink-0">{{ $suffix }}</div>
-    @endif
 </div>

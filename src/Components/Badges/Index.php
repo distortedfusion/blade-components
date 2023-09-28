@@ -8,11 +8,13 @@ class Index extends Component
 {
     public string $style;
     public ?string $size;
+    public ?string $icon;
 
-    public function __construct(string $style = 'default', string $size = null)
+    public function __construct(string $style = 'default', string $size = null, string $icon = null)
     {
         $this->style = $style;
         $this->size = $size;
+        $this->icon = $icon;
     }
 
     /**
