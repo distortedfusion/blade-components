@@ -5,7 +5,7 @@
                 @if($url = $getPreviousUrl())
                     <div class="flex-1 mr-4">
                         <a href="{{ $url }}" class="group btn btn-primary btn-secondary btn-sm text-base px-2">
-                            <x-fas-chevron-left class="text-muted group-hover:text-brand-600 w-4 h-4" />
+                            <x-fal-chevron-left class="text-muted group-hover:text-brand-600 w-4 h-4" />
                         </a>
                     </div>
                 @endif
