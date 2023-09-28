@@ -2,13 +2,15 @@
     'text-center',
     'my-4' => ! Str::contains($attributes->get('class'), ['my-', 'mt-', 'mb-']),
 ]) }}>
-    <h3>{{ $title }}</h3>
+    @if($title ?? false)
+        <x-heading :heading-level="3">{{ $title }}</x-heading>
+    @endif
 
     <p class="text-muted text-sm mt-1">
-        {{ $description }}
+        {{ $slot }}
     </p>
 
-    @if ($action ?? false)
+    @if($action ?? false)
         <div class="mt-4">
             {{ $action }}
         </div>
