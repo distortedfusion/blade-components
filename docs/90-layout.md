@@ -1,5 +1,16 @@
 # Layout
 
+## Title Bar
+
+```blade-component-code
+<x-layout.title-bar title="Page Title">
+    <x-slot:actions>
+        <x-btn style="tertiary" size="sm">Action</x-btn>
+        <x-btn size="sm">Primary Action</x-btn>
+    </x-slot:actions>
+</x-layout.title-bar>
+```
+
 ## Photo
 
 ```blade-component-code
