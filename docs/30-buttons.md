@@ -44,15 +44,43 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 </div>
 ```
 
-## Icons
+## Prefix and Suffix
+
+Buttons can be prefixed or suffixed with simple text elements for additional clarity.
+
+```blade-component-code
+<div class="grid grid-cols-3 gap-4 items-center">
+    <x-btn>
+        <x-slot:prefix>
+            <span class="text-gray-400">1.</span>
+        </x-slot:prefix>
+        Button Text
+    </x-btn>
+    <x-btn>
+        Button Text
+        <x-slot:suffix>
+            <span class="text-gray-400">1.</span>
+        </x-slot:suffix>
+    </x-btn>
+    <x-btn>
+        <x-slot:prefix>
+            <span class="text-gray-400">1.</span>
+        </x-slot:prefix>
+        Button Text
+        <x-slot:suffix>
+            <span class="text-gray-400">2.</span>
+        </x-slot:suffix>
+    </x-btn>
+</div>
+```
+
+## With Icons
+
+Optionally the `x-btn.icon` component can be used to add icons.
 
 ```blade-component-code
 <x-btn.icon icon="fal-arrow-up" />
 ```
-
-## Prefix and Suffix
-
-Buttons can be combined with the `x-btn.icon` component or simple text elements for additional clarity.
 
 ```blade-component-code
 <div class="grid grid-cols-3 gap-4 items-center">
@@ -75,27 +103,6 @@ Buttons can be combined with the `x-btn.icon` component or simple text elements 
         Button Text
         <x-slot:suffix>
             <x-btn.icon icon="fal-arrow-up" />
-        </x-slot:suffix>
-    </x-btn>
-    <x-btn>
-        <x-slot:prefix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:prefix>
-        Button Text
-    </x-btn>
-    <x-btn>
-        Button Text
-        <x-slot:suffix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:suffix>
-    </x-btn>
-    <x-btn>
-        <x-slot:prefix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:prefix>
-        Button Text
-        <x-slot:suffix>
-            <span class="text-gray-400">2.</span>
         </x-slot:suffix>
     </x-btn>
 </div>
