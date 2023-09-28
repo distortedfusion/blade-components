@@ -9,11 +9,14 @@
                         </a>
                     </div>
                 @endif
-                <div class="flex-grow flex items-center space-x-2">
-                    @if($icon)
-                        <x-layout.icon :icon="$icon" />
-                    @endif
 
+                @if($icon)
+                    <div class="flex-shrink-0">
+                        <x-layout.icon :icon="$icon" />
+                    </div>
+                @endif
+
+                <div class="flex-grow flex items-center space-x-4">
                     <x-dynamic-component :component="$asHeading ? 'heading' : 'paragraph'"
                         class="font-sans-heading font-bold text-lg">
                         {{ $title }}
