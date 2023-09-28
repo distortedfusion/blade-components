@@ -27,6 +27,7 @@ class TitleBar extends Component
     public ?string $actions;
     public ?string $previousUrl;
     public ?string $icon;
+    public bool $asHeading;
 
     /**
      * Create a new component instance.
@@ -35,13 +36,15 @@ class TitleBar extends Component
      * @param string|null $actions
      * @param string|null $previousUrl
      * @param string|null $icon
+     * @param bool        $asHeading
      */
-    public function __construct(string $title = null, string $actions = null, string $previousUrl = null, string $icon = null)
+    public function __construct(string $title = null, string $actions = null, string $previousUrl = null, string $icon = null, bool $asHeading = true)
     {
         $this->title = $title;
         $this->actions = $actions;
         $this->previousUrl = $previousUrl;
         $this->icon = $icon;
+        $this->asHeading = $asHeading;
     }
 
     /**
