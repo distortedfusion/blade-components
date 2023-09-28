@@ -3,7 +3,7 @@
 ## Title Bar
 
 ```blade-component-code
-<x-layout.title-bar title="Page Title">
+<x-layout.title-bar :as-heading="false" title="Page Title">
     <x-slot:actions>
         <x-btn style="tertiary" size="sm">Action</x-btn>
         <x-btn size="sm">Primary Action</x-btn>
@@ -12,11 +12,11 @@
 ```
 
 ```blade-component-code
-<x-layout.title-bar title="Page Title" icon="fal-feather" />
+<x-layout.title-bar :as-heading="false" title="Page Title" icon="fal-feather" />
 ```
 
 ```blade-component-code
-<x-layout.title-bar title="Page Title" previous-url="#" />
+<x-layout.title-bar :as-heading="false" title="Page Title" previous-url="#" />
 ```
 
 ## Photo
