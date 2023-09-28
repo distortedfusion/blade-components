@@ -47,9 +47,6 @@ return [
         'container' => 'tailwind-layout::components.layout.containers.container',
         'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
 
-        // Fields...
-        'field.boolean' => Components\Field\Boolean::class,
-
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon-muted' => Components\Layout\IconMuted::class,
