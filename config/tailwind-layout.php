@@ -52,15 +52,15 @@ return [
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
         'layout.photo' => Components\Layout\Photo::class,
+        'layout.title-bar' => Components\Layout\TitleBar::class,
+
         'layout.section-group' => 'tailwind-layout::components.layout.section-group',
         'layout.section-title' => Components\Layout\SectionTitle::class,
         'layout.section' => Components\Layout\Section::class,
-        'layout.spinner' => 'tailwind-layout::components.layout.spinner',
-        'layout.title-bar' => Components\Layout\TitleBar::class,
 
-        // Loading components...
-        'loading.bar' => Components\Loading\Bar::class,
-        'loading.pulser' => 'tailwind-layout::components.loading.pulser',
+        'layout.spinner' => 'tailwind-layout::components.layout.spinner',
+        'layout.progress-bar' => Components\Layout\ProgressBar::class,
+        'layout.pulser' => 'tailwind-layout::components.layout.pulser',
 
         // List group...
         'list-group' => Components\ListGroup\Index::class,
