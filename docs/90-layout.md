@@ -1,13 +1,18 @@
 # Layout
 
-## Icons
+## Contained Icons
 
 ```blade-component-code
-<div class="flex items-center justify-between">
-    <x-layout.icon icon="fal-user" />
-    <x-layout.icon icon="fal-user" size="sm" />
-    <x-layout.icon icon="fal-user" style="muted" />
-    <x-layout.icon icon="fal-user" style="muted" size="sm" />
+<div class="grid grid-cols-3 gap-4 items-center">
+    <x-layout.icon icon="fal-user" style="primary" size="lg" />
+    <x-layout.icon icon="fal-user" style="primary" />
+    <x-layout.icon icon="fal-user" style="primary" size="sm" />
+    <x-layout.icon icon="fal-user" style="secondary" size="lg" />
+    <x-layout.icon icon="fal-user" style="secondary" />
+    <x-layout.icon icon="fal-user" style="secondary" size="sm" />
+    <x-layout.icon icon="fal-user" style="tertiary" size="lg" />
+    <x-layout.icon icon="fal-user" style="tertiary" />
+    <x-layout.icon icon="fal-user" style="tertiary" size="sm" />
 </div>
 ```
 
@@ -36,9 +41,7 @@
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-10 h-10 flex items-center justify-center border border-black/20 rounded-md">
-                        <x-fal-brush class="text-gray-400 w-4 h-4" />
-                    </div>
+                    <x-layout.icon icon="fal-brush" style="tertiary" />
                 </div>
 
                 <div class="flex-grow">
@@ -54,9 +57,7 @@
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-10 h-10 flex items-center justify-center border border-black/20 rounded-md">
-                        <x-fal-code class="text-gray-400 w-4 h-4" />
-                    </div>
+                    <x-layout.icon icon="fal-code" style="tertiary" />
                 </div>
 
                 <div class="flex-grow">
@@ -72,9 +73,7 @@
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <div class="w-10 h-10 flex items-center justify-center border border-black/20 rounded-md">
-                        <x-fal-database class="text-gray-400 w-4 h-4" />
-                    </div>
+                    <x-layout.icon icon="fal-database" style="tertiary" />
                 </div>
 
                 <div class="flex-grow">
