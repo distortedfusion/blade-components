@@ -21,10 +21,9 @@ return [
         'btn' => Components\Btn\Index::class,
         'btn.icon' => 'tailwind-layout::components.btn.icon',
 
-        // Elements...
-        'badge' => Components\Elements\Badge::class,
-        'badge-icon' => 'tailwind-layout::components.elements.badge-icon',
-        'boolean-badge' => Components\Elements\BooleanBadge::class,
+        // Badges...
+        'badge' => Components\Badges\Index::class,
+        'badge.icon' => 'tailwind-layout::components.badges.icon',
 
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,

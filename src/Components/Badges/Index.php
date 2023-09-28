@@ -1,10 +1,10 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Elements;
+namespace DistortedFusion\Tailwind\Components\Badges;
 
 use Illuminate\View\Component;
 
-class Badge extends Component
+class Index extends Component
 {
     public string $style;
     public ?string $size;
@@ -22,6 +22,6 @@ class Badge extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.elements.badge');
+        return view('tailwind-layout::components.badges.index');
     }
 }
