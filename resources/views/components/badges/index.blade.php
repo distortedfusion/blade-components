@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'inline-flex items-center border p-2 py-0.5 text-sm font-semibold rounded-md',
+    'inline-flex items-center space-x-2 border p-2 py-0.5 text-sm font-semibold rounded-md',
 
     // Badge sizes...
     // '' => $size === 'lg',
