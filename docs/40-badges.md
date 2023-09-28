@@ -18,11 +18,10 @@ A contained label that shows the status of an element, emphasizes an element, or
 
 ```blade-component-code
 <div class="flex items-center space-x-4">
-    <x-badge>
-        <x-slot:prefix>
-            <x-badge.icon icon="fal-arrow-up" />
-        </x-slot:prefix>
-        Badge Text
-    </x-badge>
+    <x-badge icon="fal-arrow-up" style="success">Badge Text</x-badge>
+    <x-badge icon="fal-arrow-up" style="info">Badge Text</x-badge>
+    <x-badge icon="fal-arrow-up" style="warning">Badge Text</x-badge>
+    <x-badge icon="fal-arrow-up" style="danger">Badge Text</x-badge>
+    <x-badge icon="fal-arrow-up" style="default">Badge Text</x-badge>
 </div>
 ```
