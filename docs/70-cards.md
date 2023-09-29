@@ -5,7 +5,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-card.body>
@@ -23,7 +23,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
 
         <x-slot:action>
             <x-btn size="sm">Update Details</x-btn>
@@ -39,7 +39,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-card.body>
@@ -58,7 +58,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card style="warning">
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-card.body>
@@ -75,7 +75,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card style="danger">
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-card.body>
@@ -94,7 +94,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-card.body class="space-y-6">
@@ -121,7 +121,7 @@ Display related information in a single unit, optionally providing related actio
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title>The Evil Rabbit Jumped over the Fence</x-card.title>
+        <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
     </x-card.header>
 
     <x-list-group flush>
