@@ -9,11 +9,12 @@ class Title extends Heading
     /**
      * Create the component instance.
      *
-     * @param int $headingLevel
+     * @param int  $headingLevel
+     * @param bool $asHeading
      */
-    public function __construct(int $headingLevel = 3)
+    public function __construct(int $headingLevel = 3, bool $asHeading = true)
     {
-        $this->headingLevel = $headingLevel;
+        parent::__construct($headingLevel, $asHeading);
     }
 
     /**

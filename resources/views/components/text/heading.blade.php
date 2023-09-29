@@ -1,4 +1,7 @@
-<h{{ $headingLevel }} {{ $attributes->merge(['id' => $id()])->class([
+@php
+$element = $asHeading ? 'h'.$headingLevel : 'p';
+@endphp
+<{{ $element }} {{ $attributes->merge(['id' => $id()])->class([
     'font-sans-heading',
     'hyphens-auto' => ! Str::contains($attributes->get('class'), ['hyphens-']),
     'font-black' => $headingLevel === 1 && ! Str::contains($attributes->get('class'), ['font-']),
@@ -9,4 +12,4 @@
     'text-2xl md:text-2xl' => $headingLevel === 4 && ! Str::contains($attributes->get('class'), ['text-']),
     'text-xl md:text-xl' => $headingLevel === 5 && ! Str::contains($attributes->get('class'), ['text-']),
     'text-lg md:text-lg' => $headingLevel === 6 && ! Str::contains($attributes->get('class'), ['text-']),
-]) }}>{{ $slot }}</h{{ $headingLevel }}>
+]) }}>{{ $slot }}</{{ $element }}>

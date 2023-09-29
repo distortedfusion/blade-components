@@ -9,10 +9,12 @@ use Illuminate\View\Component;
 class Heading extends Component
 {
     public int $headingLevel;
+    public bool $asHeading;
 
-    public function __construct(int $headingLevel = 1)
+    public function __construct(int $headingLevel = 1, bool $asHeading = true)
     {
         $this->headingLevel = $headingLevel;
+        $this->asHeading = $asHeading;
     }
 
     /**
