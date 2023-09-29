@@ -14,6 +14,16 @@ A contained label that shows the status of an element, emphasizes an element, or
 </div>
 ```
 
+## Sizes
+
+```blade-component-code
+<div class="flex items-center space-x-4">
+    <x-badge size="lg">Badge Text</x-badge>
+    <x-badge>Badge Text</x-badge>
+    <x-badge size="sm">Badge Text</x-badge>
+</div>
+```
+
 ## With Icons
 
 ```blade-component-code
