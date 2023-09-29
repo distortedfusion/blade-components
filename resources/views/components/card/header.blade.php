@@ -6,7 +6,7 @@
 ]) }}>
     <div class="flex-grow">{{ $slot }}</div>
     @if($action ?? false)
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 flex items-center space-x-2">
             {{ $action }}
         </div>
     @endif
