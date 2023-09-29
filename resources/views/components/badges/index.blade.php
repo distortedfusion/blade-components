@@ -1,10 +1,10 @@
 <div {{ $attributes->class([
-    'inline-flex items-center space-x-2 border p-2 py-0.5 text-sm font-semibold rounded-md',
+    'inline-flex items-center space-x-2 border font-semibold rounded-md',
 
     // Badge sizes...
-    // '' => $size === 'lg',
-    // '' => is_null($size) || ! in_array($size, ['sm', 'lg']),
-    // '' => $size === 'sm',
+    'p-3 py-1 text-base' => $size === 'lg',
+    'p-2 py-0.5 text-sm' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'p-1 py-0 text-xs' => $size === 'sm',
 
     'text-green-900 border-green-200 bg-green-100' => $style === 'success',
     'text-blue-900 border-blue-200 bg-blue-100' => $style === 'info',
