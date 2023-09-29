@@ -1,7 +1,7 @@
 # Empty States
 
 ```blade-component-code
-<x-layout.empty-state title="Title">
+<x-layout.empty-state title="Title" :as-heading="false">
     The Evil Rabbit Jumped over the Fence.
     <x-slot:action>
         <x-btn size="sm">Primary Action</x-btn>
@@ -18,7 +18,7 @@
 ## Informational
 
 ```blade-component-code
-<x-layout.empty-state title="Title">
+<x-layout.empty-state title="Title" :as-heading="false">
     <x-paragraph>The Evil Rabbit Jumped over the Fence.</x-paragraph>
 
     <x-list-group>
