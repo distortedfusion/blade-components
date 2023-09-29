@@ -1,7 +1,5 @@
 <div {{ $attributes->class(['text-center']) }}>
-    @if($title ?? false)
-        <x-heading :heading-level="3">{{ $title }}</x-heading>
-    @endif
+    <x-heading :heading-level="3" :as-heading="$asHeading">{{ $title }}</x-heading>
     <div class="text-gray-600 text-sm space-y-4 mt-2">
         {{ $slot }}
     </div>

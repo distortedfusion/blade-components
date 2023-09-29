@@ -48,7 +48,7 @@ return [
         'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
 
         // Layout components...
-        'layout.empty-state' => 'tailwind-layout::components.layout.empty-state',
+        'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'tailwind-layout::components.layout.nav-link',
         'layout.photo' => Components\Layout\Photo::class,
