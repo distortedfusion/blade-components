@@ -20,7 +20,7 @@
 
                 <div class="flex-grow flex items-center space-x-4">
                     <x-dynamic-component :component="$asHeading ? 'heading' : 'paragraph'"
-                        class="font-sans-heading font-bold text-lg">
+                        class="font-sans-heading font-bold text-lg leading-6 py-2">
                         {{ $title }}
                     </x-dynamic-component>
                 </div>
