@@ -5,8 +5,9 @@ $class = [
     'focus:no-underline focus:outline-0',
 
     // Button sizes...
-    'h-14 py-3 px-4 text-sm font-semibold leading-8' => $size === 'lg',
-    'h-12 py-2 px-4 text-sm font-semibold leading-8' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'h-14 py-3 px-4 text-sm font-semibold leading-8' => $size === 'xl',
+    'h-12 py-2 px-4 text-sm font-semibold leading-8' => $size === 'lg',
+    'h-10 py-2 px-4 text-sm font-semibold leading-8' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
     'h-8 py-0 px-4 text-sm font-semibold leading-8' => $size === 'sm',
 
     // Primary color...
@@ -15,10 +16,10 @@ $class = [
     'shadow-none focus:bg-brand-500 focus:border-brand-500 focus:text-white' => $style === 'primary',
     'shadow-none active:bg-brand-500 active:border-brand-500 active:text-white' => $style === 'primary',
 
-    'shadow-none dark:bg-white dark:border-gray-300 dark:text-gray-700' => $style === 'primary',
-    'shadow-none dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-gray-700' => $style === 'primary',
-    'shadow-none dark:focus:bg-gray-100 dark:focus:border-gray-300 dark:focus:text-gray-700' => $style === 'primary',
-    'shadow-none dark:active:bg-gray-100 dark:active:border-gray-300 dark:active:text-gray-700' => $style === 'primary',
+    'shadow-none dark:bg-white dark:border-white dark:text-gray-700' => $style === 'primary',
+    'shadow-none dark:hover:bg-gray-100 dark:hover:border-gray-100 dark:hover:text-gray-700' => $style === 'primary',
+    'shadow-none dark:focus:bg-gray-100 dark:focus:border-gray-100 dark:focus:text-gray-700' => $style === 'primary',
+    'shadow-none dark:active:bg-gray-100 dark:active:border-gray-100 dark:active:text-gray-700' => $style === 'primary',
 
     // Secondary color...
     'shadow-none bg-white border-gray-300 text-gray-700' => $style === 'secondary' || $style === 'default',
