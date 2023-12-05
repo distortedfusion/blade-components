@@ -1,4 +1,6 @@
-<header {{ $attributes }}>
+<header {{ $attributes->class([
+        'text-black dark:text-white',
+    ]) }}>
     <x-dynamic-component :component="$currentRouteApplicableForNarrowLayout() ? 'container-narrow' : 'container'">
         <div class="border-b border-black/10 py-6">
             <div class="flex items-center">
