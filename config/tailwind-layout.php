@@ -54,6 +54,10 @@ return [
         'layout.photo' => Components\Layout\Photo::class,
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
+        'layout.section-group' => 'tailwind-layout::components.layout.section-group',
+        'layout.section-title' => Components\Layout\SectionTitle::class,
+        'layout.section' => Components\Layout\Section::class,
+
         'layout.spinner' => 'tailwind-layout::components.layout.spinner',
         'layout.progress-bar' => Components\Layout\ProgressBar::class,
         'layout.pulser' => 'tailwind-layout::components.layout.pulser',
