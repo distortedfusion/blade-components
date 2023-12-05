@@ -13,6 +13,7 @@ class Card extends Component implements Htmlable
     protected ?array $chart = null;
     protected string|Htmlable $label;
     protected $value;
+    protected $max;
 
     public function __construct(string $label)
     {
@@ -70,6 +71,18 @@ class Card extends Component implements Htmlable
     public function getValue()
     {
         return $this->value;
+    }
+
+    public function max($max): static
+    {
+        $this->max = $max;
+
+        return $this;
+    }
+
+    public function getMax()
+    {
+        return $this->max;
     }
 
     public function toHtml(): string

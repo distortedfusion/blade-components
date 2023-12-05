@@ -31,5 +31,7 @@
                 @endif
             </div>
         </div>
+
+        {{ $slot }}
     </x-dynamic-component>
 </header>

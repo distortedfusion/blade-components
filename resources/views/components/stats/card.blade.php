@@ -3,8 +3,21 @@
 ]) }}>
     <x-card.body class="space-y-1">
         <div class="text-xs text-muted font-semibold">{{ $getLabel() }}</div>
-        <div class="text-3xl font-semibold tracking-tight">{{ $getValue() ?? $slot }}</div>
+        <div class="text-3xl font-semibold tracking-tight">
+            {{ $getValue() ?? $slot }}
+            @if(($suffix ?? false) || ! is_null($getMax()))
+                <span class="text-lg text-gray-700">
+                    / {{ $suffix ?? $getMax() }}
+                </span>
+            @endif
+        </div>
     </x-card.body>
+
+    @if($footer ?? false)
+        <x-card.footer>
+            {{ $footer }}
+        </x-card.footer>
+    @endif
 
     @if($getChart())
         <div class="absolute bottom-0 inset-x-0 rounded-b overflow-hidden">
