@@ -27,6 +27,11 @@ $class = [
     'shadow-none focus:bg-gray-100 focus:border-gray-300 focus:text-gray-700' => $style === 'secondary' || $style === 'default',
     'shadow-none active:bg-gray-100 active:border-gray-300 active:text-gray-700' => $style === 'secondary' || $style === 'default',
 
+    'shadow-none dark:bg-black dark:border-white/10 dark:text-gray-300' => $style === 'secondary' || $style === 'default',
+    'shadow-none dark:hover:bg-gray-900 dark:hover:border-white/10 dark:hover:text-gray-300' => $style === 'secondary' || $style === 'default',
+    'shadow-none dark:focus:bg-gray-900 dark:focus:border-white/10 dark:focus:text-gray-300' => $style === 'secondary' || $style === 'default',
+    'shadow-none dark:active:bg-gray-900 dark:active:border-white/10 dark:active:text-gray-300' => $style === 'secondary' || $style === 'default',
+
     // Tertiary color...
     'shadow-none bg-transparent border-transparent text-gray-700' => $style === 'tertiary',
     'shadow-none hover:bg-gray-100 hover:border-gray-100 hover:text-gray-700' => $style === 'tertiary',
