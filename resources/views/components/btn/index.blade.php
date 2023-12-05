@@ -15,6 +15,11 @@ $class = [
     'shadow-none focus:bg-brand-500 focus:border-brand-500 focus:text-white' => $style === 'primary',
     'shadow-none active:bg-brand-500 active:border-brand-500 active:text-white' => $style === 'primary',
 
+    'shadow-none dark:bg-white dark:border-gray-300 dark:text-gray-700' => $style === 'primary',
+    'shadow-none dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-gray-700' => $style === 'primary',
+    'shadow-none dark:focus:bg-gray-100 dark:focus:border-gray-300 dark:focus:text-gray-700' => $style === 'primary',
+    'shadow-none dark:active:bg-gray-100 dark:active:border-gray-300 dark:active:text-gray-700' => $style === 'primary',
+
     // Secondary color...
     'shadow-none bg-white border-gray-300 text-gray-700' => $style === 'secondary' || $style === 'default',
     'shadow-none hover:bg-gray-100 hover:border-gray-300 hover:text-gray-700' => $style === 'secondary' || $style === 'default',
