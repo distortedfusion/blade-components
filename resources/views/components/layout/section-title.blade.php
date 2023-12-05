@@ -1,1 +1,1 @@
-<h{{ $headingLevel }} {{ $attributes->class(['font-semibold']) }}>{{ $slot }}</h{{ $headingLevel }}>
+<x-heading :heading-level="$headingLevel" {{ $attributes }}>{{ $slot }}</x-heading>

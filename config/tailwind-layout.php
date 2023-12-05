@@ -54,7 +54,7 @@ return [
         'layout.photo' => Components\Layout\Photo::class,
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
-        'layout.section-group' => 'tailwind-layout::components.layout.section-group',
+        'layout.sections' => 'tailwind-layout::components.layout.section-group',
         'layout.section-title' => Components\Layout\SectionTitle::class,
         'layout.section' => Components\Layout\Section::class,
 
