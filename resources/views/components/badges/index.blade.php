@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'inline-flex items-center space-x-2 border font-semibold rounded-md',
+    'inline-flex items-center space-x-2 border rounded-md',
 
     // Badge sizes...
     'p-3 py-1 text-base' => $size === 'lg',
@@ -10,7 +10,8 @@
     'text-blue-900 border-blue-200 bg-blue-100' => $style === 'info',
     'text-yellow-900 border-yellow-200 bg-yellow-100' => $style === 'warning',
     'text-red-900 border-red-200 bg-red-100' => $style === 'danger',
-    'text-gray-900 border-gray-200 bg-gray-100' => $style === 'default',
+    'text-gray-700 border-gray-300 bg-gray-100' => $style === 'default',
+    'dark:text-gray-300 dark:border-gray-700 dark:bg-gray-900' => $style === 'default',
 ]) }} role="alert">
     @if(! is_null($icon))
         <div class="flex-shrink-0">
