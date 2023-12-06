@@ -2,11 +2,11 @@
     'w-full relative'
 ]) }}>
     <x-card.body class="space-y-1">
-        <div class="text-xs text-muted font-semibold">{{ $getLabel() }}</div>
+        <div class="text-xs text-gray-700 dark:text-gray-300 font-semibold">{{ $getLabel() }}</div>
         <div class="text-3xl font-semibold tracking-tight">
             {{ $getValue() ?? $slot }}
             @if(($suffix ?? false) || ! is_null($getMax()))
-                <span class="text-lg text-gray-700">
+                <span class="text-lg text-gray-700 dark:text-gray-300">
                     / {{ $suffix ?? $getMax() }}
                 </span>
             @endif
