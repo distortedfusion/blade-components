@@ -5,10 +5,20 @@ $class = [
     'focus:no-underline focus:outline-0',
 
     // Button sizes...
-    'h-14 py-3 px-4 text-sm font-semibold leading-8' => $size === 'xl',
-    'h-12 py-2 px-4 text-sm font-semibold leading-8' => $size === 'lg',
-    'h-10 py-2 px-4 text-sm font-semibold leading-8' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
-    'h-8 py-0 px-4 text-sm font-semibold leading-8' => $size === 'sm',
+    'h-14 text-sm font-semibold leading-8' => $size === 'xl',
+    'h-12 text-sm font-semibold leading-8' => $size === 'lg',
+    'h-10 text-sm font-semibold leading-8' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
+    'h-8 text-sm font-semibold leading-8' => $size === 'sm',
+
+    'px-4' => ! Str::contains($attributes->get('class'), ['p-', 'px-', 'pl-', 'pr-']) && $size === 'xl',
+    'px-4' => ! Str::contains($attributes->get('class'), ['p-', 'px-', 'pl-', 'pr-']) && $size === 'lg',
+    'px-4' => ! Str::contains($attributes->get('class'), ['p-', 'px-', 'pl-', 'pr-']) && is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
+    'px-4' => ! Str::contains($attributes->get('class'), ['p-', 'px-', 'pl-', 'pr-']) && $size === 'sm',
+
+    'py-3' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'xl',
+    'py-2' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'lg',
+    'py-2' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
+    'py-0' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'sm',
 
     // Primary color...
     'shadow-none bg-brand-600 border-brand-800 text-white' => $style === 'primary',

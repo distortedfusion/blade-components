@@ -7,7 +7,7 @@
         <div class="space-y-6">
             <div class="flex items-center">
                 @if($url = $getPreviousUrl())
-                    <div class="flex-shrink-0 border-r border-black/10 pr-2 mr-2">
+                    <div class="flex-shrink-0 border-r border-black/10 dark:border-white/10 pr-2 mr-4">
                         <x-btn :href="$url" size="sm" style="tertiary" class="px-2">
                             <x-btn.icon icon="fal-chevron-left" />
                         </x-btn>
