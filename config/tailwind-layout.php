@@ -47,6 +47,9 @@ return [
         'container' => 'tailwind-layout::components.layout.containers.container',
         'container-narrow' => 'tailwind-layout::components.layout.containers.container-narrow',
 
+        // Entities...
+        'entity.field' => 'tailwind-layout::components.entity.field',
+
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => Components\Layout\Icon::class,
