@@ -11,6 +11,20 @@
                 </span>
             @endif
         </div>
+        @if(! is_null($getDescription()))
+            <div class="{{ implode(' ', array_filter([
+                    'flex items-center space-x-1 text-xs tracking-tight',
+                    $getStyle() === 'success' ? 'text-success' : null,
+                    $getStyle() === 'info' ? 'text-info' : null,
+                    $getStyle() === 'warning' ? 'text-warning' : null,
+                    $getStyle() === 'danger' ? 'text-danger' : null,
+                ])) }}">
+                <span>{{ $getDescription() }}</span>
+                @if(! is_null($getDescriptionIcon()))
+                    <x-dynamic-component :component="$getDescriptionIcon()" class="w-4 h-4" />
+                @endif
+            </div>
+        @endif
     </x-card.body>
 
     @if($footer ?? false)
@@ -22,8 +36,8 @@
     @if($getChart())
         <div class="absolute bottom-0 inset-x-0 rounded-b overflow-hidden">
             <canvas id="{{ $getId().'-chart' }}" class="h-5 sm:h-6" wire:ignore>
-                <span data-ref="primaryBackgroundColorElement" class="bg-brand-500 bg-opacity-100"></span>
-                <span data-ref="secondaryBackgroundColorElement" class="bg-brand-500 bg-opacity-0"></span>
+                <span data-ref="primaryBackgroundColorElement" class="bg-brand-500 bg-opacity-75"></span>
+                <span data-ref="secondaryBackgroundColorElement" class="bg-brand-500 bg-opacity-25"></span>
                 <span data-ref="borderColorElement" class="text-brand-500"></span>
             </canvas>
         </div>

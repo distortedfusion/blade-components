@@ -14,6 +14,9 @@ class Card extends Component implements Htmlable
     protected string|Htmlable $label;
     protected $value;
     protected $max;
+    protected string|null $descriptionIcon = null;
+    protected string|Htmlable|null $description = null;
+    protected string $style = 'default';
 
     public function __construct(string $label)
     {
@@ -83,6 +86,42 @@ class Card extends Component implements Htmlable
     public function getMax()
     {
         return $this->max;
+    }
+
+    public function descriptionIcon(string $descriptionIcon): static
+    {
+        $this->descriptionIcon = $descriptionIcon;
+
+        return $this;
+    }
+
+    public function getDescriptionIcon(): string|null
+    {
+        return $this->descriptionIcon;
+    }
+
+    public function description(string|Htmlable $description): static
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDescription(): string|Htmlable|null
+    {
+        return $this->description;
+    }
+
+    public function style(string $style): static
+    {
+        $this->style = $style;
+
+        return $this;
+    }
+
+    public function getStyle(): string
+    {
+        return $this->style;
     }
 
     public function toHtml(): string
