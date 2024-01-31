@@ -17,7 +17,7 @@
     }}">
         <div class="flex items-center {{ $vertical ? 'flex-col' : 'space-x-2' }}">
             @include('tailwind-layout::components.list-group.partials.title')
-            <div class="flex-grow text-{{ $align }}">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="flex-shrink-0">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
     </div>
 

@@ -1,8 +1,10 @@
 @if(! is_null($title))
-    <div class="flex-shrink-0{{ $align !== 'right' && ! ($vertical ?? false) ? ' w-1/3' : null }}">
-        <p {{ $title->attributes->class([
+    <div {{ $title->attributes->class([
+            'flex-shrink-0' => ! Str::contains($title->attributes->get('class'), ['flex-']),
             'flex items-center',
             'text-xs font-semibold',
-        ]) }}>{!! $title !!}</p>
+            'w-1/3' => $align !== 'right' && ! ($vertical ?? false) && ! Str::contains($title->attributes->get('class'), ['w-']),
+        ]) }}>
+        {!! $title !!}
     </div>
 @endif

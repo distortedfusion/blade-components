@@ -21,7 +21,7 @@
     }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
         <div class="flex items-center space-x-2">
             @include('tailwind-layout::components.list-group.partials.title')
-            <div class="flex-grow text-{{ $align }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="flex-shrink-0 pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         @if(! is_null($icon))
