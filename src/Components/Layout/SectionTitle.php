@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\BladeComponents\Components\Layout;
 
 use Illuminate\View\Component;
 
@@ -25,6 +25,6 @@ class SectionTitle extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.section-title');
+        return view('blade-components::components.layout.section-title');
     }
 }

@@ -1,8 +1,8 @@
 {
-    "name": "distortedfusion/laravel-tailwind-layout",
+    "name": "distortedfusion/blade-components",
     "description": "A collection of reusable Blade components implementing TailwindCSS.",
     "license": "proprietary",
-    "keywords": ["laravel", "tailwind", "layout", "distortedfusion"],
+    "keywords": ["laravel", "tailwind", "blade", "components", "distortedfusion"],
     "authors": [
         {
             "name": "Kevin Dierkx",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DistortedFusion\\Tailwind\\": "src/"
+            "DistortedFusion\\BladeComponents\\": "src/"
         }
     },
     "scripts": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DistortedFusion\\Tailwind\\LayoutServiceProvider"
+                "DistortedFusion\\BladeComponents\\LayoutServiceProvider"
             ]
         }
     },

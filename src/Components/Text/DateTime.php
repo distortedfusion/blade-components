@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Text;
+namespace DistortedFusion\BladeComponents\Components\Text;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
@@ -30,7 +30,7 @@ class DateTime extends Component
 
     public function render(): View
     {
-        return view('tailwind-layout::components.text.date-time');
+        return view('blade-components::components.text.date-time');
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\BladeComponents\Components\Layout;
 
 use Closure;
 use Illuminate\View\Component;
@@ -32,6 +32,6 @@ class Icon extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.icon');
+        return view('blade-components::components.layout.icon');
     }
 }

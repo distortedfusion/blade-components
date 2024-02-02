@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\BladeComponents\Components\Layout;
 
 use Closure;
 use Illuminate\Support\Facades\Route;
@@ -54,7 +54,7 @@ class TitleBar extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.title-bar');
+        return view('blade-components::components.layout.title-bar');
     }
 
     /**

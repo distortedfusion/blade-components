@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Bootstrap;
+namespace DistortedFusion\BladeComponents\Components\Bootstrap;
 
 use Illuminate\View\Component;
 
@@ -25,6 +25,6 @@ class DropdownIcon extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.bootstrap.dropdown-icon');
+        return view('blade-components::components.bootstrap.dropdown-icon');
     }
 }

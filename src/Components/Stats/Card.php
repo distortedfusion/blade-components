@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Stats;
+namespace DistortedFusion\BladeComponents\Components\Stats;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
@@ -131,6 +131,6 @@ class Card extends Component implements Htmlable
 
     public function render(): Renderable
     {
-        return view('tailwind-layout::components.stats.card', $this->data());
+        return view('blade-components::components.stats.card', $this->data());
     }
 }

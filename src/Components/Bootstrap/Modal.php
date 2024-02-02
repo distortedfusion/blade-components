@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Bootstrap;
+namespace DistortedFusion\BladeComponents\Components\Bootstrap;
 
 use Closure;
 use Illuminate\View\Component;
@@ -35,7 +35,7 @@ class Modal extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.bootstrap.modal');
+        return view('blade-components::components.bootstrap.modal');
     }
 
     /**

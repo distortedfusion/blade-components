@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Badges;
+namespace DistortedFusion\BladeComponents\Components\Badges;
 
 use Illuminate\View\Component;
 
@@ -24,6 +24,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.badges.index');
+        return view('blade-components::components.badges.index');
     }
 }

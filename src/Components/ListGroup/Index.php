@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\ListGroup;
+namespace DistortedFusion\BladeComponents\Components\ListGroup;
 
 use Closure;
 use Illuminate\View\Component;
@@ -21,6 +21,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.list-group.index');
+        return view('blade-components::components.list-group.index');
     }
 }

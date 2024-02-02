@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Console;
+namespace DistortedFusion\BladeComponents\Console;
 
 use Illuminate\Console\Command;
 
@@ -18,7 +18,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Publish all of the distortedfusion/laravel-tailwind-layout resources';
+    protected $description = 'Publish all of the distortedfusion/blade-components resources';
 
     /**
      * Execute the console command.

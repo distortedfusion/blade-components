@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Text;
+namespace DistortedFusion\BladeComponents\Components\Text;
 
 use Closure;
 use Illuminate\View\Component;
@@ -35,7 +35,7 @@ class Currency extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.text.currency');
+        return view('blade-components::components.text.currency');
     }
 
     /**

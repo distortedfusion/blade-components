@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\BladeComponents\Components\Layout;
 
 use Illuminate\View\Component;
 
@@ -29,6 +29,6 @@ class ProgressBar extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.progress-bar');
+        return view('blade-components::components.layout.progress-bar');
     }
 }

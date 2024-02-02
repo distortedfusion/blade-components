@@ -1,8 +1,8 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Card;
+namespace DistortedFusion\BladeComponents\Components\Card;
 
-use DistortedFusion\Tailwind\Components\Text\Heading;
+use DistortedFusion\BladeComponents\Components\Text\Heading;
 
 class Title extends Heading
 {
@@ -24,6 +24,6 @@ class Title extends Heading
      */
     public function render()
     {
-        return view('tailwind-layout::components.card.title');
+        return view('blade-components::components.card.title');
     }
 }

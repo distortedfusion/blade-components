@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Bootstrap;
+namespace DistortedFusion\BladeComponents\Components\Bootstrap;
 
 use Closure;
 
@@ -13,6 +13,6 @@ class ModalDialog extends Modal
      */
     public function render()
     {
-        return view('tailwind-layout::components.bootstrap.modal-dialog');
+        return view('blade-components::components.bootstrap.modal-dialog');
     }
 }

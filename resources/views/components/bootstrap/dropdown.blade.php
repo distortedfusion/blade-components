@@ -9,7 +9,7 @@
 
     @if(! ($menu ?? false))
         <div class="dropdown-menu dropdown-menu-{{ $placement }}">
-            @include('tailwind-layout::components.bootstrap.dropdown-menu')
+            @include('blade-components::components.bootstrap.dropdown-menu')
         </div>
     @else
         <div {{ $menu->attributes->class([

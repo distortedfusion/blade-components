@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\ListGroup;
+namespace DistortedFusion\BladeComponents\Components\ListGroup;
 
 use Closure;
 
@@ -24,6 +24,6 @@ class ItemLink extends Item
      */
     public function render()
     {
-        return view('tailwind-layout::components.list-group.item-link');
+        return view('blade-components::components.list-group.item-link');
     }
 }

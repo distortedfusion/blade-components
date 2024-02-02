@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Alert;
+namespace DistortedFusion\BladeComponents\Components\Alert;
 
 use Illuminate\View\Component;
 
@@ -60,7 +60,7 @@ class Index extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.alert.index');
+        return view('blade-components::components.alert.index');
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Btn;
+namespace DistortedFusion\BladeComponents\Components\Btn;
 
 use Closure;
 use Illuminate\View\Component;
@@ -31,6 +31,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.btn.index');
+        return view('blade-components::components.btn.index');
     }
 }

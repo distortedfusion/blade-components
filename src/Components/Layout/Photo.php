@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\Tailwind\Components\Layout;
+namespace DistortedFusion\BladeComponents\Components\Layout;
 
 use Closure;
 use Illuminate\View\Component;
@@ -32,7 +32,7 @@ class Photo extends Component
      */
     public function render()
     {
-        return view('tailwind-layout::components.layout.photo');
+        return view('blade-components::components.layout.photo');
     }
 
     public function getPhotoStyle(): string
