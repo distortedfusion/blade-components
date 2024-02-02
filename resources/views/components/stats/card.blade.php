@@ -3,7 +3,7 @@
 ]) }}>
     <x-card.body class="space-y-1">
         <div class="text-xs text-gray-700 dark:text-gray-300 font-semibold">{{ $getLabel() }}</div>
-        <div class="text-3xl font-semibold tracking-tight">
+        <div class="text-3xl font-semibold tracking-tight text-black dark:text-white">
             {{ $getValue() ?? $slot }}
             @if(($suffix ?? false) || ! is_null($getMax()))
                 <span class="text-lg text-gray-700 dark:text-gray-300">
@@ -36,9 +36,9 @@
     @if($getChart())
         <div class="absolute bottom-0 inset-x-0 rounded-b overflow-hidden">
             <canvas id="{{ $getId().'-chart' }}" class="h-5 sm:h-6" wire:ignore>
-                <span data-ref="primaryBackgroundColorElement" class="bg-brand-500 bg-opacity-75"></span>
-                <span data-ref="secondaryBackgroundColorElement" class="bg-brand-500 bg-opacity-25"></span>
-                <span data-ref="borderColorElement" class="text-brand-500"></span>
+                <span data-ref="primaryBackgroundColorElement" class="bg-black/75 dark:bg-white/74"></span>
+                <span data-ref="secondaryBackgroundColorElement" class="bg-black/25 dark:bg-white/25"></span>
+                <span data-ref="borderColorElement" class="text-black dark:text-white"></span>
             </canvas>
         </div>
         <script>

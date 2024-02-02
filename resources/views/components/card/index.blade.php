@@ -1,9 +1,9 @@
 <div {{ $attributes->class([
-    'card border rounded-lg',
-    'bg-white dark:bg-black',
-    'border-gray-300 dark:border-gray-700' => is_null($style) || ! in_array($style, ['warning', 'danger']),
-    'border-amber-200' => $style === 'warning',
-    'border-red-200' => $style === 'danger',
+    'card rounded-lg',
+    'border border-black/10 dark:border-white/10',
+    'bg-white/95 dark:bg-white/5',
+    'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-black ring-amber-500' => $style === 'warning',
+    'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-black ring-red-500' => $style === 'danger',
 ]) }}>
     {{ $slot }}
 </div>

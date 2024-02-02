@@ -1,6 +1,6 @@
 <div {{ $attributes->class(['text-center']) }}>
-    <x-heading :heading-level="3" :as-heading="$asHeading" class="text-base leading-6 py-2">{{ $title }}</x-heading>
-    <div class="text-gray-600 text-sm space-y-4">
+    <x-heading :heading-level="3" :as-heading="$asHeading" class="text-base leading-6 text-black dark:text-white py-2">{{ $title }}</x-heading>
+    <div class="text-sm space-y-4">
         {{ $slot }}
     </div>
 

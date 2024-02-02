@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'text-sm',
+    'text-sm text-black dark:text-white',
 ]) }}>
     <div class="font-semibold">{{ $slot }}</div>
     @if($description ?? false)

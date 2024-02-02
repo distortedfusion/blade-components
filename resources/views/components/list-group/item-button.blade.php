@@ -3,7 +3,7 @@
     fn ($value, $key) => ! Str::startsWith($key, 'wire:')
 )->class([
     'list-group-item flex items-center w-full relative',
-    'border-black/10',
+    'border-black/10 dark:border-white/10',
     'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
 ]) }}>
@@ -21,7 +21,7 @@
     }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
         <div class="flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
-            <div class="{{ is_null($title) ? 'flex-grow' : 'flex-shrink-0' }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="text-black dark:text-white {{ is_null($title) ? 'flex-grow' : 'flex-shrink-0' }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         @if(! is_null($icon))
