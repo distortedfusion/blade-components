@@ -6,12 +6,11 @@
     'p-2 py-0.5 text-sm' => is_null($size) || ! in_array($size, ['sm', 'lg']),
     'p-1 py-0 text-xs' => $size === 'sm',
 
-    'text-green-900 border-green-200 bg-green-100' => $style === 'success',
-    'text-blue-900 border-blue-200 bg-blue-100' => $style === 'info',
-    'text-yellow-900 border-yellow-200 bg-yellow-100' => $style === 'warning',
-    'text-red-900 border-red-200 bg-red-100' => $style === 'danger',
-    'text-gray-700 border-gray-300 bg-gray-100' => $style === 'default',
-    'dark:text-gray-300 dark:border-gray-700 dark:bg-gray-900' => $style === 'default',
+    'text-gray-700 dark:text-gray-300 bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10' => $style === 'default',
+    'text-green-700 dark:text-green-300 bg-green-50/95 dark:bg-green-500/10 border-green-500/50 dark:border-green-500/50' => $style === 'success',
+    'text-blue-700 dark:text-blue-300 bg-blue-50/95 dark:bg-blue-500/10 border-blue-500/50 dark:border-blue-500/50' => $style === 'info',
+    'text-amber-700 dark:text-amber-300 bg-amber-50/95 dark:bg-amber-500/10 border-amber-500/50 dark:border-amber-500/50' => $style === 'warning',
+    'text-red-700 dark:text-red-300 bg-red-50/95 dark:bg-red-500/10 border-red-500/50 dark:border-red-500/50' => $style === 'danger',
 ]) }} role="alert">
     @if(! is_null($icon))
         <div class="flex-shrink-0">
