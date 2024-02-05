@@ -17,7 +17,7 @@
         'flex-grow group block w-full rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
-        . ' hover:bg-gray-100'
+        . ' hover:bg-black/5 dark:hover:bg-white/5'
     }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
         <div class="flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')

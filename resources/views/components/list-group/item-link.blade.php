@@ -15,7 +15,7 @@
         'flex-grow group block rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
         . ' text-current hover:no-underline'
-        . ' hover:bg-gray-100'
+        . ' hover:bg-black/5 dark:hover:bg-white/5'
     }}">
         <div class="flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
