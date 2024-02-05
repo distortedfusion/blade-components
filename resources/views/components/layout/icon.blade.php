@@ -9,7 +9,7 @@
     'bg-brand-600 border-brand-600 text-brand-100' => $style === 'primary',
 
     // Secondary color...
-    'bg-white border-gray-300 text-gray-700' => $style === 'secondary',
+    'bg-white/95 dark:bg-black/95 border-black/10 dark:border-white/10 text-gray-600 dark:text-gray-300' => $style === 'secondary',
 
     // Tertiary color...
     'bg-white border-black/10 text-gray-400' => $style === 'tertiary',
