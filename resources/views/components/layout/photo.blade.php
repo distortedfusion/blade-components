@@ -1,9 +1,7 @@
 <div {{ $attributes->class([
-    'inline-flex items-center justify-center relative rounded overflow-hidden aspect-square',
-    'bg-gray-100' => ! Str::contains($attributes->get('class'), 'bg-'),
-    'text-gray-700' => ! Str::contains($attributes->get('class'), 'text-'),
-    'm-px' => ! Str::contains($attributes->get('class'), 'm-'),
-    'p-px' => ! Str::contains($attributes->get('class'), 'p-'),
+    'inline-flex relative rounded-full overflow-hidden aspect-square m-px p-px',
+    'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10',
+    'text-gray-600 dark:text-gray-300',
 
     'w-12' => $size === 'lg',
     'w-10' => is_null($size) || ! in_array($size, ['sm', 'lg']),
