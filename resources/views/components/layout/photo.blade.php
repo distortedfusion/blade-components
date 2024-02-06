@@ -1,5 +1,5 @@
 <div {{ $attributes->class([
-    'inline-flex relative rounded-full overflow-hidden aspect-square m-px p-px',
+    'block relative rounded-full overflow-hidden aspect-square m-px p-px',
     'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10',
     'text-gray-600 dark:text-gray-300',
 
