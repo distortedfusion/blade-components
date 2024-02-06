@@ -4,8 +4,9 @@
     'text-gray-600 dark:text-gray-300',
 
     'w-12' => $size === 'lg',
-    'w-10' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'w-10' => is_null($size) || ! in_array($size, ['xs', 'sm', 'lg']),
     'w-8' => $size === 'sm',
+    'w-6' => $size === 'xs',
 ]) }}>
     <div class="absolute inset-0">
         <div class="flex items-center justify-center absolute inset-0">
