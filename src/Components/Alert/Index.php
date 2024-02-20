@@ -12,10 +12,10 @@ class Index extends Component
      * @var array
      */
     public const DEFAULT_ICONS = [
-        'success' => 'fad-circle-check',
-        'info' => 'fad-circle-info',
-        'warning' => 'fad-triangle-exclamation',
-        'danger' => 'fad-hexagon-exclamation',
+        'success' => 'fal-circle-check',
+        'info' => 'fal-circle-info',
+        'warning' => 'fal-triangle-exclamation',
+        'danger' => 'fal-hexagon-exclamation',
     ];
 
     /**
@@ -46,7 +46,7 @@ class Index extends Component
      * @param string      $type
      * @param string|null $icon
      */
-    public function __construct(string $title = null, string $type = 'default', string $icon = null)
+    public function __construct(?string $title = null, string $type = 'default', ?string $icon = null)
     {
         $this->title = $title;
         $this->type = $type;
@@ -76,6 +76,6 @@ class Index extends Component
             return self::DEFAULT_ICONS[$type];
         }
 
-        return 'fad-circle-info';
+        return 'fal-circle-info';
     }
 }
