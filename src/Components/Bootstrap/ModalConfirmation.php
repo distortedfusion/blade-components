@@ -21,11 +21,11 @@ class ModalConfirmation extends Modal
      * @var array
      */
     public const DEFAULT_ICONS = [
-        'default' => 'fas-info',
-        'success' => 'fas-check',
-        'info' => 'fas-info',
-        'warning' => 'fas-exclamation',
-        'danger' => 'fas-exclamation',
+        'default' => 'fal-info',
+        'success' => 'fal-check',
+        'info' => 'fal-info',
+        'warning' => 'fal-exclamation',
+        'danger' => 'fal-exclamation',
     ];
 
     public ?string $style;
@@ -39,7 +39,7 @@ class ModalConfirmation extends Modal
      * @param string|null $style
      * @param string|null $icon
      */
-    public function __construct(string $id, string $size = null, string $style = null, string $icon = null)
+    public function __construct(string $id, ?string $size = null, ?string $style = null, ?string $icon = null)
     {
         $this->style = $style;
         $this->icon = $icon ?: $this->defaultIconForStyle($style);
@@ -78,7 +78,7 @@ class ModalConfirmation extends Modal
      *
      * @return string
      */
-    protected function defaultIconForStyle(string $style = null): string
+    protected function defaultIconForStyle(?string $style = null): string
     {
         if (! is_null($style) && array_key_exists($style, self::DEFAULT_ICONS)) {
             return self::DEFAULT_ICONS[$style];
