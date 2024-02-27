@@ -1,6 +1,6 @@
 <div {{ $attributes->class([
     'block relative rounded-full overflow-hidden aspect-square m-px p-px',
-    'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10',
+    'bg-black/5 dark:bg-white/5 ring-1 ring-inset ring-black/10 dark:ring-white/10',
     'text-gray-600 dark:text-gray-300',
 
     'w-12' => $size === 'lg',
@@ -13,11 +13,16 @@
             <x-dynamic-component :component="$icon" class="w-4 h-4" />
         </div>
 
-        @if($url)
-            <div class="bg-cover bg-center absolute inset-0"
-                role="img"
-                style="{{ $getPhotoStyle() }}">
-            </div>
+        @if($src)
+        <img class="absolute inset-0 object-contain"
+            src="{{ $src }}"
+            @if(! is_null($srcset))
+            srcset="{{ $srcset }}"
+            @endif
+            @if(! is_null($alt))
+            alt="{{ $alt }}"
+            @endif
+            />
         @endif
     </div>
 </div>
