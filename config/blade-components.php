@@ -9,7 +9,7 @@ return [
 
         // Text...
         'heading' => Components\Text\Heading::class,
-        'paragraph' => 'blade-components::components.text.paragraph',
+        'paragraph' => Components\Text\Paragraph::class,
         'currency' => Components\Text\Currency::class,
         'date-time' => Components\Text\DateTime::class,
         'description' => 'blade-components::components.text.description',
