@@ -2,6 +2,7 @@
 $element = $asHeading ? 'h'.$headingLevel : 'p';
 @endphp
 <{{ $element }} {{ $attributes->merge(['id' => $id()])->class([
+    'text-black dark:text-white',
     'font-sans-heading',
     'hyphens-auto' => ! Str::contains($attributes->get('class'), ['hyphens-']),
     'font-black' => $headingLevel === 1 && ! Str::contains($attributes->get('class'), ['font-']),
