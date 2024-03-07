@@ -1,8 +1,10 @@
 @php
 $class = [
-    'inline-flex items-center justify-center space-x-2 shrink-0 text-center border rounded-lg transition-all',
+    'inline-flex items-center justify-center space-x-2 shrink-0 text-center border transition-all',
     'hover:no-underline hover:outline-0',
     'focus:no-underline focus:outline-0',
+
+    'rounded-lg' => ! Str::contains($attributes->get('class'), ['rounded-']),
 
     // Button sizes...
     'h-14 text-sm font-semibold leading-8' => $size === 'xl',
