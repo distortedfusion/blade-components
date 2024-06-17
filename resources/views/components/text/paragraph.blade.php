@@ -1,5 +1,5 @@
 <p {{ $attributes->class([
-    'text-gray-600 dark:text-gray-300',
+    'text-gray-600 dark:text-gray-300' => ! Str::contains($attributes->get('class'), ['text-']),
 
     'text-xl' => $size === 'xl',
     'text-base' => $size === 'lg',
