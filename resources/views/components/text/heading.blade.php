@@ -1,5 +1,5 @@
 @php
-$element = $asHeading ? 'h'.$headingLevel : 'p';
+$element = $asHeading ? 'h'.$headingLevel : 'div';
 @endphp
 <{{ $element }} {{ $attributes->merge(['id' => $id()])->class([
     'text-black dark:text-white',
