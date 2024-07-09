@@ -50,6 +50,9 @@ return [
         // Entities...
         'entity.field' => 'blade-components::components.entity.field',
 
+        // Form extra's...
+        'form-actions' => Components\Form\Actions::class,
+
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => Components\Layout\Icon::class,
