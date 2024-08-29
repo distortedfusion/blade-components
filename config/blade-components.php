@@ -44,8 +44,7 @@ return [
         'card' => Components\Card\Index::class,
 
         // Layout containers...
-        'container' => 'blade-components::components.layout.containers.container',
-        'container-narrow' => 'blade-components::components.layout.containers.container-narrow',
+        'container' => 'blade-components::components.layout.container',
 
         // Entities...
         'entity.field' => 'blade-components::components.entity.field',
