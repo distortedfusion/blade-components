@@ -1,4 +1,4 @@
-<x-dynamic-component :component="$currentRouteApplicableForNarrowLayout() ? 'container-narrow' : 'container'">
+<x-container :size="$currentRouteApplicableForNarrowLayout() ? 'md' : null">
     <header {{ $attributes->class([
             'py-6',
             'text-black dark:text-white',
@@ -34,4 +34,4 @@
             {{ $slot }}
         </div>
     </header>
-</x-dynamic-component>
+</x-container>
