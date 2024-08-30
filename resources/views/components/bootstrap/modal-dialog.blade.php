@@ -6,7 +6,7 @@
 
 <x-bootstrap.modal :id="$id" :size="$size" {{ $attributes }}>
     <div {{ $title->attributes->class(['modal-header']) }}>
-        <h5 class="modal-title">{{ $title }}</h5>
+        <x-heading :heading-level="5" class="text-lg leading-normal mb-0">{{ $title }}</x-heading>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <x-fal-xmark aria-hidden="true" />
@@ -17,7 +17,12 @@
         {{ $content }}
     </div>
 
-    <div {{ $footer->attributes->class(['modal-footer', 'bg-gray-50', 'border-t']) }}>
+    <div {{ $footer->attributes->class([
+        'modal-footer',
+        'bg-white/5',
+        'border-t border-black/10 dark:border-white/10',
+        'rounded-b-lg',
+    ]) }}>
         {{ $footer }}
     </div>
 </x-bootstrap.modal>

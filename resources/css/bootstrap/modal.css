@@ -97,8 +97,6 @@
 
 /* Actual modal */
 .modal-content {
-    @apply flex flex-col bg-white rounded shadow-xl w-full relative outline-none;
-
     color: null;
     pointer-events: auto;
     background-clip: padding-box;
@@ -117,10 +115,6 @@
     .close {
         @apply p-4 -m-4 ml-auto;
     }
-}
-
-.modal-title {
-    @apply text-lg leading-normal mb-0;
 }
 
 .modal-body {
