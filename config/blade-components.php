@@ -67,6 +67,8 @@ return [
         'layout.progress-bar' => Components\Layout\ProgressBar::class,
         'layout.pulser' => 'blade-components::components.layout.pulser',
 
+        'divider' => 'blade-components::components.layout.divider',
+
         // List group...
         'list-group' => Components\ListGroup\Index::class,
         'list-group.item' => Components\ListGroup\Item::class,
