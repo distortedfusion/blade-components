@@ -5,12 +5,12 @@ Display text using pre-defined typographic styles and style combinations.
 ## Heading
 
 ```blade-component-code
-<x-heading :heading-level="1" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-heading :heading-level="2" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-heading :heading-level="3" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-heading :heading-level="4" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-heading :heading-level="5" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-heading :heading-level="6" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="1" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="2" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="3" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="4" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="5" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
+<x-heading :heading-level="6" size="flex" :as-heading="false">The Evil Rabbit Jumps.</x-heading>
 ```
 
 ## Paragraph
