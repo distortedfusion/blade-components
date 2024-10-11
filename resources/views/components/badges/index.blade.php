@@ -1,3 +1,4 @@
+@props(['style' => 'default', 'size' => null, 'icon' => null])
 <div {{ $attributes->class([
     'inline-flex items-center space-x-2 border rounded-md',
 

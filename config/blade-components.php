@@ -22,7 +22,8 @@ return [
         'btn.icon' => 'blade-components::components.btn.icon',
 
         // Badges...
-        'badge' => Components\Badges\Index::class,
+
+        'badge' => 'blade-components::components.badges.index',
         'badge.icon' => 'blade-components::components.badges.icon',
 
         // Bootstrap...
