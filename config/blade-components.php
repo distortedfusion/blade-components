@@ -5,7 +5,6 @@ use DistortedFusion\BladeComponents\Components;
 return [
     'components' => [
         'alert' => Components\Alert\Index::class,
-        'stats.card' => Components\Stats\Card::class,
 
         // Text...
         'heading' => Components\Text\Heading::class,
@@ -22,7 +21,6 @@ return [
         'btn.icon' => 'blade-components::components.btn.icon',
 
         // Badges...
-
         'badge' => 'blade-components::components.badges.index',
         'badge.icon' => 'blade-components::components.badges.icon',
 
