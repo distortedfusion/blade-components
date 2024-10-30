@@ -11,10 +11,7 @@
         </div>
     @endif
 
-    <div class="{{
-        'flex-grow group block w-full rounded relative'
-        . ' px-2 sm:px-4 -my-3 py-3'
-    }}">
+    <div class="flex-grow group block w-full rounded relative px-2 sm:px-4 -my-3 py-3">
         <div class="flex items-center {{ $vertical ? 'flex-col' : 'space-x-2' }}">
             @include('blade-components::components.list-group.partials.title')
             <div class="text-black dark:text-white {{ is_null($title) ? 'flex-grow' : 'flex-shrink-0' }}">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
