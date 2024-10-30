@@ -1,11 +1,11 @@
 @props(['style' => 'default', 'size' => null, 'icon' => null])
 <div {{ $attributes->class([
-    'inline-flex items-center space-x-2 border rounded-md',
+    'inline-flex items-center space-x-2 rounded-md',
 
     // Badge sizes...
-    'p-3 py-1 text-base' => $size === 'lg',
-    'p-2 py-0.5 text-sm' => is_null($size) || ! in_array($size, ['sm', 'lg']),
-    'p-1 py-0 text-xs' => $size === 'sm',
+    'px-3 py-1 text-base' => $size === 'lg',
+    'px-2 py-1 text-sm' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'px-1 py-0.5 text-xs' => $size === 'sm',
 
     'text-gray-700 dark:text-gray-300 bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10' => $style === 'default',
     'text-green-700 dark:text-green-300 bg-green-50/95 dark:bg-green-500/10 border-green-500/50 dark:border-green-500/50' => $style === 'success',
