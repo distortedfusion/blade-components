@@ -19,10 +19,10 @@
                     </div>
                 @endif
                 <div class="flex-grow flex items-center space-x-4">
-                    <x-dynamic-component :component="$asHeading ? 'heading' : 'paragraph'"
-                        class="font-sans-heading font-bold text-lg leading-6 py-2">
+                    <x-heading size="flex" :as-heading="$asHeading"
+                        class="text-black dark:text-white font-sans-heading hyphens-auto text-2xl">
                         {{ $title }}
-                    </x-dynamic-component>
+                    </x-heading>
                 </div>
                 @if($actions ?? false)
                     <div class="flex items-center space-x-2 ml-2">

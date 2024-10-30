@@ -7,12 +7,12 @@ $element = $asHeading ? 'h'.$headingLevel : 'div';
     'hyphens-auto' => ! Str::contains($attributes->get('class'), ['hyphens-']),
     'font-semibold' => ! Str::contains($attributes->get('class'), ['font-']),
 
-    'text-5xl' => $size === 'flex' && $headingLevel === 1,
-    'text-4xl' => $size === 'flex' && $headingLevel === 2,
-    'text-3xl' => $size === 'flex' && $headingLevel === 3,
-    'text-2xl' => $size === 'flex' && $headingLevel === 4,
-    'text-xl' => $size === 'flex' && $headingLevel === 5,
-    'text-lg' => $size === 'flex' && $headingLevel === 6,
+    'text-5xl' => $size === 'flex' && $headingLevel === 1 && ! Str::contains($attributes->get('class'), ['text-']),
+    'text-4xl' => $size === 'flex' && $headingLevel === 2 && ! Str::contains($attributes->get('class'), ['text-']),
+    'text-3xl' => $size === 'flex' && $headingLevel === 3 && ! Str::contains($attributes->get('class'), ['text-']),
+    'text-2xl' => $size === 'flex' && $headingLevel === 4 && ! Str::contains($attributes->get('class'), ['text-']),
+    'text-xl' => $size === 'flex' && $headingLevel === 5 && ! Str::contains($attributes->get('class'), ['text-']),
+    'text-lg' => $size === 'flex' && $headingLevel === 6 && ! Str::contains($attributes->get('class'), ['text-']),
 
     'text-7xl md:text-9xl' => $size === 'xl',
     'text-5xl md:text-7xl' => $size === 'lg',
