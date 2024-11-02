@@ -1,6 +1,6 @@
 @if (! is_null($action) && $show)
     @if ($method === 'GET')
-        <a href="{{ $action }}" class="dropdown-item">
+        <a href="{{ $action }}" class="dropdown-item text-gray-600 dark:text-gray-300">
             {{ $slot }}
         </a>
     @else
@@ -9,7 +9,7 @@
                 <input type="hidden" name="{{ $key }}" value="{{ $value }}">
             @endforeach
 
-            <button type="submit" {{ $attributes->merge(['class' => 'dropdown-item text-left']) }}>
+            <button type="submit" {{ $attributes->merge(['class' => 'dropdown-item text-gray-600 dark:text-gray-300 text-left']) }}>
                 {{ $slot }}
             </button>
         </x-form>

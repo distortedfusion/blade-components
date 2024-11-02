@@ -8,12 +8,12 @@
     @endif
 
     @if(! ($menu ?? false))
-        <div class="dropdown-menu dropdown-menu-{{ $placement }}">
+        <div class="dropdown-menu py-4 rounded-md border-black/10 dark:border-white/10 shadow-lg dropdown-menu-{{ $placement }}">
             @include('blade-components::components.bootstrap.dropdown-menu')
         </div>
     @else
         <div {{ $menu->attributes->class([
-            'dropdown-menu dropdown-menu-'.$placement
+            'dropdown-menu py-4 rounded-md border-black/10 dark:border-white/10 shadow-lg dropdown-menu-'.$placement
         ]) }}>
             {{ $menu }}
         </div>
