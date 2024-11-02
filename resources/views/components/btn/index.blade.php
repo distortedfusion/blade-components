@@ -42,10 +42,15 @@ $class = [
     'shadow-none dark:active:bg-gray-900 dark:active:border-white/10 dark:active:text-gray-300' => $style === 'secondary' || $style === 'default',
 
     // Tertiary color...
-    'shadow-none bg-transparent border-transparent text-gray-700' => $style === 'tertiary',
-    'shadow-none hover:bg-gray-100 hover:border-gray-100 hover:text-gray-700' => $style === 'tertiary',
-    'shadow-none focus:bg-gray-100 focus:border-gray-100 focus:text-gray-700' => $style === 'tertiary',
-    'shadow-none active:bg-gray-100 active:border-gray-100 active:text-gray-700' => $style === 'tertiary',
+    'shadow-none bg-gray-100 border-transparent text-gray-700' => $style === 'tertiary',
+    'shadow-none hover:bg-gray-50 hover:border-transparent hover:text-gray-700' => $style === 'tertiary',
+    'shadow-none focus:bg-gray-50 focus:border-transparent focus:text-gray-700' => $style === 'tertiary',
+    'shadow-none active:bg-gray-50 active:border-transparent active:text-gray-700' => $style === 'tertiary',
+
+    'shadow-none dark:bg-gray-900 dark:border-transparent dark:text-gray-300' => $style === 'tertiary',
+    'shadow-none dark:hover:bg-gray-800 dark:hover:border-transparent dark:hover:text-gray-300' => $style === 'tertiary',
+    'shadow-none dark:focus:bg-gray-800 dark:focus:border-transparent dark:focus:text-gray-300' => $style === 'tertiary',
+    'shadow-none dark:active:bg-gray-800 dark:active:border-transparent dark:active:text-gray-300' => $style === 'tertiary',
 
     // Info color...
     'shadow-none bg-blue-600 border-blue-600 text-white' => $style === 'info',
