@@ -1,3 +1,3 @@
-<div {{ $attributes }}>
+<span {{ $attributes }}>
     {!! $formattedData() !!}
-</div>
+</span>
