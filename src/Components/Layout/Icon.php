@@ -18,7 +18,7 @@ class Icon extends Component
      * @param string      $style
      * @param string|null $size
      */
-    public function __construct(string $icon, string $style = 'primary', string $size = null)
+    public function __construct(string $icon, string $style = 'primary', ?string $size = null)
     {
         $this->icon = $icon;
         $this->style = $style;

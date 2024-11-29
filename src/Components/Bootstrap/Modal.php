@@ -22,7 +22,7 @@ class Modal extends Component
      * @param string      $id
      * @param string|null $size
      */
-    public function __construct(string $id, string $size = null)
+    public function __construct(string $id, ?string $size = null)
     {
         $this->id = $id;
         $this->size = $size;

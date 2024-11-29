@@ -35,7 +35,7 @@ class Dropdown extends Component
      * @param string      $placement
      * @param string|null $variant
      */
-    public function __construct(array $actions = [], string $placement = 'right', string $variant = null)
+    public function __construct(array $actions = [], string $placement = 'right', ?string $variant = null)
     {
         $this->actions = $actions;
         $this->placement = $placement;

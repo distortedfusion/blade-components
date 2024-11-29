@@ -11,7 +11,7 @@ class Item extends Component
     public string $align;
     public bool $vertical;
 
-    public function __construct(string $title = null, string $align = 'left', bool $vertical = false)
+    public function __construct(?string $title = null, string $align = 'left', bool $vertical = false)
     {
         $this->title = $title;
         $this->align = $align;

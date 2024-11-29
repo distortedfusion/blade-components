@@ -11,7 +11,7 @@ class DropdownAction extends Component
     public string $method;
     public bool $show;
 
-    public function __construct(string $action = null, array $inputs = [], string $method = 'GET', bool $show = true)
+    public function __construct(?string $action = null, array $inputs = [], string $method = 'GET', bool $show = true)
     {
         $this->action = $action;
         $this->inputs = $inputs;

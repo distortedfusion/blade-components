@@ -33,7 +33,7 @@ class Actions extends Component
         bool $redirectPrevious = false,
         ?string $cancelTitle = null,
         ?string $submitTitle = null,
-        string $style = 'primary'
+        string $style = 'primary',
     ) {
         $this->cancel = $cancel;
         $this->redirectPrevious = $redirectPrevious;

@@ -16,7 +16,7 @@ class ProgressBar extends Component
      * @param bool        $spinner
      * @param string|null $size
      */
-    public function __construct(int $progress, string $size = null)
+    public function __construct(int $progress, ?string $size = null)
     {
         $this->progress = $progress;
         $this->size = $size;

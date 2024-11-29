@@ -20,8 +20,8 @@ class DateTime extends Component
 
     public function __construct(
         DateTimeInterface $date,
-        string $format = null,
-        bool $human = false
+        ?string $format = null,
+        bool $human = false,
     ) {
         $this->date = Carbon::instance($date);
         $this->format = $format ?: static::getDefaultFormat();

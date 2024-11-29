@@ -21,7 +21,7 @@ class Section extends Component
      * @param bool        $vertical
      * @param string|null $action
      */
-    public function __construct(string $title, string $description = null, string $action = null, bool $vertical = false)
+    public function __construct(string $title, ?string $description = null, ?string $action = null, bool $vertical = false)
     {
         $this->title = $title;
         $this->description = $description;
