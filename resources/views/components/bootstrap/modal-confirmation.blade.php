@@ -19,14 +19,13 @@ use Illuminate\View\ComponentAttributeBag;
             <x-dynamic-component :component="$icon" />
         </div>
 
-        <x-heading :heading-level="5" class="text-lg leading-normal mb-0">{{ $title }}</x-heading>
+        <x-heading :heading-level="5" size="flex" class="text-lg leading-normal font-normal mb-0">{{ $title }}</x-heading>
 
         {{ $content }}
     </div>
 
     <div {{ $footer->attributes->class([
         'modal-footer',
-        'bg-white/5',
         'border-t border-black/10 dark:border-white/10',
         'rounded-b-lg',
     ]) }}>
