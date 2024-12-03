@@ -6,17 +6,17 @@ use Closure;
 use DistortedFusion\BladeComponents\Concerns\LocalizesFormattedNumbers;
 use Illuminate\View\Component;
 
-class Currency extends Component
+class Number extends Component
 {
     use LocalizesFormattedNumbers;
 
     public float $value;
-    public string $currency;
+    public int $precision;
 
-    public function __construct(float $value, string $currency = 'EUR')
+    public function __construct(float $value, int $precision = 0)
     {
         $this->value = $value;
-        $this->currency = $currency;
+        $this->precision = $precision;
     }
 
     /**
@@ -26,7 +26,7 @@ class Currency extends Component
      */
     public function render()
     {
-        return view('blade-components::components.text.currency');
+        return view('blade-components::components.text.number');
     }
 
     /**
@@ -36,8 +36,8 @@ class Currency extends Component
      */
     public function formattedData(): ?string
     {
-        return $this->getCurrencyFormatter(
-            precision: 2
+        return $this->getDecimalNumberFormatter(
+            precision: $this->precision
         )->format($this->value);
     }
 }

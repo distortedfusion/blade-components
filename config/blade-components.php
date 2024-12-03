@@ -7,14 +7,15 @@ return [
         'alert' => Components\Alert\Index::class,
 
         // Text...
-        'heading' => Components\Text\Heading::class,
-        'paragraph' => Components\Text\Paragraph::class,
         'currency' => Components\Text\Currency::class,
         'date-time' => Components\Text\DateTime::class,
         'description' => 'blade-components::components.text.description',
+        'heading' => Components\Text\Heading::class,
+        'number' => Components\Text\Number::class,
         'ol' => 'blade-components::components.text.ol',
-        'ul' => 'blade-components::components.text.ul',
+        'paragraph' => Components\Text\Paragraph::class,
         'pre' => 'blade-components::components.text.pre',
+        'ul' => 'blade-components::components.text.ul',
 
         // Buttons...
         'btn' => Components\Btn\Index::class,
