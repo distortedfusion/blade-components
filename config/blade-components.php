@@ -25,6 +25,12 @@ return [
         'badge' => 'blade-components::components.badges.index',
         'badge.icon' => 'blade-components::components.badges.icon',
 
+        // Breadcrumbs...
+        'breadcrumb' => 'blade-components::components.breadcrumb.index',
+        'breadcrumb.item' => 'blade-components::components.breadcrumb.item',
+        'breadcrumb.ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
+        'breadcrumb.separator' => 'blade-components::components.breadcrumb.separator',
+
         // Bootstrap...
         'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
         'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
