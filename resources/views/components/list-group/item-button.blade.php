@@ -21,7 +21,7 @@
     }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
         <div class="w-full flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
-            <div class="text-black dark:text-white truncate pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="text-black dark:text-white truncate pr-6 sm:pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         @if(! is_null($icon))

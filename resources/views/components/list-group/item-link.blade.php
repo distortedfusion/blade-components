@@ -19,7 +19,7 @@
     }}">
         <div class="w-full flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
-            <div class="flex-grow min-w-0 text-black dark:text-white truncate pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="flex-grow min-w-0 text-black dark:text-white truncate pr-6 sm:pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         @if(! is_null($icon))
