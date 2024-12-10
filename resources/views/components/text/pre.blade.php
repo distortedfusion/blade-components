@@ -7,7 +7,7 @@ $refId = 'pre-'.crc32($slot);
         'bg-gray-100 dark:bg-gray-900' => ! Str::contains($attributes->get('class'), 'bg-'),
     ]) }}
     x-data="{
-        'refId': {{ $refId }},
+        'refId': '{{ $refId }}',
         'copyLabel': '{{ $copyLabel }}',
         'copiedLabel': '{{ $copiedLabel }}',
     }">
