@@ -7,7 +7,7 @@
 use Illuminate\View\ComponentAttributeBag;
 @endphp
 <x-bootstrap.modal :id="$id" :size="$size" {{ $attributes->merge(['data-backdrop' => 'static', 'data-keyboard' => 'false']) }}>
-    <div {{ $content->attributes->class(['modal-body', 'text-center']) }}>
+    <div {{ $content->attributes->class(['modal-body text-center space-y-6']) }}>
         <div {{ (new ComponentAttributeBag)->class([
             'h-12 w-12 border mx-auto flex items-center justify-center rounded-full my-4 sm:my-6',
             'text-gray-500 bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10' => $style === null || $style === 'default',
@@ -16,7 +16,7 @@ use Illuminate\View\ComponentAttributeBag;
             'text-yellow-500 bg-amber-50/95 dark:bg-amber-500/10 border-amber-500/50 dark:border-amber-500/50' => $style === 'warning',
             'text-red-500 bg-red-50/95 dark:bg-red-500/10 border-red-500/50 dark:border-red-500/50' => $style === 'danger',
         ]) }}>
-            <x-dynamic-component :component="$icon" />
+            <x-dynamic-component class="w-4 h-4" :component="$icon" />
         </div>
 
         <x-heading :heading-level="5" size="flex" class="text-lg leading-normal font-normal mb-0">{{ $title }}</x-heading>

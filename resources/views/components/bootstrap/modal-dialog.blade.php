@@ -9,7 +9,7 @@
         <x-heading :heading-level="5" size="flex" class="text-lg leading-normal font-normal mb-0">{{ $title }}</x-heading>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <x-fal-xmark aria-hidden="true" />
+            <x-fal-xmark class="w-4 h-4" aria-hidden="true" />
         </button>
     </div>
 
