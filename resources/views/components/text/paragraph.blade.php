@@ -3,7 +3,7 @@
 
     'text-lg lg:text-xl' => $size === 'xl',
     'text-sm lg:text-base' => $size === 'lg',
-    'text-xs lg:text-sm' => is_null($size),
+    'text-sm' => is_null($size),
 ]) }}>
     {{ $slot }}
 </p>
