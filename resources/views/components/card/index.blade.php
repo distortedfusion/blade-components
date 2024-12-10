@@ -1,7 +1,7 @@
 @php
 use Illuminate\Support\Str;
 @endphp
-<div {{ $attributes->class([
+<div data-slot="card" {{ $attributes->class([
     'card rounded-lg',
     'border border-black/10 dark:border-white/10' => ! Str::contains($attributes->get('class'), ['border-']),
     'bg-white dark:bg-gray-950' => ! Str::contains($attributes->get('class'), ['bg-']),
@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
     'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-black ring-blue-500' => $style === 'info',
     'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-black ring-amber-500' => $style === 'warning',
     'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-black ring-red-500' => $style === 'danger',
+
+    '[&:has([data-slot=card-header]+[data-slot=card-body])>[data-slot=card-header]]:pb-0',
 ]) }}>
     {{ $slot }}
 </div>
