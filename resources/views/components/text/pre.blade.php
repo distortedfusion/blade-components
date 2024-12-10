@@ -1,7 +1,7 @@
 <pre {{ $attributes->class([
-    'border border-black/10 rounded overflow-scroll font-mono',
-    'text-sm' => ! Str::contains($attributes->get('class'), ['text-xs', 'text-sm', 'text-md', 'text-lg', 'text-xl', 'text-2xl']),
-    'bg-gray-50' => ! Str::contains($attributes->get('class'), 'bg-'),
+    'rounded-lg overflow-scroll',
+    'bg-gray-100 dark:bg-gray-900' => ! Str::contains($attributes->get('class'), 'bg-'),
+    'text-sm font-mono',
     'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
 ]) }}>{{ $slot }}</pre>
