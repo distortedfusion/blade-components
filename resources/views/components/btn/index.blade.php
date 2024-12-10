@@ -12,12 +12,12 @@ $class = [
     'h-10 text-sm font-semibold leading-8' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
     'h-8 text-sm font-semibold leading-8' => $size === 'sm',
 
-    'px-4' => ! Str::contains($attributes->get('class'), ['p-', 'px-', 'pl-', 'pr-']),
+    'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
 
-    'py-3' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'xl',
-    'py-2' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'lg',
-    'py-2' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
-    'py-0' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']) && $size === 'sm',
+    'py-3' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'xl',
+    'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'lg',
+    'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
+    'py-0' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'sm',
 
     // Primary color...
     'shadow-none bg-brand-600 border-brand-800 text-white' => $style === 'primary',
