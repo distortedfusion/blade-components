@@ -1,10 +1,8 @@
-<div {{ $attributes->class([
-    'text-sm text-black dark:text-white',
-]) }}>
-    <div class="font-semibold">{{ $slot }}</div>
+<div {{ $attributes }}>
+    <x-heading :as-heading="false" size="flex" class="text-sm min-w-0 truncate">{{ $slot }}</x-heading>
     @if($description ?? false)
-        <div {{ $description->attributes->class([
-            'text-gray-600 dark:text-gray-300',
-        ]) }}>{{ $description }}</div>
+        <div {{ $description->attributes }}>
+            {{ $description }}
+        </div>
     @endif
 </div>

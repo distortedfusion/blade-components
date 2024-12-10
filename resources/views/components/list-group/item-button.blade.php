@@ -14,14 +14,14 @@
     @endif
 
     <button type="{{ $type }}" class="{{
-        'flex-grow group block w-full rounded relative'
-        . ' px-2 sm:px-4 -my-3 py-3'
+        'flex-grow flex items-center group block w-full rounded relative'
+        . ' px-2 sm:px-4 -my-3 py-3 pr-4'
         . ' text-current hover:no-underline'
         . ' hover:bg-black/5 dark:hover:bg-white/5'
     }}" {{ $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:')) }}>
-        <div class="flex items-center space-x-2">
+        <div class="w-full flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
-            <div class="text-black dark:text-white {{ is_null($title) ? 'flex-grow' : 'flex-shrink-0' }} pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="text-black dark:text-white pr-4">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
 
         @if(! is_null($icon))
