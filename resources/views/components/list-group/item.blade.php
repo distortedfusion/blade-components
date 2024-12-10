@@ -14,7 +14,7 @@
     <div class="flex-grow group w-full rounded relative px-2 sm:px-4 -my-3 py-3">
         <div class="w-full flex items-center space-x-2">
             @include('blade-components::components.list-group.partials.title')
-            <div class="flex-grow min-w-0 text-black dark:text-white">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
+            <div class="flex-grow min-w-0 text-black dark:text-white truncate">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
         </div>
     </div>
 
