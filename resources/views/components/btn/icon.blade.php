@@ -1,6 +1,3 @@
-@props(['icon'])
-<x-dynamic-component :component="$icon" {{ $attributes->class([
-    'text-inherit',
-    'w-4' => ! Str::contains($attributes->get('class'), ['w-']),
-    'h-4' => ! Str::contains($attributes->get('class'), ['h-']),
+<x-fal-chevron-right {{ $attributes->class([
+    'w-4 h-4 text-black/80 dark:text-white/80'
 ]) }} />

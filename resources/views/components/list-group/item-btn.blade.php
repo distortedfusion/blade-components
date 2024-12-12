@@ -1,5 +1,5 @@
-@aware(['flush'])
-<div {{ $attributes->filter(
+@props(['title' => null, 'type' => 'button', 'icon' => 'fal-chevron-right'])
+<div data-slot="list-group-item" {{ $attributes->filter(
     fn ($value, $key) => ! Str::startsWith($key, 'wire:')
 )->class([
     'list-group-item flex items-center w-full relative',

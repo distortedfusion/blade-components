@@ -76,9 +76,11 @@ return [
         'divider' => 'blade-components::components.layout.divider',
 
         // List group...
-        'list-group' => Components\ListGroup\Index::class,
-        'list-group.item' => Components\ListGroup\Item::class,
-        'list-group.item-button' => Components\ListGroup\ItemButton::class,
-        'list-group.item-link' => Components\ListGroup\ItemLink::class,
+        'list-group' => 'blade-components::components.list-group.index',
+        'list-group.icon' => 'blade-components::components.list-group.item',
+        'list-group.item' => 'blade-components::components.list-group.item',
+        'list-group.item-btn' => 'blade-components::components.list-group.item-btn',
+        'list-group.item-button' => 'blade-components::components.list-group.item-btn',
+        'list-group.item-link' => 'blade-components::components.list-group.item-btn',
     ],
 ];

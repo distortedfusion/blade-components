@@ -1,5 +1,5 @@
-@aware(['flush'])
-<div {{ $attributes->class([
+@props(['title' => null, 'icon' => 'fal-chevron-right'])
+<div data-slot="list-group-item" {{ $attributes->class([
     'list-group-item flex items-center w-full relative',
     'border-black/10 dark:border-white/10',
     'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),

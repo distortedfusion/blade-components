@@ -1,4 +1,4 @@
-@aware(['flush' => false])
+@props(['title' => null])
 <div data-slot="list-group-item" {{ $attributes->class([
     'w-full flex items-center',
     'border-black/10 dark:border-white/10',
