@@ -5,12 +5,6 @@
     'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
     'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
 ]) }}>
-    @if($prefix ?? false)
-        <div {{ $prefix->attributes->class(['relative pr-1 pl-2 sm:pl-4 mr-1 border-r']) }}>
-            {{ $prefix }}
-        </div>
-    @endif
-
     <a href="{{ $href }}" class="{{
         'flex-grow group w-full rounded relative'
         . ' px-2 sm:px-4 -my-3 py-3'
@@ -28,10 +22,4 @@
             </div>
         @endif
     </a>
-
-    @if($suffix ?? false)
-        <div {{ $suffix->attributes->class(['relative pl-1 pr-2 sm:pr-4 ml-1 border-l']) }}>
-            {{ $suffix }}
-        </div>
-    @endif
 </div>
