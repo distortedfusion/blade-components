@@ -47,7 +47,7 @@ return [
         'card.footer' => 'blade-components::components.card.footer',
         'card.header' => 'blade-components::components.card.header',
         'card.title' => Components\Card\Title::class,
-        'card' => Components\Card\Index::class,
+        'card' => 'blade-components::components.card.index',
 
         // Layout containers...
         'container' => 'blade-components::components.layout.container',

@@ -2,7 +2,7 @@
     'flex items-center space-x-2 rounded-t-lg',
     // 'border-b border-black/10' => ! Str::contains($attributes->get('class'), ['border-']),
     'px-4 sm:px-6',
-    'py-3 sm:pb-6',
+    'py-4',
 ]) }}>
     <div class="flex-grow">{{ $slot }}</div>
     @if($action ?? false)
