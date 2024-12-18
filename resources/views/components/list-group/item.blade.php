@@ -1,14 +1,42 @@
-@props(['title' => null])
-<div data-slot="list-group-item" {{ $attributes->class([
-    'w-full flex items-center',
+@props(['href' => null, 'title' => null, 'type' => 'button', 'button' => false])
+@php
+$componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
+$indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
+@endphp
+<div data-slot="list-group-item" {{ $componentAttributes->class([
+    'group flex items-center relative',
     'border-black/10 dark:border-white/10',
-    'px-2' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
-    'py-4' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']),
+    'text-gray-600 dark:text-gray-300',
+    'py-4 px-4 sm:px-6',
+    'pr-2 sm:pr-4' => ! is_null($href) || $button,
 ]) }}>
-    <div class="flex-grow group w-full rounded relative px-2 sm:px-4 -my-3 py-3">
-        <div class="w-full flex items-center space-x-2">
-            @include('blade-components::components.list-group.partials.title')
-            <div class="flex-grow min-w-0 text-black dark:text-white truncate">{!! trim($slot) ? $slot : '&mdash;' !!}</div>
-        </div>
+    @if(! is_null($href) || $button)
+        {{-- hover-indicator --}}
+        <div class="absolute inset-x-2 inset-y-1 z-0 scale-95 bg-black/5 dark:bg-white/5 rounded opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></div>
+    @endif
+
+    <div class="flex-grow min-w-0 relative z-10">
+        @if(! is_null($title))
+            <x-list-group.precomposed.title>
+                <x-slot:title>{{ $title }}</x-slot:title>
+                {!! trim($slot) ? $slot : '&mdash;' !!}
+            </x-list-group.precomposed.title>
+        @else
+            {!! trim($slot) ? $slot : '&mdash;' !!}
+        @endif
     </div>
+
+    @if(! is_null($href) && ! $button)
+        <a href="{{ $href }}" {{ $indicatorAttributes->class([
+            'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
+        ]) }}>
+            @include('blade-components::components.list-group.partials.indicator')
+        </a>
+    @elseif($button)
+        <button type="{{ $type }}" {{ $indicatorAttributes->class([
+            'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
+        ]) }}>
+            @include('blade-components::components.list-group.partials.indicator')
+        </button>
+    @endif
 </div>
