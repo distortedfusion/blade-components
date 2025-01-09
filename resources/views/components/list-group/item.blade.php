@@ -8,7 +8,6 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
     'border-black/10 dark:border-white/10',
     'text-gray-600 dark:text-gray-300',
     'py-4 px-4 sm:px-6',
-    'pr-2 sm:pr-4' => ! is_null($href) || $button,
 ]) }}>
     @if(! is_null($href) || $button)
         {{-- hover-indicator --}}
