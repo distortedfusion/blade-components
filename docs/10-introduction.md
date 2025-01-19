@@ -1,4 +1,7 @@
-# Introduction
+---
+title: Introduction
+description:
+---
 
 Blade Components is Distorted Fusion's in-house developed components library for building consistent web experiences.
 

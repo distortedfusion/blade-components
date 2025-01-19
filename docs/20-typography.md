@@ -1,3 +1,8 @@
+---
+title: Typography
+description:
+---
+
 # Text
 
 Display text using pre-defined typographic styles and style combinations.

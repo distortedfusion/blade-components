@@ -1,6 +1,7 @@
-# Buttons
-
-Primary controls for any action, supporting both anchors and buttons.
+---
+title: Buttons
+description: Primary controls for any action, supporting both anchors and buttons.
+---
 
 ```blade-component-code
 <div class="grid grid-cols-3 gap-4">

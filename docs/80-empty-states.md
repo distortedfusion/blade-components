@@ -1,3 +1,8 @@
+---
+title: Empty States
+description:
+---
+
 # Empty States
 
 ```blade-component-code

@@ -1,4 +1,7 @@
-# Cards
+---
+title: Cards
+description:
+---
 
 Display related information in a single unit, optionally providing related actions.
 
