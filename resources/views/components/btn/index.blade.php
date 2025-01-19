@@ -1,10 +1,14 @@
 @php
 $class = [
-    'inline-flex items-center justify-center space-x-2 shrink-0 text-center border transition-all',
+    'inline-flex items-center justify-center space-x-2 shrink-0 border transition-all',
     'hover:no-underline hover:outline-0',
     'focus:no-underline focus:outline-0',
 
     'rounded-lg' => ! Str::contains($attributes->get('class'), ['rounded-']),
+
+    'text-center' => is_null($alignment),
+    'text-left' => $alignment === 'left',
+    'text-right' => $alignment === 'right',
 
     // Button sizes...
     'h-14 text-sm font-semibold leading-8' => $size === 'xl',
