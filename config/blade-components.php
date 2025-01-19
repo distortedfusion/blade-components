@@ -13,7 +13,7 @@ return [
         'heading' => Components\Text\Heading::class,
         'number' => Components\Text\Number::class,
         'ol' => 'blade-components::components.text.ol',
-        'paragraph' => Components\Text\Paragraph::class,
+        'paragraph' => 'blade-components::components.text.paragraph',
         'pre' => 'blade-components::components.text.pre',
         'ul' => 'blade-components::components.text.ul',
 
