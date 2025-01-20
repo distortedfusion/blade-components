@@ -5,7 +5,7 @@ use Illuminate\View\ComponentAttributeBag;
 $class = [
     'text-gray-800 dark:text-gray-100' => ! $active,
     'text-dark dark:text-white font-semibold' => $active,
-    'text-sm',
+    'text-sm leading-8',
 ];
 @endphp
 <li {{ $attributes }}>
