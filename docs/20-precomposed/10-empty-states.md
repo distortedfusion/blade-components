@@ -3,8 +3,6 @@ title: Empty States
 description:
 ---
 
-# Empty States
-
 ```blade-component-code
 <x-layout.empty-state title="Title" :as-heading="false">
     The Evil Rabbit Jumped over the Fence.

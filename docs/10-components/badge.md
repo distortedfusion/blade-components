@@ -1,5 +1,5 @@
 ---
-title: Badges
+title: Badge
 description: A contained label that shows the status of an element, emphasizes an element, or helps categorize an element with other similar elements.
 ---
 

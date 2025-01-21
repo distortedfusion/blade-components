@@ -1,9 +1,7 @@
 ---
-title: Cards
-description:
+title: Card
+description: Display related information in a single unit, optionally providing related actions.
 ---
-
-Display related information in a single unit, optionally providing related actions.
 
 ```blade-component-code
 <x-card>

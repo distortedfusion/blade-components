@@ -1,5 +1,5 @@
 ---
-title: Icons
+title: Icon
 description:
 ---
 
