@@ -3,25 +3,6 @@ title: Layout
 description:
 ---
 
-## Title Bar
-
-```blade-component-code
-<x-layout.title-bar :as-heading="false" title="Page Title">
-    <x-slot:actions>
-        <x-btn style="tertiary" size="sm">Action</x-btn>
-        <x-btn size="sm">Primary Action</x-btn>
-    </x-slot:actions>
-</x-layout.title-bar>
-```
-
-```blade-component-code
-<x-layout.title-bar :as-heading="false" title="Page Title" icon="fal-feather" />
-```
-
-```blade-component-code
-<x-layout.title-bar :as-heading="false" title="Page Title" previous-url="#" />
-```
-
 ## Photo
 
 ```blade-component-code
@@ -48,33 +29,5 @@ description:
     <x-layout.icon icon="fal-tags" style="tertiary" size="lg" />
     <x-layout.icon icon="fal-tags" style="tertiary" />
     <x-layout.icon icon="fal-tags" style="tertiary" size="sm" />
-</div>
-```
-
-## Progress Bar
-
-```blade-component-code
-<div class="space-y-4">
-    <x-layout.progress-bar progress="75" size="lg" />
-    <x-layout.progress-bar progress="50" />
-    <x-layout.progress-bar progress="25" size="sm" />
-</div>
-```
-
-## Spinner
-
-```blade-component-code
-<div class="grid grid-cols-3 gap-4 items-center">
-    <x-layout.spinner size="lg" />
-    <x-layout.spinner />
-    <x-layout.spinner size="sm" />
-</div>
-```
-
-## Pulser
-
-```blade-component-code
-<div class="mx-auto">
-    <x-layout.pulser />
 </div>
 ```
