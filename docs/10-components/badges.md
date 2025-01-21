@@ -1,9 +1,11 @@
 ---
 title: Badges
-description:
+description: A contained label that shows the status of an element, emphasizes an element, or helps categorize an element with other similar elements.
 ---
 
-A contained label that shows the status of an element, emphasizes an element, or helps categorize an element with other similar elements.
+```blade-component-code
+<x-badge>Badge Text</x-badge>
+```
 
 ## Variants
 

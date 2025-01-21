@@ -1,9 +1,7 @@
 ---
 title: Alerts
-description:
+description: Display text that requires attention or provides additional information.
 ---
-
-Display text that requires attention or provides additional information.
 
 ```blade-component-code
 <x-alert>This alert details some information.</x-alert>
