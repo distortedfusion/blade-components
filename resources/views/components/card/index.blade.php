@@ -3,7 +3,10 @@ use Illuminate\Support\Str;
 @endphp
 @props(['style' => 'default'])
 <div data-slot="card" {{ $attributes->class([
-    'border bg-white dark:bg-gray-950 rounded-lg',
+    'rounded-lg',
+
+    // Background...
+    'bg-white dark:bg-gray-950' => ! Str::contains($attributes->get('class'), ['bg-']),
 
     // Border...
     'border' => ! Str::contains($attributes->get('class'), ['border-']),
