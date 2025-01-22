@@ -4,7 +4,7 @@ description: Primary control for any action, supporting both anchors and buttons
 ---
 
 ```blade-component-preview
-<div class="flex items-center justify-center h-32">
+<div class="flex justify-center items-center h-32">
     <x-btn>Button</x-btn>
 </div>
 ```
@@ -17,41 +17,52 @@ description: Primary control for any action, supporting both anchors and buttons
 
 ### Component API
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| Attribute   | Default   | Description                                                                                           |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------------- |
+| `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `ghost`, `info`, `warning` or `danger`.           |
+| `size`      | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, `lg` or `xl`.                           |
+| `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.   |
+| `alignment` | `center`  | `string`<br>Controls text alignment on the button label. Possible values `left`, `center` or `right`. |
+| `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                             |
 
-## Variants
+## Style
+
+Control the button style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="grid grid-cols-3 gap-4">
+<div class="flex justify-between">
     <x-btn style="primary">Button</x-btn>
     <x-btn style="secondary">Button</x-btn>
-    <x-btn style="tertiary">Button</x-btn>
+    <x-btn style="ghost">Button</x-btn>
+</div>
+```
+
+```blade-component-code
+<div class="flex justify-between">
     <x-btn style="info">Button</x-btn>
     <x-btn style="warning">Button</x-btn>
     <x-btn style="danger">Button</x-btn>
 </div>
 ```
 
-## Sizes
+## Size
+
+Control the button size by supplying the `size=""` attribute.
 
 ```blade-component-code
-<div class="grid grid-cols-3 gap-4 items-center">
+<div class="flex justify-between">
     <x-btn size="lg">Button</x-btn>
     <x-btn>Button</x-btn>
     <x-btn size="sm">Button</x-btn>
 </div>
 ```
 
-## Links
+## Link
 
-Buttons can be used as links by supplying a `href=""` attribute.
+Buttons can be used as an `<a>` element by supplying the `href=""` attribute.
 
 ```blade-component-code
-<div class="grid grid-cols-3 gap-4">
+<div class="flex justify-center">
     <x-btn href="#">Button</x-btn>
 </div>
 ```
@@ -61,29 +72,22 @@ Buttons can be used as links by supplying a `href=""` attribute.
 Both linked buttons and traditional buttons can be set to a disabled state by supplying the `disabled` boolean attribute.
 
 ```blade-component-code
-<div class="grid grid-cols-3 gap-4">
-    <x-btn disabled href="#">Button</x-btn>
+<div class="flex justify-center">
     <x-btn disabled>Button</x-btn>
 </div>
 ```
 
 ## Prefix and Suffix
 
-Buttons can be prefixed or suffixed with simple text elements for additional clarity.
+Buttons can be prefixed or suffixed with simple text elements for additional clarity by utilizing the `prefix` and `suffix` component slots.
 
 ```blade-component-code
-<div class="grid grid-cols-3 gap-4 items-center">
+<div class="flex justify-between">
     <x-btn>
         <x-slot:prefix>
             <span class="text-gray-400">1.</span>
         </x-slot:prefix>
         Button
-    </x-btn>
-    <x-btn>
-        Button
-        <x-slot:suffix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:suffix>
     </x-btn>
     <x-btn>
         <x-slot:prefix>
@@ -94,38 +98,10 @@ Buttons can be prefixed or suffixed with simple text elements for additional cla
             <span class="text-gray-400">2.</span>
         </x-slot:suffix>
     </x-btn>
-</div>
-```
-
-## With Icons
-
-Optionally the `x-btn.icon` component can be used to add icons.
-
-```blade-component-code
-<x-btn.icon icon="fal-arrow-up" />
-```
-
-```blade-component-code
-<div class="grid grid-cols-3 gap-4 items-center">
-    <x-btn>
-        <x-slot:prefix>
-            <x-btn.icon icon="fal-arrow-up" />
-        </x-slot:prefix>
-        Button
-    </x-btn>
     <x-btn>
         Button
         <x-slot:suffix>
-            <x-btn.icon icon="fal-arrow-up" />
-        </x-slot:suffix>
-    </x-btn>
-    <x-btn>
-        <x-slot:prefix>
-            <x-btn.icon icon="fal-arrow-up" />
-        </x-slot:prefix>
-        Button
-        <x-slot:suffix>
-            <x-btn.icon icon="fal-arrow-up" />
+            <span class="text-gray-400">1.</span>
         </x-slot:suffix>
     </x-btn>
 </div>
