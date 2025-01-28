@@ -4,18 +4,11 @@ use DistortedFusion\BladeComponents\Components;
 
 return [
     'components' => [
+        // Alert...
         'alert' => Components\Alert\Index::class,
 
-        // Text...
-        'currency' => Components\Text\Currency::class,
-        'date-time' => Components\Text\DateTime::class,
-        'description' => 'blade-components::components.text.description',
-        'heading' => Components\Text\Heading::class,
-        'number' => Components\Text\Number::class,
-        'ol' => 'blade-components::components.text.ol',
-        'paragraph' => 'blade-components::components.text.paragraph',
-        'pre' => 'blade-components::components.text.pre',
-        'ul' => 'blade-components::components.text.ul',
+        // Avatar...
+        'avatar' => 'blade-components::components.avatar.index',
 
         // Buttons...
         'btn' => Components\Btn\Index::class,
@@ -62,7 +55,6 @@ return [
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => Components\Layout\Icon::class,
         'layout.nav-link' => 'blade-components::components.layout.nav-link',
-        'layout.photo' => Components\Layout\Photo::class,
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
         'layout.sections' => 'blade-components::components.layout.section-group',
@@ -86,5 +78,16 @@ return [
         'list-group.item-btn' => 'blade-components::components.list-group.item-btn',
         'list-group.item-button' => 'blade-components::components.list-group.item-btn',
         'list-group.item-link' => 'blade-components::components.list-group.item',
+
+        // Typography...
+        'currency' => Components\Text\Currency::class,
+        'date-time' => Components\Text\DateTime::class,
+        'description' => 'blade-components::components.text.description',
+        'heading' => Components\Text\Heading::class,
+        'number' => Components\Text\Number::class,
+        'ol' => 'blade-components::components.text.ol',
+        'paragraph' => 'blade-components::components.text.paragraph',
+        'pre' => 'blade-components::components.text.pre',
+        'ul' => 'blade-components::components.text.ul',
     ],
 ];
