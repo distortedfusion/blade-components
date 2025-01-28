@@ -12,6 +12,7 @@ class Index extends Component
      * @var array
      */
     public static array $defaultIcons = [
+        'default' => 'heroicon-o-information-circle',
         'success' => 'heroicon-o-check-circle',
         'info' => 'heroicon-o-information-circle',
         'warning' => 'heroicon-o-exclamation-circle',
@@ -19,11 +20,11 @@ class Index extends Component
     ];
 
     /**
-     * The alert type.
+     * The alert style.
      *
      * @var string
      */
-    public string $type;
+    public string $style;
 
     /**
      * The alert title.
@@ -35,22 +36,22 @@ class Index extends Component
     /**
      * The alert icon.
      *
-     * @var string
+     * @var string|null
      */
-    public string $icon;
+    public ?string $icon;
 
     /**
      * Create the component instance.
      *
      * @param string|null $title
-     * @param string      $type
+     * @param string      $style
      * @param string|null $icon
      */
-    public function __construct(?string $title = null, string $type = 'default', ?string $icon = null)
+    public function __construct(?string $title = null, string $style = 'default', ?string $icon = null)
     {
         $this->title = $title;
-        $this->type = $type;
-        $this->icon = $icon ?: $this->defaultIconForType($type);
+        $this->style = $style;
+        $this->icon = $icon ?: $this->defaultIconForStyle($style);
     }
 
     /**
@@ -64,36 +65,36 @@ class Index extends Component
     }
 
     /**
-     * Get the default icon for the alert type.
+     * Get the default icon for the alert style.
      *
-     * @param string $type
+     * @param string $style
      *
-     * @return string
+     * @return string|null
      */
-    public static function defaultIconForType(string $type): string
+    public static function defaultIconForStyle(string $style): ?string
     {
-        if (array_key_exists($type, static::$defaultIcons)) {
-            return static::$defaultIcons[$type];
+        if (array_key_exists($style, static::$defaultIcons)) {
+            return static::$defaultIcons[$style];
         }
 
-        return 'heroicon-o-information-circle';
+        return null;
     }
 
     /**
-     * Set the default icon for the supplied alert type.
+     * Set the default icon for the supplied alert style.
      *
-     * @param string $type
+     * @param string $style
      * @param string $icon
      *
      * @return void
      */
-    public static function setDefaultIconForType(string $type, string $icon): void
+    public static function setDefaultIconForStyle(string $style, string $icon): void
     {
-        static::$defaultIcons[$type] = $icon;
+        static::$defaultIcons[$style] = $icon;
     }
 
     /**
-     * Set the default icons for the supplied alert types.
+     * Set the default icons for the supplied alert style.
      *
      * @param array $icons
      *
@@ -101,8 +102,8 @@ class Index extends Component
      */
     public static function setDefaultIcons(array $icons): void
     {
-        foreach ($icons as $type => $icon) {
-            static::setDefaultIconForType($type, $icon);
+        foreach ($icons as $style => $icon) {
+            static::setDefaultIconForStyle($style, $icon);
         }
     }
 }
