@@ -91,4 +91,18 @@ class Index extends Component
     {
         static::$defaultIcons[$type] = $icon;
     }
+
+    /**
+     * Set the default icons for the supplied alert types.
+     *
+     * @param array $icons
+     *
+     * @return void
+     */
+    public static function setDefaultIcons(array $icons): void
+    {
+        foreach ($icons as $type => $icon) {
+            static::setDefaultIconForType($type, $icon);
+        }
+    }
 }
