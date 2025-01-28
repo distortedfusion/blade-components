@@ -11,11 +11,11 @@ class Index extends Component
      *
      * @var array
      */
-    public const DEFAULT_ICONS = [
-        'success' => 'fal-circle-check',
-        'info' => 'fal-circle-info',
-        'warning' => 'fal-triangle-exclamation',
-        'danger' => 'fal-hexagon-exclamation',
+    public static array $defaultIcons = [
+        'success' => 'heroicon-o-check-circle',
+        'info' => 'heroicon-o-information-circle',
+        'warning' => 'heroicon-o-exclamation-circle',
+        'danger' => 'heroicon-o-x-circle',
     ];
 
     /**
@@ -70,12 +70,25 @@ class Index extends Component
      *
      * @return string
      */
-    protected function defaultIconForType(string $type): string
+    public static function defaultIconForType(string $type): string
     {
-        if (array_key_exists($type, self::DEFAULT_ICONS)) {
-            return self::DEFAULT_ICONS[$type];
+        if (array_key_exists($type, static::$defaultIcons)) {
+            return static::$defaultIcons[$type];
         }
 
-        return 'fal-circle-info';
+        return 'heroicon-o-information-circle';
+    }
+
+    /**
+     * Set the default icon for the supplied alert type.
+     *
+     * @param string $type
+     * @param string $icon
+     *
+     * @return void
+     */
+    public static function setDefaultIconForType(string $type, string $icon): void
+    {
+        static::$defaultIcons[$type] = $icon;
     }
 }
