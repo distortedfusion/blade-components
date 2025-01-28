@@ -1,29 +1,25 @@
 {
     "name": "distortedfusion/blade-components",
     "description": "A collection of reusable Blade components implementing TailwindCSS.",
-    "license": "proprietary",
-    "keywords": ["laravel", "tailwind", "blade", "components", "distortedfusion"],
+    "license": "MIT",
+    "keywords": ["laravel", "tailwind", "blade", "components", "distortedfusion", "ddfsn"],
     "authors": [
         {
             "name": "Kevin Dierkx",
             "email": "kevin@distortedfusion.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://distortedfusion.muse.distortedfusion.com"
-        }
-    ],
     "require": {
         "php": "^8.0",
         "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
         "distortedfusion/blade-colors": "^1.0.0",
-        "distortedfusion/blade-forms": "^2.0.0",
-        "distortedfusion/fontawesome-pro-icons-light": "^6.4"
+        "distortedfusion/blade-forms": "^2.0.0"
     },
     "require-dev": {
         "distortedfusion/php-cs-fixer-config": "^2.1"
+    },
+    "suggest": {
+        "blade-ui-kit/blade-heroicons": "Default icons used for various components"
     },
     "autoload": {
         "psr-4": {
