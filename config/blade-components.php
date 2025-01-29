@@ -38,7 +38,7 @@ return [
         'card.body' => 'blade-components::components.card.body',
         'card.footer' => 'blade-components::components.card.footer',
         'card.header' => 'blade-components::components.card.header',
-        'card.title' => Components\Card\Title::class,
+        'card.title' => 'blade-components::components.card.title',
         'card' => 'blade-components::components.card.index',
 
         // Layout containers...

@@ -1,7 +1,7 @@
 @php
 $element = $asHeading ? 'h'.$headingLevel : 'div';
 @endphp
-<{{ $element }} {{ $attributes->merge(['id' => $id()])->class([
+<{{ $element }} data-slot="heading" {{ $attributes->merge(['id' => $id()])->class([
     'text-black dark:text-white',
     'font-sans-heading',
     'hyphens-auto' => ! Str::contains($attributes->get('class'), ['hyphens-']),
