@@ -1,3 +1,4 @@
+@props(['progress' => 0, 'size' => null])
 <div {{ $attributes->class([
     'w-full',
     'h-4' => $size === 'lg',

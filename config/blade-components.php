@@ -46,6 +46,9 @@ return [
         // Entities...
         'entity.field' => 'blade-components::components.entity.field',
 
+        // Progress Bar...
+        'progress-bar' => 'blade-components::components.progress-bar.index',
+
         // Form extra's...
         'form-actions' => Components\Form\Actions::class,
 
@@ -60,7 +63,6 @@ return [
         'layout.section' => Components\Layout\Section::class,
 
         'layout.spinner' => 'blade-components::components.layout.spinner',
-        'layout.progress-bar' => Components\Layout\ProgressBar::class,
         'layout.pulser' => 'blade-components::components.layout.pulser',
 
         'divider' => 'blade-components::components.layout.divider',
