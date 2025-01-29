@@ -68,12 +68,12 @@ return [
         // List group...
         'list-group' => 'blade-components::components.list-group.index',
         'list-group.item' => 'blade-components::components.list-group.item',
+        'list-group.item-btn' => 'blade-components::components.list-group.item-btn',
 
         // List group - pre-composed elements...
         'list-group.precomposed.title' => 'blade-components::components.list-group.precomposed.title',
 
         // List group - Deprecated, use list-group.item instead...
-        'list-group.item-btn' => 'blade-components::components.list-group.item-btn',
         'list-group.item-button' => 'blade-components::components.list-group.item-btn',
         'list-group.item-link' => 'blade-components::components.list-group.item',
 
