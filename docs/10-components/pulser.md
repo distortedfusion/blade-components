@@ -1,10 +1,16 @@
 ---
 title: Pulser
-description:
+description: Indicate an action is running in the background.
 ---
 
-```blade-component-code
-<div class="mx-auto">
-    <x-layout.pulser />
+```blade-component-preview
+<div class="flex justify-center items-center min-h-40">
+    <x-pulser />
 </div>
+```
+
+## Usage
+
+```html
+<x-pulser />
 ```
