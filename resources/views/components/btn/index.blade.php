@@ -61,6 +61,12 @@ $class = [
 
     'shadow-none dark:bg-gray-900/0 dark:border-transparent dark:text-gray-300' => $style === 'ghost',
 
+    // Success Color...
+    'shadow-none bg-green-600 border-green-600 text-white' => $style === 'success',
+    'shadow-none hover:bg-green-500 hover:border-green-500 hover:text-white' => $style === 'success',
+    'shadow-none focus:bg-green-500 focus:border-green-500 focus:text-white' => $style === 'success',
+    'shadow-none active:bg-green-500 active:border-green-500 active:text-white' => $style === 'success',
+
     // Info Color...
     'shadow-none bg-blue-600 border-blue-600 text-white' => $style === 'info',
     'shadow-none hover:bg-blue-500 hover:border-blue-500 hover:text-white' => $style === 'info',

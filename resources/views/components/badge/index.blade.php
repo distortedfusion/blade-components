@@ -15,7 +15,7 @@
 ]) }} role="alert">
     @if(! is_null($icon))
         <div class="flex-shrink-0">
-            <x-badge.icon :icon="$icon" />
+            <x-dynamic-component :component="$icon" class="text-inherit opacity-80 size-4" />
         </div>
     @endif
     <div class="flex-grow">{{ $slot }}</div>
