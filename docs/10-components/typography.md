@@ -1,9 +1,7 @@
 ---
 title: Typography
-description:
+description: Display text using pre-defined typographic styles and style combinations.
 ---
-
-Display text using pre-defined typographic styles and style combinations.
 
 ## Heading
 
@@ -20,6 +18,14 @@ Display text using pre-defined typographic styles and style combinations.
 
 ```blade-component-code
 <x-paragraph>
+    The Evil Rabbit Jumped over the Fence.
+</x-paragraph>
+```
+
+### Muted
+
+```blade-component-code
+<x-paragraph style="muted">
     The Evil Rabbit Jumped over the Fence.
 </x-paragraph>
 ```
@@ -74,5 +80,5 @@ Displays a brief heading and subheading for additional information or context.
 ## Codeblock
 
 ```blade-component-code
-<x-pre>composer require distortedfusion/blade-component-codes</x-pre>
+<x-pre>composer require ddfsn/blade-components</x-pre>
 ```
