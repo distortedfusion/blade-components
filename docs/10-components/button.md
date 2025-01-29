@@ -50,7 +50,7 @@ Control the button style by supplying the `style=""` attribute.
 Control the button size by supplying the `size=""` attribute.
 
 ```blade-component-code
-<div class="flex justify-between">
+<div class="flex items-center justify-between space-x-2">
     <x-btn size="lg">Button</x-btn>
     <x-btn>Button</x-btn>
     <x-btn size="sm">Button</x-btn>
