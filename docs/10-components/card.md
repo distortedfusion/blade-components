@@ -5,7 +5,7 @@ description: Display related information in a single unit, optionally providing 
 
 ```blade-component-preview
 <div class="flex justify-center items-center min-h-40">
-    <x-card class="min-w-64">
+    <x-card class="max-w-96">
         <x-card.header>
             <x-card.title :as-heading="false">Card</x-card.title>
         </x-card.header>
@@ -103,7 +103,7 @@ For consistency the `x-card.title` component can be used within the `x-card.head
 
 ## Actions
 
-The `x-card.heading` has a dedicated `x-slot:actions` slot intended for simple call to actions elements.
+The `x-card.heading` component has a dedicated `x-slot:actions` slot intended for simple call to actions elements.
 
 ```blade-component-code
 <x-card>
