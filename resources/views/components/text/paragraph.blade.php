@@ -7,7 +7,7 @@
 
     // Styles...
     'text-gray-800 dark:text-gray-100' => ! Str::contains($attributes->get('class'), ['text-']) && is_null($style),
-    'text-gray-600 dark:text-gray-300' => $style === 'muted',
+    'text-gray-600 dark:text-gray-400' => $style === 'muted',
 ]) }}>
     {{ $slot }}
 </p>
