@@ -1,4 +1,4 @@
-@props(['href' => null, 'title' => null, 'type' => 'button', 'button' => false])
+@props(['href' => null, 'target' => '_self', 'title' => null, 'type' => 'button', 'button' => false])
 @php
 $componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
 $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
@@ -27,7 +27,7 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
     </div>
 
     @if(! is_null($href) && ! $button)
-        <a href="{{ $href }}" {{ $indicatorAttributes->class([
+        <a href="{{ $href }}" target="{{ $target }}" {{ $indicatorAttributes->class([
             'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
         ]) }}>
             @include('blade-components::components.list-group.partials.indicator')
