@@ -1,5 +1,5 @@
 ---
-title: Icon
+title: Layout Icon
 description: A contained icon to be used to differentiate layout components.
 ---
 
@@ -12,7 +12,7 @@ description: A contained icon to be used to differentiate layout components.
 ## Usage
 
 ```html
-<x-btn>Button</x-btn>
+<x-layout.icon icon="heroicon-o-cube-transparent" />
 ```
 
 ### Component API

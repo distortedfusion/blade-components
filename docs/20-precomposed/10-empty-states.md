@@ -10,9 +10,6 @@ description:
         <x-btn size="sm">Primary Action</x-btn>
         <x-btn size="sm" style="tertiary">
             Learn More
-            <x-slot:suffix>
-                <x-btn.icon icon="fal-arrow-up-right-from-square" />
-            </x-slot:suffix>
         </x-btn>
     </x-slot:action>
 </x-layout.empty-state>
@@ -77,9 +74,6 @@ description:
     <x-slot:action>
         <x-btn size="sm" style="tertiary">
             Learn More
-            <x-slot:suffix>
-                <x-btn.icon icon="fal-arrow-up-right-from-square" />
-            </x-slot:suffix>
         </x-btn>
     </x-slot:action>
 </x-layout.empty-state>
