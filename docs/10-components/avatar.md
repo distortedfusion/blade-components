@@ -4,7 +4,7 @@ description: Image element, with a fallback, for graphically representing the us
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center h-32">
+<div class="flex justify-center items-center min-h-40">
     <x-avatar />
 </div>
 ```
