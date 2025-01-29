@@ -12,7 +12,6 @@ return [
 
         // Button...
         'btn' => Components\Btn\Index::class,
-        'btn.icon' => 'blade-components::components.btn.icon',
 
         // Badge...
         'badge' => 'blade-components::components.badge.index',
