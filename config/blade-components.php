@@ -49,6 +49,10 @@ return [
         // Progress Bar...
         'progress-bar' => 'blade-components::components.progress-bar.index',
 
+        // Loading indicators...
+        'spinner' => 'blade-components::components.spinner.index',
+        'pulser' => 'blade-components::components.pulser.index',
+
         // Form extra's...
         'form-actions' => Components\Form\Actions::class,
 
@@ -61,9 +65,6 @@ return [
         'layout.sections' => 'blade-components::components.layout.section-group',
         'layout.section-title' => Components\Layout\SectionTitle::class,
         'layout.section' => Components\Layout\Section::class,
-
-        'layout.spinner' => 'blade-components::components.layout.spinner',
-        'layout.pulser' => 'blade-components::components.layout.pulser',
 
         'divider' => 'blade-components::components.layout.divider',
 
