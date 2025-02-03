@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Blade Components is a hand-crafted, UI component library for for building consistent web experiences in Laravel apps.
+description: Blade Components is a hand-crafted, UI component library for building consistent web experiences in Laravel apps.
 ---
 
 ## Prerequisites
