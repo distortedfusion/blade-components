@@ -19,7 +19,7 @@
             ]) }}>
                 @if($forLivewire())
                     <div class="hidden" wire:loading.block>
-                        <x-layout.pulser />
+                        <x-pulser />
                     </div>
                 @endif
                 <div @if($forLivewire())wire:loading.class="hidden"@endif>

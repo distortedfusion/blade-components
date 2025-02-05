@@ -13,7 +13,7 @@
                     @if($url = $getPreviousUrl())
                         <div class="flex-shrink-0 border-r border-black/10 dark:border-white/10 pr-2 mr-4">
                             <x-btn :href="$url" size="sm" style="tertiary" class="px-2">
-                                <x-btn.icon icon="fal-chevron-left" />
+                                <x-heroicon-o-chevron-left class="w-4 h-4 text-black dark:text-white opacity-50 group-hover:opacity-100 group-focus/indicator:opacity-100 relative z-10" />
                             </x-btn>
                         </div>
                     @endif
