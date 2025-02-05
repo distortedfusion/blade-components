@@ -57,7 +57,7 @@ Please refer to the [Tailwind documentation](https://v3.tailwindcss.com/docs/ins
 
 ## Setting up Blade Colors
 
-Colors are managed trough the complimentary [Blade Colors](/docs/distortedfusion/blade-colors/getting-started) package. Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. You will find the full documentation on the dedicated [documentation](/docs/distortedfusion/blade-colors/getting-started) page.
+Colors are managed trough the complimentary [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) package. Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. You will find the full documentation on the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) page.
 
 Blade Colors is automatically installed with Blade Components. After installation the `@bladeColor` directive needs be added to your layouts `<head>` section:
 
@@ -70,7 +70,7 @@ Blade Colors is automatically installed with Blade Components. After installatio
 
 #### Customizing Theme Colors
 
-Blade Components implements the default `primary` color definition offered by [Blade Colors](/docs/distortedfusion/blade-colors/getting-started) for some of its components. You can customize this to your liking, for a detailed explanation please refer to the dedicated [documentation](/docs/distortedfusion/blade-colors/usage#customizing-colors-using-palettes) page.
+Blade Components implements the default `primary` color definition offered by [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) for some of its components. You can customize this to your liking, for a detailed explanation please refer to the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors/usage#customizing-colors-using-palettes) page.
 
 ## Publishing Configuration
 
