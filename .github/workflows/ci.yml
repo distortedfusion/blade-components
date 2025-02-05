@@ -40,9 +40,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: Composer Configuration
-        run: composer config http-basic.distortedfusion.muse.distortedfusion.com token ${{ secrets.MUSE_TOKEN }}
-
       - name: Composer Install
         run: |
           composer validate

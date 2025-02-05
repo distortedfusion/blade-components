@@ -1,23 +1,33 @@
+<p align="center">
+    <a href="https://blade-components.com" target="_blank">
+        <img src="https://github.com/distortedfusion/blade-components/blob/master/.github/thumbnail.jpg" width="1200" alt="Blade Components - DDFSN">
+    </a>
+</p>
+
 # Blade Components
 
-A collection of reusable Blade components implementing TailwindCSS.
+Blade Components is a hand-crafted, UI component library for building consistent web experiences in Laravel apps.
 
-## Installation
+## Documentation
 
-Install the package via composer: `composer require distortedfusion/blade-components`
+You will find full documentation on the dedicated [documentation](https://blade-components.com) site.
 
-*This package implements Laravel's Package Discovery, no further changes are needed to your application configs. For more information [please refer to the Laravel documentation](https://laravel.com/docs/packages#package-discovery).*
+## Testing
 
-## Configuration
+To run the tests, run the following command from the project folder:
 
-```js
-zIndex: {
-    'dropdown': 1000,
-    'offcanvas-backdrop': 1040,
-    'offcanvas': 1045,
-    'modal-backdrop': 1050,
-    'modal': 1055,
-    'popover': 1070,
-    'tooltip': 1080,
-},
+``` bash
+composer test
 ```
+
+## Security
+
+If you discover a security vulnerability within this package, please send an e-mail to Kevin Dierkx via kevin@distortedfusion.com. All security vulnerabilities will be promptly addressed.
+
+## Contributing
+
+Contributions are welcome and will be [fully credited](https://github.com/distortedfusion/blade-components/graphs/contributors). Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

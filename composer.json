@@ -1,6 +1,6 @@
 {
     "name": "distortedfusion/blade-components",
-    "description": "A collection of reusable Blade components implementing TailwindCSS.",
+    "description": "Blade Components is a hand-crafted, UI component library for building consistent web experiences in Laravel apps.",
     "license": "MIT",
     "keywords": ["laravel", "tailwind", "blade", "components", "distortedfusion", "ddfsn"],
     "authors": [
@@ -19,7 +19,7 @@
         "distortedfusion/php-cs-fixer-config": "^2.1"
     },
     "suggest": {
-        "blade-ui-kit/blade-heroicons": "Default icons used for various components"
+        "blade-ui-kit/blade-heroicons": "Default icons used for various components."
     },
     "autoload": {
         "psr-4": {
