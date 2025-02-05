@@ -18,7 +18,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Publish all of the distortedfusion/blade-components resources';
+    protected $description = 'Publish all of the ddfsn/blade-components resources';
 
     /**
      * Execute the console command.

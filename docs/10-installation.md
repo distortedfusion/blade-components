@@ -33,7 +33,7 @@ Blade Components requires the following before installing:
 Blade Components can be installed via composer by running the following command from your project root:
 
 ```bash
-composer require distortedfusion/blade-components
+composer require ddfsn/blade-components
 ```
 
 ## Setting up Tailwind CSS
@@ -46,7 +46,7 @@ export default {
 
     content: [
         ...,
-        './vendor/distortedfusion/blade-components/resources/**/*.blade.php',
+        './vendor/ddfsn/blade-components/resources/**/*.blade.php',
     ],
 
     ...

@@ -1,5 +1,5 @@
 {
-    "name": "distortedfusion/blade-components",
+    "name": "ddfsn/blade-components",
     "description": "Blade Components is a hand-crafted, UI component library for building consistent web experiences in Laravel apps.",
     "license": "MIT",
     "keywords": ["laravel", "tailwind", "blade", "components", "distortedfusion", "ddfsn"],

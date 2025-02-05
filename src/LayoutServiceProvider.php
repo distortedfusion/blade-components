@@ -45,8 +45,8 @@ class LayoutServiceProvider extends ServiceProvider
     private function defineAssetPublishing(): void
     {
         $this->publishes([
-            DF_BC_PATH.'/resources/css' => $this->app->resourcePath('/css/vendor/distortedfusion/blade-components'),
-            DF_BC_PATH.'/resources/js' => $this->app->resourcePath('/js/vendor/distortedfusion/blade-components'),
+            DF_BC_PATH.'/resources/css' => $this->app->resourcePath('/css/vendor/ddfsn/blade-components'),
+            DF_BC_PATH.'/resources/js' => $this->app->resourcePath('/js/vendor/ddfsn/blade-components'),
         ], 'df-assets');
     }
 
