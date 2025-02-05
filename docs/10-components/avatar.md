@@ -34,8 +34,8 @@ When showing an image it's good practice to supply the `alt=""` attribute to spe
 
 ```blade-component-code
 <div class="flex justify-center">
-    <x-avatar src="/docs/avatar.jpeg"
-        srcset="/docs/avatar@2x.jpeg 2x"
+    <x-avatar src="/assets/avatar.jpeg"
+        srcset="/assets/avatar@2x.jpeg 2x"
         alt="Kevin Dierkx" />
 </div>
 ```
