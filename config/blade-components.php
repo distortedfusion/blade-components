@@ -8,7 +8,7 @@ return [
         'alert' => Components\Alert\Index::class,
 
         // Avatar...
-        'avatar' => 'blade-components::components.avatar.index',
+        'avatar' => Components\Avatar\Index::class,
 
         // Button...
         'btn' => Components\Btn\Index::class,

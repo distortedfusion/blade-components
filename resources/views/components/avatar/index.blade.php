@@ -1,4 +1,3 @@
-@props(['src' => null, 'srcset' => null, 'alt' => null, 'icon' => 'heroicon-o-user', 'size' => null])
 <div {{ $attributes->class([
     'block relative rounded-full overflow-hidden aspect-square m-px p-px',
     'bg-black/5 dark:bg-white/5 ring-1 ring-inset ring-black/10 dark:ring-white/10',
