@@ -3,7 +3,7 @@
 namespace DistortedFusion\BladeComponents\Components\Text;
 
 use Closure;
-use DistortedFusion\BladeComponents\Concerns\LocalizesFormattedNumbers;
+use DistortedFusion\BladeComponents\Components\Concerns\LocalizesFormattedNumbers;
 use Illuminate\View\Component;
 
 class Currency extends Component

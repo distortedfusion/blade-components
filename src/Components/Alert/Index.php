@@ -94,7 +94,7 @@ class Index extends Component
     }
 
     /**
-     * Set the default icons for the supplied alert style.
+     * Set the default icons for the supplied alert styles.
      *
      * @param array $icons
      *

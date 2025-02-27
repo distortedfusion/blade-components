@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\BladeComponents\Concerns;
+namespace DistortedFusion\BladeComponents\Components\Concerns;
 
 trait FormatsSize
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DistortedFusion\BladeComponents\Concerns;
+namespace DistortedFusion\BladeComponents\Components\Concerns;
 
 use Illuminate\Support\Facades\App;
 use NumberFormatter;
