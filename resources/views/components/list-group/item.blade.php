@@ -1,4 +1,3 @@
-@props(['href' => null, 'target' => '_self', 'title' => null, 'type' => 'button', 'button' => false])
 @php
 $componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
 $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
@@ -30,13 +29,13 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
         <a href="{{ $href }}" target="{{ $target }}" {{ $indicatorAttributes->class([
             'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
         ]) }}>
-            @include('blade-components::components.list-group.partials.indicator')
+            @include('blade-components::components.list-group.partials.indicator', ['icon' => $icon])
         </a>
     @elseif($button)
         <button type="{{ $type }}" {{ $indicatorAttributes->class([
             'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
         ]) }}>
-            @include('blade-components::components.list-group.partials.indicator')
+            @include('blade-components::components.list-group.partials.indicator', ['icon' => $icon])
         </button>
     @endif
 </div>
