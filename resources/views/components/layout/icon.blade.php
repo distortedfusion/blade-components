@@ -5,6 +5,7 @@
     'w-12' => $size === 'lg',
     'w-10' => is_null($size) || ! in_array($size, ['sm', 'lg']),
     'w-8' => $size === 'sm',
+    'w-6' => $size === 'xs',
 
     // Primary color...
     'bg-black border-black text-gray-100' => $style === 'primary',

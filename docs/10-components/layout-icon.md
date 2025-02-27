@@ -20,7 +20,7 @@ description: A contained icon to be used to differentiate layout components.
 | Attribute | Default   | Description                                                            |
 | --------- | --------- | ---------------------------------------------------------------------- |
 | `style`   | `primary` | `string`<br>Possible values `primary`, or `secondary`.                 |
-| `size`    | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, or `lg`. |
+| `size`    | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `xs`, `sm`, or `lg`. |
 
 ## Style
 
