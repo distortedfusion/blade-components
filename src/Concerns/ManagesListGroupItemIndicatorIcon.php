@@ -7,9 +7,8 @@ use DistortedFusion\BladeComponents\Components\ListGroup\Item;
 trait ManagesListGroupItemIndicatorIcon
 {
     /**
-     * Set the default icon for the supplied alert style.
+     * Set the default indicator icon for the `<x-list-group.item` component.
      *
-     * @param string $style
      * @param string $icon
      *
      * @return void

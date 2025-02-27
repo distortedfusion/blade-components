@@ -8,6 +8,6 @@
     @if($indicator ?? false)
         {{ $indicator }}
     @else
-        <x-dynamic-component :component="$icon" class="w-4 h-4 text-black dark:text-white opacity-50 group-hover:opacity-100 group-focus/indicator:opacity-100 relative z-10" />
+        <x-dynamic-component :component="$indicatorIcon" class="w-4 h-4 text-black dark:text-white opacity-50 group-hover:opacity-100 group-focus/indicator:opacity-100 relative z-10" />
     @endif
 </div>

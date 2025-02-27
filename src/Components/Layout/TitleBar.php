@@ -30,21 +30,44 @@ class TitleBar extends Component
     public bool $asHeading;
 
     /**
+     * The previous icon.
+     *
+     * @var string|null
+     */
+    public ?string $previousIcon;
+
+    /**
+     * Default indicator icon.
+     *
+     * @var string
+     */
+    public static string $defaultPreviousIcon = 'heroicon-o-chevron-left';
+
+    /**
      * Create a new component instance.
      *
-     * @param string|null $title
-     * @param string|null $actions
-     * @param string|null $previousUrl
-     * @param string|null $icon
-     * @param bool        $asHeading
+     * @param ?string $title
+     * @param ?string $actions
+     * @param ?string $previousUrl
+     * @param ?string $icon
+     * @param bool    $asHeading
+     * @param ?string $previousIcon
      */
-    public function __construct(?string $title = null, ?string $actions = null, ?string $previousUrl = null, ?string $icon = null, bool $asHeading = true)
-    {
+    public function __construct(
+        ?string $title = null,
+        ?string $actions = null,
+        ?string $previousUrl = null,
+        ?string $icon = null,
+        bool $asHeading = true,
+        ?string $previousIcon = null,
+    ) {
         $this->title = $title;
         $this->actions = $actions;
         $this->previousUrl = $previousUrl;
         $this->icon = $icon;
         $this->asHeading = $asHeading;
+
+        $this->previousIcon = $previousIcon ?: $this->defaultPreviousIcon();
     }
 
     /**
@@ -155,5 +178,27 @@ class TitleBar extends Component
     public static function setRoutesWithNarrowLayout(array $routes): void
     {
         static::$routesWithNarrowLayout = $routes;
+    }
+
+    /**
+     * Get the default previous icon.
+     *
+     * @return string|null
+     */
+    public static function defaultPreviousIcon(): ?string
+    {
+        return static::$defaultPreviousIcon;
+    }
+
+    /**
+     * Set the default previous icon.
+     *
+     * @param string $icon
+     *
+     * @return void
+     */
+    public static function setDefaultPreviousIcon(string $icon): void
+    {
+        static::$defaultPreviousIcon = $icon;
     }
 }

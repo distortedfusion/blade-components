@@ -15,7 +15,7 @@ class ItemBtn extends Item
      * @param ?string     $title
      * @param string      $type
      * @param bool        $button
-     * @param string|null $icon
+     * @param string|null $indicatorIcon
      */
     public function __construct(
         ?string $href = null,
@@ -23,7 +23,7 @@ class ItemBtn extends Item
         ?string $title = null,
         string $type = 'button',
         bool $button = false,
-        ?string $icon = null,
+        ?string $indicatorIcon = null,
     ) {
         parent::__construct(
             button: true,
@@ -32,7 +32,7 @@ class ItemBtn extends Item
             target: $target,
             title: $title,
             type: $type,
-            icon: $icon,
+            indicatorIcon: $indicatorIcon,
         );
     }
 }

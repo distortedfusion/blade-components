@@ -17,7 +17,7 @@ class Item extends Component
      *
      * @var string|null
      */
-    public ?string $icon;
+    public ?string $indicatorIcon;
 
     /**
      * Default indicator icon.
@@ -29,12 +29,12 @@ class Item extends Component
     /**
      * Create the component instance.
      *
-     * @param ?string     $href
-     * @param string      $target
-     * @param ?string     $title
-     * @param string      $type
-     * @param bool        $button
-     * @param string|null $icon
+     * @param ?string $href
+     * @param string  $target
+     * @param ?string $title
+     * @param string  $type
+     * @param bool    $button
+     * @param ?string $indicatorIcon
      */
     public function __construct(
         ?string $href = null,
@@ -42,7 +42,7 @@ class Item extends Component
         ?string $title = null,
         string $type = 'button',
         bool $button = false,
-        ?string $icon = null,
+        ?string $indicatorIcon = null,
     ) {
         $this->href = $href;
         $this->target = $target;
@@ -50,7 +50,7 @@ class Item extends Component
         $this->type = $type;
         $this->button = $button;
 
-        $this->icon = $icon ?: $this->defaultIndicatorIcon();
+        $this->indicatorIcon = $indicatorIcon ?: $this->defaultIndicatorIcon();
     }
 
     /**
@@ -76,11 +76,11 @@ class Item extends Component
     /**
      * Set the default indicator icon for link or button items.
      *
-     * @param string|null $icon
+     * @param string $icon
      *
      * @return void
      */
-    public static function setDefaultIndicatorIcon(?string $icon): void
+    public static function setDefaultIndicatorIcon(string $icon): void
     {
         static::$defaultIndicatorIcon = $icon;
     }

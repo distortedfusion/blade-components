@@ -7,7 +7,7 @@ use DistortedFusion\BladeComponents\Components\Alert\Index;
 trait ManagesAlertIcons
 {
     /**
-     * Set the default icon for the supplied alert style.
+     * Set the default style icon for the '<x-alert' component.
      *
      * @param string $style
      * @param string $icon
@@ -20,7 +20,7 @@ trait ManagesAlertIcons
     }
 
     /**
-     * Set the default icons for the supplied alert styles.
+     * Set the default style icons for the '<x-alert' component.
      *
      * @param array $icons
      *
