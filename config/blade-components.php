@@ -62,10 +62,6 @@ return [
         'layout.nav-link' => 'blade-components::components.layout.nav-link',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
-        'layout.sections' => 'blade-components::components.layout.section-group',
-        'layout.section-title' => Components\Layout\SectionTitle::class,
-        'layout.section' => Components\Layout\Section::class,
-
         'divider' => 'blade-components::components.layout.divider',
 
         // List group...
