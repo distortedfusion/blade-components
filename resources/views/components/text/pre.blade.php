@@ -13,10 +13,16 @@ $refId = 'pre-'.crc32($slot);
         'copyLabel': '{{ $copyLabel }}',
         'copiedLabel': '{{ $copiedLabel }}',
     }">
-    <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
-        'flex-grow px-4 py-2 overflow-scroll',
-        'text-sm leading-6 font-mono',
-    ]) }}>{{ $slot }}</pre>
+    <div {{ (new ComponentAttributeBag)->class([
+        'flex-grow relative min-w-0',
+        'before:content[\'\'] before:block before:w-4 before:absolute before:inset-y-0 before:right-0 before:pointer-events-none',
+        'before:bg-gradient-to-r before:from-transparent before:to-gray-100 dark:before:to-gray-900'
+    ]) }}>
+        <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
+            'w-full px-4 py-2 overflow-scroll',
+            'text-sm leading-6 font-mono',
+        ]) }}>{{ $slot }}</pre>
+    </div>
     @if($withCopy)
         <div {{ (new ComponentAttributeBag())->class([
             'flex-shrink-0 pr-1 relative',
