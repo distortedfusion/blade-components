@@ -5,6 +5,8 @@
     // Heading styling...
     '[&_[data-slot=heading]]:text-base [&_[data-slot=heading]]:py-1',
     '[&_*:is(h1,h2,h3,h4,h5,h6)]:text-base [&_*:is(h1,h2,h3,h4,h5,h6)]:py-1',
+
+    '[&_p]:text-gray-600 dark:[&_p]:text-gray-400',
 ]) }}>
     <div class="flex-grow">
         {{ $slot }}
