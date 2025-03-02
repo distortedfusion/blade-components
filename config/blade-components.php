@@ -50,6 +50,9 @@ return [
         // Progress Bar...
         'progress-bar' => 'blade-components::components.progress-bar.index',
 
+        // Separator...
+        'separator' => 'blade-components::components.separator.index',
+
         // Loading indicators...
         'spinner' => 'blade-components::components.spinner.index',
         'pulser' => 'blade-components::components.pulser.index',
