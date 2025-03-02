@@ -9,6 +9,7 @@ return [
 
         // Avatar...
         'avatar' => Components\Avatar\Index::class,
+        'avatar.stack' => 'blade-components::components.avatar.stack',
 
         // Button...
         'btn' => Components\Btn\Index::class,

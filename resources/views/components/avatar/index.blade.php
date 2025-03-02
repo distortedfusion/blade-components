@@ -1,6 +1,6 @@
 <div {{ $attributes->class([
     'block relative rounded-full overflow-hidden aspect-square m-px p-px',
-    'bg-black/5 dark:bg-white/5 ring-1 ring-inset ring-black/10 dark:ring-white/10',
+    'bg-gray-50 dark:bg-gray-950 ring-1 ring-inset ring-black/10 dark:ring-white/10',
     'text-gray-800 dark:text-gray-100',
 
     'w-12' => $size === 'lg',
