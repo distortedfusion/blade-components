@@ -3,7 +3,7 @@
 use Illuminate\View\ComponentAttributeBag;
 
 $class = [
-    'text-gray-800 dark:text-gray-100' => ! $active,
+    'text-gray-600 dark:text-gray-300' => ! $active,
     'text-dark dark:text-white font-semibold' => $active,
     'text-sm leading-8',
 ];
