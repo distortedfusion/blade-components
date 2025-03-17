@@ -5,7 +5,15 @@ description: Image element, with a fallback, for graphically representing the us
 
 ```blade-component-preview
 <div class="flex justify-center items-center min-h-40">
-    <x-avatar />
+    <x-avatar.stack>
+        <x-avatar src="/assets/avatar.jpeg"
+            srcset="/assets/avatar@2x.jpeg 2x"
+            alt="Kevin Dierkx" />
+        <x-avatar src="/assets/avatar-ddfsn.jpeg"
+            srcset="/assets/avatar-ddfsn@2x.jpeg 2x"
+            alt="DDFSN" />
+        <x-avatar />
+    </x-avatar.stack>
 </div>
 ```
 
@@ -60,5 +68,19 @@ You can control the icon per avatar instance by supplying the `icon=""` attribut
 ```blade-component-code
 <div class="flex justify-center">
     <x-avatar icon="heroicon-o-academic-cap" />
+</div>
+```
+
+## Stack
+
+Stack multiple avatars by wrapping them in a `<x-avatar.stack>` component.
+
+```blade-component-code
+<div class="flex justify-center">
+    <x-avatar.stack>
+        <x-avatar />
+        <x-avatar />
+        <x-avatar />
+    </x-avatar.stack>
 </div>
 ```
