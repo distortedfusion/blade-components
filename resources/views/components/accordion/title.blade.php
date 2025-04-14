@@ -6,7 +6,7 @@
     :aria-controls="id"
     {{ $attributes->class([
         'flex w-full items-center justify-between space-x-4 py-3 text-left group',
-        'focus:outline-none',
+        'outline-none focus-visible:underline',
     ]) }}>
     <x-heading :heading-level="3" size="base">{{ $slot }}</x-heading>
     @if($indicator ?? false)

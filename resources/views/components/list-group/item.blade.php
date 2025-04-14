@@ -27,13 +27,13 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
 
     @if(! is_null($href) && ! $button)
         <a href="{{ $href }}" target="{{ $target }}" {{ $indicatorAttributes->class([
-            'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
+            'ml-2 flex-shrink-0 block hover:no-underline outline-none group/indicator',
         ]) }}>
             @include('blade-components::components.list-group.partials.indicator')
         </a>
     @elseif($button)
         <button type="{{ $type }}" {{ $indicatorAttributes->class([
-            'ml-2 flex-shrink-0 block outline-none hover:no-underline group/indicator',
+            'ml-2 flex-shrink-0 block hover:no-underline outline-none group/indicator',
         ]) }}>
             @include('blade-components::components.list-group.partials.indicator')
         </button>

@@ -15,7 +15,7 @@ $class = [
         </span>
     @else
         <a href="{{ $href }}" {{ (new ComponentAttributeBag)->class([
-            'hover:no-underline hover:text-black dark:hover:text-white',
+            'hover:no-underline hover:text-black dark:hover:text-white outline-none focus:text-black dark:focus:text-white focus-visible:underline',
             ...$class
         ]) }}>
             {{ $slot }}
