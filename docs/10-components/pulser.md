@@ -4,7 +4,7 @@ description: Indicate an action is running in the background.
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-pulser />
 </div>
 ```

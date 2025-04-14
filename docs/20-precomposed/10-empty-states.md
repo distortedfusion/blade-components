@@ -4,7 +4,7 @@ description: Default state when no content is available.
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-layout.empty-state title="Title" :as-heading="false">
         <x-paragraph style="muted">The Evil Rabbit Jumped over the Fence.</x-paragraph>
         <x-slot:action>

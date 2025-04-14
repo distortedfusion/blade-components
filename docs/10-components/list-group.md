@@ -4,7 +4,7 @@ description: List information in an organized manner or refer to a different sou
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-list-group class="max-w-96">
         <x-list-group.item>
             <x-slot:title>

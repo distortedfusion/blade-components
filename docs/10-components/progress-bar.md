@@ -4,7 +4,7 @@ description: Visually display progress.
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-progress-bar progress="75" class="max-w-96" />
 </div>
 ```

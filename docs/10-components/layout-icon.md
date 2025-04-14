@@ -4,7 +4,7 @@ description: A contained icon to be used to differentiate layout components.
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-layout.icon icon="heroicon-o-cube-transparent" />
 </div>
 ```

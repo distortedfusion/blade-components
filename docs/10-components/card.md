@@ -4,7 +4,7 @@ description: Display related information in a single unit, optionally providing 
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-40">
+<div class="flex justify-center items-center min-h-60">
     <x-card class="max-w-96">
         <x-card.header>
             <x-card.title :as-heading="false">Card</x-card.title>
