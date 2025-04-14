@@ -4,6 +4,12 @@ use DistortedFusion\BladeComponents\Components;
 
 return [
     'components' => [
+        // Accordion...
+        'accordion.content' => 'blade-components::components.accordion.content',
+        'accordion.title' => Components\Accordion\Title::class,
+        'accordion.item' => 'blade-components::components.accordion.item',
+        'accordion' => 'blade-components::components.accordion.index',
+
         // Alert...
         'alert' => Components\Alert\Index::class,
 
