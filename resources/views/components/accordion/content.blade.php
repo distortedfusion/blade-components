@@ -8,7 +8,9 @@
     x-collapse.duration.0ms
     @endif
     x-cloak>
-    <div class="pb-3 space-y-5 transition-all duration-500"
+    <div {{ $attributes->class([
+            'pb-3 space-y-5 transition-all duration-500'
+        ]) }}
         :class="{
             'opacity-0': ! expanded && transition,
         }">
