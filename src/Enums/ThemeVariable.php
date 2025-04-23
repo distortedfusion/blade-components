@@ -27,9 +27,14 @@ enum ThemeVariable: string
     case RING = 'ring';
 
     case SUCCESS = 'success';
+    case SUCCESS_FOREGROUND = 'success-foreground';
     case INFO = 'info';
+    case INFO_FOREGROUND = 'info-foreground';
     case WARNING = 'warning';
+    case WARNING_FOREGROUND = 'warning-foreground';
     case DANGER = 'danger';
+    case DANGER_FOREGROUND = 'danger-foreground';
 
     case RADIUS = 'radius';
+    case RADIUS_INNER = 'radius-inner';
 }

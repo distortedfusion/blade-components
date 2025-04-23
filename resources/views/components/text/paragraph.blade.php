@@ -6,8 +6,8 @@
     'text-sm' => is_null($size),
 
     // Styles...
-    'text-gray-900 dark:text-gray-100' => ! Str::contains($attributes->get('class'), ['text-']) && is_null($style),
-    'text-gray-600 dark:text-gray-400' => $style === 'muted',
+    'text-[var(--foreground)]' => ! Str::contains($attributes->get('class'), ['text-']) && is_null($style),
+    'text-[var(--muted-foreground)]' => $style === 'muted',
 ]) }}>
     {{ $slot }}
 </p>

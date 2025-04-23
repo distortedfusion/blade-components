@@ -1,3 +1,3 @@
 <li {{ $attributes }}>
-    <x-fal-ellipsis class="w-4 h-4 text-gray-800 dark:text-gray-100" />
+    <x-heroicon-o-ellipsis-horizontal class="size-4 text-[var(--muted-foreground)]" />
 </li>

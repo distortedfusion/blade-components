@@ -2,7 +2,7 @@
 $element = $asHeading ? 'h'.$headingLevel : 'div';
 @endphp
 <{{ $element }} data-slot="heading"{{ $attributes->merge(['id' => $id()])->class([
-    'text-black dark:text-white',
+    'text-[var(--foreground)]',
     'font-sans-heading',
     'hyphens-auto' => ! Str::contains($attributes->get('class'), ['hyphens-']),
     'font-semibold' => ! Str::contains($attributes->get('class'), ['font-']),

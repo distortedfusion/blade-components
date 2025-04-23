@@ -4,8 +4,8 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
 @endphp
 <div data-slot="list-group-item" {{ $componentAttributes->class([
     'group flex items-center relative',
-    'border-black/10 dark:border-white/10',
-    'text-gray-800 dark:text-gray-100',
+    'border-[var(--border)]',
+    'text-[var(--foreground)]',
     'py-4 px-4 sm:px-6',
     'pr-2 sm:pr-4' => ! is_null($href) || $button,
 ]) }}>

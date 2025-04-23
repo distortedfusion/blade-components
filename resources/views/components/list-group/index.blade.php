@@ -1,8 +1,8 @@
 @props(['flush' => false])
 <div data-slot="list-group" {{ $attributes->class([
-    'w-full flex flex-col rounded-lg',
-    'border border-black/10 dark:border-white/10' => ! $flush,
-    'divide-y divide-black/10 dark:divide-white/10',
+    'w-full flex flex-col rounded-[var(--radius)]',
+    'border border-[var(--border)]' => ! $flush,
+    'divide-y divide-[var(--border)]',
 ]) }}>
     {{ $slot }}
 </div>

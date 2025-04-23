@@ -2,7 +2,7 @@
     <x-heading :as-heading="false" size="flex" class="text-sm truncate">{{ $slot }}</x-heading>
     @if($description ?? false)
         <div {{ $description->attributes->class([
-            '[&_p]:text-gray-600 dark:[&_p]:text-gray-400',
+            '[&_p]:text-[var(--muted-foreground)]',
         ]) }}>
             {{ $description }}
         </div>

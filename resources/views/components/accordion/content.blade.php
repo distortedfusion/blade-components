@@ -9,7 +9,7 @@
     @endif
     x-cloak>
     <div {{ $attributes->class([
-            'pb-3 space-y-5 transition-all duration-500'
+            'flex flex-col gap-y-5 pb-3 transition-all duration-500'
         ]) }}
         :class="{
             'opacity-0': ! expanded && transition,

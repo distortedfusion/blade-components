@@ -1,5 +1,5 @@
 <ul {{ $attributes->class([
-    'list-disc pl-5 marker:text-gray-400',
+    'list-disc pl-5 marker:text-[var(--muted-foreground)]',
 ]) }}>
     {{ $slot }}
 </ul>

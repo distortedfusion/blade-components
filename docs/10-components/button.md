@@ -17,13 +17,13 @@ description: Primary control for any action, supporting both anchors and buttons
 
 ### Component API
 
-| Attribute   | Default   | Description                                                                                           |
-| ----------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `ghost`, `info`, `warning` or `danger`.           |
-| `size`      | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, `lg` or `xl`.                           |
-| `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.   |
-| `alignment` | `center`  | `string`<br>Controls text alignment on the button label. Possible values `left`, `center` or `right`. |
-| `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                             |
+| Attribute   | Default   | Description                                                                                                       |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `outline`, `ghost`, `success`, `info`, `warning` or `danger`. |
+| `size`      | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, `lg` or `xl`.                                       |
+| `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.               |
+| `alignment` | `center`  | `string`<br>Controls text alignment on the button label. Possible values `left`, `center` or `right`.             |
+| `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                                         |
 
 ## Style
 
@@ -33,12 +33,14 @@ Control the button style by supplying the `style=""` attribute.
 <div class="flex justify-between">
     <x-btn style="primary">Button</x-btn>
     <x-btn style="secondary">Button</x-btn>
+    <x-btn style="outline">Button</x-btn>
     <x-btn style="ghost">Button</x-btn>
 </div>
 ```
 
 ```blade-component-code
 <div class="flex justify-between">
+    <x-btn style="success">Button</x-btn>
     <x-btn style="info">Button</x-btn>
     <x-btn style="warning">Button</x-btn>
     <x-btn style="danger">Button</x-btn>

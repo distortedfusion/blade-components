@@ -3,32 +3,27 @@ use Illuminate\Support\Str;
 @endphp
 @props(['style' => 'default'])
 <div data-slot="card" {{ $attributes->class([
-    'w-full rounded-lg',
+    'w-full rounded-[var(--radius)]',
 
-    // Background...
-    'bg-white dark:bg-gray-950' => ! Str::contains($attributes->get('class'), ['bg-']),
+    // Background / Foreground...
+    'bg-[var(--card)]' => ! Str::contains($attributes->get('class'), ['bg-']),
+    'text-[var(--card-foreground)]' => ! Str::contains($attributes->get('class'), ['text-']),
 
     // Border...
-    'border' => ! Str::contains($attributes->get('class'), ['border-']),
+    'border border-[var(--border)]' => ! Str::contains($attributes->get('class'), ['border-']),
 
-    // Border between elements, excluding the card footer from receiving the same color...
-    'divide-y' => ! Str::contains($attributes->get('class'), ['divide-']),
-    '[&>:not([data-slot=card-footer])]:border-black/10 dark:[&>:not([data-slot=card-footer])]:border-white/10' => ! Str::contains($attributes->get('class'), ['divide-']),
+    // Border between elements...
+    'divide-y divide-[var(--border)]' => ! Str::contains($attributes->get('class'), ['divide-']),
 
     // Specific styling...
-    'border-black/10 dark:border-white/10' => $style === 'default',
-    'border-green-500 dark:border-green-500' => $style === 'success',
-    'border-blue-500 dark:border-blue-500' => $style === 'info',
-    'border-amber-500 dark:border-amber-500' => $style === 'warning',
-    'border-red-500 dark:border-red-500' => $style === 'danger',
-    'border-transparent dark:border-transparent' => $style === 'ghost',
+    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--success)_50%,transparent)]' => $style === 'success',
+    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--info)_50%,transparent)]' => $style === 'info',
+    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--warning)_50%,transparent)]' => $style === 'warning',
+    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--danger)_50%,transparent)]' => $style === 'danger',
+    'border-transparent' => $style === 'ghost',
 
     // Specific styling, applicable to card footers...
-    '[&>[data-slot=card-footer]]:border-black/10 dark:[&>[data-slot=card-footer]]:border-white/10' => $style === 'default' || $style === 'ghost',
-    '[&>[data-slot=card-footer]]:border-green-500 dark:[&>[data-slot=card-footer]]:border-green-500' => $style === 'success',
-    '[&>[data-slot=card-footer]]:border-blue-500 dark:[&>[data-slot=card-footer]]:border-blue-500' => $style === 'info',
-    '[&>[data-slot=card-footer]]:border-amber-500 dark:[&>[data-slot=card-footer]]:border-amber-500' => $style === 'warning',
-    '[&>[data-slot=card-footer]]:border-red-500 dark:[&>[data-slot=card-footer]]:border-red-500' => $style === 'danger',
+    // '[&>[data-slot=card-footer]]:border-[var(--border)]',
 
     // Card body, reset border when following by a card header...
     '[&:has([data-slot=card-header]+[data-slot=card-body])>[data-slot=card-body]]:border-t-0',

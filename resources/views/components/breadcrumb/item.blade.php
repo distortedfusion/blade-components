@@ -3,8 +3,8 @@
 use Illuminate\View\ComponentAttributeBag;
 
 $class = [
-    'text-gray-600 dark:text-gray-300' => ! $active,
-    'text-dark dark:text-white font-semibold' => $active,
+    'text-[var(--muted-foreground)]' => ! $active,
+    'text-[var(--foreground)] font-semibold' => $active,
     'text-sm leading-8',
 ];
 @endphp
@@ -15,7 +15,9 @@ $class = [
         </span>
     @else
         <a href="{{ $href }}" {{ (new ComponentAttributeBag)->class([
-            'hover:no-underline hover:text-black dark:hover:text-white outline-none focus:text-black dark:focus:text-white focus-visible:underline',
+            'outline-none',
+            'hover:no-underline hover:text-[var(--foreground)]',
+            'focus:text-[var(--foreground)] focus-visible:underline',
             ...$class
         ]) }}>
             {{ $slot }}

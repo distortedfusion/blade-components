@@ -1,10 +1,10 @@
 @props(['size' => null])
 <div {{ $attributes->class([
-    'inline-flex items-center aspect-square',
+    'inline-flex items-center',
 
-    'w-8' => $size === 'lg',
-    'w-4' => is_null($size) || ! in_array($size, ['sm', 'lg']),
-    'w-2' => $size === 'sm',
+    'size-8' => $size === 'lg',
+    'size-4' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'size-2' => $size === 'sm',
 ]) }}>
-    <div class="animate-spin w-full h-auto aspect-square border-2 border-black/10 dark:border-white/10 border-t-black dark:border-t-white rounded-full"></div>
+    <div class="animate-spin w-full h-auto aspect-square border-2 border-[var(--border)] border-t-[var(--primary)] rounded-full"></div>
 </div>

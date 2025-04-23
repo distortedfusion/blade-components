@@ -17,9 +17,9 @@ description: A contained icon to be used to differentiate layout components.
 
 ### Component API
 
-| Attribute | Default   | Description                                                            |
-| --------- | --------- | ---------------------------------------------------------------------- |
-| `style`   | `primary` | `string`<br>Possible values `primary`, or `secondary`.                 |
+| Attribute | Default   | Description                                                                  |
+| --------- | --------- | ---------------------------------------------------------------------------- |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary` or `outline`.             |
 | `size`    | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `xs`, `sm`, or `lg`. |
 
 ## Style
@@ -27,13 +27,10 @@ description: A contained icon to be used to differentiate layout components.
 Control the icon style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex justify-center">
+<div class="flex items-center justify-center gap-x-4">
     <x-layout.icon icon="heroicon-o-cube-transparent" style="primary" />
-</div>
-```
-```blade-component-code
-<div class="flex justify-center">
     <x-layout.icon icon="heroicon-o-cube-transparent" style="secondary" />
+    <x-layout.icon icon="heroicon-o-cube-transparent" style="outline" />
 </div>
 ```
 

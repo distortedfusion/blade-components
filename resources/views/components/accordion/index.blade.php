@@ -4,7 +4,7 @@
     exclusive: {{ var_export($exclusive, true) }},
     transition: {{ var_export($transition, true) }}
 }" {{ $attributes->class([
-    'w-full divide-y divide-black/10 dark:divide-white/10',
+    'w-full divide-y divide-[var(--border)]',
 ]) }}>
     {{ $slot }}
 </div>

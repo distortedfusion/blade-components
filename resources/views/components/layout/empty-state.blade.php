@@ -1,13 +1,15 @@
 <div {{ $attributes->class([
-    'flex flex-col items-center text-center py-12',
+    'flex flex-col items-center gap-y-4 text-center py-12',
 ]) }}>
-    <x-heading size="flex" :heading-level="3" :as-heading="$asHeading" class="text-base leading-6 text-black dark:text-white py-2">{{ $title }}</x-heading>
-    <div class="max-w-[64ch] text-sm space-y-4 [&_p]:text-gray-600 dark:[&_p]:text-gray-400">
-        {{ $slot }}
+    <div class="flex flex-col gap-y-2">
+        <x-heading size="flex" :heading-level="3" :as-heading="$asHeading" class="text-base text-[var(--foreground)]">{{ $title }}</x-heading>
+        <div class="flex flex-col gap-y-4 max-w-[64ch] text-sm [&_p]:text-[var(--muted-foreground)]">
+            {{ $slot }}
+        </div>
     </div>
 
     @if($action ?? false)
-        <div class="mt-4">
+        <div class="flex items-center gap-x-2">
             {{ $action }}
         </div>
     @endif
