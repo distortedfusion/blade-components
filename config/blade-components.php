@@ -55,7 +55,6 @@ return [
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => 'blade-components::components.layout.icon',
-        'layout.nav-link' => 'blade-components::components.layout.nav-link',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
         'divider' => 'blade-components::components.layout.divider',
