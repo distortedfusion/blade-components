@@ -26,5 +26,10 @@ enum ThemeVariable: string
     case INPUT = 'input';
     case RING = 'ring';
 
+    case SUCCESS = 'success';
+    case INFO = 'info';
+    case WARNING = 'warning';
+    case DANGER = 'danger';
+
     case RADIUS = 'radius';
 }

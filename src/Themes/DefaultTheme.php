@@ -44,6 +44,11 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::INPUT->value => 'var(--border)',
             ThemeVariable::RING->value => 'var(--primary)',
 
+            ThemeVariable::SUCCESS->value => 'oklch(72.3% 0.219 149.579)', // green-500
+            ThemeVariable::INFO->value => 'oklch(62.3% 0.214 259.815)', // blue-500
+            ThemeVariable::WARNING->value => 'oklch(76.9% 0.188 70.08)', // amber-500
+            ThemeVariable::DANGER->value => 'oklch(63.7% 0.237 25.331)', // red-500
+
             ThemeVariable::RADIUS->value => '0.5rem',
         ];
     }
