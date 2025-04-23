@@ -29,17 +29,6 @@ return [
         'breadcrumb.ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
         'breadcrumb.separator' => 'blade-components::components.breadcrumb.separator',
 
-        // Bootstrap...
-        'bootstrap.dropdown-action' => Components\Bootstrap\DropdownAction::class,
-        'bootstrap.dropdown-button' => Components\Bootstrap\DropdownButton::class,
-        'bootstrap.dropdown-icon' => Components\Bootstrap\DropdownIcon::class,
-        'bootstrap.dropdown-separator' => 'blade-components::components.bootstrap.dropdown-separator',
-        'bootstrap.dropdown' => Components\Bootstrap\Dropdown::class,
-
-        'bootstrap.modal' => Components\Bootstrap\Modal::class,
-        'bootstrap.modal-confirmation' => Components\Bootstrap\ModalConfirmation::class,
-        'bootstrap.modal-dialog' => Components\Bootstrap\ModalDialog::class,
-
         // Card...
         'card.body' => 'blade-components::components.card.body',
         'card.footer' => 'blade-components::components.card.footer',
