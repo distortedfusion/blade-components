@@ -42,7 +42,7 @@ description: Display related information in a single unit, optionally providing 
 Control the card style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="space-y-2">
+<div class="flex flex-col gap-y-4">
     <x-card style="success">
         <x-card.header>
             <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
