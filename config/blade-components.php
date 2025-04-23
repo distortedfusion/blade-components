@@ -57,8 +57,6 @@ return [
         'layout.icon' => 'blade-components::components.layout.icon',
         'layout.title-bar' => Components\Layout\TitleBar::class,
 
-        'divider' => 'blade-components::components.layout.divider',
-
         // List group...
         'list-group' => 'blade-components::components.list-group.index',
         'list-group.item' => Components\ListGroup\Item::class,
