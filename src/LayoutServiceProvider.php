@@ -3,7 +3,6 @@
 namespace DistortedFusion\BladeComponents;
 
 use DistortedFusion\BladeColors\Facades\BladeColor;
-use DistortedFusion\BladeComponents\Console\PublishCommand;
 use DistortedFusion\BladeComponents\Enums\ThemeVariant;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
@@ -25,7 +24,6 @@ class LayoutServiceProvider extends ServiceProvider
 
         $this->configureBladeComponents();
         $this->configureTheme();
-        $this->configureCommands();
     }
 
     /**
@@ -36,21 +34,12 @@ class LayoutServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerResources();
-        $this->defineAssetPublishing();
         $this->offerPublishing();
     }
 
     private function registerResources(): void
     {
         $this->loadViewsFrom(DF_BC_PATH.'/resources/views', 'blade-components');
-    }
-
-    private function defineAssetPublishing(): void
-    {
-        $this->publishes([
-            DF_BC_PATH.'/resources/css' => $this->app->resourcePath('/css/vendor/ddfsn/blade-components'),
-            DF_BC_PATH.'/resources/js' => $this->app->resourcePath('/js/vendor/ddfsn/blade-components'),
-        ], 'df-assets');
     }
 
     private function offerPublishing(): void
@@ -88,14 +77,5 @@ class LayoutServiceProvider extends ServiceProvider
                 }
             }
         });
-    }
-
-    private function configureCommands(): void
-    {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                PublishCommand::class,
-            ]);
-        }
     }
 }

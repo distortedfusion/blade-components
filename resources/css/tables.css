@@ -1,5 +1,0 @@
-.table-row a:not(.table-row-link),
-.table-row button {
-    position: relative;
-    z-index: 1;
-}

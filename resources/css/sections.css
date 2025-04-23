@@ -1,3 +1,0 @@
-.section-group > :not([hidden]) ~ :not([hidden]) {
-    @apply pt-8;
-}
