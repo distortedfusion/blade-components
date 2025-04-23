@@ -2,7 +2,9 @@
 
 namespace DistortedFusion\BladeComponents;
 
+use DistortedFusion\BladeColors\Facades\BladeColor;
 use DistortedFusion\BladeComponents\Console\PublishCommand;
+use DistortedFusion\BladeComponents\Enums\ThemeVariant;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
@@ -20,6 +22,10 @@ class LayoutServiceProvider extends ServiceProvider
         }
 
         $this->mergeConfigFrom(DF_BC_PATH.'/config/blade-components.php', 'blade-components');
+
+        $this->configureBladeComponents();
+        $this->configureTheme();
+        $this->configureCommands();
     }
 
     /**
@@ -32,9 +38,6 @@ class LayoutServiceProvider extends ServiceProvider
         $this->registerResources();
         $this->defineAssetPublishing();
         $this->offerPublishing();
-
-        $this->configureBladeComponents();
-        $this->configureCommands();
     }
 
     private function registerResources(): void
@@ -68,6 +71,21 @@ class LayoutServiceProvider extends ServiceProvider
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
             foreach (config('blade-components.components', []) as $alias => $component) {
                 $blade->component($component, $alias);
+            }
+        });
+    }
+
+    private function configureTheme(): void
+    {
+        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
+            foreach (ThemeVariant::cases() as $variant) {
+                $colors = BladeComponents::theme()::bladeColorDefinitions(
+                    variant: $variant
+                );
+
+                if (! empty($colors)) {
+                    BladeColor::register(colors: $colors, theme: $variant->bladeColorTheme());
+                }
             }
         });
     }
