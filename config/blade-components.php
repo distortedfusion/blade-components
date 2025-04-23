@@ -63,9 +63,6 @@ return [
         'spinner' => 'blade-components::components.spinner.index',
         'pulser' => 'blade-components::components.pulser.index',
 
-        // Form extra's...
-        'form-actions' => Components\Form\Actions::class,
-
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => 'blade-components::components.layout.icon',
