@@ -19,7 +19,8 @@
         "distortedfusion/php-cs-fixer-config": "^2.1"
     },
     "suggest": {
-        "blade-ui-kit/blade-heroicons": "Default icons used for various components."
+        "blade-ui-kit/blade-heroicons": "Default icons used for various components.",
+        "distortedfusion/blade-forms": "A collection of reusable form components, complementary to blade components."
     },
     "autoload": {
         "psr-4": {
