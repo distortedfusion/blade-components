@@ -7,7 +7,7 @@ description: Display text using pre-defined typographic styles and style combina
 
 ```blade-component-code
 <x-heading :as-heading="false">The Evil Rabbit Jumps.</x-heading>
-<x-paragraph :style="muted">The Evil Rabbit Jumps.</x-paragraph>
+<x-paragraph style="muted">The Evil Rabbit Jumps.</x-paragraph>
 ```
 
 ## Paragraph
