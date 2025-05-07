@@ -19,8 +19,9 @@ $refId = 'pre-'.crc32($slot);
         'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)] before:rounded-r-[var(--radius-inner)]'
     ]) }}>
         <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
-            'w-full px-4 py-2 overflow-scroll',
+            'w-full px-4 py-2',
             'text-sm leading-6 font-mono',
+            'overflow-scroll [scrollbar-width:_thin] [scrollbar-color:_var(--border)_transparent]',
         ]) }}>{{ $slot }}</pre>
     </div>
     @if($withCopy)
