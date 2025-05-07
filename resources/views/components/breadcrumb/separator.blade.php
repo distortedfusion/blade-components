@@ -1,3 +1,7 @@
+@php
+use DistortedFusion\BladeComponents\BladeComponents;
+@endphp
 <li {{ $attributes }}>
-    <x-heroicon-o-chevron-right class="size-3 text-[var(--foreground)]" />
+    <x-dynamic-component :component="BladeComponents::defaultBreadcrumbSeparatorIcon()"
+        class="size-3 text-[var(--foreground)]" />
 </li>

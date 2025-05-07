@@ -1,3 +1,4 @@
 <li {{ $attributes }}>
-    <x-heroicon-o-ellipsis-horizontal class="size-4 text-[var(--muted-foreground)]" />
+    <x-dynamic-component :component="BladeComponents::defaultBreadcrumbEllipsisIcon()"
+        class="size-4 text-[var(--muted-foreground)]" />
 </li>
