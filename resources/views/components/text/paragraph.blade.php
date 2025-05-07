@@ -1,9 +1,9 @@
 @props(['style' => null, 'size' => null])
 <p {{ $attributes->class([
     // Sizes...
-    'text-lg lg:text-xl' => $size === 'xl',
-    'text-sm lg:text-base' => $size === 'lg',
-    'text-sm' => is_null($size),
+    'text-lg' => $size === 'lg',
+    'text-base' => is_null($size),
+    'text-sm' => $size === 'sm',
 
     // Styles...
     'text-[var(--foreground)]' => ! Str::contains($attributes->get('class'), ['text-']) && is_null($style),
