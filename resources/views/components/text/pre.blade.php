@@ -23,7 +23,7 @@ $refId = 'pre-'.crc32($slot);
             'w-full px-4 py-2',
             'text-sm leading-6 font-mono',
             'overflow-scroll [scrollbar-width:_thin] [scrollbar-color:_var(--border)_transparent]' => $scrollbar,
-            '[&::-webkit-scrollbar]:hidden [-ms-overflow-style:_none] [scrollbar-width:_none]' => ! $scrollbar,
+            'overflow-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:_none] [scrollbar-width:_none]' => ! $scrollbar,
         ]) }}>{{ $slot }}</pre>
     </div>
     @if($withCopy)
