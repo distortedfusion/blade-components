@@ -1,4 +1,4 @@
-@props(['withCopy' => false, 'copyLabel' => 'Copy', 'copiedLabel' => 'Copied!'])
+@props(['scrollbar' => true, 'withCopy' => false, 'copyLabel' => 'Copy', 'copiedLabel' => 'Copied!'])
 @php
 use Illuminate\View\ComponentAttributeBag;
 
@@ -16,12 +16,14 @@ $refId = 'pre-'.crc32($slot);
     <div {{ (new ComponentAttributeBag)->class([
         'flex-grow relative min-w-0',
         'before:content[\'\'] before:block before:w-4 before:absolute before:inset-y-0 before:right-0 before:pointer-events-none',
-        'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)] before:rounded-r-[var(--radius-inner)]'
+        'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)]',
+        'before:rounded-r-[var(--radius-inner)]' => ! $withCopy,
     ]) }}>
         <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
             'w-full px-4 py-2',
             'text-sm leading-6 font-mono',
-            'overflow-scroll [scrollbar-width:_thin] [scrollbar-color:_var(--border)_transparent]',
+            'overflow-scroll [scrollbar-width:_thin] [scrollbar-color:_var(--border)_transparent]' => $scrollbar,
+            '[&::-webkit-scrollbar]:hidden [-ms-overflow-style:_none] [scrollbar-width:_none]' => ! $scrollbar,
         ]) }}>{{ $slot }}</pre>
     </div>
     @if($withCopy)
