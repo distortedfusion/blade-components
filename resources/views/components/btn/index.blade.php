@@ -1,7 +1,7 @@
 @php
 $class = [
     'inline-flex items-center justify-center gap-x-2 shrink-0 transition-all',
-    'text-sm leading-8 shadow-none',
+    'text-sm font-semibold leading-8 shadow-none',
 
     'hover:no-underline hover:outline-0',
     'focus:no-underline focus:outline-0',
