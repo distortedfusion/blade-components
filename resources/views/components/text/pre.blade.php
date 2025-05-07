@@ -16,7 +16,7 @@ $refId = 'pre-'.crc32($slot);
     <div {{ (new ComponentAttributeBag)->class([
         'flex-grow relative min-w-0',
         'before:content[\'\'] before:block before:w-4 before:absolute before:inset-y-0 before:right-0 before:pointer-events-none',
-        'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)]'
+        'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)] before:rounded-r-[var(--radius-inner)]'
     ]) }}>
         <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
             'w-full px-4 py-2 overflow-scroll',
