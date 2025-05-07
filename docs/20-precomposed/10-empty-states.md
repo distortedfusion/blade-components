@@ -41,7 +41,7 @@ description: Default state when no content is available.
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-brush" style="secondary" />
+                    <x-layout.icon icon="fasl-brush" style="secondary" />
                 </div>
 
                 <div class="flex-grow text-left">
@@ -59,7 +59,7 @@ description: Default state when no content is available.
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-code" style="secondary" />
+                    <x-layout.icon icon="fasl-code" style="secondary" />
                 </div>
 
                 <div class="flex-grow text-left">
@@ -77,7 +77,7 @@ description: Default state when no content is available.
         <x-list-group.item>
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
-                    <x-layout.icon icon="fal-database" style="secondary" />
+                    <x-layout.icon icon="fasl-database" style="secondary" />
                 </div>
 
                 <div class="flex-grow text-left">
