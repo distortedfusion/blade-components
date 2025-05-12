@@ -26,7 +26,7 @@ use Illuminate\Support\Str;
     // '[&>[data-slot=card-footer]]:border-[var(--border)]',
 
     // Card body, reset border when following by a card header...
-    '[&:has([data-slot=card-header]+[data-slot=card-body])>[data-slot=card-body]]:border-t-0',
+    '[&:has([data-slot=card-header]+[data-slot=card-body])>[data-slot=card-header]]:border-b-0',
     '[&:has([data-slot=card-header]+[data-slot=card-body])>[data-slot=card-body]]:pt-0',
 
     // List group, reset borders when list group is directly added to card...
