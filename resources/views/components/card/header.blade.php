@@ -6,7 +6,7 @@
     '[&_[data-slot=heading]]:text-base [&_[data-slot=heading]]:py-1',
     '[&_*:is(h1,h2,h3,h4,h5,h6)]:text-base [&_*:is(h1,h2,h3,h4,h5,h6)]:py-1',
 
-    '[&_p]:text-[var(--muted-foreground)]',
+    '[&_p]:text-[var(--muted-foreground)] [&_p]:text-sm',
 ]) }}>
     <div class="flex-grow">
         {{ $slot }}
