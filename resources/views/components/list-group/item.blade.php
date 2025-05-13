@@ -29,12 +29,14 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
         <a href="{{ $href }}" target="{{ $target }}" {{ $indicatorAttributes->class([
             'ml-2 flex-shrink-0 block hover:no-underline outline-none group/indicator',
         ]) }}>
+            <span class="sr-only">Go to</span>
             @include('blade-components::components.list-group.partials.indicator')
         </a>
     @elseif($button)
         <button type="{{ $type }}" {{ $indicatorAttributes->class([
             'ml-2 flex-shrink-0 block hover:no-underline outline-none group/indicator',
         ]) }}>
+            <span class="sr-only">Go to</span>
             @include('blade-components::components.list-group.partials.indicator')
         </button>
     @endif
