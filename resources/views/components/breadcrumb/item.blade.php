@@ -5,10 +5,10 @@ use Illuminate\View\ComponentAttributeBag;
 $class = [
     'text-[var(--muted-foreground)]' => ! $active,
     'text-[var(--foreground)] font-semibold' => $active,
-    'text-sm leading-8',
+    'text-sm',
 ];
 @endphp
-<li {{ $attributes }}>
+<li {{ $attributes->class(['leading-none']) }}>
     @if(is_null($href))
         <span {{ (new ComponentAttributeBag)->class($class) }}>
             {{ $slot }}
