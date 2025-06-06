@@ -4,15 +4,17 @@ description: Default state when no content is available.
 ---
 
 ```blade-component-preview
-<x-layout.empty-state title="Title" :as-heading="false">
-    <x-paragraph style="muted">The Evil Rabbit Jumped over the Fence.</x-paragraph>
-    <x-slot:action>
-        <x-btn size="sm" style="secondary">Primary Action</x-btn>
-        <x-btn size="sm" style="ghost">
-            Learn More
-        </x-btn>
-    </x-slot:action>
-</x-layout.empty-state>
+<div class="mx-auto">
+    <x-layout.empty-state title="Title" :as-heading="false">
+        <x-paragraph style="muted">The Evil Rabbit Jumped over the Fence.</x-paragraph>
+        <x-slot:action>
+            <x-btn size="sm" style="secondary">Primary Action</x-btn>
+            <x-btn size="sm" style="ghost">
+                Learn More
+            </x-btn>
+        </x-slot:action>
+    </x-layout.empty-state>
+</div>
 ```
 
 ## Basic
