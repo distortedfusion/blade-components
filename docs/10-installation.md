@@ -23,7 +23,7 @@ Blade Components requires the following before installing:
                 <x-heading :heading-level="4" size="flex" class="text-base">TailwindCSS</x-heading>
             </div>
 
-            <x-paragraph size="xs" style="muted">Version ^3.4.10 or later</x-paragraph>
+            <x-paragraph size="xs" style="muted">Version ^4.0 or later</x-paragraph>
         </x-docs.card-btn>
     </div>
 ```
