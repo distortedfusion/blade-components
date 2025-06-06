@@ -4,7 +4,7 @@ description: A contained label that shows the status of an element, emphasizes a
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-60">
+<div class="mx-auto">
     <x-badge>Badge</x-badge>
 </div>
 ```

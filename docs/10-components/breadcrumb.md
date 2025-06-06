@@ -4,7 +4,7 @@ description: Displays the path to the current resource using a hierarchy of link
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-60">
+<div class="mx-auto">
     <x-breadcrumb>
         <x-breadcrumb.item>
             DDFSN

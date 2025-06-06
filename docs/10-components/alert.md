@@ -4,9 +4,7 @@ description: Display text that requires attention or provides additional informa
 ---
 
 ```blade-component-preview
-<div class="flex items-center min-h-60">
-    <x-alert class="flex-grow">This alert details some information.</x-alert>
-</div>
+<x-alert class="flex-grow">This alert details some information.</x-alert>
 ```
 
 ## Usage

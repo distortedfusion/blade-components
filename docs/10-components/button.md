@@ -4,7 +4,7 @@ description: Primary control for any action, supporting both anchors and buttons
 ---
 
 ```blade-component-preview
-<div class="flex justify-center items-center min-h-60">
+<div class="mx-auto">
     <x-btn>Button</x-btn>
 </div>
 ```
