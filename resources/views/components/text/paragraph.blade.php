@@ -2,7 +2,7 @@
 @php
 use DistortedFusion\BladeComponents\BladeComponents;
 @endphp
-<p {{ $attributes->class([
+<p data-slot="paragraph" {{ $attributes->class([
     'text-[var(--foreground)]' => ! Str::contains($attributes->get('class'), ['text-']) && is_null($style),
     'text-[var(--muted-foreground)]' => $style === 'muted',
 
