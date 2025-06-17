@@ -74,9 +74,11 @@ $class = [
     // Disabled...
     'disabled:cursor-not-allowed disabled:opacity-50',
 ];
+
+$attributes = $attributes->merge(['data-slot' => 'button'])->class($class);
 @endphp
 @if(is_null($href) || $disabled)
-<button type="{{ $type }}" {{ $attributes->merge(['disabled' => $disabled])->class($class) }}>
+<button type="{{ $type }}" {{ $attributes->merge(['disabled' => $disabled]) }}>
     @if($prefix ?? false)
         <div class="flex-shrink-0">{{ $prefix }}</div>
     @endif
@@ -86,7 +88,7 @@ $class = [
     @endif
 </button>
 @else
-<a href="{{ $href }}" {{ $attributes->class($class) }}>
+<a href="{{ $href }}" {{ $attributes }}>
     @if($prefix ?? false)
         <div class="flex-shrink-0">{{ $prefix }}</div>
     @endif
