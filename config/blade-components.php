@@ -55,7 +55,6 @@ return [
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => 'blade-components::components.layout.icon',
-        'layout.title-bar' => Components\Layout\TitleBar::class,
 
         // List group...
         'list-group' => 'blade-components::components.list-group.index',
