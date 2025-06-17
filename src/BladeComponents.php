@@ -7,7 +7,6 @@ use DistortedFusion\BladeComponents\Concerns\ManagesAlertIcons;
 use DistortedFusion\BladeComponents\Concerns\ManagesAvatarIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesBreadcrumbIcons;
 use DistortedFusion\BladeComponents\Concerns\ManagesListGroupItemIndicatorIcon;
-use DistortedFusion\BladeComponents\Concerns\ManagesTitleBarPreviousIcon;
 
 class BladeComponents
 {
@@ -16,5 +15,4 @@ class BladeComponents
     use ManagesAvatarIcon;
     use ManagesBreadcrumbIcons;
     use ManagesListGroupItemIndicatorIcon;
-    use ManagesTitleBarPreviousIcon;
 }
