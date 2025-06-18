@@ -1,6 +1,5 @@
 <div data-slot="card-header" {{ $attributes->class([
-    'flex items-center space-x-2 rounded-t-[var(--radius-inner)]',
-    'p-4 sm:px-6',
+    'flex items-center space-x-2 px-6 rounded-t-[var(--radius-inner)]',
 
     // Heading styling...
     '[&_[data-slot=heading]]:text-base [&_[data-slot=heading]]:py-1',
