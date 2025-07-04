@@ -5,7 +5,9 @@ $element = $asHeading ? 'h'.$headingLevel : 'div';
 @endphp
 <{{ $element }} data-slot="heading"{{ $attributes->merge(['id' => $id()])->class([
     'text-[var(--foreground)]',
-    'font-sans-heading font-semibold hyphens-auto',
+    'font-sans-heading hyphens-auto',
+
+    'font-semibold' => ! BladeComponents::containsFontWeightClass($attributes->get('class')),
 
     'text-lg' => ! BladeComponents::containsFontSizeClass($attributes->get('class'))
         && $size === 'lg'
