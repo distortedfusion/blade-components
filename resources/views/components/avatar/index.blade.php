@@ -1,6 +1,6 @@
 <div {{ $attributes->class([
     'block relative rounded-full overflow-hidden aspect-square m-px p-px',
-    'bg-[var(--secondary)] text-[var(--secondary-foreground)]',
+    'bg-[var(--secondary)] text-[var(--muted-foreground)]',
     'after:content-[\'\'] after:absolute after:inset-0 after:rounded-full after:border after:border-[var(--border)]',
 
     'w-12' => $size === 'lg',
