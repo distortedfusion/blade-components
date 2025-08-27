@@ -1,7 +1,10 @@
 <div {{ $attributes->class([
-    'block relative rounded-full overflow-hidden aspect-square m-px p-px',
+    'block relative rounded-full overflow-hidden aspect-square',
     'bg-[var(--secondary)] text-[var(--muted-foreground)]',
-    'after:content-[\'\'] after:absolute after:inset-0 after:rounded-full after:border after:border-[var(--border)]',
+    'ring-1 ring-[var(--background)]',
+
+    // Border element, will be overlain with the image.
+    'before:content-[\'\'] before:absolute before:inset-0 before:rounded-full before:border before:border-[var(--border)]',
 
     'w-12' => $size === 'lg',
     'w-10' => is_null($size) || ! in_array($size, ['xs', 'sm', 'lg']),
