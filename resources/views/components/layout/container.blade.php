@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 @endphp
 {{-- The max-width, except for 3xl, are matched to the default tailwindcss breakpoints --}}
 <div {{ $attributes->class([
-    'mx-auto',
+    'w-full mx-auto',
 
     // Spacing...
     'px-4 sm:px-6 lg:px-8' => $spacing === 'responsive' && $spacing !== 'none',
