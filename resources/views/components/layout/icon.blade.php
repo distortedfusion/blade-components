@@ -3,7 +3,7 @@
     'inline-flex items-center justify-center border rounded-md aspect-square',
 
     'w-12' => $size === 'lg',
-    'w-10' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'w-10' => is_null($size) || ! in_array($size, ['xs', 'sm', 'lg']),
     'w-8' => $size === 'sm',
     'w-6' => $size === 'xs',
 
