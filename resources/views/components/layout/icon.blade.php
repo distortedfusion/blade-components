@@ -1,7 +1,4 @@
 @props(['icon', 'style' => 'primary', 'size' => null])
-@php
-use Illuminate\View\ComponentAttributeBag;
-@endphp
 <div {{ $attributes->class([
     'inline-flex items-center justify-center border rounded-md aspect-square',
 
