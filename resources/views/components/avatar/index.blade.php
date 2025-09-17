@@ -7,7 +7,7 @@
     'before:content-[\'\'] before:absolute before:inset-0 before:rounded-full before:border before:border-[var(--border)]',
 
     'w-12' => $size === 'lg',
-    'w-10' => is_null($size) || ! in_array($size, ['xs', 'sm', 'lg']),
+    'w-10' => is_null($size),
     'w-8' => $size === 'sm',
     'w-6' => $size === 'xs',
 ]) }}>
