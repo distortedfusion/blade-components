@@ -19,6 +19,9 @@ use Illuminate\Support\Str;
     'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--danger)_50%,transparent)]' => $style === 'danger',
     'border-transparent' => $style === 'ghost',
 
+    // Avatars...
+    '[&_[data-slot=avatar]]:ring-[var(--card)]',
+
     // List group...
     '[&>[data-slot=list-group]]:rounded-none',
     '[&>[data-slot=list-group]]:border-x-0',
