@@ -30,6 +30,10 @@ use Illuminate\Support\Str;
     '[&>[data-slot=list-group]:is(:first-child)]:border-t-0',
     '[&>[data-slot=list-group]:is(:last-child)]:border-b-0',
 
+    // Adjust list-group padding when it's directly within the x-card.
+    '[&>[data-slot=list-group]_[data-slot=list-group-item]]:px-6',
+    '[&>[data-slot=list-group]_[data-slot=list-group-item]_[data-slot=list-group-item-indicator]]:-mr-4',
+
     // Reset card padding when a list group is the first or last item.
     '[&:has([data-slot=list-group]:is(:first-child))]:pt-0',
     '[&:has([data-slot=list-group]:is(:last-child))]:pb-0',
