@@ -3,7 +3,7 @@
 use Illuminate\View\ComponentAttributeBag;
 @endphp
 <div {{ $attributes->class([
-    'inline-flex items-center gap-x-2 rounded-md',
+    'inline-flex items-center gap-x-1 rounded-md',
     'px-2 py-1 text-xs font-semibold',
 
     'text-[var(--primary-foreground)] bg-[var(--primary)]' => $style === 'default',
@@ -21,9 +21,9 @@ use Illuminate\View\ComponentAttributeBag;
             'text-[var(--info)]' => $style === 'info',
             'text-[var(--warning)]' => $style === 'warning',
             'text-[var(--danger)]' => $style === 'danger',
-            'text-[var(--muted-foreground)]' => $style === 'default',
+            'text-[var(--muted-foreground)]' => in_array($style, ['default', 'secondary']),
         ]) }}>
-            <x-dynamic-component :component="$icon" class="size-4" />
+            <x-dynamic-component :component="$icon" class="size-3 text-inherit" />
         </div>
     @endif
     <div class="flex-grow">{{ $slot }}</div>
