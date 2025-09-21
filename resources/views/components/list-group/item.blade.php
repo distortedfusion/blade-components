@@ -2,11 +2,13 @@
 $componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
 $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
 @endphp
+@aware(['style'])
 <div data-slot="list-group-item" {{ $componentAttributes->class([
     'group flex items-center relative',
-    'border-[var(--border)]',
     'text-[var(--foreground)] leading-6',
     'py-3 px-3',
+
+    '[&:not(:first-child)]:mt-0.5 bg-[var(--card)] rounded-[var(--radius)]' => $style === 'pills',
 ]) }}>
     @if(! is_null($href) || $button)
         {{-- hover-indicator --}}

@@ -36,10 +36,10 @@ $class = [
     'active:bg-[var(--primary)]' => $style === 'primary',
 
     // Secondary, Ghost and Outline...
-    'bg-[var(--secondary)] text-[var(--secondary-foreground)]' => $style === 'secondary' || $style === 'ghost',
-    'hover:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => $style === 'secondary' || $style === 'ghost' || $style === 'outline',
-    'focus:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => $style === 'secondary' || $style === 'ghost' || $style === 'outline',
-    'active:bg-[var(--secondary)]' => $style === 'secondary' || $style === 'ghost' || $style === 'outline',
+    'bg-[var(--secondary)] text-[var(--secondary-foreground)]' => in_array($style, ['secondary', 'ghost']),
+    'hover:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'focus:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'active:bg-[var(--secondary)]' => in_array($style, ['secondary', 'ghost', 'outline']),
 
     // Ghost...
     'bg-transparent' => $style === 'ghost',
