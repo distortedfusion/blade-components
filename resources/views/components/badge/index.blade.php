@@ -1,10 +1,13 @@
-@props(['style' => 'default', 'icon' => null])
+@props(['size' => null, 'style' => 'default', 'icon' => null])
 @php
 use Illuminate\View\ComponentAttributeBag;
 @endphp
 <div {{ $attributes->class([
-    'inline-flex items-center gap-x-1 rounded-md',
-    'px-2 py-1 text-xs font-semibold',
+    'inline-flex items-center gap-x-1 rounded-[var(--radius-inner)]',
+    'text-xs font-semibold',
+
+    'px-2 py-1 -my-1' => is_null($size),
+    'px-1 py-0.5 -my-0.5' => $size === 'sm',
 
     'text-[var(--primary-foreground)] bg-[var(--primary)]' => $style === 'default',
     'text-[var(--secondary-foreground)] bg-[var(--secondary)]' => $style === 'secondary',
