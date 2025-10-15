@@ -5,7 +5,7 @@ namespace DistortedFusion\BladeComponents\Components\Accordion;
 use DistortedFusion\BladeComponents\Components\Concerns\HasIndicatorIcon;
 use Illuminate\View\Component;
 
-class Title extends Component
+class Toggle extends Component
 {
     use HasIndicatorIcon;
 
@@ -34,7 +34,7 @@ class Title extends Component
      */
     public function render()
     {
-        return view('blade-components::components.accordion.title');
+        return view('blade-components::components.accordion.toggle');
     }
 
     /**

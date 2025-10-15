@@ -1,24 +1,12 @@
-@aware(['id'])
-@props(['size' => null])
-<button data-slot="accordion-title"
-    type="button"
-    x-on:click="expanded = ! expanded"
-    :aria-expanded="expanded"
-    :aria-controls="id"
-    {{ $attributes->class([
-        'flex w-full items-center justify-between gap-x-4 py-3 text-left group',
-        'outline-none focus-visible:underline',
-    ]) }}>
-    <x-heading :heading-level="3" :size="$size">{{ $slot }}</x-heading>
+@php
+use DistortedFusion\BladeComponents\BladeComponents;
+@endphp
+@props(['size' => null, 'indicatorIcon' => null])
+<x-dynamic-component :component="BladeComponents::componentAliasWithPrefix('accordion.toggle')" :indicator-icon="$indicatorIcon">
     @if($indicator ?? false)
-        {{ $indicator }}
-    @else
-        <x-dynamic-component :component="$indicatorIcon"
-            class="w-4 h-4 text-[var(--foreground)] opacity-50 group-hover:opacity-100 group-focus:opacity-100 relative z-10"
-            ::class="{
-                'transition': transition,
-                'rotate-180': expanded,
-            }"
-            x-cloak />
+        <x-slot:indictor>
+            {{ $indicator }}
+        </x-slot:indictor>
     @endif
-</button>
+    <x-heading :heading-level="3" :size="$size">{{ $slot }}</x-heading>
+</x-dynamic-component>

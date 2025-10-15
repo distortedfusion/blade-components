@@ -32,7 +32,8 @@ return [
     'components' => [
         // Accordion...
         'accordion.content' => 'blade-components::components.accordion.content',
-        'accordion.title' => Components\Accordion\Title::class,
+        'accordion.toggle' => Components\Accordion\Toggle::class,
+        'accordion.title' => 'blade-components::components.accordion.title',
         'accordion.item' => 'blade-components::components.accordion.item',
         'accordion' => 'blade-components::components.accordion.index',
 

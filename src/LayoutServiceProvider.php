@@ -55,10 +55,8 @@ class LayoutServiceProvider extends ServiceProvider
     private function configureBladeComponents(): void
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            $prefix = config('blade-components.prefix', null);
-
             foreach (config('blade-components.components', []) as $alias => $component) {
-                $blade->component($component, ltrim($prefix.'-'.$alias, '-'));
+                $blade->component($component, BladeComponents::componentAliasWithPrefix($alias));
             }
         });
     }
