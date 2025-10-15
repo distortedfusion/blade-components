@@ -3,6 +3,32 @@
 use DistortedFusion\BladeComponents\Components;
 
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Component prefix
+    |--------------------------------------------------------------------------
+    |
+    | A prefix that should be applied to all registered components. This can
+    | be used to prevent collisions between identically named components.
+    |
+    | Example with a prefix of `df`:
+    | - Without: <x-btn></x-btn>
+    | - With:    <x-df-btn></x-df-btn>
+    |
+    */
+
+    'prefix' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Components
+    |--------------------------------------------------------------------------
+    |
+    | All components, including their backing class, that should be
+    | registered during runtime.
+    |
+    */
+
     'components' => [
         // Accordion...
         'accordion.content' => 'blade-components::components.accordion.content',
