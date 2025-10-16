@@ -10,7 +10,7 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
     'text-[var(--foreground)] leading-6',
     'py-3 px-3',
 
-    '[&:not(:last-child)]:mb-0.5 bg-[var(--card)] rounded-[var(--radius)]' => $style === 'pills',
+    '[&:not(:last-child)]:mb-0.5 border border-[var(--border)] bg-[var(--card)] rounded-[var(--radius)]' => $style === 'pills',
 ]) }}>
     @if(! is_null($href) || $button)
         {{-- hover-indicator --}}
