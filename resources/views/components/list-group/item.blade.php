@@ -1,4 +1,6 @@
 @php
+use DistortedFusion\BladeComponents\BladeComponents;
+
 $componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
 $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
 @endphp
@@ -17,10 +19,10 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
 
     <div class="flex-grow min-w-0 relative z-10">
         @if(! is_null($title))
-            <x-list-group.precomposed.title>
+            <x-dynamic-component :component="BladeComponents::componentAliasWithPrefix('list-group.precomposed.title')">
                 <x-slot:title>{{ $title }}</x-slot:title>
                 {!! trim($slot) ? $slot : '&mdash;' !!}
-            </x-list-group.precomposed.title>
+            </x-dynamic-component>
         @else
             {!! trim($slot) ? $slot : '&mdash;' !!}
         @endif

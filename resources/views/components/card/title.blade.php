@@ -1,2 +1,10 @@
+@php
+use DistortedFusion\BladeComponents\BladeComponents;
+@endphp
 @props(['headingLevel' => 3, 'asHeading' => true])
-<x-heading :heading-level="$headingLevel" :as-heading="$asHeading">{{ $slot }}</x-heading>
+<x-dynamic-component
+    :component="BladeComponents::componentAliasWithPrefix('heading')"
+    :heading-level="$headingLevel"
+    :as-heading="$asHeading">
+    {{ $slot }}
+</x-dynamic-component>

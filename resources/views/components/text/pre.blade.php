@@ -1,9 +1,10 @@
-@props(['scrollbar' => true, 'withCopy' => false, 'copyLabel' => 'Copy', 'copiedLabel' => 'Copied!'])
 @php
+use DistortedFusion\BladeComponents\BladeComponents;
 use Illuminate\View\ComponentAttributeBag;
 
 $refId = 'pre-'.crc32($slot);
 @endphp
+@props(['scrollbar' => true, 'withCopy' => false, 'copyLabel' => 'Copy', 'copiedLabel' => 'Copied!'])
 <div {{ $attributes->class([
         'flex items-start gap-x-2 rounded-[var(--radius)]',
         'bg-[var(--secondary)]' => ! Str::contains($attributes->get('class'), 'bg-'),
@@ -31,9 +32,13 @@ $refId = 'pre-'.crc32($slot);
             'flex-shrink-0 pr-1 relative',
             'pt-1',
         ]) }}>
-            <x-btn style="ghost" size="sm" x-on:click="navigator.clipboard.writeText($refs[refId].innerText); $el.textContent = copiedLabel; setTimeout(() => $el.textContent = copyLabel, 2000)">
+            <x-dynamic-component
+                :component="BladeComponents::componentAliasWithPrefix('btn')"
+                x-on:click="navigator.clipboard.writeText($refs[refId].innerText); $el.textContent = copiedLabel; setTimeout(() => $el.textContent = copyLabel, 2000)"
+                style="ghost"
+                size="sm">
                 {{ $copyLabel }}
-            </x-btn>
+            </x-dynamic-component>
         </div>
     @endif
 </div>
