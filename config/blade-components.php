@@ -76,8 +76,9 @@ return [
         'separator' => 'blade-components::components.separator.index',
 
         // Loading indicators...
-        'spinner' => 'blade-components::components.spinner.index',
         'pulser' => 'blade-components::components.pulser.index',
+        'spinner' => 'blade-components::components.spinner.index',
+        'three-dot' => 'blade-components::components.three-dot.index',
 
         // Layout components...
         'layout.empty-state' => Components\Layout\EmptyState::class,
