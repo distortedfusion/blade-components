@@ -19,7 +19,7 @@ description: A contained label that shows the status of an element, emphasizes a
 
 | Attribute | Default   | Description                                                                                   |
 | --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, `secondary`, `success`, `info`, `warning` or `danger`. |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary`, `success`, `info`, `warning` or `danger`. |
 | `icon`    | `null`    | `string` &#124;&#124; `null`                                                                  |
 
 ## Style

@@ -19,7 +19,7 @@ description: Indicate an action is running in the background.
 
 | Attribute | Default   | Description                                                                                   |
 | --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, `success`, `info`, `warning` or `danger`. |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
 
 ## Style
 

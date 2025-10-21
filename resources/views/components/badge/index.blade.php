@@ -1,4 +1,4 @@
-@props(['size' => null, 'style' => 'default', 'icon' => null])
+@props(['size' => null, 'style' => 'primary', 'icon' => null])
 @php
 use Illuminate\View\ComponentAttributeBag;
 @endphp
@@ -9,7 +9,7 @@ use Illuminate\View\ComponentAttributeBag;
     'px-2 py-1 -my-1' => is_null($size),
     'px-1 py-0.5 -my-0.5' => $size === 'sm',
 
-    'text-[var(--primary-foreground)] bg-[var(--primary)]' => $style === 'default',
+    'text-[var(--primary-foreground)] bg-[var(--primary)]' => $style === 'primary',
     'text-[var(--secondary-foreground)] bg-[var(--secondary)]' => $style === 'secondary',
 
     'text-[var(--success-foreground)] bg-[color-mix(in_oklab,var(--success)_10%,transparent)]' => $style === 'success',
@@ -24,7 +24,7 @@ use Illuminate\View\ComponentAttributeBag;
             'text-[var(--info)]' => $style === 'info',
             'text-[var(--warning)]' => $style === 'warning',
             'text-[var(--danger)]' => $style === 'danger',
-            'text-[var(--muted-foreground)]' => in_array($style, ['default', 'secondary']),
+            'text-[var(--muted-foreground)]' => in_array($style, ['primary', 'secondary']),
         ]) }}>
             <x-dynamic-component :component="$icon" class="size-3 text-inherit" />
         </div>

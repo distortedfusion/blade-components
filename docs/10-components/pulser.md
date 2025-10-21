@@ -19,7 +19,7 @@ description: A subtle, pulsing dot used to highlight notifications or important 
 
 | Attribute | Default   | Description                                                                                   |
 | --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, `success`, `info`, `warning` or `danger`. |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
 
 ## Style
 

@@ -1,8 +1,8 @@
-@props(['style' => 'default'])
+@props(['style' => 'primary'])
 <div data-slot="three-dot" {{ $attributes->class([
     'inline-block',
 
-    '[&_[data-slot=dot]]:bg-[var(--primary)]' => $style === 'default',
+    '[&_[data-slot=dot]]:bg-[var(--primary)]' => $style === 'primary',
     '[&_[data-slot=dot]]:bg-[var(--success)]' => $style === 'success',
     '[&_[data-slot=dot]]:bg-[var(--info)]' => $style === 'info',
     '[&_[data-slot=dot]]:bg-[var(--warning)]' => $style === 'warning',
