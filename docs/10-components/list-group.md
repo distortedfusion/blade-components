@@ -1,6 +1,8 @@
 ---
 title: List Group
 description: List information in an organized manner or refer to a different source.
+short-description: Organize and display a list of items.
+icon: fasl-table-list
 ---
 
 ```blade-component-preview

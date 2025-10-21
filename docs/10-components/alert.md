@@ -1,6 +1,8 @@
 ---
 title: Alert
 description: Display text that requires attention or provides additional information.
+short-description: Display text that requires attention or provides additional information.
+icon: fasl-bell
 ---
 
 ```blade-component-preview

@@ -1,6 +1,8 @@
 ---
 title: Progress Bar
 description: Visually display progress.
+short-description: Show progress visually.
+icon: fasl-bars-progress
 ---
 
 ```blade-component-preview

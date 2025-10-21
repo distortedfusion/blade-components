@@ -1,6 +1,8 @@
 ---
 title: Layout Icon
 description: A contained icon to be used to differentiate layout components.
+short-description: Use an icon to represent layout components.
+icon: fasl-image-user
 ---
 
 ```blade-component-preview

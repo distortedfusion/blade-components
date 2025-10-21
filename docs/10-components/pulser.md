@@ -1,6 +1,8 @@
 ---
 title: Pulser
 description: A subtle, pulsing dot used to highlight notifications or important statuses.
+short-description: Highlight notifications with a subtle pulsing dot.
+icon: fasl-radar
 ---
 
 ```blade-component-preview

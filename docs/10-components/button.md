@@ -1,6 +1,8 @@
 ---
 title: Button
 description: Primary control for any action, supporting both anchors and buttons.
+short-description: Primary control for actions, supporting anchors or buttons.
+icon: fasl-circle-dot
 ---
 
 ```blade-component-preview

@@ -1,6 +1,8 @@
 ---
 title: Card
 description: Display related information in a single unit, optionally providing related actions.
+short-description: Group related information in a single container.
+icon: fasl-window-maximize
 ---
 
 ```blade-component-preview

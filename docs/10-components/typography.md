@@ -1,6 +1,8 @@
 ---
 title: Typography
 description: Display text using pre-defined typographic styles and style combinations.
+short-description: Apply predefined typographic styles to text.
+icon: fasl-text-size
 ---
 
 ## Heading

@@ -1,6 +1,8 @@
 ---
 title: Three Dot
 description: Indicate an action is running in the background.
+short-description: Show that a process is running in the background.
+icon: fasl-ellipsis
 ---
 
 ```blade-component-preview

@@ -1,6 +1,8 @@
 ---
 title: Breadcrumb
 description: Displays the path to the current resource using a hierarchy of links.
+short-description: Show the navigation path to the current page.
+icon: fasl-route
 ---
 
 ```blade-component-preview

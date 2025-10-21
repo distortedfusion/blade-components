@@ -1,6 +1,8 @@
 ---
 title: Accordion
 description: A vertically stacked set of interactive headings that each reveal a section of content.
+short-description: Reveal content sections under interactive headings.
+icon: fasl-square-list
 ---
 
 ```blade-component-preview

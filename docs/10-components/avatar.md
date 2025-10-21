@@ -1,6 +1,8 @@
 ---
 title: Avatar
 description: Image element, with a fallback, for graphically representing the user.
+short-description: Show a user’s image with a fallback option.
+icon: fasl-aperture
 ---
 
 ```blade-component-preview

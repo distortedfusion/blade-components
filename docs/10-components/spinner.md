@@ -1,6 +1,8 @@
 ---
 title: Spinner
 description: Indicate an action is running in the background after an action by the user.
+short-description: Indicate background activity after a user action.
+icon: fasl-spinner
 ---
 
 ```blade-component-preview
