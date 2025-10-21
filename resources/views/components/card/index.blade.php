@@ -3,7 +3,9 @@ use Illuminate\Support\Str;
 @endphp
 @props(['style' => 'default'])
 <div data-slot="card" {{ $attributes->class([
-    'w-full flex flex-col gap-y-4 py-6 rounded-[var(--radius)]',
+    'w-full flex flex-col gap-y-4 rounded-[var(--radius)]',
+
+    'py-6' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']),
 
     // Background / Foreground...
     'bg-[var(--card)]' => ! Str::contains($attributes->get('class'), ['bg-']),
