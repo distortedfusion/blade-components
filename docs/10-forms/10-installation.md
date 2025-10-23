@@ -2,11 +2,8 @@
 title: Installation
 description: Blade Forms is a collection of reusable Blade form components implementing Tailwind CSS. With support for Alpine.js, Livewire and native Laravel Requests.
 links:
-    distortedfusion/blade-forms: https://github.com/distortedfusion/blade-forms
     tailwindcss/forms: https://github.com/tailwindlabs/tailwindcss-forms
 ---
-
-Blade Forms is a standalone complimentary package, fully compatible with Blade Components and its theme framework.
 
 ## Install Blade Forms
 
@@ -45,13 +42,27 @@ export default {
 
 Please refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/installation) if you don't have Tailwind CSS installed already.
 
-## Form Components
+## Publishing Configuration
 
-```blade-component
-    <x-docs.forms-toc />
+You can publish the package configuration using the following command:
+
+```bash
+php artisan vendor:publish --tag=blade-forms-config
 ```
 
-## Using Blade Forms standalone
+Publishing the package configuration allows you to disable or add components.
+
+## Publishing Views
+
+You can publish the package views using the following command:
+
+```bash
+php artisan vendor:publish --tag=blade-forms-views
+```
+
+After publishing you can modify the views from your application's `/resources/views/vendor/blade-forms` directory.
+
+## Using Blade Forms Standalone
 
 Blade Forms can be used standalone. The installation of Blade Components isn't required if you so desire.
 
