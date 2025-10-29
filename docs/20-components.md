@@ -6,3 +6,10 @@ description: Every detail is built for speed and consistency, so you can create 
 ```blade-component
     <x-docs.components-toc />
 ```
+## Form Components
+
+A collection of Blade form components designed to streamline the creation of user-friendly, accessible, and visually appealing forms in Laravel applications.
+
+```blade-component
+    <x-docs.forms-toc />
+```

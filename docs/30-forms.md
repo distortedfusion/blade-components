@@ -1,7 +1,8 @@
 ---
-title: Installation
+title: Forms
 description: Blade Forms is a collection of reusable Blade form components implementing Tailwind CSS. With support for Alpine.js, Livewire and native Laravel Requests.
 links:
+    distortedfusion/blade-forms: https://github.com/distortedfusion/blade-forms
     tailwindcss/forms: https://github.com/tailwindlabs/tailwindcss-forms
 ---
 
