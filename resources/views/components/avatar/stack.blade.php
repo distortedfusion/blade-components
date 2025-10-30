@@ -1,9 +1,13 @@
 @php
 use Illuminate\View\ComponentAttributeBag;
 @endphp
-<div {{ (new ComponentAttributeBag)->class([
+<div data-slot="avatar-stack" {{ (new ComponentAttributeBag)->class([
     'flex flex-row-reverse items-center',
-    '[&_*]:-mr-6 [&_*:first-child]:mr-0',
+
+    '[&>[data-slot=avatar]:not(:first-child):is([data-size=lg])]:-mr-8',
+    '[&>[data-slot=avatar]:not(:first-child):is([data-size=default])]:-mr-6',
+    '[&>[data-slot=avatar]:not(:first-child):is([data-size=sm])]:-mr-4',
+    '[&>[data-slot=avatar]:not(:first-child):is([data-size=xs])]:-mr-2',
 ]) }}>
     {{ $slot }}
 </div>

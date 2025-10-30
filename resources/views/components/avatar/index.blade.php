@@ -1,4 +1,4 @@
-<div data-slot="avatar" {{ $attributes->class([
+<div data-slot="avatar" data-size="{{ $size ?: 'default' }}" {{ $attributes->class([
     'block relative rounded-full overflow-hidden aspect-square',
     'bg-[var(--secondary)] text-[var(--muted-foreground)]',
     'ring-1 ring-[var(--background)]',
