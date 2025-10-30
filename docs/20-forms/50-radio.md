@@ -2,7 +2,7 @@
 title: Radio
 description: Displays a control that allows the user to select one option from a set of mutually exclusive choices.
 short-description: Renders a radio input field for selecting a single option.
-icon: fasl-input-text
+icon: fasl-circle-dot
 ---
 
 ```blade-component-preview

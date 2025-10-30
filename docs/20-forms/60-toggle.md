@@ -2,7 +2,7 @@
 title: Toggle
 description: Displays a control that allows the user to toggle between states using a switch.
 short-description: Renders a checkbox input field as a switch.
-icon: fasl-input-text
+icon: fasl-toggle-off
 ---
 
 ```blade-component-preview

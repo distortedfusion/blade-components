@@ -2,7 +2,7 @@
 title: Checkbox
 description: Displays a control that allows the user to toggle between states.
 short-description: Renders a checkbox input field for capturing state.
-icon: fasl-input-text
+icon: fasl-square-check
 ---
 
 ```blade-component-preview

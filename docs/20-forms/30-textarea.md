@@ -2,7 +2,7 @@
 title: Textarea
 description: Displays a multi-line plain-text editing control.
 short-description: Displays a multi-line plain-text editing control.
-icon: fasl-input-text
+icon: fasl-paragraph
 ---
 
 ```blade-component-preview
