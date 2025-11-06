@@ -12,11 +12,13 @@
     '[&_[data-slot=icon]]:size-3 w-6' => $size === 'xs',
 ]) }}>
     <div class="absolute inset-0">
-        @if(! is_null($icon))
-            <div class="flex items-center justify-center absolute inset-0">
+        <div class="flex items-center justify-center absolute inset-0">
+            @if(is_string($icon) && ! is_null($icon))
                 <x-dynamic-component :component="$icon" data-slot="icon" />
-            </div>
-        @endif
+            @elseif($icon ?? false)
+                {{ $icon }}
+            @endif
+        </div>
 
         @if($src)
             <img class="absolute inset-0 object-contain"
