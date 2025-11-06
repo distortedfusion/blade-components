@@ -66,6 +66,9 @@ return [
         // Layout containers...
         'container' => 'blade-components::components.layout.container',
 
+        // Empty...
+        'empty' => 'blade-components::components.empty.index',
+
         // Entities...
         'entity.field' => 'blade-components::components.entity.field',
 
