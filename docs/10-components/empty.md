@@ -49,7 +49,7 @@ Instead of setting the `description` attribute, which will render its contents w
     icon="heroicon-o-cloud"
     title="Cloud Storage Full">
     <x-slot:description>
-        <x-paragraph size="sm">
+        <x-paragraph>
             You've reached your storage limit. Upgrade your storage plan or review <a href="#">your usage</a>.
         </x-paragraph>
     </x-slot:description>
@@ -99,7 +99,7 @@ Instead of setting the `icon` attribute, which will use a `<x-layout.icon` compo
             </x-slot:icon-prefix>
         </x-form-input>
     </div>
-    <x-paragraph size="sm">
+    <x-paragraph>
         Need help? <a href="#">Contact support</a>
     </x-paragraph>
 </x-empty>

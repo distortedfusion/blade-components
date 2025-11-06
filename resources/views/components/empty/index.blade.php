@@ -18,7 +18,7 @@
         <x-heading :as-heading="false">{{ $title }}</x-heading>
 
         @if(is_string($description) && ! is_null($description))
-            <x-paragraph size="sm" style="muted">{{ $description }}</x-paragraph>
+            <x-paragraph>{{ $description }}</x-paragraph>
         @elseif($description ?? false)
             {{ $description }}
         @endif
