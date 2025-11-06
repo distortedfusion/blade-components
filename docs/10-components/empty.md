@@ -7,17 +7,17 @@ icon: fasl-square-dashed
 
 ```blade-component-preview
 <x-empty
-    :icon="heroicon-o-book-open"
-    :title="No Projects Yet"
-    :description="You haven't created any projects yet.">
+    icon="heroicon-o-book-open"
+    title="No Projects Yet"
+    description="You haven't created any projects yet. Get started by creating your first project.">
     <div class="flex items-center gap-2">
-        <x-btn>Create Project</x-btn>
-        <x-btn style="secondary">Import Projects</x-btn>
+        <x-btn size="sm">Create Project</x-btn>
+        <x-btn size="sm" style="secondary">Import Projects</x-btn>
     </div>
-    <x-btn style="ghost">
+    <x-btn size="sm" style="ghost">
         Learn More
         <x-slot:suffix>
-            <x-heroicon-o-arrow-top-right-on-square class="text-[var(--muted-foreground)]" />
+            <x-heroicon-o-arrow-top-right-on-square class="size-4 text-[var(--muted-foreground)]" />
         </x-slot:suffix>
     </x-btn>
 </x-empty>
@@ -27,15 +27,42 @@ icon: fasl-square-dashed
 
 ```html
 <x-empty
-    :icon="heroicon-o-book-open"
-    :title="No Projects Yet"
-    :description="You haven't created any projects yet.">
-    <x-btn>Create Project</x-btn>
+    icon="heroicon-o-book-open"
+    title="No Projects Yet"
+    description="You haven't created any projects yet.">
+    <x-btn size="sm">Create Project</x-btn>
 </x-empty>
 ```
 
 ### Component API
 
-| Attribute | Default | Description                                          |
-| --------- | ------- | ---------------------------------------------------- |
-| `title`   | `void`  | `string`<br>Controls the heading of the empty state. |
+| Attribute     | Default | Description                                                                 |
+| ------------- | ------- | --------------------------------------------------------------------------- |
+| `title`       | `void`  | `string`<br>Controls the heading of the empty state.                        |
+| `description` | `null`  | `string`<br>Optional description after the heading.                         |
+| `icon`        | `null`  | `string`<br>When set, adds a `<x-layout.icon` component before the heading. |
+
+## Custom Icons
+
+Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for more custom icons.
+
+```blade-component-code
+<x-empty
+    title="No Team Members"
+    description="Invite members to your team to collaborate on this project.">
+    <x-slot:icon>
+        <x-avatar.stack>
+            <x-avatar />
+            <x-avatar />
+            <x-avatar />
+        </x-avatar.stack>
+    </x-slot:icon>
+
+    <x-btn size="sm">
+        <x-slot:prefix>
+            <x-heroicon-o-user-plus class="size-4" />
+        </x-slot:prefix>
+        Invite Members
+    </x-btn>
+</x-empty>
+```
