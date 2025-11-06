@@ -29,9 +29,7 @@ icon: fasl-square-dashed
 <x-empty
     icon="heroicon-o-book-open"
     title="No Projects Yet"
-    description="You haven't created any projects yet.">
-    <x-btn size="sm">Create Project</x-btn>
-</x-empty>
+    description="You haven't created any projects yet." />
 ```
 
 ### Component API
@@ -42,9 +40,28 @@ icon: fasl-square-dashed
 | `description` | `null`  | `string`<br>Optional description after the heading.                         |
 | `icon`        | `null`  | `string`<br>When set, adds a `<x-layout.icon` component before the heading. |
 
-## Custom Icons
+## Custom Description Markup
 
-Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for more custom icons.
+Instead of setting the `description` attribute, which will render its contents within a `<x-paragraph` component, the `description` slot can be used for custom markup.
+
+```blade-component-code
+<x-empty
+    icon="heroicon-o-cloud"
+    title="Cloud Storage Full">
+    <x-slot:description>
+        <x-paragraph size="sm">
+            You've reached your storage limit. Upgrade your storage plan or review <a href="#">your usage</a>.
+        </x-paragraph>
+    </x-slot:description>
+    <x-btn size="sm">
+        Upgrade Plan
+    </x-btn>
+</x-empty>
+```
+
+## Custom Icon Markup
+
+Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for custom markup.
 
 ```blade-component-code
 <x-empty
@@ -64,5 +81,26 @@ Instead of setting the `icon` attribute, which will use a `<x-layout.icon` compo
         </x-slot:prefix>
         Invite Members
     </x-btn>
+</x-empty>
+```
+
+## Additional Content
+
+Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for custom markup.
+
+```blade-component-code
+<x-empty
+    title="404 - Not Found"
+    description="The page you're looking for doesn't exist.">
+    <div class="w-full max-w-3/4">
+        <x-form-input name="search-page" placeholder="Search pages...">
+            <x-slot:icon-prefix>
+                <x-form-icon icon="heroicon-o-magnifying-glass" />
+            </x-slot:icon-prefix>
+        </x-form-input>
+    </div>
+    <x-paragraph size="sm">
+        Need help? <a href="#">Contact support</a>
+    </x-paragraph>
 </x-empty>
 ```
