@@ -4,7 +4,8 @@ use DistortedFusion\BladeComponents\BladeComponents;
 @props(['size' => null, 'indicatorIcon' => null])
 <x-dynamic-component
     :component="BladeComponents::componentAliasWithPrefix('accordion.toggle')"
-    :indicator-icon="$indicatorIcon">
+    :indicator-icon="$indicatorIcon"
+    {{ $attributes }}>
     @if($indicator ?? false)
         <x-slot:indictor>
             {{ $indicator }}
