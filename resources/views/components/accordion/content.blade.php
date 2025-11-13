@@ -1,4 +1,8 @@
+@php
+use Illuminate\Support\Str;
+@endphp
 @aware(['transition' => true])
+@props(['fade' => true])
 <div data-slot="accordion-content"
     :aria-labelledby="id"
     x-show="expanded"
@@ -9,7 +13,10 @@
     @endif
     x-cloak>
     <div {{ $attributes->class([
-            'flex flex-col gap-y-5 pb-3 transition-all duration-500'
+            'flex flex-col gap-y-5 transition-all duration-500',
+            'pb-3' => ! Str::contains($attributes->get('class'), ['p-', 'pb-', 'py-']),
+
+            'opacity-100' => ! $fade || ! $transition,
         ]) }}
         :class="{
             'opacity-0': ! expanded && transition,
