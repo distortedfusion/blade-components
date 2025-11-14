@@ -5,7 +5,7 @@
     :aria-expanded="expanded"
     :aria-controls="id"
     {{ $attributes->class([
-        'flex w-full items-center justify-between gap-x-4 py-3 text-left group',
+        'flex w-full items-center justify-between gap-x-2 py-3 text-left group',
         'outline-none focus-visible:underline',
     ]) }}>
     {{ $slot }}
