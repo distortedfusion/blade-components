@@ -1,3 +1,6 @@
+@php
+use DistortedFusion\BladeComponents\BladeComponents;
+@endphp
 @props(['title', 'description' => null, 'icon' => null])
 <div data-slot="empty" {{ $attributes->class([
     'min-w-0 flex flex-1 flex-col items-center justify-center gap-6 p-6 md:p-12 rounded-[var(--radius)]',
@@ -10,15 +13,24 @@
 ]) }}>
     <div data-slot="empty-header" class="flex max-w-md flex-col items-center gap-2 text-center [&>[data-slot=heading]:not(:first-child)]:mt-2">
         @if(is_string($icon) && ! is_null($icon))
-            <x-layout.icon :icon="$icon" style="secondary" />
+            <x-dynamic-component
+                :component="BladeComponents::componentAliasWithPrefix('layout.icon')"
+                style="secondary"
+                :icon="$icon" />
         @elseif($icon ?? false)
             {{ $icon }}
         @endif
 
-        <x-heading :as-heading="false">{{ $title }}</x-heading>
+        <x-dynamic-component
+            :component="BladeComponents::componentAliasWithPrefix('heading')"
+            :as-heading="false">
+            {{ $title }}
+        </x-dynamic-component>
 
         @if(is_string($description) && ! is_null($description))
-            <x-paragraph>{{ $description }}</x-paragraph>
+            <x-dynamic-component :component="BladeComponents::componentAliasWithPrefix('paragraph')">
+                {{ $description }}
+            </x-dynamic-component>
         @elseif($description ?? false)
             {{ $description }}
         @endif
