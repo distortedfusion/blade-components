@@ -1,6 +1,6 @@
 @php
 $class = [
-    'inline-flex items-center justify-center gap-x-2 shrink-0 transition-all',
+    'inline-flex items-center justify-center gap-x-1.5 shrink-0 transition-all',
     'text-sm font-semibold leading-8 shadow-none',
 
     'hover:no-underline hover:outline-0',
@@ -18,7 +18,7 @@ $class = [
     'h-10' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
     'h-8' => $size === 'sm',
 
-    'px-4' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
+    'px-3' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
 
     'py-3' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'xl',
     'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'lg',
@@ -79,22 +79,18 @@ $attributes = $attributes->merge(['data-slot' => 'button'])->class($class);
 @endphp
 @if(is_null($href) || $disabled)
 <button type="{{ $type }}" {{ $attributes->merge(['disabled' => $disabled]) }}>
-    @if($prefix ?? false)
-        <div class="flex-shrink-0">{{ $prefix }}</div>
-    @endif
-    <div class="flex-grow">{{ $slot }}</div>
-    @if($suffix ?? false)
-        <div class="flex-shrink-0">{{ $suffix }}</div>
-    @endif
-</button>
 @else
 <a href="{{ $href }}" {{ $attributes }}>
+@endif
     @if($prefix ?? false)
-        <div class="flex-shrink-0">{{ $prefix }}</div>
+        {{ $prefix }}
     @endif
-    <div class="flex-grow">{{ $slot }}</div>
+    {{ $slot }}
     @if($suffix ?? false)
-        <div class="flex-shrink-0">{{ $suffix }}</div>
+        {{ $suffix }}
     @endif
+@if(is_null($href) || $disabled)
+</button>
+@else
 </a>
 @endif
