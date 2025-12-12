@@ -45,7 +45,7 @@ return [
         'avatar.stack' => 'blade-components::components.avatar.stack',
 
         // Button...
-        'btn' => Components\Btn\Index::class,
+        'btn' => 'blade-components::components.btn.index',
 
         // Badge...
         'badge' => 'blade-components::components.badge.index',

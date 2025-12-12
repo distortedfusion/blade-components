@@ -1,7 +1,10 @@
+@props(['size' => 'default', 'style' => 'primary', 'alignment' => 'center', 'disabled' => false, 'type' => 'button', 'href' => null])
 @php
+use DistortedFusion\BladeComponents\BladeComponents;
+
 $class = [
     'inline-flex items-center justify-center gap-x-1.5 shrink-0 transition-all',
-    'text-sm font-semibold leading-8 shadow-none',
+    'text-sm/5 font-semibold shadow-none',
 
     'hover:no-underline hover:outline-0',
     'focus:no-underline focus:outline-0',
@@ -12,18 +15,25 @@ $class = [
     'text-left' => $alignment === 'left',
     'text-right' => $alignment === 'right',
 
+    // Icons...
+    '[&_svg]:size-4',
+
     // Button sizes...
-    'h-14' => $size === 'xl',
-    'h-12' => $size === 'lg',
-    'h-10' => is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
+    'h-10' => $size === 'lg',
+    'h-9' => $size === 'default',
     'h-8' => $size === 'sm',
 
-    'px-3' => ! Str::contains($attributes->get('class'), ['px-', 'pl-', 'pr-']),
+    'size-10' => $size === 'icon-lg',
+    'size-9' => $size === 'icon',
+    'size-8' => $size === 'icon-sm',
 
-    'py-3' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'xl',
-    'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'lg',
-    'py-2' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && is_null($size) || ! in_array($size, ['sm', 'lg', 'xl']),
-    'py-0' => ! Str::contains($attributes->get('class'), ['py-', 'pt-', 'pb-']) && $size === 'sm',
+    'px-6' => ! BladeComponents::containsHorizontalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'lg',
+    'px-4' => ! BladeComponents::containsHorizontalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'default',
+    'px-3' => ! BladeComponents::containsHorizontalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'sm',
+
+    'py-2.5' => ! BladeComponents::containsVerticalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'lg',
+    'py-2' => ! BladeComponents::containsVerticalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'default',
+    'py-1.5' => ! BladeComponents::containsVerticalPaddingClass($attributes->get('class')) && ! Str::startsWith($size, 'icon-') && $size === 'sm',
 
     // Styles...
     'border',
@@ -45,7 +55,11 @@ $class = [
     'bg-transparent' => $style === 'ghost',
 
     // Outline...
-    'bg-transparent border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
+    'bg-[var(--background)] border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
+
+    'dark:bg-[color-mix(in_oklab,var(--input)_30%,transparent)]' => $style === 'outline',
+    'dark:hover:bg-[color-mix(in_oklab,var(--input)_70%,transparent)]' => $style === 'outline',
+    'dark:focus:bg-[color-mix(in_oklab,var(--input)_70%,transparent)]' => $style === 'outline',
 
     // Success...
     'bg-[color-mix(in_oklab,var(--success)_10%,transparent)] text-[var(--success-foreground)]' => $style === 'success',

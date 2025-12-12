@@ -15,6 +15,60 @@ trait ChecksClass
     ];
 
     /**
+     * Determine if the provided class contains padding classes in any direction.
+     *
+     * @param string|null $class
+     *
+     * @return bool
+     */
+    public static function containsPaddingClass(?string $class): bool
+    {
+        if (is_null($class)) {
+            return false;
+        }
+
+        return Str::contains($class, ['p-'])
+            || static::containsHorizontalPaddingClass($class)
+            || static::containsVerticalPaddingClass($class);
+    }
+
+    /**
+     * Determine if the provided class contains horizontal padding classes.
+     *
+     * @param string|null $class
+     *
+     * @return bool
+     */
+    public static function containsHorizontalPaddingClass(?string $class): bool
+    {
+        if (is_null($class)) {
+            return false;
+        }
+
+        return Str::contains($class, [
+            'px-', 'pl-', 'pr-',
+        ]);
+    }
+
+    /**
+     * Determine if the provided class contains vertical padding classes.
+     *
+     * @param string|null $class
+     *
+     * @return bool
+     */
+    public static function containsVerticalPaddingClass(?string $class): bool
+    {
+        if (is_null($class)) {
+            return false;
+        }
+
+        return Str::contains($class, [
+            'py-', 'pt-', 'pb-',
+        ]);
+    }
+
+    /**
      * Determine if the provided class contains any of the default font-size classes.
      *
      * This doesn't include arbitrary values.
