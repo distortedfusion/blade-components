@@ -6,8 +6,8 @@
     // Border element, will be overlain with the image.
     'before:content-[\'\'] before:absolute before:inset-0 before:rounded-full before:border before:border-[var(--border)]',
 
-    '[&_[data-slot=icon]]:size-4 w-12' => $size === 'lg',
-    '[&_[data-slot=icon]]:size-4 w-10' => is_null($size),
+    '[&_[data-slot=icon]]:size-4 w-10' => $size === 'lg',
+    '[&_[data-slot=icon]]:size-4 w-9' => is_null($size),
     '[&_[data-slot=icon]]:size-4 w-8' => $size === 'sm',
     '[&_[data-slot=icon]]:size-3 w-6' => $size === 'xs',
 ]) }}>
