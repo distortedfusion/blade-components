@@ -89,7 +89,11 @@ $class = [
     'disabled:cursor-not-allowed disabled:opacity-50',
 ];
 
-$attributes = $attributes->merge(['data-slot' => 'button'])->class($class);
+$attributes = $attributes->merge([
+    'data-style' => $style,
+    'data-size' => $size,
+    'data-slot' => 'button',
+])->class($class);
 @endphp
 @if(is_null($href) || $disabled)
 <button type="{{ $type }}" {{ $attributes->merge(['disabled' => $disabled]) }}>
