@@ -25,6 +25,7 @@ use Illuminate\Support\Str;
     '[&_[data-slot=avatar]]:ring-[var(--card)]',
 
     // List group...
+    '[&>[data-slot=list-group]]:bg-transparent',
     '[&>[data-slot=list-group]]:rounded-none',
     '[&>[data-slot=list-group]]:border-x-0',
 
