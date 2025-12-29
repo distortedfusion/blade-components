@@ -10,7 +10,7 @@ class Index extends Component
     public ?string $src;
     public ?string $srcset;
     public ?string $alt;
-    public ?string $size;
+    public string $size;
     public string $icon;
 
     /**
@@ -33,7 +33,7 @@ class Index extends Component
         ?string $src = null,
         ?string $srcset = null,
         ?string $alt = null,
-        ?string $size = null,
+        string $size = 'default',
         ?string $icon = null,
     ) {
         $this->src = $src;

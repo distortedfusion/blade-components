@@ -17,4 +17,9 @@ trait ManagesAvatarIcon
     {
         Index::setDefaultIcon(icon: $icon);
     }
+
+    public static function defaultAvatarIcon(): string
+    {
+        return Index::defaultIcon();
+    }
 }
