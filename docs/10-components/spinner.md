@@ -19,18 +19,33 @@ icon: fasl-spinner
 
 ### Component API
 
-| Attribute | Default | Description                                                            |
-| --------- | ------- | ---------------------------------------------------------------------- |
-| `size`    | `null`  | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, or `lg`. |
+| Attribute | Default   | Description                                                                      |
+| --------- | --------- | -------------------------------------------------------------------------------- |
+| `size`    | `default` | `string`<br>Possible values `default`, `sm`, or `lg`.                            |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
 
 ## Size
 
 Control the spinner size by supplying the `size=""` attribute.
 
 ```blade-component-code
-<div class="flex items-center justify-between space-x-2">
-    <x-spinner size="lg" />
-    <x-spinner />
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
     <x-spinner size="sm" />
+    <x-spinner />
+    <x-spinner size="lg" />
+</div>
+```
+
+## Style
+
+Control the spinner style by supplying the `style=""` attribute.
+
+```blade-component-code
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
+    <x-spinner />
+    <x-spinner style="success" />
+    <x-spinner style="info" />
+    <x-spinner style="warning" />
+    <x-spinner style="danger" />
 </div>
 ```

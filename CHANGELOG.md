@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [TBD]
 
+### Added
+
+- The the `x-spinner` component now has additional styles, including: `primary`, `success`, `info`, `warning` or `danger`.
+
 ### Changed
 
 - The `x-list-group` component now uses the same `default` styling as cards.
@@ -14,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The default size for the `x-heading` component has been changed from `null` to `default`.
 - The default size for the `x-layout.icon` component has been changed from `null` to `default`.
 - The default size for the `x-progress-bar` component has been changed from `null` to `default`.
+- The default size for the `x-spinner` component has been changed from `null` to `default`.
 
 ### Removed
 
