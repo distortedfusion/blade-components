@@ -45,6 +45,9 @@ You can control the icon per badge instance by supplying the `icon=""` attribute
 
 ```blade-component-code
 <div class="flex justify-center">
-    <x-badge icon="heroicon-o-star">Badge</x-badge>
+    <x-badge>
+        <x-heroicon-o-star />
+        Badge
+    </x-badge>
 </div>
 ```

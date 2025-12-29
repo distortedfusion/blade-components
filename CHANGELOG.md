@@ -20,3 +20,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 - The `x-btn` component `prefix` and `suffix` slots have been deprecated and will be removed in a future release.
+- The `x-badge` component `icon` slot has been deprecated and will be removed in a future release.
