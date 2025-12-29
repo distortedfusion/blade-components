@@ -15,3 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - The `x-layout.empty-state` component has been removed and replaced by the `x-empty` component.
+
+### Deprecated
+
+- The `x-btn` component `prefix` and `suffix` slots have been deprecated and will be removed in a future release.

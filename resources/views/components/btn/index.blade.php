@@ -11,7 +11,7 @@ $class = [
 
     'rounded-[var(--radius)]' => ! Str::contains($attributes->get('class'), ['rounded-']),
 
-    'text-center' => is_null($alignment),
+    'text-center' => $alignment === 'center',
     'text-left' => $alignment === 'left',
     'text-right' => $alignment === 'right',
 

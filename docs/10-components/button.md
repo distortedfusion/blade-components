@@ -6,8 +6,11 @@ icon: fasl-circle-dot
 ---
 
 ```blade-component-preview
-<div class="mx-auto">
-    <x-btn>Button</x-btn>
+<div class="flex items-center gap-2">
+    <x-btn style="outline">Button</x-btn>
+    <x-btn style="outline" size="icon">
+        <x-heroicon-o-arrow-up-right />
+    </x-btn>
 </div>
 ```
 
@@ -22,17 +25,61 @@ icon: fasl-circle-dot
 | Attribute   | Default   | Description                                                                                                       |
 | ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `outline`, `ghost`, `success`, `info`, `warning` or `danger`. |
-| `size`      | `null`    | `string` &#124;&#124; `null`<br>Possible values `null`, `sm`, `lg` or `xl`.                                       |
+| `size`      | `default` | `string`<br>Possible values `default`, `sm`, `lg`, `icon`, `icon-sm` or `icon-lg`.                                |
 | `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.               |
 | `alignment` | `center`  | `string`<br>Controls text alignment on the button label. Possible values `left`, `center` or `right`.             |
 | `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                                         |
+
+## Cursor
+
+As of Tailwind v4 the default cursor behavior for buttons has [switched](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) from `cursor: pointer` to `cursor: default`.
+
+If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
+
+```css
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+```
+
+## Size
+
+Control the button size by supplying the `size=""` attribute.
+
+```blade-component-code
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
+    <div class="flex items-center gap-2">
+        <x-btn style="outline" size="sm">Small</x-btn>
+        <x-btn style="outline" size="icon-sm">
+            <x-heroicon-o-arrow-up-right />
+        </x-btn>
+    </div>
+
+    <div class="flex items-center gap-2">
+        <x-btn style="outline">Default</x-btn>
+        <x-btn style="outline" size="icon">
+            <x-heroicon-o-arrow-up-right />
+        </x-btn>
+    </div>
+
+    <div class="flex items-center gap-2">
+        <x-btn style="outline" size="lg">Large</x-btn>
+        <x-btn style="outline" size="icon-lg">
+            <x-heroicon-o-arrow-up-right />
+        </x-btn>
+    </div>
+</div>
+```
 
 ## Style
 
 Control the button style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex justify-between">
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
     <x-btn style="primary">Button</x-btn>
     <x-btn style="secondary">Button</x-btn>
     <x-btn style="outline">Button</x-btn>
@@ -41,23 +88,11 @@ Control the button style by supplying the `style=""` attribute.
 ```
 
 ```blade-component-code
-<div class="flex justify-between">
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
     <x-btn style="success">Button</x-btn>
     <x-btn style="info">Button</x-btn>
     <x-btn style="warning">Button</x-btn>
     <x-btn style="danger">Button</x-btn>
-</div>
-```
-
-## Size
-
-Control the button size by supplying the `size=""` attribute.
-
-```blade-component-code
-<div class="flex items-center justify-between space-x-2">
-    <x-btn size="lg">Button</x-btn>
-    <x-btn>Button</x-btn>
-    <x-btn size="sm">Button</x-btn>
 </div>
 ```
 
@@ -67,7 +102,10 @@ Buttons can be used as an `<a>` element by supplying the `href=""` attribute.
 
 ```blade-component-code
 <div class="flex justify-center">
-    <x-btn href="#">Button</x-btn>
+    <x-btn href="#" style="outline">
+        External Link
+        <x-heroicon-o-arrow-top-right-on-square />
+    </x-btn>
 </div>
 ```
 
@@ -77,36 +115,34 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 
 ```blade-component-code
 <div class="flex justify-center">
-    <x-btn disabled>Button</x-btn>
+    <x-btn style="outline" disabled>Button</x-btn>
 </div>
 ```
 
-## Prefix and Suffix
+## Rounding
 
-Buttons can be prefixed or suffixed with simple text elements for additional clarity by utilizing the `prefix` and `suffix` component slots.
+Customize the button rounding by supplying any of the `rounded-` classes.
 
 ```blade-component-code
-<div class="flex justify-between">
-    <x-btn>
-        <x-slot:prefix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:prefix>
-        Button
+<div class="flex justify-center">
+    <x-btn style="outline" size="icon" class="rounded-full">
+        <x-heroicon-o-arrow-up />
     </x-btn>
-    <x-btn>
-        <x-slot:prefix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:prefix>
-        Button
-        <x-slot:suffix>
-            <span class="text-gray-400">2.</span>
-        </x-slot:suffix>
+</div>
+```
+
+## Spinner
+
+Customize the button rounding by supplying any of the `rounded-` classes.
+
+```blade-component-code
+<div class="flex justify-center gap-2">
+    <x-btn style="outline" disabled>
+        <x-spinner />
+        Loading
     </x-btn>
-    <x-btn>
-        Button
-        <x-slot:suffix>
-            <span class="text-gray-400">1.</span>
-        </x-slot:suffix>
+    <x-btn style="outline" size="icon" disabled>
+        <x-spinner />
     </x-btn>
 </div>
 ```
