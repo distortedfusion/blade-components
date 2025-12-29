@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [TBD]
 
+### Changed
+
+- The `x-list-group` component now uses the same `default` styling as cards.
+
 ### Removed
 
 - The `x-layout.empty-state` component has been removed and replaced by the `x-empty` component.
