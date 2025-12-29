@@ -1,9 +1,9 @@
-@props(['icon', 'style' => 'primary', 'size' => null])
+@props(['icon', 'style' => 'primary', 'size' => 'default'])
 <div {{ $attributes->class([
     'inline-flex items-center justify-center border rounded-md aspect-square',
 
     '[&>[data-slot=icon]]:size-4 w-12' => $size === 'lg',
-    '[&>[data-slot=icon]]:size-4 w-10' => is_null($size),
+    '[&>[data-slot=icon]]:size-4 w-10' => $size === 'default',
     '[&>[data-slot=icon]]:size-4 w-8' => $size === 'sm',
     '[&>[data-slot=icon]]:size-3 w-6' => $size === 'xs',
 

@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The `x-list-group` component now uses the same `default` styling as cards.
 - Added the `unit` attribute to the `x-number` component.
-- The default size for the `x-heading` has been changed from `null` to `default`.
+- The default size for the `x-heading` component has been changed from `null` to `default`.
+- The default size for the `x-layout.icon` component has been changed from `null` to `default`.
 
 ### Removed
 
