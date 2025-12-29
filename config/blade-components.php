@@ -69,9 +69,6 @@ return [
         // Empty...
         'empty' => 'blade-components::components.empty.index',
 
-        // Entities...
-        'entity.field' => 'blade-components::components.entity.field',
-
         // Progress Bar...
         'progress-bar' => 'blade-components::components.progress-bar.index',
 
