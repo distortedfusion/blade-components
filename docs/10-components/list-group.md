@@ -34,6 +34,8 @@ icon: fasl-table-list
 
 ### Component API
 
+#### x-list-group
+
 | Attribute | Default   | Description                                        |
 | --------- | --------- | -------------------------------------------------- |
 | `style`   | `default` | `string`<br>Possible values `default`, or `pills`. |
