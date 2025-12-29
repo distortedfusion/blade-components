@@ -92,7 +92,9 @@ icon: fasl-square-list
 
 ### Default Icons
 
-Get or set the default icons used trough the `BladeComponents` service or via the component directly.
+The accordion component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
+
+You can customize the default icons globally trough the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
 
 ```php
 <?php

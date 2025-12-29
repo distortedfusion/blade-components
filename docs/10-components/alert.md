@@ -23,6 +23,60 @@ icon: fasl-bell
 | `style`   | `default` | `string`<br>Possible values `default`, `success`, `info`, `warning` or `danger`. |
 | `icon`    | `null`    | `string`<br>Optional component alias of the icon.                                |
 
+### Default Icons
+
+The alert component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
+
+| Style     | Default Icon                    |
+| --------- | ------------------------------- |
+| `default` | `heroicon-o-information-circle` |
+| `success` | `heroicon-o-check-circle`       |
+| `info`    | `heroicon-o-information-circle` |
+| `warning` | `heroicon-o-exclamation-circle` |
+| `danger`  | `heroicon-o-x-circle`           |
+
+You can customize the default icons globally trough the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+
+The `setDefaultAlertIcons()` or `setDefaultIcons()` method takes an array of icon definitions.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\Alert\Index as Alert;
+
+$icons = [
+    'default' => 'heroicon-o-information-circle',
+    'success' => 'heroicon-o-check-circle',
+    'info'    => 'heroicon-o-information-circle',
+    'warning' => 'heroicon-o-exclamation-circle',
+    'danger'  => 'heroicon-o-x-circle',
+];
+
+BladeComponents::setDefaultAlertIcons(icons: $icons);
+
+Alert::setDefaultIcons(icons: $icons);
+```
+
+The `setDefaultAlertIconForStyle()` or `setDefaultIconForStyle()` method sets the icon for a specific style.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\Alert\Index as Alert;
+
+BladeComponents::setDefaultAlertIconForStyle(
+    style: 'default',
+    icon: 'heroicon-o-information-circle'
+);
+
+Alert::setDefaultIconForStyle(
+    style: 'default',
+    icon: 'heroicon-o-information-circle'
+);
+```
+
 ## Title
 
 For added clarity a title can be added to the alert by supplying the `title=""` attribute.
@@ -65,47 +119,4 @@ You can control the icon per alert instance by supplying the `icon=""` attribute
 <x-alert style="warning" icon="heroicon-o-bolt">
     This alert details some information.
 </x-alert>
-```
-
-### Customizing the default icons
-
-The alert component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
-
-| Style     | Default Icon                    |
-| --------- | ------------------------------- |
-| `default` | `heroicon-o-information-circle` |
-| `success` | `heroicon-o-check-circle`       |
-| `info`    | `heroicon-o-information-circle` |
-| `warning` | `heroicon-o-exclamation-circle` |
-| `danger`  | `heroicon-o-x-circle`           |
-
-You can customize the default icons globally by calling either the `setDefaultIcons()` or `setDefaultIconForStyle()` method from a service provider's `boot()` method, or middleware.
-
-The `setDefaultIcons()` method takes an array of icon definitions.
-
-```php
-<?php
-
-use DistortedFusion\BladeComponents\Components\Alert\Index as Alert;
-
-Alert::setDefaultIcons([
-    'default' => 'heroicon-o-information-circle',
-    'success' => 'heroicon-o-check-circle',
-    'info'    => 'heroicon-o-information-circle',
-    'warning' => 'heroicon-o-exclamation-circle',
-    'danger'  => 'heroicon-o-x-circle',
-]);
-```
-
-The `setDefaultIconForStyle()` method sets the icon for a specific style.
-
-```php
-<?php
-
-use DistortedFusion\BladeComponents\Components\Alert\Index as Alert;
-
-Alert::setDefaultIconForStyle(
-    style: 'default',
-    icon: 'heroicon-o-information-circle'
-);
 ```
