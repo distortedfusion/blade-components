@@ -2,7 +2,7 @@
 use DistortedFusion\BladeComponents\BladeComponents;
 @endphp
 <div {{ $attributes->class([
-    'flex flex-wrap flex-col md:flex-row items-start',
+    'flex flex-wrap flex-col md:flex-row items-baseline',
 ]) }}>
     <div class="md:w-32 md:flex-shrink-0 md:mr-2">
         <x-dynamic-component
