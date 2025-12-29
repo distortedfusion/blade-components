@@ -37,7 +37,7 @@ icon: fasl-window-maximize
 
 | Attribute | Default   | Description                                                                      |
 | --------- | --------- | -------------------------------------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, `success`, `info`, `warning` or `danger`. |
+| `style`   | `default` | `string`<br>Possible values `default`, `ghost`, `success`, `info`, `warning` or `danger`. |
 
 ## Style
 
@@ -45,13 +45,35 @@ Control the card style by supplying the `style=""` attribute.
 
 ```blade-component-code
 <div class="flex flex-col gap-y-4">
+    <x-card>
+        <x-card.header>
+            <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
+        </x-card.header>
+
+        <x-card.footer class="justify-end">
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
+            <x-btn size="sm">Update</x-btn>
+        </x-card.footer>
+    </x-card>
+
+    <x-card style="ghost">
+        <x-card.header>
+            <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
+        </x-card.header>
+
+        <x-card.footer class="justify-end">
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
+            <x-btn size="sm" style="secondary">Update</x-btn>
+        </x-card.footer>
+    </x-card>
+
     <x-card style="success">
         <x-card.header>
             <x-card.title :as-heading="false">The Evil Rabbit Jumped over the Fence</x-card.title>
         </x-card.header>
 
         <x-card.footer class="justify-end">
-            <x-btn size="sm" style="default">Cancel</x-btn>
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
             <x-btn size="sm" style="success">Update</x-btn>
         </x-card.footer>
     </x-card>
@@ -62,7 +84,7 @@ Control the card style by supplying the `style=""` attribute.
         </x-card.header>
 
         <x-card.footer class="justify-end">
-            <x-btn size="sm" style="default">Cancel</x-btn>
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
             <x-btn size="sm" style="info">Update</x-btn>
         </x-card.footer>
     </x-card>
@@ -73,7 +95,7 @@ Control the card style by supplying the `style=""` attribute.
         </x-card.header>
 
         <x-card.footer class="justify-end">
-            <x-btn size="sm" style="default">Cancel</x-btn>
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
             <x-btn size="sm" style="warning">Update</x-btn>
         </x-card.footer>
     </x-card>
@@ -84,7 +106,7 @@ Control the card style by supplying the `style=""` attribute.
         </x-card.header>
 
         <x-card.footer class="justify-end">
-            <x-btn size="sm" style="default">Cancel</x-btn>
+            <x-btn size="sm" style="ghost">Cancel</x-btn>
             <x-btn size="sm" style="danger">Delete</x-btn>
         </x-card.footer>
     </x-card>
