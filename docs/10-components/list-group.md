@@ -55,29 +55,72 @@ Item::defaultIndicatorIcon();
 Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
 ```
 
+## Style
+
+Control the list group style by supplying the style="" attribute.
+
+```blade-component-code
+<x-list-group style="pills">
+    <x-list-group.item>
+        <div class="flex items-center gap-3">
+            <x-avatar icon="fasl-face-monocle" />
+            <div class="flex-grow">
+                <x-heading size="sm" :heading-level="4">Kevin Dierkx</x-heading>
+                <x-paragraph size="sm" style="muted">
+                    kevin@example.com
+                </x-paragraph>
+            </div>
+            <x-badge style="secondary">Owner</x-badge>
+        </div>
+    </x-list-group.item>
+
+    <x-list-group.item>
+        <div class="flex items-center gap-3">
+            <x-avatar icon="fasl-face-smile-wink" />
+            <div class="flex-grow">
+                <x-heading size="sm" :heading-level="4">Isabella Duffey</x-heading>
+                <x-paragraph size="sm" style="muted">
+                    isabella@example.com
+                </x-paragraph>
+            </div>
+            <x-badge style="secondary">Financial</x-badge>
+        </div>
+    </x-list-group.item>
+
+    <x-list-group.item>
+        <div class="flex items-center gap-3">
+            <x-avatar icon="fasl-face-sunglasses" />
+            <div class="flex-grow">
+                <x-heading size="sm" :heading-level="4">James Black</x-heading>
+                <x-paragraph size="sm" style="muted">
+                    james@example.com
+                </x-paragraph>
+            </div>
+            <x-badge style="secondary">Technical</x-badge>
+        </div>
+    </x-list-group.item>
+</x-list-group>
+```
+
 ## Item Title
 
-The `x-list-group.item` component has a dedicated `x-slot:title` slot which can be used to add additional information about an entry.
+The `x-list-group.item` component has a dedicated `x-slot:title` slot which can be used to add additional information about an entry, alternatively the same can be achieved by supplying the `title=""` attribute.
 
 ```blade-component-code
 <x-list-group>
-    <x-list-group.item>
-        <x-slot:title>
-            Address
-        </x-slot:title>
-        <address class="text-sm not-italic">
+    <x-list-group.item title="Address">
+        <address class="not-italic">
             <x-heading :heading-level="4" size="sm">DDFSN</x-heading>
             <x-paragraph size="sm" style="muted">Hoogstraat 12</x-paragraph>
             <x-paragraph size="sm" style="muted">4331 KR, Middelburg</x-paragraph>
             <x-paragraph size="sm" style="muted">The Netherlands</x-paragraph>
         </address>
     </x-list-group.item>
-    <x-list-group.item>
-        <x-slot:title>
-            VAT ID
-        </x-slot:title>
+
+    <x-list-group.item title="VAT ID">
         <span class="font-mono">NL000099998B57</span>
     </x-list-group.item>
+
     <x-list-group.item>
         <x-paragraph size="sm" style="muted">Your next invoice will include 21% VAT based on your location.</x-paragraph>
     </x-list-group.item>
@@ -90,16 +133,11 @@ Use list group items as links by supplying the `href=""` attribute. Optionally, 
 
 ```blade-component-code
 <x-list-group>
-    <x-list-group.item-link href="https://distortedfusion.com" target="_blank">
-        <x-slot:title>
-            Distorted Fusion
-        </x-slot:title>
+    <x-list-group.item-link href="https://distortedfusion.com" target="_blank" title="Distorted Fusion">
         https://distortedfusion.com
     </x-list-group.item-link>
-    <x-list-group.item-link href="https://devnomads.nl" target="_blank">
-        <x-slot:title>
-            DevNomads
-        </x-slot:title>
+
+    <x-list-group.item-link href="https://devnomads.nl" target="_blank" title="DevNomads">
         https://devnomads.nl
     </x-list-group.item-link>
 </x-list-group>
@@ -114,6 +152,7 @@ A list group items can be used as a `<button>` by supplying the `boolean` boolea
     <x-list-group.item button onclick="alert('Hello World!')">
         <span>BENNY BENASSI - Satisfaction</span> <x-badge size="sm" style="success">Radio Edit</x-badge>
     </x-list-group.item>
+
     <x-list-group.item-btn onclick="alert('Hello World!')">
         <span>BENNY BENASSI - Satisfaction</span> <x-badge size="sm" style="warning">Remix</x-badge>
     </x-list-group.item>
