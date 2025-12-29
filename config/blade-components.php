@@ -84,7 +84,6 @@ return [
         'three-dot' => 'blade-components::components.three-dot.index',
 
         // Layout components...
-        'layout.empty-state' => Components\Layout\EmptyState::class,
         'layout.icon' => 'blade-components::components.layout.icon',
 
         // List group...
