@@ -9,7 +9,7 @@ $class = [
 
     'self-center' => ! $vertical,
     'self-stretch' => $vertical,
-    'h-px' => ! $vertical,
+    'w-full h-px' => ! $vertical,
     'w-px' => $vertical,
 
     // Styles...
