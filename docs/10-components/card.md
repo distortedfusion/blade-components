@@ -6,19 +6,22 @@ icon: fasl-window-maximize
 ---
 
 ```blade-component-preview
-<div class="mx-auto">
-    <x-card class="max-w-96">
-        <x-card.header>
-            <x-card.title :as-heading="false">Card</x-card.title>
-        </x-card.header>
-        <x-card.body>
-            <x-paragraph>The Evil Rabbit Jumped over the Fence.</x-paragraph>
-        </x-card.body>
-        <x-card.footer>
-            Card Footer
-        </x-card.footer>
-    </x-card>
-</div>
+<x-card class="w-full max-w-96">
+    <x-card.header>
+        <x-card.title>Login to your account</x-card.title>
+        <x-paragraph>Enter your email below to login to your account</x-paragraph>
+    </x-card.header>
+    <x-card.body>
+        <div class="grid gap-6">
+            <x-form-input type="email" name="username" label="Email" placeholder="user@example.com" />
+            <x-form-input type="password" name="Password" label="Password" />
+        </div>
+    </x-card.body>
+    <x-card.footer class="flex items-center gap-2">
+        <x-btn size="sm" class="flex-1" style="outline">Cancel</x-btn>
+        <x-btn size="sm" class="flex-1">Submit</x-btn>
+    </x-card.footer>
+</x-card>
 ```
 
 ## Usage
@@ -135,7 +138,7 @@ The `x-card.heading` component has a dedicated `x-slot:actions` slot intended fo
         <x-card.title :as-heading="false">Company Details</x-card.title>
 
         <x-slot:action>
-            <x-btn size="sm">Update Details</x-btn>
+            <x-btn size="sm" style="outline">Update Details</x-btn>
         </x-slot:action>
     </x-card.header>
 
@@ -158,17 +161,16 @@ The `x-card.heading` component has a dedicated `x-slot:actions` slot intended fo
 
 ## List Groups
 
-Cards will automatically modify the `x-list-group` component styling to match the card. You can either use `x-list-group` components within either the `x-card.body` or `x-card.footer` components or directly within the `x-card` component.
+Cards will automatically modify the `x-list-group` component styling to match the card. You can use `x-list-group` components within either, the `x-card.body` or `x-card.footer` components, or directly within the `x-card` component.
 
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title :as-heading="false">Webhook Details</x-card.title>
+        <x-card.title>Webhook Details</x-card.title>
+        <x-paragraph size="sm">Details the webhook activity.</x-paragraph>
     </x-card.header>
 
-    <x-card.body class="space-y-6">
-        <x-paragraph>Details the webhook activity.</x-paragraph>
-
+    <x-card.body>
         <x-list-group>
             <x-list-group.item>
                 <x-slot:title>
@@ -190,12 +192,9 @@ Cards will automatically modify the `x-list-group` component styling to match th
 ```blade-component-code
 <x-card>
     <x-card.header>
-        <x-card.title :as-heading="false">Webhook Details</x-card.title>
+        <x-card.title>Webhook Details</x-card.title>
+        <x-paragraph size="sm">Details the webhook activity.</x-paragraph>
     </x-card.header>
-
-    <x-card.body>
-        <x-paragraph>Details the webhook activity.</x-paragraph>
-    </x-card.body>
 
     <x-list-group>
         <x-list-group.item>
