@@ -1,7 +1,7 @@
 @php
 use DistortedFusion\BladeComponents\BladeComponents;
 @endphp
-@props(['size' => null, 'indicatorIcon' => null])
+@props(['size' => 'default', 'indicatorIcon' => null])
 <x-dynamic-component
     :component="BladeComponents::componentAliasWithPrefix('accordion.toggle')"
     :indicator-icon="$indicatorIcon"
