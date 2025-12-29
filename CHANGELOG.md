@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The `x-list-group` component now uses the same `default` styling as cards.
-- Added `unit` attribute to `x-number` component.
+- Added the `unit` attribute to the `x-number` component.
+- The default size for the `x-heading` has been changed from `null` to `default`.
 
 ### Removed
 

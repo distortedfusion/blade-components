@@ -10,9 +10,9 @@ class Heading extends Component
 {
     public int $headingLevel;
     public bool $asHeading;
-    public ?string $size;
+    public string $size;
 
-    public function __construct(int $headingLevel = 1, bool $asHeading = true, ?string $size = null)
+    public function __construct(int $headingLevel = 1, bool $asHeading = true, string $size = 'default')
     {
         $this->headingLevel = $headingLevel;
         $this->asHeading = $asHeading;
