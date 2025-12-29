@@ -22,20 +22,32 @@ icon: fasl-tag
 | Attribute | Default   | Description                                                                                   |
 | --------- | --------- | --------------------------------------------------------------------------------------------- |
 | `style`   | `primary` | `string`<br>Possible values `primary`, `secondary`, `success`, `info`, `warning` or `danger`. |
-| `icon`    | `null`    | `string` &#124;&#124; `null`                                                                  |
+| `size`    | `default` | `string`<br>Possible values `default`, or `sm`.                                               |
+
+## Size
+
+Control the badge size by supplying the `size=""` attribute.
+
+```blade-component-code
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
+    <x-badge style="secondary" size="sm">Small</x-badge>
+    <x-badge style="secondary">Default</x-badge>
+</div>
+```
+
 
 ## Style
 
 Control the badge style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0 lg:space-x-4">
-    <x-badge>Badge Text</x-badge>
-    <x-badge style="secondary">Badge Text</x-badge>
-    <x-badge style="success">Badge Text</x-badge>
-    <x-badge style="info">Badge Text</x-badge>
-    <x-badge style="warning">Badge Text</x-badge>
-    <x-badge style="danger">Badge Text</x-badge>
+<div class="flex items-start justify-center gap-8 max-md:flex-col">
+    <x-badge>Badge</x-badge>
+    <x-badge style="secondary">Badge</x-badge>
+    <x-badge style="success">Badge</x-badge>
+    <x-badge style="info">Badge</x-badge>
+    <x-badge style="warning">Badge</x-badge>
+    <x-badge style="danger">Badge</x-badge>
 </div>
 ```
 
@@ -45,8 +57,8 @@ You can control the icon per badge instance by supplying the `icon=""` attribute
 
 ```blade-component-code
 <div class="flex justify-center">
-    <x-badge>
-        <x-heroicon-o-star />
+    <x-badge style="secondary">
+        <x-heroicon-o-sparkles />
         Badge
     </x-badge>
 </div>
