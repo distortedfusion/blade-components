@@ -59,12 +59,12 @@ Please refer to the [Tailwind documentation](https://tailwindcss.com/docs/instal
 
 Colors are managed trough the complimentary [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) package. Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. You will find the full documentation on the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) page.
 
-Blade Colors is automatically installed with Blade Components. After installation the `@bladeColor` directive needs be added to your layouts `<head>` section:
+Blade Colors is automatically installed with Blade Components. After installation the `@ddfsnStyles` directive needs be added to your layouts `<head>` section:
 
 ```html
 <head>
     ...
-    @bladeColor
+    @ddfsnStyles
 </head>
 ```
 
