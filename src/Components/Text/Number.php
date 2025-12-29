@@ -12,11 +12,13 @@ class Number extends Component
 
     public float $value;
     public int $precision;
+    public ?string $unit;
 
-    public function __construct(float $value, int $precision = 0)
+    public function __construct(float $value, int $precision = 0, ?string $unit = null)
     {
         $this->value = $value;
         $this->precision = $precision;
+        $this->unit = $unit;
     }
 
     /**
