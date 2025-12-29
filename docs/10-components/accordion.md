@@ -101,10 +101,10 @@ use DistortedFusion\BladeComponents\BladeComponents;
 use DistortedFusion\BladeComponents\Components\Accordion\Toggle;
 
 BladeComponents::defaultAccordionIndicatorIcon();
-BladeComponents::setDefaultAccordionIndicatorIcon();
+BladeComponents::setDefaultAccordionIndicatorIcon(icon: 'heroicon-o-chevron-down');
 
 Toggle::defaultIndicatorIcon();
-Toggle::setDefaultIndicatorIcon();
+Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
 ```
 
 ## Exclusive

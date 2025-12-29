@@ -40,6 +40,23 @@ icon: fasl-table-list
 | ---------- | ------- | ------------------------------------------------ |
 | `disabled` | `false` | `bool`<br>Whether the outside borders are shown. |
 
+### Default Icons
+
+Get or set the default icons used trough the `BladeComponents` service or via the component directly.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\ListGroup\Item;
+
+BladeComponents::defaultListGroupItemIndicatorIcon();
+BladeComponents::setDefaultListGroupItemIndicatorIcon(icon: 'heroicon-o-chevron-right');
+
+Item::defaultIndicatorIcon();
+Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
+```
+
 ## Flush
 
 The outside borders can be removed per `x-list-group` instance by supplying the `disabled` boolean attribute.
