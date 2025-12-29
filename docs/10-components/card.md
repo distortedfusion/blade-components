@@ -17,9 +17,9 @@ icon: fasl-window-maximize
             <x-form-input type="password" name="Password" label="Password" />
         </div>
     </x-card.body>
-    <x-card.footer class="flex items-center gap-2">
-        <x-btn size="sm" class="flex-1" style="outline">Cancel</x-btn>
-        <x-btn size="sm" class="flex-1">Submit</x-btn>
+    <x-card.footer>
+        <x-btn size="sm" style="outline">Sign Up</x-btn>
+        <x-btn size="sm">Login</x-btn>
     </x-card.footer>
 </x-card>
 ```
@@ -37,6 +37,8 @@ icon: fasl-window-maximize
 ```
 
 ### Component API
+
+#### x-card
 
 | Attribute | Default   | Description                                                                      |
 | --------- | --------- | -------------------------------------------------------------------------------- |
