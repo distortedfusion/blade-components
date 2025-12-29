@@ -30,28 +30,49 @@ icon: fasl-distribute-spacing-vertical
 
 | Attribute  | Default | Description                                            |
 | ---------- | ------- | ------------------------------------------------------ |
+| `style`    | `solid` | `string`<br>Possible values `solid` or `dashed`.       |
 | `vertical` | `false` | `bool`<br>Determines the orientation of the separator. |
-
-## With Text
-
-Add text to the separator for a more descriptive element.
-
-```blade-component-code
-<x-separator>
-    or
-</x-separator>
-```
 
 ## Style
 
-Control the spinner style by supplying the `style=""` attribute.
+Control the separator style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex items-start justify-center gap-8 max-md:flex-col">
-    <x-spinner />
-    <x-spinner style="success" />
-    <x-spinner style="info" />
-    <x-spinner style="warning" />
-    <x-spinner style="danger" />
+<div class="flex flex-col gap-8">
+    <x-separator />
+
+    <x-separator style="dashed" />
+</div>
+```
+
+## With Content
+
+Add text or icons to the separator for a more descriptive element.
+
+```blade-component-code
+<div class="flex flex-col gap-8">
+    <x-separator>
+        <x-paragraph size="xs" style="muted">Optional</x-paragraph>
+    </x-separator>
+
+    <x-separator>
+        <x-heroicon-o-arrow-down-tray class="size-4 text-[var(--foreground)]" />
+    </x-separator>
+</div>
+```
+
+## Vertical
+
+Separate contents with a vertical separator when horizontally stacked by supplying the `vertical` attribute.
+
+```blade-component-code
+<div class="flex items-start justify-center gap-4">
+    <x-btn size="icon" style="ghost">
+        <x-heroicon-o-arrow-down-tray />
+    </x-btn>
+    <x-separator vertical />
+    <x-btn style="outline">
+        Generate Export
+    </x-btn>
 </div>
 ```
