@@ -1,8 +1,8 @@
-@props(['progress' => 0, 'size' => null])
+@props(['progress' => 0, 'size' => 'default'])
 <div {{ $attributes->class([
     'w-full',
     'h-4' => $size === 'lg',
-    'h-2' => is_null($size) || ! in_array($size, ['sm', 'lg']),
+    'h-2' => $size === 'default',
     'h-1' => $size === 'sm',
 ]) }}>
     <div class="w-full h-full bg-[var(--secondary)] rounded-full overflow-hidden relative">

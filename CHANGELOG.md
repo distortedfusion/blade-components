@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added the `unit` attribute to the `x-number` component.
 - The default size for the `x-heading` component has been changed from `null` to `default`.
 - The default size for the `x-layout.icon` component has been changed from `null` to `default`.
+- The default size for the `x-progress-bar` component has been changed from `null` to `default`.
 
 ### Removed
 
