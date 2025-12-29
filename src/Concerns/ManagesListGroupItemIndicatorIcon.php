@@ -17,4 +17,9 @@ trait ManagesListGroupItemIndicatorIcon
     {
         Item::setDefaultIndicatorIcon(icon: $icon);
     }
+
+    public static function defaultListGroupItemIndicatorIcon(): string
+    {
+        return Item::defaultIndicatorIcon();
+    }
 }
