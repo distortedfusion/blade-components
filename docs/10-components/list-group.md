@@ -6,22 +6,20 @@ icon: fasl-table-list
 ---
 
 ```blade-component-preview
-<div class="mx-auto">
-    <x-list-group class="max-w-96">
-        <x-list-group.item>
-            <x-slot:title>
-                Status
-            </x-slot:title>
-            <x-badge style="success">Active</x-badge>
-        </x-list-group.item>
-        <x-list-group.item>
-            <x-slot:title>
-                Last Activity
-            </x-slot:title>
-            2 months ago
-        </x-list-group.item>
-    </x-list-group>
-</div>
+<x-list-group class="w-full max-w-96">
+    <x-list-group.item>
+        <x-slot:title>
+            Status
+        </x-slot:title>
+        <x-badge style="success">Active</x-badge>
+    </x-list-group.item>
+    <x-list-group.item>
+        <x-slot:title>
+            Last Activity
+        </x-slot:title>
+        2 months ago
+    </x-list-group.item>
+</x-list-group>
 ```
 
 ## Usage
@@ -36,9 +34,9 @@ icon: fasl-table-list
 
 ### Component API
 
-| Attribute  | Default | Description                                      |
-| ---------- | ------- | ------------------------------------------------ |
-| `disabled` | `false` | `bool`<br>Whether the outside borders are shown. |
+| Attribute | Default   | Description                                        |
+| --------- | --------- | -------------------------------------------------- |
+| `style`   | `default` | `string`<br>Possible values `default`, or `pills`. |
 
 ### Default Icons
 
@@ -57,27 +55,6 @@ Item::defaultIndicatorIcon();
 Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
 ```
 
-## Flush
-
-The outside borders can be removed per `x-list-group` instance by supplying the `disabled` boolean attribute.
-
-```blade-component-code
-<x-list-group flush>
-    <x-list-group.item>
-        <x-slot:title>
-            Status
-        </x-slot:title>
-        <x-badge style="success">Active</x-badge>
-    </x-list-group.item>
-    <x-list-group.item>
-        <x-slot:title>
-            Last Activity
-        </x-slot:title>
-        2 months ago
-    </x-list-group.item>
-</x-list-group>
-```
-
 ## Item Title
 
 The `x-list-group.item` component has a dedicated `x-slot:title` slot which can be used to add additional information about an entry.
@@ -86,12 +63,23 @@ The `x-list-group.item` component has a dedicated `x-slot:title` slot which can 
 <x-list-group>
     <x-list-group.item>
         <x-slot:title>
-            Placeholder
+            Address
         </x-slot:title>
-        The Evil Rabbit Jumped over the Fence.
+        <address class="text-sm not-italic">
+            <x-heading :heading-level="4" size="sm">DDFSN</x-heading>
+            <x-paragraph size="sm" style="muted">Hoogstraat 12</x-paragraph>
+            <x-paragraph size="sm" style="muted">4331 KR, Middelburg</x-paragraph>
+            <x-paragraph size="sm" style="muted">The Netherlands</x-paragraph>
+        </address>
     </x-list-group.item>
     <x-list-group.item>
-        The Evil Rabbit Jumped over the Fence.
+        <x-slot:title>
+            VAT ID
+        </x-slot:title>
+        <span class="font-mono">NL000099998B57</span>
+    </x-list-group.item>
+    <x-list-group.item>
+        <x-paragraph size="sm" style="muted">Your next invoice will include 21% VAT based on your location.</x-paragraph>
     </x-list-group.item>
 </x-list-group>
 ```
