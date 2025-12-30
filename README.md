@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://blade-components.com" target="_blank">
-        <img src="https://github.com/distortedfusion/blade-components/blob/master/.github/thumbnail.jpg" width="1200" alt="Blade Components - DDFSN">
+        <img src="https://github.com/distortedfusion/blade-components/blob/master/.github/thumbnail.png" width="1200" alt="Blade Components - DDFSN">
     </a>
 </p>
 
