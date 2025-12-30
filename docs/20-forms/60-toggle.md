@@ -5,7 +5,7 @@ short-description: Renders a checkbox input field as a switch.
 icon: fasl-toggle-off
 ---
 
-```blade-component-preview
+```blade-component-code
 <div class="flex-grow lg:max-w-96">
     <x-form-toggle name="toggle" label="Security emails">
         <x-slot:description>
