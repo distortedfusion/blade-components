@@ -74,8 +74,6 @@ During runtime the theme variants will be rendered within 2 generic CSS selector
 
 ### Custom Theme
 
-Custom Blade Color theme classes must implement the `DistortedFusion\BladeColors\Contracts\ThemeContract` interface.
-
 When creating a custom theme for Blade Components you're not required to define all possible CSS variables manually. Instead you can simply refer to the default theme and alter the variables you want customized.
 
 ```php
