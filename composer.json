@@ -12,13 +12,13 @@
     "require": {
         "php": "^8.0",
         "illuminate/support": "*",
-        "distortedfusion/blade-colors": "^2.0"
+        "distortedfusion/blade-colors": "^2.0",
+        "blade-ui-kit/blade-heroicons": "^2.6"
     },
     "require-dev": {
         "distortedfusion/php-cs-fixer-config": "^2.1"
     },
     "suggest": {
-        "blade-ui-kit/blade-heroicons": "Default icons used for various components.",
         "distortedfusion/blade-forms": "A collection of reusable form components, complementary to blade components."
     },
     "autoload": {
