@@ -50,7 +50,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 Control the button size by supplying the `size=""` attribute.
 
 ```blade-component-code
-<div class="flex items-start justify-center gap-8 max-md:flex-col">
+<div class="flex items-start justify-center gap-8 max-md:flex-col max-md:items-center">
     <div class="flex items-center gap-2">
         <x-btn style="outline" size="sm">Small</x-btn>
         <x-btn style="outline" size="icon-sm">
@@ -79,7 +79,7 @@ Control the button size by supplying the `size=""` attribute.
 Control the button style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex items-start justify-center gap-8 max-md:flex-col">
+<div class="flex items-center justify-center gap-x-8 gap-y-2 max-md:flex-col">
     <x-btn style="primary">Button</x-btn>
     <x-btn style="secondary">Button</x-btn>
     <x-btn style="outline">Button</x-btn>
@@ -88,7 +88,7 @@ Control the button style by supplying the `style=""` attribute.
 ```
 
 ```blade-component-code
-<div class="flex items-start justify-center gap-8 max-md:flex-col">
+<div class="flex items-center justify-center gap-x-8 gap-y-2 max-md:flex-col">
     <x-btn style="success">Button</x-btn>
     <x-btn style="info">Button</x-btn>
     <x-btn style="warning">Button</x-btn>
@@ -136,7 +136,7 @@ Customize the button rounding by supplying any of the `rounded-` classes.
 Show a loading state by embedding the `x-spinner` component.
 
 ```blade-component-code
-<div class="flex justify-center gap-2">
+<div class="flex items-center justify-center gap-2 max-md:flex-col">
     <x-btn style="outline" disabled>
         <x-spinner />
         Processing payment...
@@ -152,11 +152,26 @@ Show a loading state by embedding the `x-spinner` component.
 Join related buttons into a group by wrapping them in a `x-btn.group` component.
 
 ```blade-component-code
-<div class="flex justify-center gap-2">
+<div class="flex items-center justify-center gap-2 max-md:flex-col">
     <x-btn.group>
-        <x-btn style="outline">Oldest</x-btn>
-        <x-btn style="outline">Newest</x-btn>
-        <x-btn style="outline">Top</x-btn>
+        <x-btn style="outline">
+            First
+        </x-btn>
+        <x-btn style="outline">
+            Last
+        </x-btn>
+    </x-btn.group>
+
+    <x-btn.group>
+        <x-btn style="outline" size="icon">
+            <x-heroicon-o-bold />
+        </x-btn>
+        <x-btn style="outline" size="icon">
+            <x-heroicon-o-italic />
+        </x-btn>
+        <x-btn style="outline" size="icon">
+            <x-heroicon-o-strikethrough />
+        </x-btn>
     </x-btn.group>
 
     <x-btn.group>
