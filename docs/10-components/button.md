@@ -133,16 +133,42 @@ Customize the button rounding by supplying any of the `rounded-` classes.
 
 ## Spinner
 
-Customize the button rounding by supplying any of the `rounded-` classes.
+Show a loading state by embedding the `x-spinner` component.
 
 ```blade-component-code
 <div class="flex justify-center gap-2">
     <x-btn style="outline" disabled>
         <x-spinner />
-        Loading
+        Processing payment...
     </x-btn>
     <x-btn style="outline" size="icon" disabled>
         <x-spinner />
     </x-btn>
+</div>
+```
+
+## Button Groups
+
+Join related buttons into a group by wrapping them in a `x-btn.group` component.
+
+```blade-component-code
+<div class="flex justify-center gap-2">
+    <x-btn.group>
+        <x-btn style="outline">Oldest</x-btn>
+        <x-btn style="outline">Newest</x-btn>
+        <x-btn style="outline">Top</x-btn>
+    </x-btn.group>
+
+    <x-btn.group>
+        <x-btn size="icon" style="outline">
+            <x-heroicon-o-bars-3-bottom-left />
+        </x-btn>
+        <x-btn size="icon" style="outline">
+            <x-heroicon-o-bars-3 />
+        </x-btn>
+        <x-btn size="icon" style="outline">
+            <x-heroicon-o-bars-3-bottom-right />
+        </x-btn>
+    </x-btn.group>
 </div>
 ```
