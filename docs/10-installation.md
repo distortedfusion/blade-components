@@ -71,23 +71,3 @@ Blade Colors is automatically installed with Blade Components. After installatio
 #### Theme customization
 
 Blade Components implements the ["default theme"](https://github.com/distortedfusion/blade-colors/blob/master/src/Themes/DefaultTheme.php) offered by [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started). You can customize this to your liking, for a detailed explanation please refer to the [theming](/docs/theming) documentation.
-
-## Publishing Configuration
-
-You can publish the package configuration using the following command:
-
-```bash
-php artisan vendor:publish --tag=blade-components-config
-```
-
-Publishing the package configuration allows you to disable or add components.
-
-## Publishing Views
-
-You can publish the package views using the following command:
-
-```bash
-php artisan vendor:publish --tag=blade-components-views
-```
-
-After publishing you can modify the views from your application's `/resources/views/vendor/blade-components` directory.

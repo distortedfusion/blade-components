@@ -15,6 +15,8 @@ return [
     | - Without: <x-btn></x-btn>
     | - With:    <x-df-btn></x-df-btn>
     |
+    | @see https://blade-components.com/docs/configuration#preventing-collisions
+    |
     */
 
     'prefix' => null,
@@ -26,6 +28,8 @@ return [
     |
     | All components, including their backing class, that should be
     | registered during runtime.
+    |
+    | @see https://blade-components.com/docs/configuration#publishing-configuration
     |
     */
 
