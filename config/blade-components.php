@@ -50,6 +50,7 @@ return [
 
         // Button...
         'btn' => 'blade-components::components.btn.index',
+        'btn.group' => 'blade-components::components.btn.group',
 
         // Badge...
         'badge' => 'blade-components::components.badge.index',

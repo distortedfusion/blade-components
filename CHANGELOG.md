@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- The the `x-spinner` component now has additional styles, including: `primary`, `success`, `info`, `warning` and `danger`.
-- The the `x-separator` component now has additional styles, including: `solid`, and `dashed`.
-- The the `x-separator` component now has support for arbitrary contents.
+- The `x-spinner` component now has additional styles, including: `primary`, `success`, `info`, `warning` and `danger`.
+- The `x-separator` component now has additional styles, including: `solid`, and `dashed`.
+- The `x-separator` component now has support for arbitrary contents.
+- The `x-btn.group` component has been added.
 
 ### Changed
 
