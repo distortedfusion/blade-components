@@ -7,10 +7,10 @@ use Illuminate\Support\Str;
     'w-full mx-auto',
 
     // Spacing...
-    'px-4 sm:px-6 lg:px-8' => $spacing === 'responsive' && $spacing !== 'none',
-    'px-8' => $spacing === 'lg' && $spacing !== 'none',
-    'px-6' => $spacing === 'md' && $spacing !== 'none',
-    'px-4' => $spacing === 'sm' && $spacing !== 'none',
+    '[:where(&)]:px-4 [:where(&)]:sm:px-6 [:where(&)]:lg:px-8' => $spacing === 'responsive' && $spacing !== 'none',
+    '[:where(&)]:px-8' => $spacing === 'lg' && $spacing !== 'none',
+    '[:where(&)]:px-6' => $spacing === 'md' && $spacing !== 'none',
+    '[:where(&)]:px-4' => $spacing === 'sm' && $spacing !== 'none',
 
     // Sizes...
     'max-w-full' => $size === 'full',
