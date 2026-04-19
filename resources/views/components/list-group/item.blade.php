@@ -14,7 +14,7 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
 ]) }}>
     @if(! is_null($href) || $button)
         {{-- hover-indicator --}}
-        <div class="absolute inset-x-1 inset-y-1 z-0 scale-95 bg-black/5 dark:bg-white/5 rounded opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></div>
+        <div class="absolute inset-x-1 inset-y-1 z-0 scale-95 bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)] rounded opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></div>
     @endif
 
     <div class="flex-grow min-w-0 relative z-10">
