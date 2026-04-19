@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added list group item style using `data-style` attribute.
+
+### Changed
+
+- Adjusted list group pill style spacing.
+
 ### Fixed
 
 - Updated transition property on buttons fixing outline blinking.
