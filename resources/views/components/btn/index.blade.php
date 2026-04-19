@@ -3,7 +3,7 @@
 use DistortedFusion\BladeComponents\BladeComponents;
 
 $class = [
-    'inline-flex items-center justify-center gap-x-1.5 shrink-0 transition-all',
+    'inline-flex items-center justify-center gap-x-1.5 shrink-0 transition-color',
     'text-sm/5 font-medium shadow-none',
 
     'hover:no-underline hover:outline-0',
