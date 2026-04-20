@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added list group item style using `data-style` attribute.
+- Added current `x-list-group.item` style attribute using `data-style`.
 
 ### Changed
 
-- Adjusted list group pill style spacing.
+- Adjusted `x-list-group` pill style spacing.
+- Adjusted `x-btn` outline styling.
 
 ### Fixed
 

@@ -49,17 +49,14 @@ $class = [
     'bg-[var(--secondary)] text-[var(--secondary-foreground)]' => in_array($style, ['secondary', 'ghost']),
     'hover:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
     'focus:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
-    'active:bg-[var(--secondary)]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'active:bg-[var(--secondary)]' => in_array($style, ['secondary', 'ghost']),
 
     // Ghost...
     'bg-transparent' => $style === 'ghost',
 
     // Outline...
-    'bg-[var(--background)] border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
-
-    'dark:bg-[color-mix(in_oklab,var(--input)_30%,transparent)]' => $style === 'outline',
-    'dark:hover:bg-[color-mix(in_oklab,var(--input)_70%,transparent)]' => $style === 'outline',
-    'dark:focus:bg-[color-mix(in_oklab,var(--input)_70%,transparent)]' => $style === 'outline',
+    'bg-[var(--input)] border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
+    'active:bg-[var(--input)]' => $style === 'outline',
 
     // Success...
     'bg-[color-mix(in_oklab,var(--success)_10%,transparent)] text-[var(--success-foreground)]' => $style === 'success',
