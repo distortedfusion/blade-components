@@ -16,7 +16,7 @@ $class = [
     'text-right' => $alignment === 'right',
 
     // Icons...
-    '[&_svg]:size-4',
+    '[&_svg:not([class*=size-])]:size-4',
 
     // Button sizes...
     'h-10' => $size === 'lg',
