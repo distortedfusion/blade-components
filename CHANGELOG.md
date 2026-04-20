@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjusted `x-btn` outline styling.
 - Allow svg size override in `x-btn`.
 - Less specific base font-size on `x-heading`.
+- Slimmer `x-card`, `x-card.body` and `x-card.footer` padding.
 
 ### Fixed
 
