@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjusted `x-list-group` pill style spacing.
 - Adjusted `x-btn` outline styling.
 - Allow svg size override in `x-btn`.
+- Less specific base font-size on `x-heading`.
 
 ### Fixed
 
