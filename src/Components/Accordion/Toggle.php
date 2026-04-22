@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeComponents\Components\Accordion;
 
 use DistortedFusion\BladeComponents\Components\Concerns\HasIndicatorIcon;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeComponents\Concerns;
 
 use DistortedFusion\BladeComponents\Components\Accordion\Toggle;

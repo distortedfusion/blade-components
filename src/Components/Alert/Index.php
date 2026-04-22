@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeComponents\Components\Alert;
 
 use Illuminate\View\Component;

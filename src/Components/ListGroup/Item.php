@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeComponents\Components\ListGroup;
 
 use DistortedFusion\BladeComponents\Components\Concerns\HasIndicatorIcon;
