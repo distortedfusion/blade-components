@@ -1,5 +1,5 @@
 @props(['style' => 'default'])
-<div data-slot="list-group" {{ $attributes->class([
+<div data-slot="list-group" data-style="{{ $style }}" {{ $attributes->class([
     'w-full flex flex-col rounded-[var(--radius)]',
 
     'bg-[var(--card)]' => $style === 'default',

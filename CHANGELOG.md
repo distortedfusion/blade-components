@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Moved the `data-style` attribute from `x-list-group.item` elements to the `x-list-group` component.
+
 ## [1.1.1] - 2026-04-22
 
 ### Fixed
