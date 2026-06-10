@@ -5,6 +5,7 @@ use Illuminate\View\ComponentAttributeBag;
     'px-2 py-1 border',
 
     'rounded-[var(--radius)]' => ! Str::contains($attributes->get('class'), ['rounded']),
+    '[[data-slot=card]>*]:rounded-none [[data-slot=card]>*]:-mx-px',
 
     'text-[var(--secondary-foreground)] border-[var(--border)]' => $style === 'default',
     'text-[var(--success-foreground)] bg-[color-mix(in_oklab,var(--success)_10%,var(--background))] border-[color-mix(in_oklab,var(--success)_50%,var(--background))]' => $style === 'success',
