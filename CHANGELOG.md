@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - The `x-stack` component has been added which can be used for stacking `x-card` and `x-alert` components.
+- Added `muted` style to the `x-card` component.
 
 ### Changed
 

@@ -8,18 +8,21 @@ use Illuminate\Support\Str;
     'py-4' => ! Str::contains($attributes->get('class'), ['p-', 'py-', 'pt-', 'pb-']),
 
     // Background / Foreground...
-    'bg-[var(--card)]' => ! Str::contains($attributes->get('class'), ['bg-']),
     'text-[var(--card-foreground)]' => ! Str::contains($attributes->get('class'), ['text-']),
 
     // Border...
     'border border-[var(--border)]' => ! Str::contains($attributes->get('class'), ['border-']),
 
     // Styles...
-    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--success)_50%,transparent)]' => $style === 'success',
-    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--info)_50%,transparent)]' => $style === 'info',
-    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--warning)_50%,transparent)]' => $style === 'warning',
-    'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--danger)_50%,transparent)]' => $style === 'danger',
-    'border-transparent' => $style === 'ghost',
+    'bg-[var(--card)]' => $style === 'default',
+    'bg-[var(--muted)]' => $style === 'muted',
+
+    'bg-[var(--card)] border-transparent' => $style === 'ghost',
+
+    'bg-[var(--card)] ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--success)_50%,transparent)]' => $style === 'success',
+    'bg-[var(--card)] ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--info)_50%,transparent)]' => $style === 'info',
+    'bg-[var(--card)] ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--warning)_50%,transparent)]' => $style === 'warning',
+    'bg-[var(--card)] ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--danger)_50%,transparent)]' => $style === 'danger',
 
     // Account for the padding element when used as a direct descendant of a `x-stack` component...
     // - Equals the gap-x class.
