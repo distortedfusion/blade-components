@@ -5,6 +5,8 @@ use Illuminate\View\ComponentAttributeBag;
     'px-2 py-1 border',
 
     'rounded-[var(--radius)]' => ! Str::contains($attributes->get('class'), ['rounded']),
+
+    // Reset border radius when used as a direct descendant of a `x-card` component...
     '[[data-slot=card]>*]:rounded-none [[data-slot=card]>*]:-mx-px',
 
     'text-[var(--secondary-foreground)] border-[var(--border)]' => $style === 'default',

@@ -21,6 +21,11 @@ use Illuminate\Support\Str;
     'ring-1 ring-offset-2 ring-offset-[var(--background)] ring-[color-mix(in_oklab,var(--danger)_50%,transparent)]' => $style === 'danger',
     'border-transparent' => $style === 'ghost',
 
+    // Account for the padding element when used as a direct descendant of a `x-stack` component...
+    // - Equals the gap-x class.
+    '[[data-slot=stack][data-order=asc]>*:not(:last-child)]:after:-mt-4',
+    '[[data-slot=stack][data-order=desc]>*:not(:last-child)]:before:-mb-4',
+
     // Avatars...
     '[&_[data-slot=avatar]]:ring-[var(--card)]',
 

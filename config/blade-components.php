@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use DistortedFusion\BladeComponents\Components;
 
 return [
@@ -79,6 +81,9 @@ return [
 
         // Separator...
         'separator' => 'blade-components::components.separator.index',
+
+        // Stack...
+        'stack' => 'blade-components::components.stack.index',
 
         // Loading indicators...
         'pulser' => 'blade-components::components.pulser.index',

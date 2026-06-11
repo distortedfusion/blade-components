@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- The `x-stack` component has been added which can be used for stacking `x-card` and `x-alert` components.
+
 ### Changed
 
 - The `x-alert` component can now be used as a direct decendant of a `x-card` component, this resets the alert border radius and overlaps the `x-card` border.
