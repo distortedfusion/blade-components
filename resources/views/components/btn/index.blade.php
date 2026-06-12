@@ -41,46 +41,46 @@ $class = [
 
     // Primary...
     'bg-[var(--primary)] text-[var(--primary-foreground)]' => $style === 'primary',
-    'hover:bg-[color-mix(in_oklab,var(--primary)_90%,transparent)]' => $style === 'primary',
-    'focus:bg-[color-mix(in_oklab,var(--primary)_90%,transparent)]' => $style === 'primary',
+    'hover:bg-[color-mix(in_oklab,var(--primary)_90%,var(--background))]' => $style === 'primary',
+    'focus:bg-[color-mix(in_oklab,var(--primary)_90%,var(--background))]' => $style === 'primary',
     'active:bg-[var(--primary)]' => $style === 'primary',
 
     // Secondary, Ghost and Outline...
     'bg-[var(--secondary)] text-[var(--secondary-foreground)]' => in_array($style, ['secondary', 'ghost']),
-    'hover:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
-    'focus:bg-[color-mix(in_oklab,var(--secondary)_70%,transparent)]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'hover:bg-[color-mix(in_oklab,var(--secondary)_80%,var(--background))]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'focus:bg-[color-mix(in_oklab,var(--secondary)_80%,var(--background))]' => in_array($style, ['secondary', 'ghost', 'outline']),
     'active:bg-[var(--secondary)]' => in_array($style, ['secondary', 'ghost']),
 
     // Ghost...
-    'bg-transparent' => $style === 'ghost',
+    'bg-transparent' => in_array($style, ['ghost', 'outline']),
 
     // Outline...
-    'bg-[var(--input)] border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
+    'border-[var(--border)] text-[var(--secondary-foreground)]' => $style === 'outline',
     'active:bg-[var(--input)]' => $style === 'outline',
 
     // Success...
-    'bg-[color-mix(in_oklab,var(--success)_10%,transparent)] text-[var(--success-foreground)]' => $style === 'success',
-    'hover:bg-[color-mix(in_oklab,var(--success)_20%,transparent)]' => $style === 'success',
-    'focus:bg-[color-mix(in_oklab,var(--success)_20%,transparent)]' => $style === 'success',
-    'active:bg-[color-mix(in_oklab,var(--success)_10%,transparent)]' => $style === 'success',
+    'bg-[color-mix(in_oklab,var(--success)_20%,var(--background))] text-[var(--success-foreground)]' => $style === 'success',
+    'hover:bg-[color-mix(in_oklab,var(--success)_40%,var(--background))]' => $style === 'success',
+    'focus:bg-[color-mix(in_oklab,var(--success)_40%,var(--background))]' => $style === 'success',
+    'active:bg-[color-mix(in_oklab,var(--success)_20%,var(--background))]' => $style === 'success',
 
     // Info...
-    'bg-[color-mix(in_oklab,var(--info)_10%,transparent)] text-[var(--info-foreground)]' => $style === 'info',
-    'hover:bg-[color-mix(in_oklab,var(--info)_20%,transparent)]' => $style === 'info',
-    'focus:bg-[color-mix(in_oklab,var(--info)_20%,transparent)]' => $style === 'info',
-    'active:bg-[color-mix(in_oklab,var(--info)_10%,transparent)]' => $style === 'info',
+    'bg-[color-mix(in_oklab,var(--info)_20%,var(--background))] text-[var(--info-foreground)]' => $style === 'info',
+    'hover:bg-[color-mix(in_oklab,var(--info)_40%,var(--background))]' => $style === 'info',
+    'focus:bg-[color-mix(in_oklab,var(--info)_40%,var(--background))]' => $style === 'info',
+    'active:bg-[color-mix(in_oklab,var(--info)_20%,var(--background))]' => $style === 'info',
 
     // Warning...
-    'bg-[color-mix(in_oklab,var(--warning)_10%,transparent)] text-[var(--warning-foreground)]' => $style === 'warning',
-    'hover:bg-[color-mix(in_oklab,var(--warning)_20%,transparent)]' => $style === 'warning',
-    'focus:bg-[color-mix(in_oklab,var(--warning)_20%,transparent)]' => $style === 'warning',
-    'active:bg-[color-mix(in_oklab,var(--warning)_10%,transparent)]' => $style === 'warning',
+    'bg-[color-mix(in_oklab,var(--warning)_20%,var(--background))] text-[var(--warning-foreground)]' => $style === 'warning',
+    'hover:bg-[color-mix(in_oklab,var(--warning)_40%,var(--background))]' => $style === 'warning',
+    'focus:bg-[color-mix(in_oklab,var(--warning)_40%,var(--background))]' => $style === 'warning',
+    'active:bg-[color-mix(in_oklab,var(--warning)_20%,var(--background))]' => $style === 'warning',
 
     // Danger...
-    'bg-[color-mix(in_oklab,var(--danger)_10%,transparent)] text-[var(--danger-foreground)]' => $style === 'danger',
-    'hover:bg-[color-mix(in_oklab,var(--danger)_20%,transparent)]' => $style === 'danger',
-    'focus:bg-[color-mix(in_oklab,var(--danger)_20%,transparent)]' => $style === 'danger',
-    'active:bg-[color-mix(in_oklab,var(--danger)_10%,transparent)]' => $style === 'danger',
+    'bg-[color-mix(in_oklab,var(--danger)_20%,var(--background))] text-[var(--danger-foreground)]' => $style === 'danger',
+    'hover:bg-[color-mix(in_oklab,var(--danger)_40%,var(--background))]' => $style === 'danger',
+    'focus:bg-[color-mix(in_oklab,var(--danger)_40%,var(--background))]' => $style === 'danger',
+    'active:bg-[color-mix(in_oklab,var(--danger)_20%,var(--background))]' => $style === 'danger',
 
     // Disabled...
     'disabled:pointer-events-none disabled:opacity-50',
