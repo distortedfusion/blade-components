@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-06-12
+
 ### Added
 
 - The `x-stack` component has been added which can be used for stacking `x-card` and `x-alert` components.
