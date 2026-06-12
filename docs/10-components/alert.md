@@ -35,7 +35,7 @@ The alert component uses the [blade-ui-kit/blade-heroicons](https://github.com/b
 | `warning` | `heroicon-o-exclamation-circle` |
 | `danger`  | `heroicon-o-x-circle`           |
 
-You can customize the default icons globally trough the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
 
 The `setDefaultAlertIcons()` or `setDefaultIcons()` method takes an array of icon definitions.
 

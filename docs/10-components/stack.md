@@ -1,6 +1,6 @@
 ---
 title: Stack
-description: Visually combine components into a stack in accending or descending order.
+description: Visually combine components into a stack in ascending or descending order.
 short-description: Visually combine components into a stack.
 icon: fasl-layer-group
 ---

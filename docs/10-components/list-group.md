@@ -44,7 +44,7 @@ icon: fasl-table-list
 
 The list group component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
 
-You can customize the default icons globally trough the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
 
 ```php
 <?php
@@ -149,7 +149,7 @@ Use list group items as links by supplying the `href=""` attribute. Optionally, 
 
 ## Buttons
 
-A list group items can be used as a `<button>` by supplying the `boolean` boolean attribute or by using the `x-list-group.item-btn` component alias.
+List group items can be used as a `<button>` by supplying the `button` boolean attribute or by using the `x-list-group.item-btn` component alias.
 
 ```blade-component-code
 <x-list-group>

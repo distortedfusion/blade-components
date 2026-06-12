@@ -5,7 +5,7 @@ description: All Blade Forms components are designed to work as close to native 
 
 ## Laravel Requests
 
-For normal Laravel request you define your form like any other HTML form:
+For normal Laravel requests you define your form like any other HTML form:
 
 ```html
 <x-form action="/" method="POST">
@@ -62,7 +62,7 @@ To resolve this you can customize the validation error message key by supplying 
 
 ### Hide Error Messages
 
-By default all components except radio's show any validation error messages. To disabled this behavior you can supply the `show-errors="false"` boolean attribute to disable error messages.
+By default all components except radios show any validation error messages. To disabled this behavior you can supply the `show-errors="false"` boolean attribute to disable error messages.
 
 ```html
 <x-form-input name="description" label="Description" :show-errors="false" />

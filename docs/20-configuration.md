@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: Exclude components trough configuration, prevent collisions, and customize components by publishing their views.
+description: Exclude components through configuration, prevent collisions, and customize components by publishing their views.
 ---
 
 ## Publishing configuration
@@ -44,7 +44,7 @@ return [
 
 ## Publishing views
 
-If you would like to make more impactful modifications to a component, the recommended approach is to publish the components view file to your application.
+If you would like to make more impactful modifications to a component, the recommended approach is to publish the component's view file to your application.
 
 You can publish the packaged views using the following command:
 

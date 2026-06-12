@@ -149,7 +149,7 @@ class AppServiceProvider extends ServiceProvider
 If you're planning on supporting multiple themes at once, themes should be added using a custom selector. When using a custom selector all registered themes are available simultaneously and wont require a complete page reload when switching between themes.
 
 > [!NOTE]
-> Themes applied trough custom selectors do not require to implement all available CSS variables and could be used to stack CSS variables across themes.
+> Themes applied through custom selectors do not require to implement all available CSS variables and could be used to stack CSS variables across themes.
 
 To register a theme using a custom selector you need to call the `BladeColors::registerTheme()` method from your `AppServiceProvider`.
 
