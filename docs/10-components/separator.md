@@ -38,7 +38,7 @@ icon: fasl-distribute-spacing-vertical
 Control the separator style by supplying the `style=""` attribute.
 
 ```blade-component-code
-<div class="flex flex-col gap-8">
+<div class="grid gap-8">
     <x-separator />
 
     <x-separator style="dashed" />
@@ -50,7 +50,7 @@ Control the separator style by supplying the `style=""` attribute.
 Add text or icons to the separator for a more descriptive element.
 
 ```blade-component-code
-<div class="flex flex-col gap-8">
+<div class="grid gap-8">
     <x-separator>
         <x-paragraph size="xs" style="muted">Optional</x-paragraph>
     </x-separator>
