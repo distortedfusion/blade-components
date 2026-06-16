@@ -25,6 +25,15 @@ class LayoutServiceProvider extends ServiceProvider
         $this->configureBladeComponents();
     }
 
+    private function configureBladeComponents(): void
+    {
+        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
+            foreach (config('blade-components.components', []) as $alias => $component) {
+                $blade->component($component, BladeComponents::componentAliasWithPrefix($alias));
+            }
+        });
+    }
+
     /**
      * Boot the service provider.
      *
@@ -34,6 +43,10 @@ class LayoutServiceProvider extends ServiceProvider
     {
         $this->registerResources();
         $this->offerPublishing();
+
+        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
+            AssetManager::boot();
+        });
     }
 
     private function registerResources(): void
@@ -52,14 +65,5 @@ class LayoutServiceProvider extends ServiceProvider
                 DF_BC_PATH.'/resources/views' => resource_path('views/vendor/blade-components'),
             ], 'blade-components-views');
         }
-    }
-
-    private function configureBladeComponents(): void
-    {
-        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            foreach (config('blade-components.components', []) as $alias => $component) {
-                $blade->component($component, BladeComponents::componentAliasWithPrefix($alias));
-            }
-        });
     }
 }

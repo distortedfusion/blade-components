@@ -7,6 +7,7 @@ namespace DistortedFusion\BladeComponents;
 use DistortedFusion\BladeComponents\Concerns\ChecksClass;
 use DistortedFusion\BladeComponents\Concerns\ManagesAccordionIndicatorIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesAlertIcons;
+use DistortedFusion\BladeComponents\Concerns\ManagesAssets;
 use DistortedFusion\BladeComponents\Concerns\ManagesAvatarIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesBreadcrumbIcons;
 use DistortedFusion\BladeComponents\Concerns\ManagesListGroupItemIndicatorIcon;
@@ -14,6 +15,7 @@ use DistortedFusion\BladeComponents\Concerns\ManagesListGroupItemIndicatorIcon;
 class BladeComponents
 {
     use ChecksClass;
+    use ManagesAssets;
     use ManagesAlertIcons;
     use ManagesAvatarIcon;
     use ManagesBreadcrumbIcons;
