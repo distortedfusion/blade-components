@@ -30,8 +30,8 @@ class AssetManager
 <script$nonce>
     window.DDFSN = {
         applyAppearance (appearance) {
-            let applyClass = (class) => document.documentElement.classList.add(class)
-            let removeClass = (class) => document.documentElement.classList.remove(class)
+            let applyClass = (className) => document.documentElement.classList.add(className);
+            let removeClass = (className) => document.documentElement.classList.remove(className);
 
             if (appearance === 'system') {
                 let media = window.matchMedia('(prefers-color-scheme: dark)')
@@ -52,7 +52,7 @@ class AssetManager
     }
 
     window.DDFSN.applyAppearance(window.localStorage.getItem('ddfsn.appearance') || 'system')
-</script$>
+</script>
 HTML;
     }
 }
