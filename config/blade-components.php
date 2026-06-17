@@ -57,7 +57,7 @@ return [
         // Badge...
         'badge' => 'blade-components::components.badge.index',
 
-        // Breadcrumbs...
+        // Breadcrumb...
         'breadcrumb' => 'blade-components::components.breadcrumb.index',
         'breadcrumb.item' => 'blade-components::components.breadcrumb.item',
         'breadcrumb.ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
@@ -70,7 +70,7 @@ return [
         'card.title' => 'blade-components::components.card.title',
         'card' => 'blade-components::components.card.index',
 
-        // Layout containers...
+        // Container...
         'container' => 'blade-components::components.layout.container',
 
         // Empty...
@@ -84,6 +84,15 @@ return [
 
         // Stack...
         'stack' => 'blade-components::components.stack.index',
+
+        // Table...
+        'table' => 'blade-components::components.table.index',
+        'table-header' => 'blade-components::components.table.header',
+        'table-head' => 'blade-components::components.table.head',
+        'table-body' => 'blade-components::components.table.body',
+        'table-row' => 'blade-components::components.table.row',
+        'table-cell' => 'blade-components::components.table.cell',
+        'table-caption' => 'blade-components::components.table.caption',
 
         // Loading indicators...
         'pulser' => 'blade-components::components.pulser.index',
