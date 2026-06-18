@@ -40,8 +40,8 @@ icon: fasl-window-maximize
 
 #### x-card
 
-| Attribute | Default   | Description                                                                      |
-| --------- | --------- | -------------------------------------------------------------------------------- |
+| Attribute | Default   | Description                                                                               |
+| --------- | --------- | ----------------------------------------------------------------------------------------- |
 | `style`   | `default` | `string`<br>Possible values `default`, `ghost`, `success`, `info`, `warning` or `danger`. |
 
 ## Style

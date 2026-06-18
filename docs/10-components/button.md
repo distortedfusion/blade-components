@@ -27,7 +27,7 @@ icon: fasl-circle-dot
 | `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `outline`, `ghost`, `success`, `info`, `warning` or `danger`. |
 | `size`      | `default` | `string`<br>Possible values `default`, `sm`, `lg`, `icon`, `icon-sm` or `icon-lg`.                                |
 | `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.               |
-| `alignment` | `center`  | `string`<br>Controls text alignment on the button label. Possible values `left`, `center` or `right`.             |
+| `alignment` | `center`  | `string`<br>Controls text alignment of the button label. Possible values `left`, `center` or `right`.             |
 | `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                                         |
 
 ## Cursor
