@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-06-18
+
 ### Added
 
-- Added various `table` related components.
+- The `x-table` component has been added, together with various `table` related components.
 
 ### Changed
 
