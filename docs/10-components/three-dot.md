@@ -17,12 +17,6 @@ icon: fasl-ellipsis
 <x-three-dot />
 ```
 
-### Component API
-
-| Attribute | Default   | Description                                                                                   |
-| --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
-
 ## Style
 
 Control the three-dot style by supplying the `style=""` attribute.
@@ -36,3 +30,9 @@ Control the three-dot style by supplying the `style=""` attribute.
     <x-three-dot style="danger" />
 </div>
 ```
+
+## Component API
+
+| Attribute | Default   | Description                                                                      |
+| --------- | --------- | -------------------------------------------------------------------------------- |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |

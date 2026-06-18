@@ -20,16 +20,6 @@ icon: fasl-circle-dot
 <x-btn>Button</x-btn>
 ```
 
-### Component API
-
-| Attribute   | Default   | Description                                                                                                       |
-| ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `outline`, `ghost`, `success`, `info`, `warning` or `danger`. |
-| `size`      | `default` | `string`<br>Possible values `default`, `sm`, `lg`, `icon`, `icon-sm` or `icon-lg`.                                |
-| `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.               |
-| `alignment` | `center`  | `string`<br>Controls text alignment of the button label. Possible values `left`, `center` or `right`.             |
-| `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                                         |
-
 ## Cursor
 
 As of Tailwind v4 the default cursor behavior for buttons has [switched](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) from `cursor: pointer` to `cursor: default`.
@@ -187,3 +177,15 @@ Join related buttons into a group by wrapping them in a `x-btn.group` component.
     </x-btn.group>
 </div>
 ```
+
+## Component API
+
+#### x-btn
+
+| Attribute   | Default   | Description                                                                                                       |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| `style`     | `primary` | `string`<br>Possible values `primary`, `secondary`, `outline`, `ghost`, `success`, `info`, `warning` or `danger`. |
+| `size`      | `default` | `string`<br>Possible values `default`, `sm`, `lg`, `icon`, `icon-sm` or `icon-lg`.                                |
+| `href`      | `null`    | `string` &#124;&#124; `null`<br>When set, renders an `<a>` element instead of a `<button>` element.               |
+| `alignment` | `center`  | `string`<br>Controls text alignment of the button label. Possible values `left`, `center` or `right`.             |
+| `disabled`  | `false`   | `bool`<br>Whether the button is disabled.                                                                         |

@@ -17,13 +17,6 @@ icon: fasl-bars-progress
 <x-progress-bar progress="75" />
 ```
 
-### Component API
-
-| Attribute  | Default | Description                                                                 |
-| ---------- | ------- | --------------------------------------------------------------------------- |
-| `progress` | `0`     | `int`<br>Control the progress bar fill.                                     |
-| `size`     | `default`  | `string`<br>Possible values `default`, `sm`, or `lg`. |
-
 ## Progress
 
 Control the progress bar fill by supplying the `progress=""` attribute.
@@ -43,3 +36,10 @@ Control the progress bar size by supplying the `size=""` attribute.
     <x-progress-bar progress="75" size="lg" />
 </div>
 ```
+
+## Component API
+
+| Attribute  | Default   | Description                                           |
+| ---------- | --------- | ----------------------------------------------------- |
+| `progress` | `0`       | `int`<br>Control the progress bar fill.               |
+| `size`     | `default` | `string`<br>Possible values `default`, `sm`, or `lg`. |

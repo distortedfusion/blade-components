@@ -36,14 +36,6 @@ icon: fasl-window-maximize
 </x-card>
 ```
 
-### Component API
-
-#### x-card
-
-| Attribute | Default   | Description                                                                               |
-| --------- | --------- | ----------------------------------------------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, `ghost`, `success`, `info`, `warning` or `danger`. |
-
 ## Style
 
 Control the card style by supplying the `style=""` attribute.
@@ -214,3 +206,11 @@ Cards will automatically modify the `x-list-group` component styling to match th
     </x-list-group>
 </x-card>
 ```
+
+## Component API
+
+#### x-card
+
+| Attribute | Default   | Description                                                                                        |
+| --------- | --------- | -------------------------------------------------------------------------------------------------- |
+| `style`   | `default` | `string`<br>Possible values `default`, `muted`, `ghost`, `success`, `info`, `warning` or `danger`. |

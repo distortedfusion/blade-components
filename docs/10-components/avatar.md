@@ -21,38 +21,6 @@ icon: fasl-aperture
 <x-avatar />
 ```
 
-### Component API
-
-#### x-avatar
-
-| Attribute | Default           | Description                                                                                                                                              |
-| --------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src`     | `null`            | `string` &#124;&#124; `null`<br>The image source.                                                                                                        |
-| `srcset`  | `null`            | `string` &#124;&#124; `null`<br>The image source set, used for [responsive images](https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images). |
-| `alt`     | `null`            | `string` &#124;&#124; `null`<br>The image alternate text.                                                                                                |
-| `size`    | `default`         | `string`<br>Possible values `default`, `xs`, `sm` or `lg`.                                                                                               |
-| `icon`    | `heroicon-o-user` | `string` &#124;&#124; `null`                                                                                                                             |
-
-### Default Icons
-
-The avatar component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
-
-You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
-
-```php
-<?php
-
-use DistortedFusion\BladeComponents\BladeComponents;
-use DistortedFusion\BladeComponents\Components\Avatar\Index as Avatar;
-
-BladeComponents::defaultAvatarIcon();
-BladeComponents::setDefaultAvatarIcon(icon: 'heroicon-o-user');
-
-Avatar::defaultIcon();
-Avatar::setDefaultIcon(icon: 'heroicon-o-user');
-```
-
-
 ## Image
 
 Show an image by supplying the `src=""` attribute. Optionally add support for [responsive images](https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images) by supplying the `srcset=""` attribute.
@@ -121,3 +89,34 @@ Stack multiple avatars by wrapping them in a `<x-avatar.stack>` component.
     </x-avatar.stack>
 </div>
 ```
+
+## Default Icons
+
+The avatar component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
+
+You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\Avatar\Index as Avatar;
+
+BladeComponents::defaultAvatarIcon();
+BladeComponents::setDefaultAvatarIcon(icon: 'heroicon-o-user');
+
+Avatar::defaultIcon();
+Avatar::setDefaultIcon(icon: 'heroicon-o-user');
+```
+
+## Component API
+
+#### x-avatar
+
+| Attribute | Default           | Description                                                                                                                                              |
+| --------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src`     | `null`            | `string` &#124;&#124; `null`<br>The image source.                                                                                                        |
+| `srcset`  | `null`            | `string` &#124;&#124; `null`<br>The image source set, used for [responsive images](https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images). |
+| `alt`     | `null`            | `string` &#124;&#124; `null`<br>The image alternate text.                                                                                                |
+| `size`    | `default`         | `string`<br>Possible values `default`, `xs`, `sm` or `lg`.                                                                                               |
+| `icon`    | `heroicon-o-user` | `string` &#124;&#124; `null`                                                                                                                             |

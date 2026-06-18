@@ -32,14 +32,6 @@ icon: fasl-square-dashed
     description="You haven't created any projects yet." />
 ```
 
-### Component API
-
-| Attribute     | Default | Description                                                                 |
-| ------------- | ------- | --------------------------------------------------------------------------- |
-| `title`       | `void`  | `string`<br>Controls the heading of the empty state.                        |
-| `description` | `null`  | `string`<br>Optional description after the heading.                         |
-| `icon`        | `null`  | `string`<br>When set, adds a `<x-layout.icon` component before the heading. |
-
 ## Custom Description Markup
 
 Instead of setting the `description` attribute, which will render its contents within a `<x-paragraph` component, the `description` slot can be used for custom markup.
@@ -104,3 +96,13 @@ Instead of setting the `icon` attribute, which will use a `<x-layout.icon` compo
     </x-paragraph>
 </x-empty>
 ```
+
+## Component API
+
+#### x-empty
+
+| Attribute     | Default | Description                                                                 |
+| ------------- | ------- | --------------------------------------------------------------------------- |
+| `title`       | `void`  | `string`<br>Controls the heading of the empty state.                        |
+| `description` | `null`  | `string`<br>Optional description after the heading.                         |
+| `icon`        | `null`  | `string`<br>When set, adds a `<x-layout.icon` component before the heading. |

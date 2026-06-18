@@ -67,48 +67,6 @@ icon: fasl-square-list
 </x-accordion>
 ```
 
-### Component API
-
-#### x-accordion
-
-| Attribute    | Default | Description                                                      |
-| ------------ | ------- | ---------------------------------------------------------------- |
-| `exclusive`  | `false` | `bool`<br>Enforce that only a single item is expanded at a time. |
-| `transition` | `true`  | `bool`<br>Enable or disable transitions during item expansion.   |
-
-#### x-accordion.title
-
-| Attribute       | Default   | Description                                                                           |
-| --------------- | --------- | ------------------------------------------------------------------------------------- |
-| `size`          | `default` | `string`<br>Possible values `default`, `xs`, `sm` or `lg`                             |
-| `indicatorIcon` | `null`    | `string` &#124;&#124; `null`<br>The component name for an alternative indicator icon. |
-
-
-#### x-accordion.item
-
-| Attribute  | Default | Description                                               |
-| ---------- | ------- | --------------------------------------------------------- |
-| `expanded` | `false` | `bool`<br>Control the default state of an accordion item. |
-
-### Default Icons
-
-The accordion component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
-
-You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
-
-```php
-<?php
-
-use DistortedFusion\BladeComponents\BladeComponents;
-use DistortedFusion\BladeComponents\Components\Accordion\Toggle;
-
-BladeComponents::defaultAccordionIndicatorIcon();
-BladeComponents::setDefaultAccordionIndicatorIcon(icon: 'heroicon-o-chevron-down');
-
-Toggle::defaultIndicatorIcon();
-Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
-```
-
 ## Exclusive
 
 Enforce that only a single item is expanded at a time by supplying the `exclusive` attribute on the `x-accordion` component.
@@ -246,3 +204,45 @@ Change the indicator icon by supplying the `indicatorIcon` attribute on the `x-a
     </x-accordion.item>
 </x-accordion>
 ```
+
+## Default Icons
+
+The accordion component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
+
+You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\Accordion\Toggle;
+
+BladeComponents::defaultAccordionIndicatorIcon();
+BladeComponents::setDefaultAccordionIndicatorIcon(icon: 'heroicon-o-chevron-down');
+
+Toggle::defaultIndicatorIcon();
+Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
+```
+
+## Component API
+
+#### x-accordion
+
+| Attribute    | Default | Description                                                      |
+| ------------ | ------- | ---------------------------------------------------------------- |
+| `exclusive`  | `false` | `bool`<br>Enforce that only a single item is expanded at a time. |
+| `transition` | `true`  | `bool`<br>Enable or disable transitions during item expansion.   |
+
+#### x-accordion.title
+
+| Attribute       | Default   | Description                                                                           |
+| --------------- | --------- | ------------------------------------------------------------------------------------- |
+| `size`          | `default` | `string`<br>Possible values `default`, `xs`, `sm` or `lg`                             |
+| `indicatorIcon` | `null`    | `string` &#124;&#124; `null`<br>The component name for an alternative indicator icon. |
+
+
+#### x-accordion.item
+
+| Attribute  | Default | Description                                               |
+| ---------- | ------- | --------------------------------------------------------- |
+| `expanded` | `false` | `bool`<br>Control the default state of an accordion item. |

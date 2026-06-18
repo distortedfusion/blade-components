@@ -26,13 +26,6 @@ icon: fasl-distribute-spacing-vertical
 <x-separator />
 ```
 
-### Component API
-
-| Attribute  | Default | Description                                            |
-| ---------- | ------- | ------------------------------------------------------ |
-| `style`    | `solid` | `string`<br>Possible values `solid` or `dashed`.       |
-| `vertical` | `false` | `bool`<br>Determines the orientation of the separator. |
-
 ## Style
 
 Control the separator style by supplying the `style=""` attribute.
@@ -76,3 +69,10 @@ Separate contents with a vertical separator when horizontally stacked by supplyi
     </x-btn>
 </div>
 ```
+
+## Component API
+
+| Attribute  | Default | Description                                            |
+| ---------- | ------- | ------------------------------------------------------ |
+| `style`    | `solid` | `string`<br>Possible values `solid` or `dashed`.       |
+| `vertical` | `false` | `bool`<br>Determines the orientation of the separator. |

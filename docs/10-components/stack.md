@@ -77,13 +77,6 @@ icon: fasl-layer-group
 </x-stack>
 ```
 
-### Component API
-
-| Attribute | Default | Description                          |
-| --------- | ------- | ------------------------------------ |
-| `reverse` | `false` | `bool`<br>Reverse the display order. |
-
-
 ## Reversing the stacking order
 
 Components within a stack overlap based on the DOM order. By default this would result in the second element overlapping the first, the third element the second, and so on.
@@ -115,3 +108,9 @@ This can visually be reversed where each element is overlapped by the previous e
 The `x-stack` component is intended to be used with the `x-card` and `x-alert` components, but it's not limited to just those components.
 
 When elements are added to the `x-stack` component, overlap is automatically accounted for by adding a spacer element using the `::before` and `::after` [pseudo elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::before). Depending on the element this might conflict with existing [flexbox styling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). To resolve this you can simply wrap the element and move the flexbox styling one layer deeper.
+
+## Component API
+
+| Attribute | Default | Description                          |
+| --------- | ------- | ------------------------------------ |
+| `reverse` | `false` | `bool`<br>Reverse the display order. |

@@ -17,13 +17,6 @@ icon: fasl-spinner
 <x-spinner />
 ```
 
-### Component API
-
-| Attribute | Default   | Description                                                                      |
-| --------- | --------- | -------------------------------------------------------------------------------- |
-| `size`    | `default` | `string`<br>Possible values `default`, `sm`, or `lg`.                            |
-| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
-
 ## Size
 
 Control the spinner size by supplying the `size=""` attribute.
@@ -49,3 +42,10 @@ Control the spinner style by supplying the `style=""` attribute.
     <x-spinner style="danger" />
 </div>
 ```
+
+## Component API
+
+| Attribute | Default   | Description                                                                      |
+| --------- | --------- | -------------------------------------------------------------------------------- |
+| `size`    | `default` | `string`<br>Possible values `default`, `sm`, or `lg`.                            |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |

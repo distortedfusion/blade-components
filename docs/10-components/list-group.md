@@ -32,33 +32,6 @@ icon: fasl-table-list
 </x-list-group>
 ```
 
-### Component API
-
-#### x-list-group
-
-| Attribute | Default   | Description                                        |
-| --------- | --------- | -------------------------------------------------- |
-| `style`   | `default` | `string`<br>Possible values `default`, or `pills`. |
-
-### Default Icons
-
-The list group component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
-
-You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
-
-```php
-<?php
-
-use DistortedFusion\BladeComponents\BladeComponents;
-use DistortedFusion\BladeComponents\Components\ListGroup\Item;
-
-BladeComponents::defaultListGroupItemIndicatorIcon();
-BladeComponents::setDefaultListGroupItemIndicatorIcon(icon: 'heroicon-o-chevron-right');
-
-Item::defaultIndicatorIcon();
-Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
-```
-
 ## Style
 
 Control the list group style by supplying the style="" attribute.
@@ -137,19 +110,19 @@ Use list group items as links by supplying the `href=""` attribute. Optionally, 
 
 ```blade-component-code
 <x-list-group>
-    <x-list-group.item-link href="https://distortedfusion.com" target="_blank" title="Distorted Fusion">
+    <x-list-group.item href="https://distortedfusion.com" target="_blank" title="Distorted Fusion">
         https://distortedfusion.com
-    </x-list-group.item-link>
+    </x-list-group.item>
 
-    <x-list-group.item-link href="https://devnomads.nl" target="_blank" title="DevNomads">
+    <x-list-group.item href="https://devnomads.nl" target="_blank" title="DevNomads">
         https://devnomads.nl
-    </x-list-group.item-link>
+    </x-list-group.item>
 </x-list-group>
 ```
 
 ## Buttons
 
-List group items can be used as a `<button>` by supplying the `button` boolean attribute or by using the `x-list-group.item-btn` component alias.
+List group items can be used as a `<button>` by supplying the `button` boolean attribute.
 
 ```blade-component-code
 <x-list-group>
@@ -162,3 +135,37 @@ List group items can be used as a `<button>` by supplying the `button` boolean a
     </x-list-group.item>
 </x-list-group>
 ```
+
+## Default Icons
+
+The list group component uses the [blade-ui-kit/blade-heroicons](https://github.com/blade-ui-kit/blade-heroicons) icon set by default.
+
+You can customize the default icons globally through the `BladeComponents` service or via the component directly from a service provider's `boot()` method, or middleware.
+
+```php
+<?php
+
+use DistortedFusion\BladeComponents\BladeComponents;
+use DistortedFusion\BladeComponents\Components\ListGroup\Item;
+
+BladeComponents::defaultListGroupItemIndicatorIcon();
+BladeComponents::setDefaultListGroupItemIndicatorIcon(icon: 'heroicon-o-chevron-right');
+
+Item::defaultIndicatorIcon();
+Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
+```
+
+## Component API
+
+#### x-list-group
+
+| Attribute | Default   | Description                                        |
+| --------- | --------- | -------------------------------------------------- |
+| `style`   | `default` | `string`<br>Possible values `default`, or `pills`. |
+
+#### x-list-group.item
+
+| Attribute | Default | Description                                       |
+| --------- | ------- | ------------------------------------------------- |
+| `button`  | `false` | `bool`<br>Renders the element as a `button`.      |
+| `href`    | `null`  | `string`<br>When set, makes the element linkable. |

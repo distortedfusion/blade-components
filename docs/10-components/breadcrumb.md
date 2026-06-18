@@ -40,3 +40,12 @@ icon: fasl-route
     </x-breadcrumb.item>
 </x-breadcrumb>
 ```
+
+## Component API
+
+#### x-breadcrumb.item
+
+| Attribute | Default | Description                                       |
+| --------- | ------- | ------------------------------------------------- |
+| `active`  | `false` | `bool`<br>Controls the active state.              |
+| `href`    | `null`  | `string`<br>When set, makes the element linkable. |

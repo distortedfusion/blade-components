@@ -17,13 +17,6 @@ icon: fasl-image-user
 <x-layout.icon icon="heroicon-o-cube-transparent" />
 ```
 
-### Component API
-
-| Attribute | Default   | Description                                                      |
-| --------- | --------- | ---------------------------------------------------------------- |
-| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary` or `outline`. |
-| `size`    | `default` | `string`<br>Possible values `default`, `xs`, `sm`, or `lg`.      |
-
 ## Style
 
 Control the icon style by supplying the `style=""` attribute.
@@ -48,3 +41,12 @@ Control the icon size by supplying the `size=""` attribute.
     <x-layout.icon icon="heroicon-o-cube-transparent" size="lg" />
 </div>
 ```
+
+## Component API
+
+#### x-layout.icon
+
+| Attribute | Default   | Description                                                      |
+| --------- | --------- | ---------------------------------------------------------------- |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary` or `outline`. |
+| `size`    | `default` | `string`<br>Possible values `default`, `xs`, `sm`, or `lg`.      |

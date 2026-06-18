@@ -17,12 +17,6 @@ icon: fasl-radar
 <x-pulser />
 ```
 
-### Component API
-
-| Attribute | Default   | Description                                                                                   |
-| --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |
-
 ## Style
 
 Control the pulser style by supplying the `style=""` attribute.
@@ -36,3 +30,9 @@ Control the pulser style by supplying the `style=""` attribute.
     <x-pulser style="danger" />
 </div>
 ```
+
+## Component API
+
+| Attribute | Default   | Description                                                                      |
+| --------- | --------- | -------------------------------------------------------------------------------- |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `success`, `info`, `warning` or `danger`. |

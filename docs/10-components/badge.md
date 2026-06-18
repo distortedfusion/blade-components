@@ -17,13 +17,6 @@ icon: fasl-tag
 <x-badge>Badge</x-badge>
 ```
 
-### Component API
-
-| Attribute | Default   | Description                                                                                   |
-| --------- | --------- | --------------------------------------------------------------------------------------------- |
-| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary`, `success`, `info`, `warning` or `danger`. |
-| `size`    | `default` | `string`<br>Possible values `default`, or `sm`.                                               |
-
 ## Size
 
 Control the badge size by supplying the `size=""` attribute.
@@ -63,3 +56,12 @@ You can control the icon per badge instance by supplying the `icon=""` attribute
     </x-badge>
 </div>
 ```
+
+## Component API
+
+#### x-badge
+
+| Attribute | Default   | Description                                                                                   |
+| --------- | --------- | --------------------------------------------------------------------------------------------- |
+| `style`   | `primary` | `string`<br>Possible values `primary`, `secondary`, `success`, `info`, `warning` or `danger`. |
+| `size`    | `default` | `string`<br>Possible values `default`, or `sm`.                                               |
