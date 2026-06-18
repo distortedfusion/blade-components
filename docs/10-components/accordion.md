@@ -226,14 +226,14 @@ Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
 
 ## Component API
 
-#### x-accordion
+### x-accordion
 
 | Attribute    | Default | Description                                                      |
 | ------------ | ------- | ---------------------------------------------------------------- |
 | `exclusive`  | `false` | `bool`<br>Enforce that only a single item is expanded at a time. |
 | `transition` | `true`  | `bool`<br>Enable or disable transitions during item expansion.   |
 
-#### x-accordion.title
+### x-accordion.title
 
 | Attribute       | Default   | Description                                                                           |
 | --------------- | --------- | ------------------------------------------------------------------------------------- |
@@ -241,7 +241,7 @@ Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
 | `indicatorIcon` | `null`    | `string` &#124;&#124; `null`<br>The component name for an alternative indicator icon. |
 
 
-#### x-accordion.item
+### x-accordion.item
 
 | Attribute  | Default | Description                                               |
 | ---------- | ------- | --------------------------------------------------------- |

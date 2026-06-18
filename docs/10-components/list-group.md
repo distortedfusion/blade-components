@@ -157,13 +157,13 @@ Item::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-right');
 
 ## Component API
 
-#### x-list-group
+### x-list-group
 
 | Attribute | Default   | Description                                        |
 | --------- | --------- | -------------------------------------------------- |
 | `style`   | `default` | `string`<br>Possible values `default`, or `pills`. |
 
-#### x-list-group.item
+### x-list-group.item
 
 | Attribute | Default | Description                                       |
 | --------- | ------- | ------------------------------------------------- |

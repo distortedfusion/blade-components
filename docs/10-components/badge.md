@@ -59,7 +59,7 @@ You can control the icon per badge instance by supplying the `icon=""` attribute
 
 ## Component API
 
-#### x-badge
+### x-badge
 
 | Attribute | Default   | Description                                                                                   |
 | --------- | --------- | --------------------------------------------------------------------------------------------- |

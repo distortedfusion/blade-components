@@ -180,7 +180,7 @@ Join related buttons into a group by wrapping them in a `x-btn.group` component.
 
 ## Component API
 
-#### x-btn
+### x-btn
 
 | Attribute   | Default   | Description                                                                                                       |
 | ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |

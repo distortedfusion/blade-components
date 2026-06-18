@@ -100,41 +100,41 @@ x-table
         └── x-table-cell
 ```
 
-### Component API
+## Component API
 
-#### x-table
+### x-table
 
 | Attribute         | Default | Description                                                             |
 | ----------------- | ------- | ----------------------------------------------------------------------- |
 | `container:class` | `null`  | `string`<br>Helper attribute for adding classes to the table container. |
 | `hover`           | `false` | `bool`<br>Controls highlighting of rows when hovered.                   |
 
-#### x-header
+### x-header
 
 | Attribute | Default | Description                                                  |
 | --------- | ------- | ------------------------------------------------------------ |
 | `sticky`  | `false` | `bool`<br>Makes the header sticky during vertical scrolling. |
 
-#### x-body
+### x-body
 
 | Attribute   | Default | Description                                                                                        |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------- |
 | `highlight` | `null`  | `string`<br>Alternate highlighting for the contained rows. Possible values `null`, `even` or `odd`. |
 
-#### x-row
+### x-row
 
 | Attribute | Default | Description                                               |
 | --------- | ------- | --------------------------------------------------------- |
 | `sticky`  | `false` | `bool`<br>Makes the row sticky during vertical scrolling. |
 
-#### x-head
+### x-head
 
 | Attribute | Default | Description                                                                                                      |
 | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | `align`   | `start` | `string`<br>Controls text alignment. Possible values `start`, `center` or `end`.                                 |
 | `sticky`  | `false` | `bool`<br>Makes the cell sticky during horizontal scrolling. Only applies to the first or last element in a row. |
 
-#### x-cell
+### x-cell
 
 | Attribute | Default | Description                                                                                                      |
 | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- |

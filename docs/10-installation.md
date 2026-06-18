@@ -68,6 +68,6 @@ Blade Colors is automatically installed with Blade Components. After installatio
 </head>
 ```
 
-#### Theme customization
+### Theme customization
 
 Blade Components implements the ["default theme"](https://github.com/distortedfusion/blade-colors/blob/master/src/Themes/DefaultTheme.php) offered by [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started). You can customize this to your liking, for a detailed explanation please refer to the [theming](/docs/theming) documentation.

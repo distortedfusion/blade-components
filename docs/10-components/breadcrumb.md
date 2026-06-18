@@ -43,7 +43,7 @@ icon: fasl-route
 
 ## Component API
 
-#### x-breadcrumb.item
+### x-breadcrumb.item
 
 | Attribute | Default | Description                                       |
 | --------- | ------- | ------------------------------------------------- |

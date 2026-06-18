@@ -209,7 +209,7 @@ Cards will automatically modify the `x-list-group` component styling to match th
 
 ## Component API
 
-#### x-card
+### x-card
 
 | Attribute | Default   | Description                                                                                        |
 | --------- | --------- | -------------------------------------------------------------------------------------------------- |

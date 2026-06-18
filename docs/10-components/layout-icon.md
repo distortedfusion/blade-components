@@ -44,7 +44,7 @@ Control the icon size by supplying the `size=""` attribute.
 
 ## Component API
 
-#### x-layout.icon
+### x-layout.icon
 
 | Attribute | Default   | Description                                                      |
 | --------- | --------- | ---------------------------------------------------------------- |

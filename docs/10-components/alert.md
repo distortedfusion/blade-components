@@ -115,7 +115,7 @@ Alert::setDefaultIconForStyle(
 
 ## Component API
 
-#### x-alert
+### x-alert
 
 | Attribute | Default   | Description                                                                      |
 | --------- | --------- | -------------------------------------------------------------------------------- |

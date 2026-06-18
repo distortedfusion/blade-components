@@ -99,7 +99,7 @@ Instead of setting the `icon` attribute, which will use a `<x-layout.icon` compo
 
 ## Component API
 
-#### x-empty
+### x-empty
 
 | Attribute     | Default | Description                                                                 |
 | ------------- | ------- | --------------------------------------------------------------------------- |
