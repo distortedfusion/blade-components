@@ -19,7 +19,7 @@ icon: fasl-radar
 
 ## Style
 
-Control the pulser style by supplying the `style=""` attribute.
+Control the pulser style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-center justify-center space-x-4">

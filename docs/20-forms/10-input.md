@@ -47,7 +47,7 @@ Use any of the browser's [input types](https://developer.mozilla.org/en-US/docs/
 
 ### Labels and Description
 
-Captions and descriptions can be added to the form control by supplying the `label=""` and `description=""` attribute.
+Add captions and descriptions to the form control by setting the `label` and `description` attributes.
 
 ```blade-component-code
 <x-form-input type="email" name="public-email" label="Email" description="This will be publicly displayed." />

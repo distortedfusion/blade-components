@@ -14,7 +14,7 @@ For normal Laravel requests you define your form like any other HTML form:
 </x-form>
 ```
 
-As you might have notice we didn't supply a [CSRF token](https://laravel.com/docs/csrf) input. This is automatically handled by the `x-form` component. Additionally, for `PUT` and `PATCH` requests, the method will automatically be spoofed as described in the [Laravel Documentation](https://laravel.com/docs/routing#form-method-spoofing).
+As you might have noticed, we didn't add a [CSRF token](https://laravel.com/docs/csrf) input. This is automatically handled by the `x-form` component. Additionally, for `PUT` and `PATCH` requests, the method will automatically be spoofed as described in the [Laravel Documentation](https://laravel.com/docs/routing#form-method-spoofing).
 
 ## Alpine.js and Livewire Requests
 
@@ -54,7 +54,7 @@ By default any validation error messages are resolved using the `name`, `x-model
 
 In some cases, especially with Alpine.js where you might have used a masked input, your validation error message key might not directly relate to any of these attributes.
 
-To resolve this you can customize the validation error message key by supplying the `error-name` attribute:
+To resolve this, customize the validation error message key by setting the `error-name` attribute:
 
 ```html
 <x-form-input type="number" name="amount-mask" label="Amount" error-name="amount" />
@@ -62,7 +62,7 @@ To resolve this you can customize the validation error message key by supplying 
 
 ### Hide Error Messages
 
-By default all components except radios show any validation error messages. To disabled this behavior you can supply the `show-errors="false"` boolean attribute to disable error messages.
+By default all components except radios show any validation error messages. To disable this behavior, set `show-errors` to `false`.
 
 ```html
 <x-form-input name="description" label="Description" :show-errors="false" />

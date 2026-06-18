@@ -17,7 +17,7 @@ icon: fasl-bell
 
 ## Title
 
-For added clarity a title can be added to the alert by supplying the `title=""` attribute.
+For added clarity, add a title using the `title` attribute.
 
 ```blade-component-code
 <x-alert title="Important">
@@ -27,7 +27,7 @@ For added clarity a title can be added to the alert by supplying the `title=""` 
 
 ## Style
 
-Control the alert style by supplying the `style=""` attribute.
+Control the alert style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="space-y-2">
@@ -51,7 +51,7 @@ Control the alert style by supplying the `style=""` attribute.
 
 ## Icon
 
-You can control the icon per alert instance by supplying the `icon=""` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
+Control the icon per alert instance by setting the `icon` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
 
 ```blade-component-code
 <x-alert style="warning" icon="heroicon-o-bolt">

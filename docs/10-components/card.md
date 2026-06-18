@@ -38,7 +38,7 @@ icon: fasl-window-maximize
 
 ## Style
 
-Control the card style by supplying the `style=""` attribute.
+Control the card style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex flex-col gap-y-4">
@@ -112,7 +112,7 @@ Control the card style by supplying the `style=""` attribute.
 
 ## Card Title
 
-For consistency the `x-card.title` component can be used within the `x-card.header` component. The `x-card.title` [extends the `x-heading` component](/docs/components/typography#heading) and sets the `heading-level` to `3` by default. Alternatively it's also possible to simply provide the native HTML headings directly.
+For consistency, the `x-card.title` component can be used within `x-card.header`. It [extends the `x-heading` component](/docs/components/typography#heading) and sets the `heading-level` to `3` by default. Alternatively, native HTML headings can be used directly.
 
 ```html
 <x-card.title>Title</x-card.title>
@@ -124,7 +124,7 @@ For consistency the `x-card.title` component can be used within the `x-card.head
 
 ## Actions
 
-The `x-card.heading` component has a dedicated `x-slot:actions` slot intended for simple call to actions elements.
+The `x-card.header` component has a dedicated `x-slot:action` slot intended for simple call-to-action elements.
 
 ```blade-component-code
 <x-card>
@@ -155,7 +155,7 @@ The `x-card.heading` component has a dedicated `x-slot:actions` slot intended fo
 
 ## List Groups
 
-Cards will automatically modify the `x-list-group` component styling to match the card. You can use `x-list-group` components within either, the `x-card.body` or `x-card.footer` components, or directly within the `x-card` component.
+Cards will automatically modify the `x-list-group` component styling to match the card. You can use `x-list-group` components within either the `x-card.body` or `x-card.footer` component, or directly within `x-card`.
 
 ```blade-component-code
 <x-card>

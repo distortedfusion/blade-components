@@ -19,7 +19,7 @@ icon: fasl-image-user
 
 ## Style
 
-Control the icon style by supplying the `style=""` attribute.
+Control the icon style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">
@@ -31,7 +31,7 @@ Control the icon style by supplying the `style=""` attribute.
 
 ## Size
 
-Control the icon size by supplying the `size=""` attribute.
+Control the icon size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">

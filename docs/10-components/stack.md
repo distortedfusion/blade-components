@@ -79,7 +79,7 @@ icon: fasl-layer-group
 
 ## Reversing the stacking order
 
-Components within a stack overlap based on the DOM order. By default this would result in the second element overlapping the first, the third element the second, and so on.
+Components within a stack overlap based on the DOM order. By default, the second element overlaps the first, the third overlaps the second, and so on.
 
 ```blade-component-code
 <x-stack>
@@ -89,10 +89,10 @@ Components within a stack overlap based on the DOM order. By default this would 
 </x-stack>
 ```
 
-This can visually be reversed where each element is overlapped by the previous element in the DOM order by supplying the `reverse` attribute.
+To visually reverse this, where each element is overlapped by the previous one, add the `reverse` attribute.
 
 > [!NOTE]
-> Supplying the `reverse` attribute doesn't alter the DOM order, it only reverses the displayed order of the child elements.
+> The `reverse` attribute doesn't alter the DOM order; it only reverses the displayed order of child elements.
 
 
 ```blade-component-code
@@ -107,7 +107,7 @@ This can visually be reversed where each element is overlapped by the previous e
 
 The `x-stack` component is intended to be used with the `x-card` and `x-alert` components, but it's not limited to just those components.
 
-When elements are added to the `x-stack` component, overlap is automatically accounted for by adding a spacer element using the `::before` and `::after` [pseudo elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::before). Depending on the element this might conflict with existing [flexbox styling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). To resolve this you can simply wrap the element and move the flexbox styling one layer deeper.
+When elements are added to the `x-stack` component, overlap is automatically accounted for by adding a spacer element using the `::before` and `::after` [pseudo elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::before). Depending on the element, this might conflict with existing [flexbox styling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). To resolve this, wrap the element and move the flexbox styling one layer deeper.
 
 ## Component API
 

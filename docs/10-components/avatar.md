@@ -23,9 +23,9 @@ icon: fasl-aperture
 
 ## Image
 
-Show an image by supplying the `src=""` attribute. Optionally add support for [responsive images](https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images) by supplying the `srcset=""` attribute.
+Show an image by setting the `src` attribute. Optionally add support for [responsive images](https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images) by setting the `srcset` attribute.
 
-When showing an image it's good practice to supply the `alt=""` attribute to specify an alternate text, if the image cannot be displayed.
+When showing an image, set the `alt` attribute to provide alternate text in case the image cannot be displayed.
 
 ```blade-component-code
 <div class="flex justify-center">
@@ -37,7 +37,7 @@ When showing an image it's good practice to supply the `alt=""` attribute to spe
 
 ## Size
 
-Control the avatar size by supplying the `size=""` attribute.
+Control the avatar size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">
@@ -50,7 +50,7 @@ Control the avatar size by supplying the `size=""` attribute.
 
 ## Icon
 
-You can control the icon per avatar instance by supplying the `icon=""` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
+Control the icon per avatar instance by setting the `icon` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
 
 ```blade-component-code
 <div class="flex justify-center">

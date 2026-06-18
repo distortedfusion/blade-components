@@ -19,7 +19,7 @@ icon: fasl-bars-progress
 
 ## Progress
 
-Control the progress bar fill by supplying the `progress=""` attribute.
+Control the progress bar fill by setting the `progress` attribute.
 
 ```blade-component-code
 <x-progress-bar progress="25" />
@@ -27,7 +27,7 @@ Control the progress bar fill by supplying the `progress=""` attribute.
 
 ## Size
 
-Control the progress bar size by supplying the `size=""` attribute.
+Control the progress bar size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex flex-col gap-8">

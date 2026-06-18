@@ -19,7 +19,7 @@ icon: fasl-tag
 
 ## Size
 
-Control the badge size by supplying the `size=""` attribute.
+Control the badge size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">
@@ -31,7 +31,7 @@ Control the badge size by supplying the `size=""` attribute.
 
 ## Style
 
-Control the badge style by supplying the `style=""` attribute.
+Control the badge style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">
@@ -46,7 +46,7 @@ Control the badge style by supplying the `style=""` attribute.
 
 ## Icon
 
-You can control the icon per badge instance by supplying the `icon=""` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
+Control the icon per badge instance by setting the `icon` attribute. Any [blade-ui-kit/blade-icons](https://github.com/blade-ui-kit/blade-icons) compatible icon set can be used.
 
 ```blade-component-code
 <div class="flex justify-center">

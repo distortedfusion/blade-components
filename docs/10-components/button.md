@@ -37,7 +37,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 ## Size
 
-Control the button size by supplying the `size=""` attribute.
+Control the button size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col max-md:items-center">
@@ -66,7 +66,7 @@ Control the button size by supplying the `size=""` attribute.
 
 ## Style
 
-Control the button style by supplying the `style=""` attribute.
+Control the button style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-center justify-center gap-x-8 gap-y-2 max-md:flex-col">
@@ -88,7 +88,7 @@ Control the button style by supplying the `style=""` attribute.
 
 ## Link
 
-Buttons can be used as an `<a>` element by supplying the `href=""` attribute.
+Buttons can be used as an `<a>` element by adding an `href` attribute.
 
 ```blade-component-code
 <div class="flex justify-center">
@@ -101,7 +101,7 @@ Buttons can be used as an `<a>` element by supplying the `href=""` attribute.
 
 ## Disabled State
 
-Both linked buttons and traditional buttons can be set to a disabled state by supplying the `disabled` boolean attribute.
+Both linked buttons and traditional buttons can be set to a disabled state by adding the `disabled` attribute.
 
 ```blade-component-code
 <div class="flex justify-center">
@@ -111,7 +111,7 @@ Both linked buttons and traditional buttons can be set to a disabled state by su
 
 ## Rounding
 
-Customize the button rounding by supplying any of the `rounded-` classes.
+Customize the button rounding by adding any of the `rounded-` classes.
 
 ```blade-component-code
 <div class="flex justify-center">

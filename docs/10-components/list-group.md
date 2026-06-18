@@ -34,7 +34,7 @@ icon: fasl-table-list
 
 ## Style
 
-Control the list group style by supplying the style="" attribute.
+Control the list group style by setting the `style` attribute.
 
 ```blade-component-code
 <x-list-group style="pills">
@@ -81,7 +81,7 @@ Control the list group style by supplying the style="" attribute.
 
 ## Item Title
 
-The `x-list-group.item` component has a dedicated `x-slot:title` slot which can be used to add additional information about an entry, alternatively the same can be achieved by supplying the `title=""` attribute.
+The `x-list-group.item` component has a dedicated `x-slot:title` slot for adding additional information about an entry. Alternatively, the same can be achieved by setting the `title` attribute.
 
 ```blade-component-code
 <x-list-group>
@@ -106,7 +106,7 @@ The `x-list-group.item` component has a dedicated `x-slot:title` slot which can 
 
 ## Links
 
-Use list group items as links by supplying the `href=""` attribute. Optionally, as with native [anchor elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), a `target=""` attribute can be provided to control the behavior of the anchor.
+Use list group items as links by adding an `href` attribute. Optionally, as with native [anchor elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a), a `target` attribute can be set to control the behavior of the anchor.
 
 ```blade-component-code
 <x-list-group>
@@ -122,7 +122,7 @@ Use list group items as links by supplying the `href=""` attribute. Optionally, 
 
 ## Buttons
 
-List group items can be used as a `<button>` by supplying the `button` boolean attribute.
+List group items can be used as a `<button>` by adding the `button` attribute.
 
 ```blade-component-code
 <x-list-group>

@@ -19,7 +19,7 @@ icon: fasl-ellipsis
 
 ## Style
 
-Control the three-dot style by supplying the `style=""` attribute.
+Control the three-dot style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-center justify-center space-x-4">

@@ -28,7 +28,7 @@ icon: fasl-distribute-spacing-vertical
 
 ## Style
 
-Control the separator style by supplying the `style=""` attribute.
+Control the separator style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="grid gap-8">
@@ -56,7 +56,7 @@ Add text or icons to the separator for a more descriptive element.
 
 ## Vertical
 
-Separate contents with a vertical separator when horizontally stacked by supplying the `vertical` attribute.
+Separate content with a vertical separator when elements are horizontally stacked by adding the `vertical` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-4">

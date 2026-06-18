@@ -34,7 +34,7 @@ icon: fasl-square-dashed
 
 ## Custom Description Markup
 
-Instead of setting the `description` attribute, which will render its contents within a `<x-paragraph` component, the `description` slot can be used for custom markup.
+Instead of setting the `description` attribute, which renders its contents within an `x-paragraph` component, the `description` slot can be used for custom markup.
 
 ```blade-component-code
 <x-empty
@@ -53,7 +53,7 @@ Instead of setting the `description` attribute, which will render its contents w
 
 ## Custom Icon Markup
 
-Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for custom markup.
+Instead of setting the `icon` attribute, which uses an `x-layout.icon` component, the `icon` slot can be used for custom markup.
 
 ```blade-component-code
 <x-empty
@@ -78,7 +78,7 @@ Instead of setting the `icon` attribute, which will use a `<x-layout.icon` compo
 
 ## Additional Content
 
-Instead of setting the `icon` attribute, which will use a `<x-layout.icon` component, the `icon` slot can be used for custom markup.
+Place additional content such as actions or supplementary information in the default slot.
 
 ```blade-component-code
 <x-empty

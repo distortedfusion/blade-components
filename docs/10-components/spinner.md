@@ -19,7 +19,7 @@ icon: fasl-spinner
 
 ## Size
 
-Control the spinner size by supplying the `size=""` attribute.
+Control the spinner size by setting the `size` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">
@@ -31,7 +31,7 @@ Control the spinner size by supplying the `size=""` attribute.
 
 ## Style
 
-Control the spinner style by supplying the `style=""` attribute.
+Control the spinner style by setting the `style` attribute.
 
 ```blade-component-code
 <div class="flex items-start justify-center gap-8 max-md:flex-col">

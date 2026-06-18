@@ -76,7 +76,7 @@ $rows = [
 
 ## Row highlighting
 
-Control `x-table-row` highlighting by supplying `even` or `odd` to the `highlight=""` attribute on the `x-table-body` component.
+Control row highlighting by setting the `highlight` attribute on `x-table-body` to `even` or `odd`.
 
 ```blade-component-code
 @php
@@ -111,7 +111,7 @@ $rows = [
 
 ### Highlighting on hover
 
-Alternatively `x-table-row` components can be highlighted on hover by supplying the `hover` boolean attribute on the `x-table` component.
+Alternatively, rows can be highlighted on hover by adding the `hover` attribute to `x-table`.
 
 ```blade-component-code
 @php
@@ -146,7 +146,7 @@ $rows = [
 
 ## Sticky header
 
-Keep the `x-table-header` visible during vertical scrolling by supplying the `sticky` boolean attribute on the `x-table-header` component.
+Keep the `x-table-header` visible during vertical scrolling by adding the `sticky` attribute.
 
 ```blade-component-code
 @php
@@ -200,7 +200,7 @@ $rows = [
 
 ## Sticky rows
 
-Keep certain `x-table-row` components visible during vertical scrolling by supplying the `sticky` boolean attribute.
+Keep certain rows visible during vertical scrolling by adding the `sticky` attribute to `x-table-row`.
 
 ```blade-component-code
 @php
@@ -234,7 +234,7 @@ $names = [
 
 ## Sticky cells
 
-Keep important information visible during horizontal scrolling by supplying the `sticky` boolean attribute on the `x-table-head` and `x-table-cell` components.
+Keep important information visible during horizontal scrolling by adding the `sticky` attribute to `x-table-head` or `x-table-cell`.
 
 ```blade-component-code
 @php

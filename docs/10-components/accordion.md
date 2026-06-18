@@ -69,7 +69,7 @@ icon: fasl-square-list
 
 ## Exclusive
 
-Enforce that only a single item is expanded at a time by supplying the `exclusive` attribute on the `x-accordion` component.
+Enforce that only a single item is expanded at a time by adding the `exclusive` attribute to `x-accordion`.
 
 ```blade-component-code
 <x-accordion exclusive>
@@ -104,7 +104,7 @@ Enforce that only a single item is expanded at a time by supplying the `exclusiv
 
 ## Transition
 
-Enable or disable transitions during item expansion by supplying the `transition="false"` attribute on the `x-accordion` component.
+Enable or disable transitions during item expansion by setting `transition` to `false` on `x-accordion`.
 
 ```blade-component-code
 <x-accordion :transition="false">
@@ -137,7 +137,7 @@ Enable or disable transitions during item expansion by supplying the `transition
 
 ## Expanded
 
-Control the default state of an accordion item by supplying the `expanded` attribute on the `x-accordion.item` component.
+Control the default state of an accordion item by adding the `expanded` attribute to `x-accordion.item`.
 
 ```blade-component-code
 <x-accordion>
@@ -172,7 +172,7 @@ Control the default state of an accordion item by supplying the `expanded` attri
 
 ## Indicator Icon
 
-Change the indicator icon by supplying the `indicatorIcon` attribute on the `x-accordion.title` component.
+Change the indicator icon by setting the `indicatorIcon` attribute on `x-accordion.title`.
 
 ```blade-component-code
 <x-accordion>
@@ -237,7 +237,7 @@ Toggle::setDefaultIndicatorIcon(icon: 'heroicon-o-chevron-down');
 
 | Attribute       | Default   | Description                                                                           |
 | --------------- | --------- | ------------------------------------------------------------------------------------- |
-| `size`          | `default` | `string`<br>Possible values `default`, `xs`, `sm` or `lg`                             |
+| `size`          | `default` | `string`<br>Possible values `default`, `xs`, `sm` or `lg`.                             |
 | `indicatorIcon` | `null`    | `string` &#124;&#124; `null`<br>The component name for an alternative indicator icon. |
 
 
