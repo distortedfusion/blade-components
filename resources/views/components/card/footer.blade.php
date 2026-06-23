@@ -1,7 +1,7 @@
 <div data-slot="card-footer" {{ $attributes->class([
-    'flex flex-col-reverse sm:flex-row sm:justify-end gap-2',
+    'flex flex-col-reverse sm:flex-row sm:[:where(&)]:justify-end gap-2',
     'rounded-b-[var(--radius-inner)]',
-    'px-4' => ! Str::contains($attributes->get('class'), ['px-']),
+    '[:where(&)]:px-4',
 ]) }}>
     {{ $slot }}
 </div>
