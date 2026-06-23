@@ -1,6 +1,6 @@
 @props(['align' => 'start', 'sticky' => false])
 <td data-slot="table-cell" {{ $attributes->class([
-    'align-middle p-2 [&:has(role=checkbox)]:p-0',
+    'align-middle p-2 [&:has([role="checkbox"])]:p-0',
     '[:where(&)]:bg-[var(--background)] transition-colors',
 
     '[:where(&)]:text-left' => $align === 'start',

@@ -1,6 +1,6 @@
 @props(['align' => 'start', 'sticky' => false])
 <th data-slot="table-head" {{ $attributes->class([
-    'align-middle p-2 [&:has(role=checkbox)]:p-0',
+    'align-middle p-2 [&:has([role="checkbox"])]:p-0',
     '[:where(&)]:bg-[var(--background)] transition-colors',
 
     'font-medium',
