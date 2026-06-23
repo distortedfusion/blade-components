@@ -94,6 +94,10 @@ return [
         'table-cell' => 'blade-components::components.table.cell',
         'table-caption' => 'blade-components::components.table.caption',
 
+        // KBD...
+        'kbd-group' => 'blade-components::components.kbd.group',
+        'kbd' => 'blade-components::components.kbd.index',
+
         // Loading indicators...
         'pulser' => 'blade-components::components.pulser.index',
         'spinner' => 'blade-components::components.spinner.index',
