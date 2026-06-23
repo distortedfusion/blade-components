@@ -37,38 +37,38 @@ return [
 
     'components' => [
         // Accordion...
-        'accordion.content' => 'blade-components::components.accordion.content',
-        'accordion.toggle' => Components\Accordion\Toggle::class,
-        'accordion.title' => 'blade-components::components.accordion.title',
-        'accordion.item' => 'blade-components::components.accordion.item',
         'accordion' => 'blade-components::components.accordion.index',
+        'accordion-item' => 'blade-components::components.accordion.item',
+        'accordion-content' => 'blade-components::components.accordion.content',
+        'accordion-toggle' => Components\Accordion\Toggle::class,
+        'accordion-title' => 'blade-components::components.accordion.title',
 
         // Alert...
         'alert' => Components\Alert\Index::class,
 
         // Avatar...
+        'avatar-stack' => 'blade-components::components.avatar.stack',
         'avatar' => Components\Avatar\Index::class,
-        'avatar.stack' => 'blade-components::components.avatar.stack',
 
         // Button...
+        'btn-group' => 'blade-components::components.btn.group',
         'btn' => 'blade-components::components.btn.index',
-        'btn.group' => 'blade-components::components.btn.group',
 
         // Badge...
         'badge' => 'blade-components::components.badge.index',
 
         // Breadcrumb...
         'breadcrumb' => 'blade-components::components.breadcrumb.index',
-        'breadcrumb.item' => 'blade-components::components.breadcrumb.item',
-        'breadcrumb.ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
-        'breadcrumb.separator' => 'blade-components::components.breadcrumb.separator',
+        'breadcrumb-item' => 'blade-components::components.breadcrumb.item',
+        'breadcrumb-ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
+        'breadcrumb-separator' => 'blade-components::components.breadcrumb.separator',
 
         // Card...
-        'card.body' => 'blade-components::components.card.body',
-        'card.footer' => 'blade-components::components.card.footer',
-        'card.header' => 'blade-components::components.card.header',
-        'card.title' => 'blade-components::components.card.title',
         'card' => 'blade-components::components.card.index',
+        'card-header' => 'blade-components::components.card.header',
+        'card-body' => 'blade-components::components.card.body',
+        'card-footer' => 'blade-components::components.card.footer',
+        'card-title' => 'blade-components::components.card.title',
 
         // Container...
         'container' => 'blade-components::components.layout.container',
@@ -100,19 +100,14 @@ return [
         'three-dot' => 'blade-components::components.three-dot.index',
 
         // Layout components...
-        'layout.icon' => 'blade-components::components.layout.icon',
+        'layout-icon' => 'blade-components::components.layout.icon',
 
         // List group...
         'list-group' => 'blade-components::components.list-group.index',
-        'list-group.item' => Components\ListGroup\Item::class,
-        'list-group.item-btn' => Components\ListGroup\ItemBtn::class,
+        'list-group-item' => Components\ListGroup\Item::class,
 
         // List group - pre-composed elements...
         'list-group.precomposed.title' => 'blade-components::components.list-group.precomposed.title',
-
-        // List group - Deprecated, use list-group.item instead...
-        'list-group.item-button' => Components\ListGroup\ItemBtn::class,
-        'list-group.item-link' => Components\ListGroup\Item::class,
 
         // Typography...
         'currency' => Components\Text\Currency::class,
@@ -124,5 +119,41 @@ return [
         'paragraph' => 'blade-components::components.text.paragraph',
         'pre' => 'blade-components::components.text.pre',
         'ul' => 'blade-components::components.text.ul',
+
+        //
+        // Deprecated aliases...
+        //
+
+        // Accordion...
+        'accordion.item' => 'blade-components::components.accordion.item',
+        'accordion.content' => 'blade-components::components.accordion.content',
+        'accordion.toggle' => Components\Accordion\Toggle::class,
+        'accordion.title' => 'blade-components::components.accordion.title',
+
+        // Avatar...
+        'avatar.stack' => 'blade-components::components.avatar.stack',
+
+        // Button...
+        'btn.group' => 'blade-components::components.btn.group',
+
+        // Breadcrumb...
+        'breadcrumb.item' => 'blade-components::components.breadcrumb.item',
+        'breadcrumb.ellipsis' => 'blade-components::components.breadcrumb.ellipsis',
+        'breadcrumb.separator' => 'blade-components::components.breadcrumb.separator',
+
+        // Card...
+        'card.body' => 'blade-components::components.card.body',
+        'card.footer' => 'blade-components::components.card.footer',
+        'card.header' => 'blade-components::components.card.header',
+        'card.title' => 'blade-components::components.card.title',
+
+        // Layout...
+        'layout.icon' => 'blade-components::components.layout.icon',
+
+        // List group - use list-group-item instead...
+        'list-group.item' => Components\ListGroup\Item::class,
+        'list-group.item-btn' => Components\ListGroup\ItemBtn::class,
+        'list-group.item-button' => Components\ListGroup\ItemBtn::class,
+        'list-group.item-link' => Components\ListGroup\Item::class,
     ],
 ];
