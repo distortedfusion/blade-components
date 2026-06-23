@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Deprecated
+
+- The following component namespaces have been deprecated and will be removed in a future release:
+    - `accordion.item`, replaced with `accordion-item`
+    - `accordion.content`, replaced with `accordion-content`
+    - `accordion.toggle`, replaced with `accordion-toggle`
+    - `accordion.title`, replaced with `accordion-title`
+    - `avatar.stack`, replaced with `avatar-stack`
+    - `btn.group`, replaced with `btn-group`
+    - `breadcrumb.item`, replaced with `breadcrumb-item`
+    - `breadcrumb.ellipsis`, replaced with `breadcrumb-ellipsis`
+    - `breadcrumb.separator`, replaced with `breadcrumb-separator`
+    - `card.body`, replaced with `card-body`
+    - `card.footer`, replaced with `card-footer`
+    - `card.header`, replaced with `card-header`
+    - `card.title`, replaced with `card-title`
+    - `layout.icon`, replaced with `layout-icon`
+    - `list-group.item`, replaced with `list-group-item`
+    - `list-group.item-btn`, replaced with `list-group-item`
+    - `list-group.item-button`, replaced with `list-group-item`
+    - `list-group.item-link`, replaced with `list-group-item`
+
 ## [1.3.1] - 2026-06-23
 
 ### Fixed
