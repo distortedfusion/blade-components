@@ -9,7 +9,7 @@ use Illuminate\View\ComponentAttributeBag;
     // Reset border radius when used as a direct descendant of a `x-card` component...
     '[[data-slot=card]>*]:rounded-none [[data-slot=card]>*]:-mx-px',
 
-    'text-[var(--foreground)] bg-[var(--muted)] border-[color-mix(in_oklab,var(--foreground)_50%,var(--background))]' => $style === 'default',
+    'text-[var(--foreground)] bg-[var(--accent)] border-[var(--border)]' => $style === 'default',
     'text-[var(--success-foreground)] bg-[color-mix(in_oklab,var(--success)_20%,var(--background))] border-[color-mix(in_oklab,var(--success)_50%,var(--background))]' => $style === 'success',
     'text-[var(--info-foreground)] bg-[color-mix(in_oklab,var(--info)_20%,var(--background))] border-[color-mix(in_oklab,var(--info)_50%,var(--background))]' => $style === 'info',
     'text-[var(--warning-foreground)] bg-[color-mix(in_oklab,var(--warning)_20%,var(--background))] border-[color-mix(in_oklab,var(--warning)_50%,var(--background))]' => $style === 'warning',
