@@ -24,7 +24,7 @@
         </div>
 
         @if($src)
-            <img class="absolute inset-0 object-contain"
+            <img class="absolute inset-0 size-full object-cover"
                 src="{{ $src }}"
                 @if(! is_null($srcset))
                 srcset="{{ $srcset }}"
