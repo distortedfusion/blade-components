@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Adjusted the border color for the `x-alert`, `default` style.
+- The `x-avatar` component is now square by default.
+    - Use the `circle` boolean attribute to revert to the previous round style.
 
 ### Deprecated
 

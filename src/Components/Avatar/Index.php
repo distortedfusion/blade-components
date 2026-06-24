@@ -9,12 +9,6 @@ use Illuminate\View\Component;
 
 class Index extends Component
 {
-    public ?string $src;
-    public ?string $srcset;
-    public ?string $alt;
-    public string $size;
-    public string $icon;
-
     /**
      * Default icon.
      *
@@ -22,27 +16,14 @@ class Index extends Component
      */
     public static string $defaultIcon = 'heroicon-o-user';
 
-    /**
-     * Create a new component instance.
-     *
-     * @param ?string $src
-     * @param ?string $srcset
-     * @param ?string $alt
-     * @param ?string $size
-     * @param ?string $icon
-     */
     public function __construct(
-        ?string $src = null,
-        ?string $srcset = null,
-        ?string $alt = null,
-        string $size = 'default',
-        ?string $icon = null,
+        public ?string $src = null,
+        public ?string $srcset = null,
+        public ?string $alt = null,
+        public string $size = 'default',
+        public bool $circle = false,
+        public ?string $icon = null,
     ) {
-        $this->src = $src;
-        $this->srcset = $srcset;
-        $this->alt = $alt;
-        $this->size = $size;
-
         $this->icon = $icon ?: $this->defaultIcon();
     }
 
