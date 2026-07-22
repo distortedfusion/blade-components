@@ -4,10 +4,10 @@
     'ring-1 ring-[var(--background)]',
 
     // Border element, will be overlain with the image.
-    'before:content-[\'\'] before:absolute before:inset-0 before:border before:border-[var(--border)]',
+    'after:content-[\'\'] after:absolute after:inset-0 after:border after:border-[var(--border)]',
 
-    'rounded-[var(--radius)] before:rounded-[var(--radius)]' => ! $circle,
-    'rounded-full before:rounded-full' => $circle,
+    'rounded-[var(--radius)] after:rounded-[var(--radius)]' => ! $circle,
+    'rounded-full after:rounded-full' => $circle,
 
     '[&_[data-slot=icon]]:size-4 w-10' => $size === 'lg',
     '[&_[data-slot=icon]]:size-4 w-9' => $size === 'default',
