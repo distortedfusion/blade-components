@@ -11,16 +11,18 @@ use DistortedFusion\BladeComponents\Concerns\ManagesAssets;
 use DistortedFusion\BladeComponents\Concerns\ManagesAvatarIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesBreadcrumbIcons;
 use DistortedFusion\BladeComponents\Concerns\ManagesListGroupItemIndicatorIcon;
+use DistortedFusion\BladeComponents\Concerns\ManagesSidebarToggleIcon;
 
 class BladeComponents
 {
     use ChecksClass;
-    use ManagesAssets;
+    use ManagesAccordionIndicatorIcon;
     use ManagesAlertIcons;
+    use ManagesAssets;
     use ManagesAvatarIcon;
     use ManagesBreadcrumbIcons;
-    use ManagesAccordionIndicatorIcon;
     use ManagesListGroupItemIndicatorIcon;
+    use ManagesSidebarToggleIcon;
 
     /**
      * Resolve the component alias with the optional prefix.

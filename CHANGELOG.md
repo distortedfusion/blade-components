@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Various interactive layout components have been added:
+    - `x-footer`
+    - `x-header`
+    - `x-main`
+    - `x-sidebar-toggle`
+    - `x-sidebar`
+
 ### Changed
 
 - Adjusted the border color for the `x-alert`, `default` style.

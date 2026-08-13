@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 @endphp
 {{-- The max-width, except for 3xl, are matched to the default tailwindcss breakpoints --}}
-<div {{ $attributes->class([
+<div data-slot="container" {{ $attributes->class([
     'w-full mx-auto',
 
     // Spacing...

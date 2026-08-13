@@ -104,6 +104,13 @@ return [
         'three-dot' => 'blade-components::components.three-dot.index',
 
         // Layout components...
+        'footer' => 'blade-components::components.layout.footer',
+        'header' => 'blade-components::components.layout.header',
+        'main' => 'blade-components::components.layout.main',
+        'sidebar' => 'blade-components::components.layout.sidebar',
+        'sidebar-toggle' => Components\Layout\SidebarToggle::class,
+        'sidebar-backdrop' => 'blade-components::components.layout.sidebar-backdrop',
+
         'layout-icon' => 'blade-components::components.layout.icon',
 
         // List group...
