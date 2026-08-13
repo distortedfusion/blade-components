@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjusted the border color for the `x-alert`, `default` style.
 - The `x-avatar` component is now square by default.
     - Use the `circle` boolean attribute to revert to the previous round style.
+- Reduced the z-index of the `list-group-item` indicator when used as a link or button.
 
 ### Deprecated
 
