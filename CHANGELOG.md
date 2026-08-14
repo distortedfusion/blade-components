@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- The `@ddfsnScripts` directive has been added which is required for the `x-sidebar` component.
+    - Alternatively import `dist/blade-components.js` or `dist/blade-components.esm.js` in your `app.js`.
 - Various interactive layout components have been added:
     - `x-footer`
     - `x-header`

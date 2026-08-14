@@ -11,9 +11,11 @@
     ],
     "require": {
         "php": "^8.0",
+        "illuminate/routing": "*",
         "illuminate/support": "*",
-        "distortedfusion/blade-colors": "^2.1",
-        "blade-ui-kit/blade-heroicons": "^2.6"
+        "distortedfusion/blade-colors": "^2.2",
+        "blade-ui-kit/blade-heroicons": "^2.6",
+        "symfony/http-kernel": "^6.2|^7.0|^8.0"
     },
     "require-dev": {
         "distortedfusion/php-cs-fixer-config": "^2.1"

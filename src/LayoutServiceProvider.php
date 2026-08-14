@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace DistortedFusion\BladeComponents;
 
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
@@ -44,8 +45,11 @@ class LayoutServiceProvider extends ServiceProvider
         $this->registerResources();
         $this->offerPublishing();
 
-        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            AssetManager::boot();
+        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade, Application $app) {
+            AssetManager::boot(
+                blade: $blade,
+                router: $app->make('router'),
+            );
         });
     }
 
