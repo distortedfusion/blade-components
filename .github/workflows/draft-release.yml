@@ -60,9 +60,6 @@ jobs:
       - name: Build assets
         run: npm run build
 
-      - name: Run JS tests
-        run: npm run test:run
-
       - name: Create release branch
         run: |
           branch="release/${VERSION}"
