@@ -2,17 +2,17 @@ import { DDFSNElement } from './elements.js';
 import { Observable } from './events.js';
 import { setStyle, setAttribute, removeAttribute } from './utils.js';
 
-const EVENTS = {
-    SIDEBAR_BREAKPOINT_UP: "sidebar:breakpoint:up",
-    SIDEBAR_BREAKPOINT_DOWN: "sidebar:breakpoint:down",
+const SIDEBAR_EVENTS = {
+    BREAKPOINT_UP: "sidebar:breakpoint:up",
+    BREAKPOINT_DOWN: "sidebar:breakpoint:down",
 
-    SIDEBAR_COLLAPSE: "sidebar:collapse",
-    SIDEBAR_COLLAPSED: "sidebar:collapsed",
+    COLLAPSE: "sidebar:collapse",
+    COLLAPSED: "sidebar:collapsed",
 
-    SIDEBAR_EXPAND: "sidebar:expand",
-    SIDEBAR_EXPANDED: "sidebar:expanded",
+    EXPAND: "sidebar:expand",
+    EXPANDED: "sidebar:expanded",
 
-    SIDEBAR_TOGGLE: "sidebar:toggle",
+    TOGGLE: "sidebar:toggle",
 };
 
 class SidebarsViewportResizeObserver {
@@ -32,8 +32,8 @@ class SidebarsViewportResizeObserver {
 
         this.handleViewportChange = () => {
             this.viewport.matches
-                ? this.observable.notify(EVENTS.SIDEBAR_BREAKPOINT_UP)
-                : this.observable.notify(EVENTS.SIDEBAR_BREAKPOINT_DOWN);
+                ? this.observable.notify(SIDEBAR_EVENTS.BREAKPOINT_UP)
+                : this.observable.notify(SIDEBAR_EVENTS.BREAKPOINT_DOWN);
         };
 
         this.handleViewportChange();
@@ -71,7 +71,7 @@ export class Sidebar extends DDFSNElement {
 
         this.removeAttribute("data-ddfsn-sidebar-cloak");
 
-        this.observable.subscribe(EVENTS.SIDEBAR_BREAKPOINT_UP, () => {
+        this.observable.subscribe(SIDEBAR_EVENTS.BREAKPOINT_UP, () => {
             let reapplyTransition = setStyle(this, "transition", "none");
 
             setTimeout(reapplyTransition);
@@ -82,10 +82,10 @@ export class Sidebar extends DDFSNElement {
 
             this.updateDataAttributes(this);
 
-            this.observable.notify(EVENTS.SIDEBAR_EXPANDED);
+            this.observable.notify(SIDEBAR_EVENTS.EXPANDED);
         });
 
-        this.observable.subscribe(EVENTS.SIDEBAR_BREAKPOINT_DOWN, () => {
+        this.observable.subscribe(SIDEBAR_EVENTS.BREAKPOINT_DOWN, () => {
             let reapplyTransition = setStyle(this, "transition", "none");
 
             setTimeout(reapplyTransition);
@@ -96,23 +96,23 @@ export class Sidebar extends DDFSNElement {
 
             this.updateDataAttributes(this);
 
-            this.observable.notify(EVENTS.SIDEBAR_COLLAPSED);
+            this.observable.notify(SIDEBAR_EVENTS.COLLAPSED);
         });
 
-        this.observable.subscribe(EVENTS.SIDEBAR_COLLAPSE, () => {
+        this.observable.subscribe(SIDEBAR_EVENTS.COLLAPSE, () => {
             this.state.collapsed = true;
 
             this.updateDataAttributes(this);
 
-            this.observable.notify(EVENTS.SIDEBAR_COLLAPSED);
+            this.observable.notify(SIDEBAR_EVENTS.COLLAPSED);
         });
 
-        this.observable.subscribe(EVENTS.SIDEBAR_EXPAND, () => {
+        this.observable.subscribe(SIDEBAR_EVENTS.EXPAND, () => {
             this.state.collapsed = false;
 
             this.updateDataAttributes(this);
 
-            this.observable.notify(EVENTS.SIDEBAR_EXPANDED);
+            this.observable.notify(SIDEBAR_EVENTS.EXPANDED);
         });
 
         let viewportObserver = new SidebarsViewportResizeObserver(this.observable, this.config);
@@ -121,13 +121,13 @@ export class Sidebar extends DDFSNElement {
 
         let onSidebarToggle = () => {
             this.state.collapsed
-                ? this.observable.notify(EVENTS.SIDEBAR_EXPAND)
-                : this.observable.notify(EVENTS.SIDEBAR_COLLAPSE);
+                ? this.observable.notify(SIDEBAR_EVENTS.EXPAND)
+                : this.observable.notify(SIDEBAR_EVENTS.COLLAPSE);
         };
 
-        document.addEventListener(EVENTS.SIDEBAR_TOGGLE, onSidebarToggle);
+        document.addEventListener(SIDEBAR_EVENTS.TOGGLE, onSidebarToggle);
 
-        this.onUnmount(() => document.removeEventListener(EVENTS.SIDEBAR_TOGGLE, onSidebarToggle));
+        this.onUnmount(() => document.removeEventListener(SIDEBAR_EVENTS.TOGGLE, onSidebarToggle));
     }
 
     setStickyPositionStyles() {
@@ -171,7 +171,7 @@ export class SidebarToggle extends DDFSNElement {
         let button = this.querySelector("button,[data-slot='button']") || this;
 
         button.addEventListener("click", () => {
-            this.dispatchEvent(new CustomEvent(EVENTS.SIDEBAR_TOGGLE, { bubbles: true }))
+            this.dispatchEvent(new CustomEvent(SIDEBAR_EVENTS.TOGGLE, { bubbles: true }))
         });
 
         queueMicrotask(() => {
@@ -182,8 +182,8 @@ export class SidebarToggle extends DDFSNElement {
             }
 
             sidebar.updateDataAttributes(this);
-            sidebar.observable.subscribe(EVENTS.SIDEBAR_COLLAPSED, () => sidebar.updateDataAttributes(this));
-            sidebar.observable.subscribe(EVENTS.SIDEBAR_EXPANDED, () => sidebar.updateDataAttributes(this));
+            sidebar.observable.subscribe(SIDEBAR_EVENTS.COLLAPSED, () => sidebar.updateDataAttributes(this));
+            sidebar.observable.subscribe(SIDEBAR_EVENTS.EXPANDED, () => sidebar.updateDataAttributes(this));
         });
     }
 }

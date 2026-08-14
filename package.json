@@ -1,0 +1,14 @@
+{
+    "main": "dist/blade-components.js",
+    "name": "blade-components",
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "watch": "node ./scripts/build.js --watch"
+    },
+    "author": "Kevin Dierkx",
+    "license": "MIT",
+    "devDependencies": {
+        "brotli-size": "^4.0.0",
+        "esbuild": "^0.28.2"
+    }
+}
