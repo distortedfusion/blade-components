@@ -22,10 +22,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Reduced the z-index of the `list-group-item` indicator when used as a link or button.
+
+## [1.3.2] - 2026-07-22
+
+### Added
+
+- The `x-kbd` and `x-kbd-group` components have been added.
+
+### Changed
+
 - Adjusted the border color for the `x-alert`, `default` style.
 - The `x-avatar` component is now square by default.
     - Use the `circle` boolean attribute to revert to the previous round style.
-- Reduced the z-index of the `list-group-item` indicator when used as a link or button.
 
 ### Deprecated
 
