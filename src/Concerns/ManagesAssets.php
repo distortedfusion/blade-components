@@ -13,6 +13,11 @@ trait ManagesAssets
         return AssetManager::ddfsnAppearance($options);
     }
 
+    public static function ddfsnStyles(array $options = []): ?string
+    {
+        return AssetManager::ddfsnStyles($options);
+    }
+
     public static function ddfsnScripts(array $options = []): ?string
     {
         return AssetManager::ddfsnScripts($options);

@@ -12,13 +12,17 @@ use DistortedFusion\BladeComponents\Concerns\ManagesAvatarIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesBreadcrumbIcons;
 use DistortedFusion\BladeComponents\Concerns\ManagesListGroupItemIndicatorIcon;
 use DistortedFusion\BladeComponents\Concerns\ManagesSidebarToggleIcon;
+use DistortedFusion\BladeComponents\Concerns\ManagesThemes;
 
 class BladeComponents
 {
     use ChecksClass;
+    use ManagesAssets;
+    use ManagesThemes;
+
+    // Icon helpers...
     use ManagesAccordionIndicatorIcon;
     use ManagesAlertIcons;
-    use ManagesAssets;
     use ManagesAvatarIcon;
     use ManagesBreadcrumbIcons;
     use ManagesListGroupItemIndicatorIcon;

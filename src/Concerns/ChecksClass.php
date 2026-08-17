@@ -6,6 +6,9 @@ namespace DistortedFusion\BladeComponents\Concerns;
 
 use Illuminate\Support\Str;
 
+/**
+ * @deprecated
+ */
 trait ChecksClass
 {
     public static array $defaultTailwindSizingScale = [

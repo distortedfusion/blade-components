@@ -13,12 +13,14 @@
         "php": "^8.0",
         "illuminate/routing": "*",
         "illuminate/support": "*",
-        "distortedfusion/blade-colors": "^2.2",
         "blade-ui-kit/blade-heroicons": "^2.6",
         "symfony/http-kernel": "^6.2|^7.0|^8.0"
     },
     "require-dev": {
         "distortedfusion/php-cs-fixer-config": "^2.1"
+    },
+    "conflict": {
+        "distortedfusion/blade-colors": "*"
     },
     "suggest": {
         "distortedfusion/blade-forms": "A collection of reusable form components, complementary to blade components."
