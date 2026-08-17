@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The `distortedfusion/blade-colors` implementation has been deprecated and replaced.
+    - References to the `DistortedFusion\BladeColors` namespace should be replaced with `DistortedFusion\BladeComponents`.
+    - Themes must implement `DistortedFusion\BladeComponents\Contracts\ThemeContract`.
+        - The `bladeColorDefinitions` method has been renamed to `definitions`.
+- The `ddfsnStyles` directive is now defined by `ddfsn/blade-components`.
+    - The inline styles, previously rendered by this directive, have been replaced with dedicated file endpoints.
+    - The `ddfsnStyles` endpoint, `/ddfsn/blade-components.css`, renders minified CSS when `APP_ENV` is set to `production`.
+- Theme examples, previously shipped with `distortedfusion/blade-colors`, have been moved to `ddfsn/blade-component-themes`.
+
 ## [1.4.0] - 2026-08-14
 
 ### Added
