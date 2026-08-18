@@ -58,7 +58,9 @@ Blade Components uses Tailwind CSS for its default styling. If you already have 
 
 ```css
 @import 'tailwindcss';
-@source "../../vendor/ddfsn/blade-components/resources/**/*.blade.php";
+@import '../../vendor/ddfsn/blade-components/resources/css/blade-components.css';
+
+@source '../../vendor/ddfsn/blade-components/resources/**/*.blade.php';
 
 @custom-variant dark (&:where(.dark, .dark *));
 ```
