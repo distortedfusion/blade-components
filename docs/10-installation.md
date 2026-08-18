@@ -36,38 +36,41 @@ Blade Components can be installed via composer by running the following command 
 composer require ddfsn/blade-components
 ```
 
-## Setting up Tailwind CSS
+## Include asset directives
 
-Blade Components uses Tailwind CSS for its default styling. If you already have Tailwind installed in your project, just add the following configuration to your `tailwind.config.js` config file:
-
-```js
-export default {
-    darkMode: 'class',
-
-    content: [
-        ...,
-        './vendor/ddfsn/blade-components/resources/**/*.blade.php',
-    ],
-
-    ...
-}
-```
-
-Please refer to the [Tailwind documentation](https://tailwindcss.com/docs/installation) if you don't have Tailwind CSS installed already.
-
-## Setting up Blade Colors
-
-Themes are managed through the complimentary [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) package. Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, style definitions. You will find the full documentation on the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) page.
-
-Blade Colors is automatically installed with Blade Components. After installation the `@ddfsnStyles` directive needs to be added to your layouts `<head>` section:
+After installation the `@ddfsnAppearance`, `@ddfsnStyles` and `@ddfsnScripts` directives need to be added to your layout:
 
 ```html
 <head>
     ...
+    @ddfsnAppearance
     @ddfsnStyles
 </head>
+<body>
+    ...
+    @ddfsnScripts
+</body>
 ```
+
+## Setting up Tailwind CSS
+
+Blade Components uses Tailwind CSS for its default styling. If you already have Tailwind installed in your project, just add the following configuration to your `resources/css/app.css` file:
+
+```css
+@import 'tailwindcss';
+@source "../../vendor/ddfsn/blade-components/resources/**/*.blade.php";
+
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+Please refer to the [Tailwind documentation](https://tailwindcss.com/docs/installation) if you don't have Tailwind CSS installed already.
+
+## Disable automatic dark mode handling
+
+By default, Blade Components will apply the dark mode appearance automatically by applying the `.dark` class to the html element. Dark mode is chosen based on the user's system preference or previously selected appearance.
+
+If you don't want Blade Components to handle this for you, you can remove the `@ddfsnAppearance` directive from your layout file.
 
 ### Theme customization
 
-Blade Components implements the ["default theme"](https://github.com/distortedfusion/blade-colors/blob/master/src/Themes/DefaultTheme.php) offered by [Blade Colors](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started). You can customize this to your liking, for a detailed explanation please refer to the [theming](/docs/theming) documentation.
+Blade Components comes with a ["default theme"](https://github.com/distortedfusion/blade-components/blob/master/src/Themes/DefaultTheme.php). You can customize this to your liking, for a detailed explanation please refer to the [theming](/docs/theming) documentation.
