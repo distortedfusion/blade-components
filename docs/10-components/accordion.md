@@ -3,6 +3,8 @@ title: Accordion
 description: A vertically stacked set of interactive headings that each reveal a section of content.
 short-description: Reveal content sections under interactive headings.
 icon: fasl-square-list
+links:
+    "@alpinejs/collapse": https://alpinejs.dev/plugins/collapse
 ---
 
 ```blade-component-preview
@@ -66,6 +68,10 @@ icon: fasl-square-list
     </x-accordion.item>
 </x-accordion>
 ```
+
+## Prerequisites
+
+The accordion component requires the [@alpinejs/collapse](https://alpinejs.dev/plugins/collapse) plugin to handle its collapsed state. Without it, the accordion panels will not open or close correctly.
 
 ## Exclusive
 
