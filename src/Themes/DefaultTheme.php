@@ -54,6 +54,8 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::BACKGROUND->value => '#fff',
             ThemeVariable::FOREGROUND->value => 'oklch(20.5% 0 0)', // neutral-900
 
+            ThemeVariable::BACKDROP->value => 'color-mix(in oklab,var(--background) 60%,transparent)',
+
             ThemeVariable::PRIMARY->value => '#000',
             ThemeVariable::PRIMARY_FOREGROUND->value => '#fff',
 

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- The `ThemeVariable::BACKDROP`, `ThemeVariable::HEADER_HEIGHT` and `ThemeVariable::SIDEBAR_WIDTH` theme variables have been added.
+
+### Changed
+
+- The `x-sidebar-backdrop` component now uses the `ThemeVariable::BACKDROP` variable for its background.
+
 ## [1.5.0] - 2026-08-17
 
 ### Changed
