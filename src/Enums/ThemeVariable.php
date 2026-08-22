@@ -9,6 +9,8 @@ enum ThemeVariable: string
     case BACKGROUND = 'background';
     case FOREGROUND = 'foreground';
 
+    case BACKDROP = 'backdrop';
+
     case PRIMARY = 'primary';
     case PRIMARY_FOREGROUND = 'primary-foreground';
 
@@ -39,4 +41,7 @@ enum ThemeVariable: string
 
     case RADIUS = 'radius';
     case RADIUS_INNER = 'radius-inner';
+
+    case HEADER_HEIGHT = 'header-height';
+    case SIDEBAR_WIDTH = 'sidebar-width';
 }
