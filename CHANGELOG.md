@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - The `ThemeVariable::BACKDROP`, `ThemeVariable::HEADER_HEIGHT` and `ThemeVariable::SIDEBAR_WIDTH` theme variables have been added.
+- Added `fixed` display state to `x-header` component.
 
 ### Changed
 

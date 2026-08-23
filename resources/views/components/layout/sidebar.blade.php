@@ -20,8 +20,8 @@ use DistortedFusion\BladeComponents\BladeComponents;
     'data-ddfsn-sidebar-breakpoint-down:min-h-dvh!',
     'data-ddfsn-sidebar-breakpoint-down:max-h-dvh!',
 
+    // Prevent layout shifting during page load...
     'not-data-ddfsn-sidebar-cloak:transition-transform',
-
     'max-lg:data-ddfsn-sidebar-cloak:hidden',
 ]) }}
 @if($sticky) sticky @endif

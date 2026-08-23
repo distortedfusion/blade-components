@@ -27,6 +27,17 @@
         "sidebar footer  aside";
 }
 
-*:has(>[data-slot=sidebar][fixed]) {
-    padding-left: var(--sidebar-width,16rem);
+/* Adjust for fixed sidebars and/or headers */
+@media (min-width: 1024px) {
+    *:has(>[data-slot=sidebar]:not([data-ddfsn-sidebar-breakpoint-down])[fixed]) {
+        padding-left: var(--sidebar-width,16rem);
+    }
+
+    *:has(>[data-slot=sidebar]:not([data-ddfsn-sidebar-breakpoint-down])[fixed]+[data-slot=header][fixed]) > [data-slot=header] {
+        inset-inline-start: var(--sidebar-width,16rem);
+    }
+}
+
+*:has(>[data-slot=header][fixed]) {
+    padding-top: var(--header-height,3.5rem);
 }
