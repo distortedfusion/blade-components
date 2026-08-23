@@ -3,7 +3,7 @@
 {{-- indicator --}}
 <div data-slot="list-group-item-indicator" class="p-2 -my-2 -mr-2 relative">
     {{-- focus-indicator --}}
-    <div class="absolute inset-0 z-0 bg-black/5 dark:bg-white/5 rounded-[var(--radius-inner)] opacity-0 transition group-focus-visible/indicator:opacity-100"></div>
+    <div class="absolute inset-0 z-0 bg-[color-mix(in_oklab,var(--secondary),var(--foreground)_5%)] rounded-[var(--radius-inner)] opacity-0 transition group-focus-visible/indicator:opacity-100"></div>
 
     @if($indicator ?? false)
         {{ $indicator }}

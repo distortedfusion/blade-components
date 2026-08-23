@@ -6,7 +6,10 @@
     'border border-[var(--border)]' => $style === 'default',
     'divide-y divide-[var(--border)]' => $style === 'default',
 
-    'gap-y-0.5' => $style === 'pills'
+    'gap-y-0.5' => $style === 'pills',
+
+    // Avatars...
+    '[&_[data-slot=avatar]]:ring-[var(--card)]',
 ]) }}>
     {{ $slot }}
 </div>

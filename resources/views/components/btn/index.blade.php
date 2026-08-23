@@ -47,8 +47,8 @@ $class = [
 
     // Secondary, Ghost and Outline...
     'bg-[var(--secondary)] text-[var(--secondary-foreground)]' => in_array($style, ['secondary', 'ghost']),
-    'hover:bg-[color-mix(in_oklab,var(--secondary)_80%,var(--background))]' => in_array($style, ['secondary', 'ghost', 'outline']),
-    'focus:bg-[color-mix(in_oklab,var(--secondary)_80%,var(--background))]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'hover:bg-[color-mix(in_oklab,var(--secondary),var(--foreground)_5%)]' => in_array($style, ['secondary', 'ghost', 'outline']),
+    'focus:bg-[color-mix(in_oklab,var(--secondary),var(--foreground)_5%)]' => in_array($style, ['secondary', 'ghost', 'outline']),
     'active:bg-[var(--secondary)]' => in_array($style, ['secondary', 'ghost']),
 
     // Ghost...
