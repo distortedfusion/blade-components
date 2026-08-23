@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated the default theme.
     - Base color palette has been changed from `neutral` to `zinc`.
     - Softer background color for dark theme.
+- Updated dark mode card color.
+- Updated dark mode input color.
 
 ## [1.5.0] - 2026-08-17
 

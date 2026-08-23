@@ -107,10 +107,10 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::MUTED_FOREGROUND->value => 'oklch(70.5% 0.015 286.067)', // zinc-400
 
-            ThemeVariable::CARD->value => 'oklch(14.1% 0.005 285.823)', // zinc-950
+            ThemeVariable::CARD->value => 'var(--accent)', // zinc-950
 
             ThemeVariable::BORDER->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
-            ThemeVariable::INPUT->value => 'var(--accent)',
+            ThemeVariable::INPUT->value => 'color-mix(in oklab,var(--background) 30%,transparent)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300
             ThemeVariable::INFO_FOREGROUND->value => 'oklch(80.9% 0.105 251.813)',   // blue-300
