@@ -27,12 +27,17 @@ use DistortedFusion\BladeComponents\Enums\ThemeVariant;
  * --color-red-500: oklch(63.7% 0.237 25.331);
  * --color-red-700: oklch(50.5% 0.213 27.518);
  *
- * --color-neutral-100: oklch(97% 0 0);
- * --color-neutral-400: oklch(70.8% 0 0);
- * --color-neutral-600: oklch(43.9% 0 0);
- * --color-neutral-800: oklch(26.9% 0 0);
- * --color-neutral-900: oklch(20.5% 0 0);
- * --color-neutral-950: oklch(14.5% 0 0);
+ * --color-zinc-50: oklch(98.5% 0 0);
+ * --color-zinc-100: oklch(96.7% 0.001 286.375);
+ * --color-zinc-200: oklch(92% 0.004 286.32);
+ * --color-zinc-300: oklch(87.1% 0.006 286.286);
+ * --color-zinc-400: oklch(70.5% 0.015 286.067);
+ * --color-zinc-500: oklch(55.2% 0.016 285.938);
+ * --color-zinc-600: oklch(44.2% 0.017 285.786);
+ * --color-zinc-700: oklch(37% 0.013 285.805);
+ * --color-zinc-800: oklch(27.4% 0.006 286.033);
+ * --color-zinc-900: oklch(21% 0.006 285.885);
+ * --color-zinc-950: oklch(14.1% 0.005 285.823);
  */
 class DefaultTheme implements ThemeContract
 {
@@ -51,28 +56,28 @@ class DefaultTheme implements ThemeContract
     private static function lightColors(): array
     {
         return [
-            ThemeVariable::BACKGROUND->value => '#fff',
-            ThemeVariable::FOREGROUND->value => 'oklch(20.5% 0 0)', // neutral-900
+            ThemeVariable::BACKGROUND->value => 'oklch(100% 0 0)', // white
+            ThemeVariable::FOREGROUND->value => 'oklch(21% 0.006 285.885)', // zinc-900
 
             ThemeVariable::BACKDROP->value => 'color-mix(in oklab,var(--background) 60%,transparent)',
 
-            ThemeVariable::PRIMARY->value => '#000',
-            ThemeVariable::PRIMARY_FOREGROUND->value => '#fff',
+            ThemeVariable::PRIMARY->value => 'var(--foreground)',
+            ThemeVariable::PRIMARY_FOREGROUND->value => 'var(--background)',
 
-            ThemeVariable::SECONDARY->value => 'oklch(97% 0 0)', // neutral-100
+            ThemeVariable::SECONDARY->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
             ThemeVariable::SECONDARY_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::ACCENT->value => 'var(--secondary)',
             ThemeVariable::ACCENT_FOREGROUND->value => 'var(--secondary-foreground)',
 
             ThemeVariable::MUTED->value => 'var(--secondary)',
-            ThemeVariable::MUTED_FOREGROUND->value => 'oklch(43.9% 0 0)', // neutral-600
+            ThemeVariable::MUTED_FOREGROUND->value => 'oklch(44.2% 0.017 285.786)', // zinc-600
 
             ThemeVariable::CARD->value => 'var(--background)',
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
-            ThemeVariable::BORDER->value => 'oklch(92.2% 0 0)', // neutral-200
-            ThemeVariable::INPUT->value => '#fff',
+            ThemeVariable::BORDER->value => 'oklch(92% 0.004 286.32)', // zinc-200
+            ThemeVariable::INPUT->value => 'var(--background)',
             ThemeVariable::RING->value => 'var(--primary)',
 
             ThemeVariable::SUCCESS->value => 'oklch(72.3% 0.219 149.579)',            // green-500
@@ -92,19 +97,19 @@ class DefaultTheme implements ThemeContract
     private static function darkColors(): array
     {
         return [
-            ThemeVariable::BACKGROUND->value => '#000',
-            ThemeVariable::FOREGROUND->value => 'oklch(97% 0 0)', // neutral-100
+            ThemeVariable::BACKGROUND->value => 'oklch(14.1% 0.005 285.823)', // zinc-950
+            ThemeVariable::FOREGROUND->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
 
-            ThemeVariable::PRIMARY->value => '#fff',
-            ThemeVariable::PRIMARY_FOREGROUND->value => '#000',
+            ThemeVariable::PRIMARY->value => 'oklch(100% 0 0)', // white
+            ThemeVariable::PRIMARY_FOREGROUND->value => 'oklch(14.1% 0.005 285.823)', // zinc-950
 
-            ThemeVariable::SECONDARY->value => 'oklch(20.5% 0 0)', // neutral-900
+            ThemeVariable::SECONDARY->value => 'oklch(21% 0.006 285.885)', // zinc-900
 
-            ThemeVariable::MUTED_FOREGROUND->value => 'oklch(70.8% 0 0)', // neutral-400
+            ThemeVariable::MUTED_FOREGROUND->value => 'oklch(70.5% 0.015 286.067)', // zinc-400
 
-            ThemeVariable::CARD->value => 'oklch(14.5% 0 0)', // neutral-950
+            ThemeVariable::CARD->value => 'oklch(14.1% 0.005 285.823)', // zinc-950
 
-            ThemeVariable::BORDER->value => 'oklch(26.9% 0 0)', // neutral-800
+            ThemeVariable::BORDER->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
             ThemeVariable::INPUT->value => 'var(--accent)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300

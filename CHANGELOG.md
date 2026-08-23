@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The `x-sidebar-backdrop` component now uses the `ThemeVariable::BACKDROP` variable for its background.
 - Replaced the sidebar spacer (used when a sidebar is in the fixed display state) with padding on the containing element.
+- Updated the default theme.
+    - Base color palette has been changed from `neutral` to `zinc`.
+    - Softer background color for dark theme.
 
 ## [1.5.0] - 2026-08-17
 
