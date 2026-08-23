@@ -7,7 +7,7 @@ $refId = 'pre-'.crc32($slot);
 @props(['scrollbar' => true, 'withCopy' => false, 'copyLabel' => 'Copy', 'copiedLabel' => 'Copied!'])
 <div {{ $attributes->class([
         'flex items-start gap-x-2 rounded-[var(--radius)]',
-        'bg-[var(--secondary)]' => ! Str::contains($attributes->get('class'), 'bg-'),
+        'bg-[var(--accent)]' => ! Str::contains($attributes->get('class'), 'bg-'),
     ]) }}
     x-data="{
         'refId': '{{ $refId }}',
@@ -17,7 +17,7 @@ $refId = 'pre-'.crc32($slot);
     <div {{ (new ComponentAttributeBag)->class([
         'flex-grow relative min-w-0',
         'before:content[\'\'] before:block before:w-4 before:absolute before:inset-y-0 before:right-0 before:pointer-events-none',
-        'before:bg-gradient-to-r before:from-transparent before:to-[var(--secondary)]',
+        'before:bg-gradient-to-r before:from-transparent before:to-[var(--accent)]',
         'before:rounded-r-[var(--radius-inner)]' => ! $withCopy,
     ]) }}>
         <pre x-ref="{{ $refId }}" {{ (new ComponentAttributeBag())->class([
