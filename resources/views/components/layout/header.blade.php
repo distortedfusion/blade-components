@@ -5,7 +5,9 @@ use DistortedFusion\BladeComponents\BladeComponents;
 <header data-slot="header" {{ $attributes->class([
     '[grid-area:header]',
     'flex items-center justify-between gap-2 z-10',
+
     'bg-[var(--sidebar)] min-h-[var(--header-height,3.5rem)]',
+    '[:where(&)]:border-be [:where(&)]:border-[var(--border)]',
 
     'fixed top-0 inset-x-0' => $fixed,
     'sticky [:where(&)]:top-0' => $sticky,

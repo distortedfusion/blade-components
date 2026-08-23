@@ -8,7 +8,9 @@ use DistortedFusion\BladeComponents\BladeComponents;
 <ddfsn-sidebar data-slot="sidebar" {{ $attributes->class([
     '[grid-area:sidebar]' => ! $fixed,
     'flex flex-col gap-4 z-20',
+
     'bg-[var(--sidebar)] [:where(&)]:w-[var(--sidebar-width,16rem)] [:where(&)]:p-4',
+    '[:where(&)]:border-e [:where(&)]:border-[var(--border)]',
 
     'max-h-dvh overflow-x-hidden overscroll-contain' => $sticky || $fixed,
     'min-h-dvh fixed start-0 inset-y-0' => $fixed,
