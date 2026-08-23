@@ -20,10 +20,13 @@
         "sidebar footer  aside";
 }
 
-*:has(>[data-slot=sidebar]+[data-slot=header]),
-*:has(>[data-slot=sidebar-spacer]+[data-slot=header]) {
+*:has(>[data-slot=sidebar]+[data-slot=header]) {
     grid-template-areas:
         "sidebar header  header"
         "sidebar main    aside"
         "sidebar footer  aside";
+}
+
+*:has(>[data-slot=sidebar][fixed]) {
+    padding-left: var(--sidebar-width,16rem);
 }
