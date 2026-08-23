@@ -64,13 +64,13 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::PRIMARY->value => 'var(--foreground)',
             ThemeVariable::PRIMARY_FOREGROUND->value => 'var(--background)',
 
-            ThemeVariable::SECONDARY->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
+            ThemeVariable::SECONDARY->value => 'oklch(92% 0.004 286.32)', // zinc-200
             ThemeVariable::SECONDARY_FOREGROUND->value => 'var(--foreground)',
 
-            ThemeVariable::ACCENT->value => 'var(--secondary)',
+            ThemeVariable::ACCENT->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
             ThemeVariable::ACCENT_FOREGROUND->value => 'var(--secondary-foreground)',
 
-            ThemeVariable::MUTED->value => 'var(--secondary)',
+            ThemeVariable::MUTED->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
             ThemeVariable::MUTED_FOREGROUND->value => 'oklch(44.2% 0.017 285.786)', // zinc-600
 
             ThemeVariable::CARD->value => 'var(--background)',
@@ -78,7 +78,7 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::BORDER->value => 'oklch(92% 0.004 286.32)', // zinc-200
             ThemeVariable::INPUT->value => 'var(--background)',
-            ThemeVariable::RING->value => 'var(--primary)',
+            ThemeVariable::RING->value => 'color-mix(in oklab,var(--primary) 30%,transparent)',
 
             ThemeVariable::SUCCESS->value => 'oklch(72.3% 0.219 149.579)',            // green-500
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(52.7% 0.154 150.069)', // green-700
@@ -103,15 +103,17 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::PRIMARY->value => 'oklch(100% 0 0)', // white
             ThemeVariable::PRIMARY_FOREGROUND->value => 'oklch(14.1% 0.005 285.823)', // zinc-950
 
-            ThemeVariable::SECONDARY->value => 'oklch(21% 0.006 285.885)', // zinc-900
+            ThemeVariable::SECONDARY->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
 
-            ThemeVariable::MUTED->value => 'var(--background)',
+            ThemeVariable::ACCENT->value => 'oklch(21% 0.006 285.885)', // zinc-900
+
+            ThemeVariable::MUTED->value => 'oklch(21% 0.006 285.885)', // zinc-900
             ThemeVariable::MUTED_FOREGROUND->value => 'oklch(70.5% 0.015 286.067)', // zinc-400
 
-            ThemeVariable::CARD->value => 'var(--secondary)',
+            ThemeVariable::CARD->value => 'oklch(21% 0.006 285.885)', // zinc-900
 
-            ThemeVariable::BORDER->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
-            ThemeVariable::INPUT->value => 'color-mix(in oklab,var(--background) 30%,transparent)',
+            ThemeVariable::BORDER->value => 'color-mix(in oklab,var(--foreground) 10%,transparent)',
+            ThemeVariable::INPUT->value => 'color-mix(in oklab,var(--foreground) 5%,transparent)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300
             ThemeVariable::INFO_FOREGROUND->value => 'oklch(80.9% 0.105 251.813)',   // blue-300

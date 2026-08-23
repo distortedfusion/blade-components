@@ -1,6 +1,6 @@
 <div data-slot="avatar" data-size="{{ $size }}" {{ $attributes->class([
     'block relative overflow-hidden aspect-square',
-    'bg-[var(--secondary)] text-[var(--muted-foreground)]',
+    'bg-[var(--muted)] text-[var(--muted-foreground)]',
     'ring-1 ring-[var(--background)]',
 
     // Border element, will be overlain with the image.
