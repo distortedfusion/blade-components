@@ -88,7 +88,7 @@ class ThemeManager
 
     public static function hashStyles(): string
     {
-        return substr(hash('xxh3', static::renderStyles()), 0, 8);
+        return hash('xxh128', static::renderStyles());
     }
 
     /**

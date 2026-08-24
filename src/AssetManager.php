@@ -165,6 +165,7 @@ HTML;
             'Cache-Control' => 'public, max-age=31536000',
         ]);
 
+        $response->setEtag($hash);
         $response->isNotModified($request);
 
         return $response;
@@ -183,10 +184,10 @@ HTML;
             'Content-Type' => $contentType,
             'Last-Modified' => gmdate('D, d M Y H:i:s', $lastModified).' GMT',
             'Expires' => gmdate('D, d M Y H:i:s', $expires).' GMT',
-            'Etag' => hash_file('xxh128', $path),
             'Cache-Control' => 'public, max-age=31536000',
         ]);
 
+        $response->setEtag(hash_file('xxh128', $path));
         $response->isNotModified($request);
 
         return $response;
