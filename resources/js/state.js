@@ -1,3 +1,5 @@
+import { setAttribute, removeAttribute } from './utils.js';
+
 export class State {
     boot() {
         let Alpine = window.Alpine;
@@ -55,15 +57,31 @@ export class State {
 
         media.addEventListener("change", () => {
             ddfsn.triggerReactivityCounter++;
+
+            this.pauseTransitions();
             applyAppearance(ddfsn.appearance);
+            this.resumeTransitions();
         });
     }
 
     watchForLivewireNavigate(ddfsn, applyAppearance) {
         document.addEventListener("livewire:navigating", (e) => {
             e.detail.onSwap(() => {
+                this.pauseTransitions();
                 applyAppearance(ddfsn.appearance);
+                this.resumeTransitions();
             });
         });
+    }
+
+    pauseTransitions() {
+        setAttribute(document.documentElement, 'data-ddfsn-pause-transitions', true);
+    }
+
+    resumeTransitions() {
+        // Double request to ensure we're using the next frame...
+        requestAnimationFrame(() => requestAnimationFrame(
+            () => removeAttribute(document.documentElement, 'data-ddfsn-pause-transitions')
+        ));
     }
 }

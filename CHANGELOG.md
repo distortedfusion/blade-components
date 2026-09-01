@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## TBD
+
+### Fixed
+
+- Pause transitions during appearance changes, this resolves button flickering when switching between light and/or dark mode.
+
 ## [1.6.2] - 2026-09-01
 
 ### Fixed

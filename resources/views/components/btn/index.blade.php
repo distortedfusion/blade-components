@@ -3,7 +3,7 @@
 use DistortedFusion\BladeComponents\BladeComponents;
 
 $class = [
-    'inline-flex items-center justify-center gap-x-1.5 shrink-0 transition-colors duration-100',
+    'inline-flex items-center justify-center gap-x-1.5 shrink-0',
     'text-sm/5 font-medium shadow-none',
 
     'hover:no-underline hover:outline-0',
@@ -84,6 +84,12 @@ $class = [
 
     // Disabled...
     'disabled:pointer-events-none disabled:opacity-50',
+
+    // Transitions...
+    'transition-colors duration-100',
+
+    // Pause transitions during appearance changes...
+    '[[data-ddfsn-pause-transitions]_&]:transition-none',
 ];
 
 $attributes = $attributes->merge([
