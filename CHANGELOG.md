@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## TBD
 
+### Added
+
+- The `ThemeVariable::SIDEBAR` and `ThemeVariable::HEADER` variables have been added and now use the `ThemeVariable::BACKGROUND` as their default value.
+
 ### Fixed
 
 - Pause transitions during appearance changes, this resolves button flickering when switching between light and/or dark mode.

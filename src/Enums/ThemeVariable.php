@@ -9,6 +9,9 @@ enum ThemeVariable: string
     case BACKGROUND = 'background';
     case FOREGROUND = 'foreground';
 
+    case SIDEBAR = 'sidebar';
+    case HEADER = 'header';
+
     case BACKDROP = 'backdrop';
 
     case PRIMARY = 'primary';

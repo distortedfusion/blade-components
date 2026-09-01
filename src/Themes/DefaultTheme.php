@@ -59,6 +59,9 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::BACKGROUND->value => 'oklch(100% 0 0)', // white
             ThemeVariable::FOREGROUND->value => 'oklch(21% 0.006 285.885)', // zinc-900
 
+            ThemeVariable::SIDEBAR->value => 'var(--background)',
+            ThemeVariable::HEADER->value => 'var(--background)',
+
             ThemeVariable::BACKDROP->value => 'color-mix(in oklab,var(--background) 60%,transparent)',
 
             ThemeVariable::PRIMARY->value => 'var(--foreground)',
