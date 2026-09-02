@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - The `ThemeVariable::SIDEBAR` and `ThemeVariable::HEADER` variables have been added and now use the `ThemeVariable::BACKGROUND` as their default value.
+- Added slots to breadcrumb components.
 
 ### Fixed
 

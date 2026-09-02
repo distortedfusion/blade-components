@@ -8,7 +8,7 @@ $class = [
     'text-sm',
 ];
 @endphp
-<li {{ $attributes->class(['leading-none']) }}>
+<li data-slot="breadcrumb-item" {{ $attributes->class(['leading-none']) }}>
     @if(is_null($href))
         <span {{ (new ComponentAttributeBag)->class($class) }}>
             {{ $slot }}
