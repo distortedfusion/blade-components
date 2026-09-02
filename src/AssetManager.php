@@ -71,7 +71,7 @@ class AssetManager
     {
         return $this->fileResponse(
             request: $request,
-            path: __DIR__.'/../dist/blade-components.js',
+            path: __DIR__.'/../dist'.static::javascriptBundle(minified: false),
             contentType: 'text/javascript'
         );
     }
@@ -80,9 +80,21 @@ class AssetManager
     {
         return $this->fileResponse(
             request: $request,
-            path: __DIR__.'/../dist/blade-components.min.js',
+            path: __DIR__.'/../dist'.static::javascriptBundle(minified: true),
             contentType: 'text/javascript'
         );
+    }
+
+    private static function javascriptVariant(): string
+    {
+        return config('blade-components.javascript', 'blade') === 'vue' ? 'vue' : 'blade';
+    }
+
+    private static function javascriptBundle(bool $minified): string
+    {
+        $variant = static::javascriptVariant();
+
+        return '/blade-components'.($variant === 'vue' ? '-vue' : '').($minified ? '.min' : '').'.js';
     }
 
     public static function ddfsnAppearance(array $options = []): string
@@ -144,12 +156,12 @@ HTML;
         $manifest = json_decode(file_get_contents($manifestPath), true);
 
         if (! App::isProduction()) {
-            $versionHash = $manifest['/blade-components.js'];
+            $versionHash = $manifest[static::javascriptBundle(minified: false)];
 
             return '<script src="'.url('/ddfsn/blade-components.js?id='.$versionHash).'"'.$dataAttributes.$nonce.'></script>';
         }
 
-        $versionHash = $manifest['/blade-components.min.js'];
+        $versionHash = $manifest[static::javascriptBundle(minified: true)];
 
         return '<script src="'.url('/ddfsn/blade-components.min.js?id='.$versionHash).'"'.$dataAttributes.$nonce.'></script>';
     }

@@ -25,6 +25,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | JavaScript variant
+    |--------------------------------------------------------------------------
+    |
+    | Blade Components ships a vanilla JavaScript layer (custom elements
+    | powered by Alpine.js) by default. Applications built on Vue 3 may opt
+    | into the Vue variant, which implements the same behaviour without
+    | Alpine.js.
+    |
+    | Supported: "blade", "vue"
+    |
+    */
+
+    'javascript' => env('BLADE_COMPONENTS_JAVASCRIPT', 'blade'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Components
     |--------------------------------------------------------------------------
     |

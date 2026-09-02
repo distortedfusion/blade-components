@@ -12,5 +12,8 @@
 Thumbs.db
 
 .php-cs-fixer.cache
+.codegraph/
+pint.json
+/smoke/
 composer.lock
 composer.phar

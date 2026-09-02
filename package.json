@@ -1,5 +1,10 @@
 {
     "main": "dist/blade-components.js",
+    "exports": {
+        ".": "./dist/blade-components.js",
+        "./vue": "./dist/blade-components-vue.esm.js",
+        "./dist/*": "./dist/*"
+    },
     "name": "blade-components",
     "scripts": {
         "build": "node ./scripts/build.js",
@@ -8,7 +13,13 @@
     "author": "Kevin Dierkx",
     "license": "MIT",
     "devDependencies": {
+        "@tailwindcss/browser": "^4.3.3",
         "brotli-size": "^4.0.0",
-        "esbuild": "^0.28.2"
+        "esbuild": "^0.28.2",
+        "jsdom": "^30.0.1",
+        "vue": "^3.5.42"
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true
     }
 }
