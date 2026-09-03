@@ -10,6 +10,9 @@ if (! fs.existsSync(path.resolve(__dirname, '../dist'))) {
 
 let shouldWatch = process.argv.includes('--watch');
 
+let vueGlobalShim = path.resolve(__dirname, '../resources/js/vue/global-vue.js');
+let vueSfcPlugin = require('./vue-sfc-plugin.js').vueSfcPlugin;
+
 let builds = [
     {
         entryPoints: [`resources/js/index.js`],
@@ -33,6 +36,41 @@ let builds = [
         minify: true,
         platform: 'browser',
         sizeOf: `dist/blade-components.min.js`,
+    },
+
+    // Vue 3 variant (plain JavaScript, no TypeScript). `vue` is
+    // provided by the consumer: the ESM build keeps it external, the
+    // IIFE builds alias it to a shim that reads Vue's global `Vue`
+    // (browser builds) — load Vue first.
+    {
+        entryPoints: [`resources/js/vue/index.js`],
+        outfile: `dist/blade-components-vue.js`,
+        bundle: true,
+        platform: 'browser',
+        globalName: 'DdfsnVue',
+        plugins: [vueSfcPlugin()],
+        alias: { vue: vueGlobalShim },
+    },
+    {
+        format: 'esm',
+        entryPoints: [`resources/js/vue/index.js`],
+        outfile: `dist/blade-components-vue.esm.js`,
+        sourcemap: 'linked',
+        bundle: true,
+        platform: 'node',
+        plugins: [vueSfcPlugin()],
+        external: ['vue'],
+    },
+    {
+        entryPoints: [`resources/js/vue/index.js`],
+        outfile: `dist/blade-components-vue.min.js`,
+        sourcemap: 'linked',
+        bundle: true,
+        minify: true,
+        platform: 'browser',
+        plugins: [vueSfcPlugin()],
+        alias: { vue: vueGlobalShim },
+        sizeOf: `dist/blade-components-vue.min.js`,
     },
 ];
 
@@ -70,7 +108,10 @@ async function build(options) {
         let ctx = await esbuild.context(config)
         await ctx.watch()
     } else {
-        await esbuild.build(config).catch(() => process.exit(1))
+        await esbuild.build(config).catch((error) => {
+            console.error(error);
+            process.exit(1);
+        })
     }
 }
 
