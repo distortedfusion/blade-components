@@ -3,7 +3,7 @@
 use DistortedFusion\BladeComponents\BladeComponents;
 @endphp
 <div {{ $attributes->class([
-    'flex flex-wrap flex-col md:flex-row items-center gap-y-2 gap-x-3',
+    'flex flex-wrap flex-col md:flex-row md:items-center gap-y-2 gap-x-3',
 ]) }}>
     <div class="md:flex-1">
         <x-dynamic-component
