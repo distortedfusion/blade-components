@@ -7,7 +7,7 @@ $element = $asHeading ? 'h'.$headingLevel : 'div';
     'text-[var(--foreground)]',
     'font-sans-heading hyphens-auto',
 
-    'font-semibold' => ! BladeComponents::containsFontWeightClass($attributes->get('class')),
+    'font-medium' => ! BladeComponents::containsFontWeightClass($attributes->get('class')),
 
     'text-lg' => ! BladeComponents::containsFontSizeClass($attributes->get('class')) && $size === 'lg',
     '[:where(&)]:text-base' => ! BladeComponents::containsFontSizeClass($attributes->get('class')) && $size === 'default',

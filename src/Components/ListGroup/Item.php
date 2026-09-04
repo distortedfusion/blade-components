@@ -14,6 +14,7 @@ class Item extends Component
     public ?string $href;
     public string $target;
     public ?string $title;
+    public ?string $description;
     public string $type;
     public bool $button;
 
@@ -30,6 +31,7 @@ class Item extends Component
      * @param ?string $href
      * @param string  $target
      * @param ?string $title
+     * @param ?string $description
      * @param string  $type
      * @param bool    $button
      * @param ?string $indicatorIcon
@@ -38,6 +40,7 @@ class Item extends Component
         ?string $href = null,
         string $target = '_self',
         ?string $title = null,
+        ?string $description = null,
         string $type = 'button',
         bool $button = false,
         ?string $indicatorIcon = null,
@@ -45,6 +48,7 @@ class Item extends Component
         $this->href = $href;
         $this->target = $target;
         $this->title = $title;
+        $this->description = $description;
         $this->type = $type;
         $this->button = $button;
 

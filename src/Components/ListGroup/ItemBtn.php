@@ -15,6 +15,7 @@ class ItemBtn extends Item
      * @param ?string     $href
      * @param string      $target
      * @param ?string     $title
+     * @param ?string     $description
      * @param string      $type
      * @param bool        $button
      * @param string|null $indicatorIcon
@@ -23,6 +24,7 @@ class ItemBtn extends Item
         ?string $href = null,
         string $target = '_self',
         ?string $title = null,
+        ?string $description = null,
         string $type = 'button',
         bool $button = false,
         ?string $indicatorIcon = null,
@@ -33,6 +35,7 @@ class ItemBtn extends Item
             href: $href,
             target: $target,
             title: $title,
+            description: $description,
             type: $type,
             indicatorIcon: $indicatorIcon,
         );

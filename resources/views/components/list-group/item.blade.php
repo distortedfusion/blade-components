@@ -19,8 +19,10 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
 
     <div class="flex-grow min-w-0 relative z-1">
         @if(! is_null($title))
-            <x-dynamic-component :component="BladeComponents::componentAliasWithPrefix('list-group.precomposed.title')">
-                <x-slot:title>{{ $title }}</x-slot:title>
+            <x-dynamic-component
+                :component="BladeComponents::componentAliasWithPrefix('list-group.precomposed.title')"
+                :title="$title"
+                :description="$description">
                 {!! trim($slot) ? $slot : '&mdash;' !!}
             </x-dynamic-component>
         @else
