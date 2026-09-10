@@ -67,7 +67,7 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::PRIMARY->value => 'var(--foreground)',
             ThemeVariable::PRIMARY_FOREGROUND->value => 'var(--background)',
 
-            ThemeVariable::SECONDARY->value => 'oklch(92% 0.004 286.32)', // zinc-200
+            ThemeVariable::SECONDARY->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
             ThemeVariable::SECONDARY_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::ACCENT->value => 'oklch(96.7% 0.001 286.375)', // zinc-100
@@ -108,9 +108,9 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::SECONDARY->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
 
-            ThemeVariable::ACCENT->value => 'oklch(21% 0.006 285.885)', // zinc-900
+            ThemeVariable::ACCENT->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
 
-            ThemeVariable::MUTED->value => 'oklch(21% 0.006 285.885)', // zinc-900
+            ThemeVariable::MUTED->value => 'oklch(27.4% 0.006 286.033)', // zinc-800
             ThemeVariable::MUTED_FOREGROUND->value => 'oklch(70.5% 0.015 286.067)', // zinc-400
 
             ThemeVariable::CARD->value => 'oklch(21% 0.006 285.885)', // zinc-900
