@@ -1,20 +1,27 @@
+@aware(['style' => 'default'])
 @php
 use DistortedFusion\BladeComponents\BladeComponents;
+use Illuminate\View\ComponentAttributeBag;
 
 $componentAttributes = $attributes->filter(fn ($value, $key) => ! Str::startsWith($key, 'wire:') && ! Str::startsWith($key, 'x-'));
 $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith($key, 'wire:') || Str::startsWith($key, 'x-'));
 @endphp
-@aware(['style'])
 <div data-slot="list-group-item" {{ $componentAttributes->class([
-    'group flex items-center relative',
+    'group flex items-center relative py-4',
     'text-[var(--foreground)] leading-6',
-    'py-3 px-3',
 
     'border border-[var(--border)] bg-[var(--card)] rounded-[var(--radius)]' => $style === 'pills',
+    'px-4' => $style === 'pills',
 ]) }}>
     @if(! is_null($href) || $button)
         {{-- hover-indicator --}}
-        <div class="absolute inset-x-1 inset-y-1 z-0 scale-95 bg-[var(--accent)] rounded opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></div>
+        <div {{ (new ComponentAttributeBag)->class([
+            'bg-[var(--accent)] rounded opacity-0 transition',
+            'group-hover:scale-100 group-hover:opacity-100',
+            'absolute inset-y-1 z-0 scale-95',
+            '-inset-x-3' => $style === 'default',
+            'inset-x-1' => $style === 'pills',
+        ]) }}></div>
     @endif
 
     <div class="flex-grow min-w-0 relative z-1">

@@ -5,6 +5,7 @@
     'bg-[var(--card)]' => $style === 'default',
     'border border-[var(--border)]' => $style === 'default',
     'divide-y divide-[var(--border)]' => $style === 'default',
+    'px-4' => $style === 'default',
 
     'gap-y-0.5' => $style === 'pills',
 
