@@ -28,8 +28,10 @@ $indicatorAttributes = $attributes->filter(fn ($value, $key) => Str::startsWith(
         @if(! is_null($title))
             <x-dynamic-component
                 :component="BladeComponents::componentAliasWithPrefix('list-group.precomposed.title')"
+                :icon="$icon"
                 :title="$title"
-                :description="$description">
+                :description="$description"
+                :wrap="$wrap">
                 {!! trim($slot) ? $slot : '&mdash;' !!}
             </x-dynamic-component>
         @else

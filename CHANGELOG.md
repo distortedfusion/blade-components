@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added support for descriptions in `x-list-group-item` components.
+- Added support for `layout.icon` within `x-list-group-item` components using the `icon` attribute.
+- Added conditional support for content wrapping within `x-list-group-item` components using the `wrap` attribute.
 - Updated `x-list-group-item` styling, now matching `x-card` paddings.
 
 ## [1.6.3] - 2026-09-03

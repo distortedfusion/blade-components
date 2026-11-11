@@ -17,6 +17,8 @@ class Item extends Component
     public ?string $description;
     public string $type;
     public bool $button;
+    public bool $wrap;
+    public ?string $icon;
 
     /**
      * Default indicator icon.
@@ -25,17 +27,6 @@ class Item extends Component
      */
     public static string $defaultIndicatorIcon = 'heroicon-o-chevron-right';
 
-    /**
-     * Create the component instance.
-     *
-     * @param ?string $href
-     * @param string  $target
-     * @param ?string $title
-     * @param ?string $description
-     * @param string  $type
-     * @param bool    $button
-     * @param ?string $indicatorIcon
-     */
     public function __construct(
         ?string $href = null,
         string $target = '_self',
@@ -43,6 +34,8 @@ class Item extends Component
         ?string $description = null,
         string $type = 'button',
         bool $button = false,
+        bool $wrap = false,
+        ?string $icon = null,
         ?string $indicatorIcon = null,
     ) {
         $this->href = $href;
@@ -51,7 +44,9 @@ class Item extends Component
         $this->description = $description;
         $this->type = $type;
         $this->button = $button;
+        $this->wrap = $wrap;
 
+        $this->icon = $icon;
         $this->indicatorIcon = $indicatorIcon ?: $this->defaultIndicatorIcon();
     }
 

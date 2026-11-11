@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace DistortedFusion\BladeComponents\Components\ListGroup;
 
 /**
- * @deprecated use the `<x-item` component directly with the `button` attribute
+ * @deprecated use the `<x-list-group-item` component directly with the `button` attribute
  */
 class ItemBtn extends Item
 {
